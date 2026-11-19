@@ -108,7 +108,7 @@
   }
 
   /* ---------- Auftritte (Bareiss Teil 3): jedes Stück eines Abschnitts einzeln, sobald es selbst an den Rand kommt */
-  var STUECK = '.rahmen, figure, h3, p, ul, ol, dl, .knoepfe, .karte, .tafel, .zeit, .drei, .plakat, .aufsteller, .k-buehne, .saft-streifen, .g-drei, .p-bilder, .a-bilder, .b-bilder, .buehne, .g-band, .karte-box, .heute';
+  var STUECK = '.rubrik, .rahmen, figure, h3, p, ul, ol, dl, .knoepfe, .karte, .tafel, .zeit, .drei, .plakat, .aufsteller, .k-buehne, .saft-streifen, .g-drei, .p-bilder, .a-bilder, .b-bilder, .buehne, .g-band, .karte-box, .heute';
   var EIGEN = '[data-r], .auftakt, .skopf, .fen, .fuss, .rubriknav, .k-buehne .kb, .mvoll';
   var GRUPPE = '.saft-streifen, .g-drei, .p-bilder, .a-bilder, .b-bilder, .buehne, .g-band, .morgen-buehne';
   function sichtbar(e) { return !!(e.offsetParent || e.getClientRects().length); }
@@ -117,7 +117,7 @@
       sek.querySelectorAll('h2,.zitat,.t-gross').forEach(function (h) { if (!h.closest(EIGEN.replace('[data-r], ', '')) && sichtbar(h)) { h.setAttribute('data-schlitz', ''); zeilen(h); } });
       sek.querySelectorAll(STUECK).forEach(function (e) {
         if (e.closest('[data-schlitz]') || e.closest(EIGEN)) return;
-        if (e.closest('.rubriken')) return;   /* Karte: im Spaltensatz bewegt sich nichts (Safari legt verschobene Stücke in Spalten übereinander oder zeigt sie nicht) */
+        if (e.closest('.rubriken') && !e.matches('.rubrik')) return;   /* Karte: im Spaltensatz bewegt sich nichts (Safari legt verschobene Stücke in Spalten übereinander oder zeigt sie nicht) */
         if (!sichtbar(e)) return;
         /* Gruppen aus Fotos Wand an Wand: jedes Foto fliegt einzeln, die Gruppe selbst bleibt stehen */
         if (e.matches(GRUPPE)) return;
