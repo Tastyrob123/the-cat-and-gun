@@ -419,7 +419,7 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
   .at-unten .knoepfe{margin-top:4px}
 
   .skopf{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr}
-  .sk-text{padding:150px clamp(30px,4vw,70px) clamp(50px,7vh,90px) var(--rand);justify-content:flex-end}
+  .sk-text{padding:130px clamp(30px,4vw,70px) calc(var(--ecke) + 40px) var(--rand);justify-content:center}
   .sk-bild{margin:118px var(--rand) calc(var(--ecke) + 30px) 0}
 
   .morgen-kopf{grid-template-columns:auto minmax(0,1fr);align-items:end;column-gap:clamp(40px,6vw,110px)}
@@ -480,6 +480,8 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
   .zwei{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:stretch;column-gap:clamp(40px,5vw,96px)}
   .zwei>div:not(.buehne):not(.b-bilder){align-self:center}
   .zwei>.brekky-t{align-self:stretch;justify-content:space-between}
+  #tisch .zwei>div:first-child{align-self:stretch;display:flex;flex-direction:column}
+  #tisch .zwei>div:first-child .knoepfe{margin-top:auto;padding-top:24px}
   .zwei>.b-bilder{min-height:clamp(460px,40vw,600px)}
   .zwei.umgekehrt>:first-child{order:2}
 
