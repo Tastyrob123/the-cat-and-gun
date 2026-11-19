@@ -14,8 +14,8 @@
 @font-face{font-family:"Instrument Sans";src:url(assets/schrift/InstrumentSans-normal-400_600.woff2) format("woff2");font-weight:400 700;font-display:block}
 @font-face{font-family:"DM Mono";src:url(assets/schrift/DMMono-normal-400.woff2) format("woff2");font-weight:400;font-display:block}
 *{box-sizing:border-box}
-html,body{margin:0;background:#15120f;color:#f4efe7;font:400 17px/1.6 "Instrument Sans",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-body{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f4efe7%22%20stroke-opacity%3D%220.055%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:46px 46px;min-height:100svh;display:flex;flex-direction:column}
+html,body{margin:0;background:#e9dfcf;color:#1d1915;font:400 17px/1.6 "Instrument Sans",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100svh;display:flex;flex-direction:column}
 main{flex:1;width:min(100% - 32px,1440px);margin:0 auto;padding:clamp(28px,5vw,64px) 0 clamp(28px,4vw,48px);display:grid;gap:clamp(22px,3vw,36px);align-content:center}
 .kopf{display:flex;justify-content:space-between;align-items:center;gap:20px}
 .schild{display:block;width:clamp(64px,7vw,88px);aspect-ratio:1;padding:8px;background:#15120f;border-radius:6px;box-shadow:0 10px 24px -14px rgba(0,0,0,.6)}
@@ -23,13 +23,13 @@ main{flex:1;width:min(100% - 32px,1440px);margin:0 auto;padding:clamp(28px,5vw,6
 .schild svg{width:100%;height:auto;display:block}
 svg use{fill:currentColor}
 h1{font:400 clamp(2.2rem,5vw,4.4rem)/1.04 "Gloock",Georgia,serif;margin:0;text-align:right}
-.mono{font:400 13px/1.4 "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#bdb2a5}
-.film{position:relative;width:min(100%,calc((100svh - 300px) * 1.592));justify-self:center;border-radius:clamp(14px,1.6vw,24px);overflow:hidden;background:#0d0b09;box-shadow:0 2px 6px rgba(0,0,0,.3),0 40px 80px -40px rgba(0,0,0,.8)}
+.mono{font:400 13px/1.4 "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#6c6157}
+.film{position:relative;width:min(100%,calc((100svh - 300px) * 1.592));justify-self:center;border-radius:clamp(14px,1.6vw,24px);overflow:hidden;background:#0d0b09;box-shadow:0 2px 6px rgba(40,22,8,.18),0 40px 80px -40px rgba(40,22,8,.6)}
 .film video{display:block;width:100%;height:auto;aspect-ratio:1920/1206}
 .kopf,.unten{width:min(100%,calc((100svh - 300px) * 1.592));justify-self:center}
 .unten{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
-.knopf{display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 6px 0 22px;border-radius:999px;background:#fbf8f3;color:#15120f;text-decoration:none;font:400 13px/1 "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase;box-shadow:inset 0 1px 0 #fff,0 10px 22px -12px rgba(0,0,0,.5)}
-.knopf i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#15120f;color:#f4efe7}
+.knopf{display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 6px 0 22px;border-radius:999px;background:#15120f;color:#f4efe7;text-decoration:none;font:400 13px/1 "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 10px 22px -12px rgba(0,0,0,.5)}
+.knopf i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#f4efe7;color:#15120f}
 .knopf svg{width:17px;height:17px}
 .studie{padding:16px;text-align:center;font-size:13px;color:#8f857a;background:#0d0b09}
 </style>
@@ -42,6 +42,6 @@ h1{font:400 clamp(2.2rem,5vw,4.4rem)/1.04 "Gloock",Georgia,serif;margin:0;text-a
   <div class="unten"><span class="mono">Screen recording · 1 min 24 s</span><a class="knopf" href="index.html"><span>Open the website</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div>
 </main>
 <div class="studie">Design study by Tasty Studios, not the official website.</div>
-<script src="assets/besuch.js?v=1795102247" defer></script>
+<script src="assets/besuch.js?v=1795112701" defer></script>
 </body>
 </html>
