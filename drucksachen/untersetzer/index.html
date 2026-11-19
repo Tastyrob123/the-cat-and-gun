@@ -8,7 +8,7 @@
 <link rel="icon" href="../zeichen/et-schwarz.svg" type="image/svg+xml">
 <link rel="preload" href="../schrift/dmserif.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:'DM Serif Display';src:url(../schrift/dmserif.woff2) format('woff2');font-weight:400;font-style:normal;font-display:block}@font-face{font-family:'Instrument Sans';src:url(../schrift/instrument.woff2) format('woff2');font-weight:400 600;font-style:normal;font-display:block}
-:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#8a8378;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
+:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#090807;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 html.wartet body{visibility:hidden}
@@ -34,7 +34,7 @@ img{display:block;max-width:100%;height:auto}
 .kopf h2{font:400 clamp(30px,3.2vw,44px)/1.05 'DM Serif Display',serif;margin:0;flex:none}
 .kopf p{margin:0;color:var(--grau);font-size:17px}
 .stueck{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:52px;align-items:center;margin:0 0 64px}
-.karton{background:var(--karton);border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
+.karton{background-color:var(--karton);background-image:var(--fisch-k);background-size:46px 46px;border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
 .reihe{display:flex;justify-content:center;align-items:center;gap:3.7%}
 .reihe img{display:block;height:auto;width:var(--w);filter:drop-shadow(0 10px 14px rgba(20,18,15,.3)) drop-shadow(0 2px 3px rgba(20,18,15,.24))}
 .karton.ohne .reihe img{filter:none}
@@ -60,7 +60,7 @@ img{display:block;max-width:100%;height:auto}
 @media (prefers-reduced-motion:reduce){[data-a]{opacity:1;transform:none;transition:none}}
 @media (max-width:900px){.stueck{grid-template-columns:1fr;gap:26px;margin-bottom:56px}.karton{min-height:0}.wege{grid-template-columns:repeat(2,minmax(0,1fr))}.imhaus.zwei{grid-template-columns:1fr}}
 @media (max-width:600px){body{font-size:16px}.leiste{padding:14px 16px}.leiste .logo{height:42px}.auftakt{padding:48px 16px 24px}.auftakt h1{font-size:clamp(40px,12vw,56px)}.text h3{font-size:26px}.kopf h2{font-size:28px}.gruppe{padding:44px 16px 4px}.kopf{flex-direction:column;gap:8px;margin-bottom:26px}.karton{padding:9% 6%;gap:14px}.weiter{padding:0 16px}.wege{grid-template-columns:1fr}.imhaus{padding:8px 16px 0}.imhaus figcaption{position:static;border-radius:0;background:var(--schwarz)}.schluss{padding:40px 16px 56px;flex-direction:column;align-items:flex-start}}
-</style>
+:root{--fisch-k:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f4efe7%22%20stroke-opacity%3D%220.07%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}</style>
 <noscript><style>html.wartet body{visibility:visible}[data-a]{opacity:1;transform:none}</style></noscript>
 <script>
 (function(){var d=document.documentElement,f=false;function zeig(){if(!f){f=true;d.classList.remove('wartet')}}setTimeout(zeig,2600);
@@ -76,74 +76,74 @@ Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})()
   <p class="lead">Seven coasters, each with a front and a back: two beer mats, the square ones for the pool table and the coffee, and the round ones for the Brekky, the Super Juices and the desserts.</p>
 </header>
 <section class="gruppe"><header class="kopf" data-a><h2>At the bar</h2><p>Under the beer, the espresso martini and the glass next to the pool table.</p></header><article class="stueck" id="bierdeckel" data-a>
-  <div class="karton"><div class="reihe"><img src="img/bierdeckel-vorn.webp?v=202611191820" width="1218" height="1218" alt="" decoding="sync" style="--w:48.17%"><img src="img/bierdeckel-hinten.webp?v=202611191820" width="1218" height="1218" alt="" decoding="sync" style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/bierdeckel-vorn.webp?v=202611192105" width="1218" height="1218" alt="" decoding="sync" style="--w:48.17%"><img src="img/bierdeckel-hinten.webp?v=202611192105" width="1218" height="1218" alt="" decoding="sync" style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Beer mat</h3>
     <p class="satz">In front the wordmark on black, on the back the ten draught beers from the menu with their strength.</p>
     <p class="wozu">Names and percentages come straight from the menu file. When a beer changes, only the list on the back changes.</p>
     <p class="format">round Ø 107 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-bierdeckel.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-bierdeckel.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="untersetzer-pool" data-a>
-  <div class="karton"><div class="reihe"><img src="img/untersetzer-pool-vorn.webp?v=202611191820" width="1056" height="1059" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-pool-hinten.webp?v=202611191820" width="1056" height="1056" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/untersetzer-pool-vorn.webp?v=202611192105" width="1056" height="1059" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-pool-hinten.webp?v=202611192105" width="1056" height="1056" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Coaster for the pool table</h3>
     <p class="satz">In front the ampersand from the wordmark on the red of the pool table, on the back the house’s own line about the cue.</p>
     <p class="wozu">For the tables around the pool table and the bar. The sentence is from the house’s Instagram post of September 2026.</p>
     <p class="format">square 93 × 93 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-pool.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-pool.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="bierdeckel-markt" data-a>
-  <div class="karton"><div class="reihe"><img src="img/bierdeckel-markt-vorn.webp?v=202611191820" width="1218" height="1218" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/bierdeckel-markt-hinten.webp?v=202611191820" width="1218" height="1218" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/bierdeckel-markt-vorn.webp?v=202611192105" width="1218" height="1218" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/bierdeckel-markt-hinten.webp?v=202611192105" width="1218" height="1218" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Beer mat for the Sunday market</h3>
     <p class="satz">In front the house’s own line about Sundays on palm green, on the back the Sunday Community Market «Coffee &amp; Thrift» with local vendors.</p>
     <p class="wozu">Without a date, so the mat works for every market.</p>
     <p class="format">round Ø 107 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-bierdeckel-markt.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-bierdeckel-markt.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section><section class="gruppe"><header class="kopf" data-a><h2>In the morning</h2><p>For the Brekky and the coffee.</p></header><article class="stueck" id="untersetzer-brekky" data-a>
-  <div class="karton"><div class="reihe"><img src="img/untersetzer-brekky-vorn.webp?v=202611191820" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-brekky-hinten.webp?v=202611191820" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/untersetzer-brekky-vorn.webp?v=202611192105" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-brekky-hinten.webp?v=202611192105" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Coaster for the Brekky</h3>
     <p class="satz">In front «Good mornings start here.» with the Brekky time, on the back the Bagel &amp; Coffee Combo for 350 PHP and Eggs your way with the eight extras.</p>
     <p class="wozu">For the tables in the morning, from 7:00 to 10:30. All items are from the house’s own posts.</p>
     <p class="format">round Ø 95 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-brekky.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-brekky.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="untersetzer-kaffee" data-a>
-  <div class="karton"><div class="reihe"><img src="img/untersetzer-kaffee-vorn.webp?v=202611191820" width="1056" height="1059" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-kaffee-hinten.webp?v=202611191820" width="1056" height="1056" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/untersetzer-kaffee-vorn.webp?v=202611192105" width="1056" height="1059" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-kaffee-hinten.webp?v=202611192105" width="1056" height="1056" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Coaster for the coffee</h3>
     <p class="satz">In front «Coffee, hot or iced.» on the brown of the coffee, on the back all twelve coffees from the menu.</p>
     <p class="wozu">Every coffee on the menu is available hot or iced, so the back lists only the names.</p>
     <p class="format">square 93 × 93 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-kaffee.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-kaffee.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section><section class="gruppe"><header class="kopf" data-a><h2>Juices and desserts</h2><p>For the Super Juices all day and for dessert.</p></header><article class="stueck" id="untersetzer-saft" data-a>
-  <div class="karton"><div class="reihe"><img src="img/untersetzer-saft-vorn.webp?v=202611191820" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-saft-hinten.webp?v=202611191820" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/untersetzer-saft-vorn.webp?v=202611192105" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-saft-hinten.webp?v=202611192105" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Coaster for the Super Juices</h3>
     <p class="satz">In front the six juice colours around «Super Juices», on the back the six Super Juices with what goes into them.</p>
     <p class="wozu">Juice names and ingredients come straight from the menu file, in its order.</p>
     <p class="format">round Ø 95 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-saft.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-saft.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="untersetzer-dessert" data-a>
-  <div class="karton"><div class="reihe"><img src="img/untersetzer-dessert-vorn.webp?v=202611191820" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-dessert-hinten.webp?v=202611191820" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/untersetzer-dessert-vorn.webp?v=202611192105" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/untersetzer-dessert-hinten.webp?v=202611192105" width="1080" height="1080" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Coaster for the desserts</h3>
     <p class="satz">In front «Save room for dessert. Always.» on red, on the back the four homemade desserts with their descriptions from the menu.</p>
     <p class="wozu">Goes with the table card: the same four desserts, the same words.</p>
     <p class="format">round Ø 95 mm · front and back</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-dessert.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-untersetzer-dessert.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section>
 <section class="weiter" data-a><h2>More for the house</h2><div class="wege"><a class="weg" href="../sticker/index.html"><span>Stickers</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../schilder/index.html"><span>Signs for the street</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../tisch/index.html"><span>On the table</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../../werkbank/index.html"><span>The workbench</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div></section>
@@ -151,6 +151,6 @@ Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})()
 <script>(function(){var z=[].slice.call(document.querySelectorAll('[data-a]'));if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){z.forEach(function(x){x.classList.add('da')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);x.target.classList.add('da')}})},{rootMargin:'0px 0px -6% 0px'});z.forEach(function(x){io.observe(x)});
 addEventListener('pageshow',function(ev){if(ev.persisted)z.forEach(function(x){x.classList.add('da')})});})();</script>
-<script src="../besuch.js?v=1795091481" defer></script>
+<script src="../besuch.js?v=1795094168" defer></script>
 </body>
 </html>

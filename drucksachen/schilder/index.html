@@ -8,7 +8,7 @@
 <link rel="icon" href="../zeichen/et-schwarz.svg" type="image/svg+xml">
 <link rel="preload" href="../schrift/dmserif.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:'DM Serif Display';src:url(../schrift/dmserif.woff2) format('woff2');font-weight:400;font-style:normal;font-display:block}@font-face{font-family:'Instrument Sans';src:url(../schrift/instrument.woff2) format('woff2');font-weight:400 600;font-style:normal;font-display:block}
-:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#8a8378;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
+:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#090807;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 html.wartet body{visibility:hidden}
@@ -34,7 +34,7 @@ img{display:block;max-width:100%;height:auto}
 .kopf h2{font:400 clamp(30px,3.2vw,44px)/1.05 'DM Serif Display',serif;margin:0;flex:none}
 .kopf p{margin:0;color:var(--grau);font-size:17px}
 .stueck{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:52px;align-items:center;margin:0 0 64px}
-.karton{background:var(--karton);border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
+.karton{background-color:var(--karton);background-image:var(--fisch-k);background-size:46px 46px;border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
 .reihe{display:flex;justify-content:center;align-items:center;gap:3.7%}
 .reihe img{display:block;height:auto;width:var(--w);filter:drop-shadow(0 10px 14px rgba(20,18,15,.3)) drop-shadow(0 2px 3px rgba(20,18,15,.24))}
 .karton.ohne .reihe img{filter:none}
@@ -60,7 +60,7 @@ img{display:block;max-width:100%;height:auto}
 @media (prefers-reduced-motion:reduce){[data-a]{opacity:1;transform:none;transition:none}}
 @media (max-width:900px){.stueck{grid-template-columns:1fr;gap:26px;margin-bottom:56px}.karton{min-height:0}.wege{grid-template-columns:repeat(2,minmax(0,1fr))}.imhaus.zwei{grid-template-columns:1fr}}
 @media (max-width:600px){body{font-size:16px}.leiste{padding:14px 16px}.leiste .logo{height:42px}.auftakt{padding:48px 16px 24px}.auftakt h1{font-size:clamp(40px,12vw,56px)}.text h3{font-size:26px}.kopf h2{font-size:28px}.gruppe{padding:44px 16px 4px}.kopf{flex-direction:column;gap:8px;margin-bottom:26px}.karton{padding:9% 6%;gap:14px}.weiter{padding:0 16px}.wege{grid-template-columns:1fr}.imhaus{padding:8px 16px 0}.imhaus figcaption{position:static;border-radius:0;background:var(--schwarz)}.schluss{padding:40px 16px 56px;flex-direction:column;align-items:flex-start}}
-</style>
+:root{--fisch-k:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f4efe7%22%20stroke-opacity%3D%220.07%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}</style>
 <noscript><style>html.wartet body{visibility:visible}[data-a]{opacity:1;transform:none}</style></noscript>
 <script>
 (function(){var d=document.documentElement,f=false;function zeig(){if(!f){f=true;d.classList.remove('wartet')}}setTimeout(zeig,2600);
@@ -76,74 +76,74 @@ Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})()
   <p class="lead">Two A-boards with four sides, three chalkboards in the size of the boards at the bar, a banner for the front and four posters.</p>
 </header>
 <section class="gruppe"><header class="kopf" data-a><h2>On the street</h2><p>Four sides for the A-board frame and the banner for the front.</p></header><article class="stueck" id="kundenstopper" data-a>
-  <div class="karton"><div class="reihe"><img src="img/kundenstopper-brekky.webp?v=202611191820" width="989" height="1400" alt="" decoding="sync" style="--w:48.17%"><img src="img/kundenstopper-screening.webp?v=202611191820" width="989" height="1400" alt="" decoding="sync" style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/kundenstopper-brekky.webp?v=202611192105" width="989" height="1400" alt="" decoding="sync" style="--w:48.17%"><img src="img/kundenstopper-spielplatz.webp?v=202611192105" width="989" height="1400" alt="" decoding="sync" style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>A-board for the street</h3>
-    <p class="satz">One side shows the Brekky Specials from 7:00 to 10:30 with the Bagel &amp; Coffee Combo for 350 PHP, the other side the live screening, here with the dates of the WSL Philippines Pro.</p>
-    <p class="wozu">For the next screening only the event and the dates change. The opening hours run along the foot of both sides.</p>
+    <p class="satz">One side shows the Brekky Specials from 7:00 to 10:30 with the Bagel &amp; Coffee Combo for 350 PHP, the other side the playground in the backyard with the house’s own line about grown-ups and little ones.</p>
+    <p class="wozu">The opening hours run along the foot of both sides.</p>
     <p class="format">A1, 594 × 841 mm · two sides for the frame</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kundenstopper.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kundenstopper.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="kundenstopper2" data-a>
-  <div class="karton"><div class="reihe"><img src="img/kundenstopper2-juices.webp?v=202611191820" width="989" height="1400" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/kundenstopper2-pool.webp?v=202611191820" width="989" height="1400" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/kundenstopper2-juices.webp?v=202611192105" width="989" height="1400" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/kundenstopper2-pool.webp?v=202611192105" width="989" height="1400" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Second A-board</h3>
     <p class="satz">One side the six Super Juices with what goes into them, «available all day, everyday», the other side the pool table with the house’s own line about the cue.</p>
     <p class="wozu">Fits the same frame as the first A-board, so the sides can be swapped through the day.</p>
     <p class="format">A1, 594 × 841 mm · two sides for the frame</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kundenstopper2.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kundenstopper2.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="banner" data-a>
-  <div class="karton"><div class="reihe"><img src="img/banner-banner.webp?v=202611191820" width="1400" height="420" alt="" decoding="async" loading=lazy style="--w:100.00%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/banner-banner.webp?v=202611192105" width="1400" height="420" alt="" decoding="async" loading=lazy style="--w:100.00%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Banner for the front</h3>
     <p class="satz">The wordmark next to «Your neighbourhood hangout» with the opening hours, for the street side of the house.</p>
     <p class="wozu">Printed on mesh or canvas with eyelets. The line is from the house’s Instagram profile.</p>
     <p class="format">2000 × 600 mm · for the railing or the wall</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-banner.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-banner.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section><section class="gruppe"><header class="kopf" data-a><h2>At the bar and at the door</h2><p>The chalkboards and the posters.</p></header><article class="stueck" id="kreidetafel" data-a>
-  <div class="karton"><div class="reihe"><img src="img/kreidetafel-tafel.webp?v=202611191820" width="796" height="1400" alt="" decoding="async" loading=lazy style="--w:40.73%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/kreidetafel-tafel.webp?v=202611192105" width="796" height="1400" alt="" decoding="async" loading=lazy style="--w:40.73%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Chalkboard</h3>
     <p class="satz">«Good mornings start here.» above «Build your own brekky: Eggs your way», three eggs on homemade sourdough and the eight extras, with the Brekky Specials at the foot.</p>
     <p class="wozu">To copy by hand with chalk or to print on chalkboard film. Every item is from the house’s November 2026 post.</p>
     <p class="format">500 × 880 mm · the size of the boards at the bar</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kreidetafel.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kreidetafel.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="kreidetafel2" data-a>
-  <div class="karton"><div class="reihe"><img src="img/kreidetafel2-juices.webp?v=202611191820" width="796" height="1400" alt="" decoding="async" loading=lazy style="--w:40.73%"><img src="img/kreidetafel2-on-tap.webp?v=202611191820" width="796" height="1400" alt="" decoding="async" loading=lazy style="--w:40.73%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/kreidetafel2-juices.webp?v=202611192105" width="796" height="1400" alt="" decoding="async" loading=lazy style="--w:40.73%"><img src="img/kreidetafel2-on-tap.webp?v=202611192105" width="796" height="1400" alt="" decoding="async" loading=lazy style="--w:40.73%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Two more chalkboards</h3>
     <p class="satz">One board with the six Super Juices and their ingredients, one with the ten beers on draught and their strength.</p>
     <p class="wozu">To copy by hand with chalk or to print on chalkboard film. Names and percentages come straight from the menu file.</p>
     <p class="format">500 × 880 mm · the size of the boards at the bar</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kreidetafel2.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-kreidetafel2.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="markt" data-a>
-  <div class="karton"><div class="reihe"><img src="img/markt-plakat.webp?v=202611191820" width="990" height="1400" alt="" decoding="async" loading=lazy style="--w:50.69%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/markt-plakat.webp?v=202611192105" width="990" height="1400" alt="" decoding="async" loading=lazy style="--w:50.69%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Poster for the Sunday Community Market</h3>
-    <p class="satz">Sunday Community Market «Coffee &amp; Thrift», with the date of the first market on November 15 from 8AM and the house’s own line about Sundays.</p>
-    <p class="wozu">For the door, the counter and the boards in Catangnan. For every new market only the date changes.</p>
+    <p class="satz">Sunday Community Market «Coffee &amp; Thrift» from 8AM with local vendors, and the house’s own line about Sundays.</p>
+    <p class="wozu">For the door, the counter and the boards in Catangnan. Without a date.</p>
     <p class="format">A3, 297 × 420 mm</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-markt.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-markt.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="plakate" data-a>
-  <div class="karton"><div class="reihe"><img src="img/plakate-juices.webp?v=202611191820" width="990" height="1400" alt="" decoding="async" loading=lazy style="--w:30.89%"><img src="img/plakate-playground.webp?v=202611191820" width="990" height="1400" alt="" decoding="async" loading=lazy style="--w:30.89%"><img src="img/plakate-pool.webp?v=202611191820" width="991" height="1400" alt="" decoding="async" loading=lazy style="--w:30.89%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/plakate-juices.webp?v=202611192105" width="990" height="1400" alt="" decoding="async" loading=lazy style="--w:30.89%"><img src="img/plakate-playground.webp?v=202611192105" width="990" height="1400" alt="" decoding="async" loading=lazy style="--w:30.89%"><img src="img/plakate-pool.webp?v=202611192105" width="991" height="1400" alt="" decoding="async" loading=lazy style="--w:30.89%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Three posters for the house</h3>
     <p class="satz">The Super Juices with the three juices clinking, the playground with the climbing wall, and the pool table, each with the house’s own line.</p>
     <p class="wozu">For the door, the counter and the boards in Catangnan. Photos and lines are the house’s own.</p>
     <p class="format">A3, 297 × 420 mm · three posters</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-plakate.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-plakate.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section>
 <section class="weiter" data-a><h2>More for the house</h2><div class="wege"><a class="weg" href="../sticker/index.html"><span>Stickers</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../untersetzer/index.html"><span>Beer mats and coasters</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../tisch/index.html"><span>On the table</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../../werkbank/index.html"><span>The workbench</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div></section>
@@ -151,6 +151,6 @@ Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})()
 <script>(function(){var z=[].slice.call(document.querySelectorAll('[data-a]'));if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){z.forEach(function(x){x.classList.add('da')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);x.target.classList.add('da')}})},{rootMargin:'0px 0px -6% 0px'});z.forEach(function(x){io.observe(x)});
 addEventListener('pageshow',function(ev){if(ev.persisted)z.forEach(function(x){x.classList.add('da')})});})();</script>
-<script src="../besuch.js?v=1795091481" defer></script>
+<script src="../besuch.js?v=1795094168" defer></script>
 </body>
 </html>

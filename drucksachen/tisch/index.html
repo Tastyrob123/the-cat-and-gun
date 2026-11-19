@@ -8,7 +8,7 @@
 <link rel="icon" href="../zeichen/et-schwarz.svg" type="image/svg+xml">
 <link rel="preload" href="../schrift/dmserif.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:'DM Serif Display';src:url(../schrift/dmserif.woff2) format('woff2');font-weight:400;font-style:normal;font-display:block}@font-face{font-family:'Instrument Sans';src:url(../schrift/instrument.woff2) format('woff2');font-weight:400 600;font-style:normal;font-display:block}
-:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#8a8378;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
+:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#090807;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 html.wartet body{visibility:hidden}
@@ -34,7 +34,7 @@ img{display:block;max-width:100%;height:auto}
 .kopf h2{font:400 clamp(30px,3.2vw,44px)/1.05 'DM Serif Display',serif;margin:0;flex:none}
 .kopf p{margin:0;color:var(--grau);font-size:17px}
 .stueck{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:52px;align-items:center;margin:0 0 64px}
-.karton{background:var(--karton);border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
+.karton{background-color:var(--karton);background-image:var(--fisch-k);background-size:46px 46px;border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
 .reihe{display:flex;justify-content:center;align-items:center;gap:3.7%}
 .reihe img{display:block;height:auto;width:var(--w);filter:drop-shadow(0 10px 14px rgba(20,18,15,.3)) drop-shadow(0 2px 3px rgba(20,18,15,.24))}
 .karton.ohne .reihe img{filter:none}
@@ -60,7 +60,7 @@ img{display:block;max-width:100%;height:auto}
 @media (prefers-reduced-motion:reduce){[data-a]{opacity:1;transform:none;transition:none}}
 @media (max-width:900px){.stueck{grid-template-columns:1fr;gap:26px;margin-bottom:56px}.karton{min-height:0}.wege{grid-template-columns:repeat(2,minmax(0,1fr))}.imhaus.zwei{grid-template-columns:1fr}}
 @media (max-width:600px){body{font-size:16px}.leiste{padding:14px 16px}.leiste .logo{height:42px}.auftakt{padding:48px 16px 24px}.auftakt h1{font-size:clamp(40px,12vw,56px)}.text h3{font-size:26px}.kopf h2{font-size:28px}.gruppe{padding:44px 16px 4px}.kopf{flex-direction:column;gap:8px;margin-bottom:26px}.karton{padding:9% 6%;gap:14px}.weiter{padding:0 16px}.wege{grid-template-columns:1fr}.imhaus{padding:8px 16px 0}.imhaus figcaption{position:static;border-radius:0;background:var(--schwarz)}.schluss{padding:40px 16px 56px;flex-direction:column;align-items:flex-start}}
-</style>
+:root{--fisch-k:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f4efe7%22%20stroke-opacity%3D%220.07%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}</style>
 <noscript><style>html.wartet body{visibility:visible}[data-a]{opacity:1;transform:none}</style></noscript>
 <script>
 (function(){var d=document.documentElement,f=false;function zeig(){if(!f){f=true;d.classList.remove('wartet')}}setTimeout(zeig,2600);
@@ -76,94 +76,94 @@ Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})()
   <p class="lead">Three table cards for the acrylic stand on the wooden block, a placemat with the bagels, a napkin, and for everything to go cup stickers, a coffee sleeve and twelve labels.</p>
 </header>
 <section class="gruppe"><header class="kopf" data-a><h2>At the table</h2><p>Six sides for the acrylic stand, the placemat and the napkin.</p></header><article class="stueck" id="aufsteller" data-a>
-  <div class="karton"><div class="reihe"><img src="img/aufsteller-desserts.webp?v=202611191820" width="892" height="1400" alt="" decoding="sync" style="--w:45.65%"><img src="img/aufsteller-wifi.webp?v=202611191820" width="893" height="1400" alt="" decoding="sync" style="--w:45.65%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/aufsteller-desserts.webp?v=202611192105" width="892" height="1400" alt="" decoding="sync" style="--w:45.65%"><img src="img/aufsteller-wifi.webp?v=202611192105" width="893" height="1400" alt="" decoding="sync" style="--w:45.65%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Table card</h3>
     <p class="satz">One side the four homemade desserts with their descriptions from the menu and «Save room for dessert. Always.», the other side the Wi-Fi, opening hours, phone and Instagram.</p>
     <p class="wozu">Network and password are left blank to write in. Made for the acrylic stand already on the tables.</p>
     <p class="format">102 × 160 mm · two sides, fits the acrylic stand on the wooden block</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-aufsteller.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-aufsteller.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="aufsteller2" data-a>
-  <div class="karton"><div class="reihe"><img src="img/aufsteller2-juices.webp?v=202611191820" width="892" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"><img src="img/aufsteller2-coffee.webp?v=202611191820" width="893" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/aufsteller2-juices.webp?v=202611192105" width="892" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"><img src="img/aufsteller2-coffee.webp?v=202611192105" width="893" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Second table card</h3>
     <p class="satz">One side the six Super Juices with their ingredients, the other side all twelve coffees, hot or iced.</p>
     <p class="wozu">Names and ingredients come straight from the menu file.</p>
     <p class="format">102 × 160 mm · two sides, fits the acrylic stand on the wooden block</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-aufsteller2.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-aufsteller2.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="aufsteller3" data-a>
-  <div class="karton"><div class="reihe"><img src="img/aufsteller3-on-tap.webp?v=202611191820" width="892" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"><img src="img/aufsteller3-brekky.webp?v=202611191820" width="893" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/aufsteller3-on-tap.webp?v=202611192105" width="892" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"><img src="img/aufsteller3-brekky.webp?v=202611192105" width="893" height="1400" alt="" decoding="async" loading=lazy style="--w:45.65%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Third table card</h3>
     <p class="satz">One side the ten beers on draught with their strength, the other side the Brekky Specials with the Bagel &amp; Coffee Combo for 350 PHP and Eggs your way.</p>
     <p class="wozu">For the bar tables in the evening and the morning tables. Every item is from the menu and the house’s own posts.</p>
     <p class="format">102 × 160 mm · two sides, fits the acrylic stand on the wooden block</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-aufsteller3.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-aufsteller3.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="tischset" data-a>
-  <div class="karton"><div class="reihe"><img src="img/tischset-bagels.webp?v=202611191820" width="1400" height="990" alt="" decoding="async" loading=lazy style="--w:100.00%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/tischset-bagels.webp?v=202611192105" width="1400" height="990" alt="" decoding="async" loading=lazy style="--w:100.00%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Placemat with the bagels</h3>
     <p class="satz">The twelve homemade bagels with their descriptions from the menu, next to «Good mornings start here.» and the Brekky time.</p>
     <p class="wozu">Without prices, because the menu prices are delivery prices. Names and descriptions come straight from the menu file.</p>
     <p class="format">A3 landscape, 420 × 297 mm · paper placemat</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-tischset.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-tischset.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="serviette" data-a>
-  <div class="karton"><div class="reihe"><img src="img/serviette-serviette.webp?v=202611191820" width="1399" height="1400" alt="" decoding="async" loading=lazy style="--w:71.61%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/serviette-serviette.webp?v=202611192105" width="1399" height="1400" alt="" decoding="async" loading=lazy style="--w:71.61%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Napkin</h3>
     <p class="satz">The ampersand as a pattern in pool table red, with the wordmark in the middle.</p>
     <p class="wozu">Folded in four, the wordmark lands on top.</p>
     <p class="format">330 × 330 mm · paper napkin, folded in four</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-serviette.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-serviette.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section><section class="gruppe"><header class="kopf" data-a><h2>To go</h2><p>For coffee, juices, kombucha and paper bags.</p></header><article class="stueck" id="becher" data-a>
-  <div class="karton ohne"><div class="reihe"><img src="img/becher-becher-schwarz.webp?v=202611191820" width="516" height="513" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/becher-becher-papier.webp?v=202611191820" width="516" height="513" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton ohne"><div class="reihe"><img src="img/becher-becher-schwarz.webp?v=202611192105" width="516" height="513" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/becher-becher-papier.webp?v=202611192105" width="516" height="513" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Cup stickers</h3>
     <p class="satz">For coffee and juice to go: the wordmark on black, and the ampersand with «Good mornings start here».</p>
     <p class="wozu">For cups, lids and paper bags. The print file carries the cut line.</p>
     <p class="format">round Ø 45 mm · two designs</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-becher-druckerei.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF for the printer</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-becher-druckerei.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF for the printer</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="becherhuelse" data-a>
-  <div class="karton"><div class="reihe"><img src="img/becherhuelse-huelse.webp?v=202611191820" width="1400" height="337" alt="" decoding="async" loading=lazy style="--w:100.00%"></div></div>
+  <div class="karton"><div class="reihe"><img src="img/becherhuelse-huelse.webp?v=202611192105" width="1400" height="337" alt="" decoding="async" loading=lazy style="--w:100.00%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Sleeve for coffee to go</h3>
     <p class="satz">The wordmark, «Good mornings start here.» and the ampersand on the brown of the coffee.</p>
     <p class="wozu">Printed flat and glued into a ring around the cup.</p>
     <p class="format">flat 250 × 60 mm · wraps a 12 oz cup</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-becherhuelse.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-becherhuelse.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="saft-etiketten" data-a>
-  <div class="karton ohne"><div class="reihe"><img src="img/saft-etiketten-melonberry.webp?v=202611191820" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/saft-etiketten-mango-tango.webp?v=202611191820" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/saft-etiketten-pineapple-punch.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/saft-etiketten-the-green-glow.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/saft-etiketten-turbo-tonic.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/saft-etiketten-the-purple-potion.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton ohne"><div class="reihe"><img src="img/saft-etiketten-melonberry.webp?v=202611192105" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/saft-etiketten-mango-tango.webp?v=202611192105" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/saft-etiketten-pineapple-punch.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/saft-etiketten-the-green-glow.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/saft-etiketten-turbo-tonic.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/saft-etiketten-the-purple-potion.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Labels for the Super Juices</h3>
     <p class="satz">One label for each Super Juice, in its own colour, with the name and what goes into it.</p>
     <p class="wozu">For bottles and cups to go. Names and ingredients come straight from the menu file.</p>
     <p class="format">84 × 30 mm · six labels</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-saft-etiketten-druckerei.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF for the printer</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-saft-etiketten-druckerei.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF for the printer</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article><article class="stueck" id="etiketten2" data-a>
-  <div class="karton ohne"><div class="reihe"><img src="img/etiketten2-fresh-juice.webp?v=202611191820" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/etiketten2-fresh-lemonade.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/etiketten2-fresh-shake.webp?v=202611191820" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/etiketten2-guava-kombucha.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/etiketten2-hibiscus--red-berries-kombucha.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/etiketten2-tropical-mango-kombucha.webp?v=202611191820" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
+  <div class="karton ohne"><div class="reihe"><img src="img/etiketten2-fresh-juice.webp?v=202611192105" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/etiketten2-fresh-lemonade.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/etiketten2-fresh-shake.webp?v=202611192105" width="954" height="345" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/etiketten2-guava-kombucha.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div><div class="reihe"><img src="img/etiketten2-hibiscus--red-berries-kombucha.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"><img src="img/etiketten2-tropical-mango-kombucha.webp?v=202611192105" width="954" height="342" alt="" decoding="async" loading=lazy style="--w:48.17%"></div></div>
   <div class="text">
     <p class="idee">Idea</p>
     <h3>Labels for fresh juices and kombucha</h3>
     <p class="satz">Fresh Juice, Fresh Shake and Fresh Lemonade with what goes into them, and the three kombuchas.</p>
     <p class="wozu">For bottles and cups to go. Names and descriptions come straight from the menu file.</p>
     <p class="format">84 × 30 mm · six labels</p>
-    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-etiketten2-druckerei.pdf?v=202611191820" target="_blank" rel="noopener"><span>PDF for the printer</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-etiketten2-druckerei.pdf?v=202611192105" target="_blank" rel="noopener"><span>PDF for the printer</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
   </div>
 </article></section>
 <section class="weiter" data-a><h2>More for the house</h2><div class="wege"><a class="weg" href="../sticker/index.html"><span>Stickers</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../untersetzer/index.html"><span>Beer mats and coasters</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../schilder/index.html"><span>Signs for the street</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="weg" href="../../werkbank/index.html"><span>The workbench</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div></section>
@@ -171,6 +171,6 @@ Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})()
 <script>(function(){var z=[].slice.call(document.querySelectorAll('[data-a]'));if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){z.forEach(function(x){x.classList.add('da')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);x.target.classList.add('da')}})},{rootMargin:'0px 0px -6% 0px'});z.forEach(function(x){io.observe(x)});
 addEventListener('pageshow',function(ev){if(ev.persisted)z.forEach(function(x){x.classList.add('da')})});})();</script>
-<script src="../besuch.js?v=1795091481" defer></script>
+<script src="../besuch.js?v=1795094168" defer></script>
 </body>
 </html>

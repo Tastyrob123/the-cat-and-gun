@@ -122,6 +122,10 @@
         /* Gruppen aus Fotos Wand an Wand: jedes Foto fliegt einzeln, die Gruppe selbst bleibt stehen */
         if (e.matches(GRUPPE)) return;
         if (e.closest('.k-liste') && e.tagName !== 'UL') return;
+        /* Lauftext rollt wie die Überschriften zeilenweise aus dem Schlitz (Bareiss Teil 3) */
+        /* Zwischentitel rollen ebenfalls aus dem Schlitz: so kreuzt kein Titel im Flug den Text darunter */
+        if (e.tagName === 'H3' && e.textContent.trim() && !e.children.length) { e.setAttribute('data-schlitz', ''); zeilen(e); return; }
+        if (e.tagName === 'P' && e.textContent.trim().length >= 30 && ![].some.call(e.children, function (k) { return k.tagName !== 'BR'; })) { e.setAttribute('data-schlitz', ''); zeilen(e); return; }
         e.setAttribute('data-r', (e.matches('.rahmen, figure') || (e.querySelector('img') && !e.matches('.karte,.tafel'))) ? 'b' : 't');
         var p = e.parentElement, i = 0;
         if (p && p.matches(GRUPPE)) i = [].indexOf.call(p.children, e);
@@ -158,7 +162,7 @@
     }
     /* Fotos: der Weg hängt am Scrollen (CSS view()), der Zoom startet, wenn das Foto am Rand erscheint, damit man ihn sieht.
        Texte und Knöpfe: kurz vor dem Rand, damit sie schon steigen, wenn sie sichtbar werden, statt erst im Abschnitt hochzuspringen. */
-    var ioB = beob('0px 0px 0px 0px'), ioT = beob('0px 0px 10% 0px');
+    var ioB = beob('0px 0px 0px 0px'), ioT = beob('0px 0px -7% 0px');   /* Texte erst, wenn sie im Bild sind: man sieht sie hochrollen (Robert 19.11.2026, 20:1x) */
     D.querySelectorAll('[data-r],[data-schlitz]').forEach(function (e) { if (e.classList.contains('da')) return; (e.getAttribute('data-r') === 'b' ? ioB : ioT).observe(e); });
   }
   if (ruhig) H.classList.add('ruhig');

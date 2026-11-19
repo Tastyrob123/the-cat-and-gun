@@ -109,9 +109,9 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
 .js .ruhig-b img,.js .fen img{scale:none}
 /* Wie Rivage und Carlton (Briefing 8.2, Robert 19.11.2026, 20:0x: «reingeschwebt und hochgezoomt … nicht erst hüpfen»): der Weg nach oben hängt am Scrollen
    und beginnt mit dem ersten Pixel am unteren Rand (view(), cover 0% bis cover 58vh), das Foto zoomt dabei in seinen Rahmen. Kein Puls (Korrektur 16.10.2026). */
-@keyframes cg-zug{from{translate:0 var(--weg,clamp(64px,6.2vw,104px))}}
+@keyframes cg-zug{from{transform:translateY(var(--weg,clamp(64px,6.2vw,104px)))}}
 @supports (animation-timeline:view()){
-  .js [data-r="b"],.js [data-r="b"].da{translate:none;scale:none;transition:none;animation:cg-zug cubic-bezier(.3,.3,.45,1) both;animation-duration:auto;animation-timeline:view();animation-range:cover 0% cover 58vh}
+  .js [data-r="b"],.js [data-r="b"].da{translate:none;scale:none;transition:none;animation:cg-zug cubic-bezier(.3,.3,.45,1) forwards;animation-duration:auto;animation-timeline:view();animation-range:cover 0% cover 58vh}
   .js [data-r] .rahmen img,.js .rahmen[data-r] img{scale:1.13;transition:scale 2.4s var(--ein)}
   .js .rahmen[data-r].da img,.js [data-r].da .rahmen img{scale:1.03}
 }
@@ -769,6 +769,9 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
   .fv-auf{grid-template-columns:1fr 1.1fr 1fr;align-items:center;column-gap:clamp(40px,5vw,90px)}
   .auf-k{order:0}
 }
+
+/* Tapete in jedem Kopf, dezent (Robert 19.11.2026, 21:00: «in allen Heroes … so eine dezente Tapete») */
+main>.auftakt,main>.skopf{background-image:var(--fisch-d);background-size:46px 46px}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
