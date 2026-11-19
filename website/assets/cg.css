@@ -71,6 +71,9 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
 .knopf.hell{--k-bg:#fbf8f3;--k-fg:var(--tinte);--k-kn:var(--tinte);--k-kf:var(--hell);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(90,60,30,.18),0 1px 2px rgba(40,25,10,.1),0 10px 22px -12px rgba(40,25,10,.4)}
 .knopf.holz{--k-bg:var(--holz);--k-fg:#fff8ef;--k-kn:#fff8ef;--k-kf:var(--holz-tief)}
 
+/* Handy: Knöpfe kompakter, damit zwei nebeneinander passen */
+@media (max-width:899px){.knopf{gap:10px;padding-left:18px;letter-spacing:.1em}.knoepfe{gap:10px}}
+
 /* ---------- Leiste: links das Hausschild (Wortmarke im feinen Rahmen wie am Haus), rechts eine schwarze Leiste mit den Seiten ---------- */
 .leiste{position:fixed;z-index:60;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;padding:12px var(--rand) 0;pointer-events:none;transition:transform .7s var(--ein)}
 .leiste.weg{transform:translateY(calc(-100% - 20px))}
@@ -78,7 +81,10 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
 .schild{display:block;width:62px;height:62px;padding:7px;background:var(--tinte);border-radius:6px;box-shadow:0 10px 24px -14px rgba(0,0,0,.6);transition:opacity .5s,transform .7s var(--ein)}
 .schild span{display:grid;place-items:center;width:100%;height:100%;border:1px solid rgba(244,239,231,.75);padding:5px;color:var(--hell)}
 .schild svg{width:100%;height:auto;display:block}
-.start .leiste:not(.unten) .schild{opacity:0;transform:translateY(-8px);pointer-events:none}
+.schild{transform-origin:0 0}
+/* Startseite: oben das Schild gross, kommt die Leiste nach dem Scrollen wieder, ist es klein (Robert 19.11.2026, 21:1x) */
+.start .leiste.oben .schild{transform:scale(1.42)}
+.start .auftakt{padding-top:118px!important}
 .nav{display:flex;align-items:center;gap:6px;height:52px;padding:0 6px 0 8px;border-radius:999px;background:rgba(21,18,15,.94);color:var(--hell);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 12px 26px -14px rgba(0,0,0,.6)}
 .nav a{display:none}
 .nav .menue-t{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px;border-radius:999px;font:400 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
@@ -407,6 +413,8 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
   .nav a:hover,.nav a.aktiv{background:rgba(255,255,255,.1)}
   .nav .menue-t{display:none}
   .schild{width:76px;height:76px;padding:8px}
+  .start .leiste.oben .schild{transform:scale(1.5)}
+  .start .auftakt{padding-top:150px!important}
 
   .auftakt{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto;column-gap:clamp(40px,5vw,96px);row-gap:28px;padding:118px var(--rand) calc(var(--ecke) + 30px)!important}
   .at-marke{grid-column:1;grid-row:1;align-self:end;width:min(100%,56svh*1.163)}

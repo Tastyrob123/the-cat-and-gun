@@ -199,6 +199,7 @@
       if (y < 80) leiste.classList.remove('weg');
       else if (d > 6) leiste.classList.add('weg');
       else if (d < -6) leiste.classList.remove('weg');
+      leiste.classList.toggle('oben', y < 80);
       if (auftakt) leiste.classList.toggle('unten', y > auftakt.offsetHeight * .72);
       H.classList.toggle('leiste-da', !leiste.classList.contains('weg') && y > 80);
       y0 = y; tick = false;
