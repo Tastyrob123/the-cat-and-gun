@@ -343,8 +343,8 @@ main>section:nth-child(1){z-index:1}main>section:nth-child(2){z-index:2}main>sec
 .posten .pn{font:400 clamp(1.15rem,1.5vw,1.35rem)/1.2 var(--titel)}
 .posten .pp{font:400 13px/1.6 var(--mono);color:var(--grau);white-space:nowrap}
 .posten .pd{grid-column:1/-1;font-size:15px;color:var(--grau);line-height:1.45}
-.posten .pm,.r-legende .pm{display:inline-block;font:400 10px/1 var(--mono);letter-spacing:.04em;text-decoration:none;border:1px solid currentColor;border-radius:999px;padding:3px 5px 2px;vertical-align:3px;opacity:.65;cursor:help}
-.r-notiz{margin-top:10px;font-size:14px;color:var(--grau);line-height:1.5}.r-notiz b{font:400 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-right:6px}
+.posten .pm,.r-legende .pm{display:inline-block;font:400 13px/1 var(--mono);letter-spacing:.02em;text-decoration:none;border:1px solid currentColor;border-radius:999px;padding:3px 5px 2px;vertical-align:3px;opacity:.65;cursor:help}
+.r-notiz{margin-top:10px;font-size:14px;color:var(--grau);line-height:1.5}.r-notiz b{font:400 13px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-right:6px}
 .r-legende{grid-column:1/-1;margin-top:8px;font-size:13px;color:var(--grau)}
 .hinweis{margin-top:14px;font-size:14.5px;color:var(--hell2)}
 
