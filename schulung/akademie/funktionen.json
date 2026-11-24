@@ -1,0 +1,874 @@
+{
+ "werkzeuge": [
+  {
+   "id": "maison",
+   "name": "Control panel",
+   "video": "a1",
+   "satz": "Every tool of The Cat & Gun opens from the control panel.",
+   "bereiche": [
+    {
+     "titel": "Greeting and house",
+     "satz": "The top of the page greets Julie and names the house.",
+     "punkte": [
+      "The greeting changes with the time of day: «Good morning, Julie.», «Good afternoon, Julie.» or «Good evening, Julie.».",
+      "The place, the address and the opening hours of the house stand next to it, read from the website.",
+      "The date is written in British English."
+     ],
+     "kapitel": 1.6
+    },
+    {
+     "titel": "One window per tool",
+     "satz": "Seven windows open the tools.",
+     "punkte": [
+      "Each window carries the name of a tool: Edit website, Menus & price lists, Inquiries & chat, Brand book, Brand book editor, Sticker editor and Print & feed.",
+      "Under each name stands what is waiting in that tool.",
+      "If a tool does not answer, the window shows a sentence without a number.",
+      "A tool that is not delivered yet shows «In progress».",
+      "A click on a window opens the tool."
+     ],
+     "kapitel": 8.48
+    },
+    {
+     "titel": "Today on the website",
+     "satz": "One line shows the visits of today.",
+     "punkte": [
+      "«Today … visits · … pages» shows the visits and pages viewed today.",
+      "«Open Visitors» opens the Visitors tool.",
+      "Without a number from Visitors, «–» stands in its place."
+     ],
+     "kapitel": 16.68
+    },
+    {
+     "titel": "The bar at the top",
+     "satz": "The bar at the top leads to every tool and comes back when you scroll up.",
+     "punkte": [
+      "«Control panel» brings you back to the top of the page.",
+      "The keys 1 to 8 open the tools.",
+      "«All pieces» shows every printed piece of the house.",
+      "«View website» opens the website.",
+      "«Guides» leads to the guides."
+     ],
+     "kapitel": 25.99
+    },
+    {
+     "titel": "A section per tool",
+     "satz": "Further down, each tool has its own section, «No. 1 of 8» to «No. 8 of 8».",
+     "punkte": [
+      "The section names what the tool is for in one line.",
+      "«How it works» explains in three lines what you do in the tool.",
+      "Where the tool gives them, its numbers stand in the section, for example «Sections» and «Pages» for Edit website.",
+      "The button at the end opens the tool, for example «Open Edit website».",
+      "The section of Print & feed also has «All pieces»."
+     ],
+     "kapitel": 38.12
+    },
+    {
+     "titel": "Visitors in numbers",
+     "satz": "The section of Visitors shows numbers of the website.",
+     "punkte": [
+      "It shows «Visits», «Pages viewed» and «Countries».",
+      "It says that visits are counted without cookies and never with names.",
+      "«Open Visitors» opens the tool."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Footer and help",
+     "satz": "The footer holds the details of the house and the way to help.",
+     "punkte": [
+      "The footer names the house, the address, the opening hours and the phone number.",
+      "«View website» opens the website.",
+      "If the control panel does not start, a page says so and offers «Reload».",
+      "A short tour in five steps shows the page."
+     ],
+     "kapitel": null
+    }
+   ]
+  },
+  {
+   "id": "bureau",
+   "name": "Edit website",
+   "video": "b",
+   "satz": "With «Edit website» you keep the website of The Cat & Gun up to date yourself: texts, photos, phone, address, opening hours and a notice for guests.",
+   "bereiche": [
+    {
+     "titel": "The Overview",
+     "satz": "The Overview is the start page of the tool.",
+     "punkte": [
+      "At the top it shows if something is waiting in the draft and when the website was last published.",
+      "Below that are the jobs that come up most often («Often used»).",
+      "At the bottom every page of the website stands as a card with a photo: Home, Menu, Super Juices, Playground, Pool & Bar and Visit.",
+      "A card leads to «Menus & price lists».",
+      "On the left are the same pages, plus «Phone, address & hours», «Times & prices», «Notice for guests», «Draft & compare» and «Earlier versions».",
+      "On the phone, «Sections» at the top opens this list."
+     ],
+     "kapitel": 14.7
+    },
+    {
+     "titel": "Change a text",
+     "satz": "Texts are changed right next to the page as guests see it.",
+     "punkte": [
+      "Choose a page. On the right is the page the way guests see it.",
+      "Click the text you want to change. A field opens on the left, and the page on the right changes as you type.",
+      "The search field shows only the lines with the word you type.",
+      "If the same text is on several pages, the field offers to change it in all spots.",
+      "«As built» brings back the original text.",
+      "A whole section can be hidden and shown again later.",
+      "The page can be shown the way guests see it on a phone.",
+      "Dishes, drinks and prices on the Menu page are locked here. You change them in «Menus & price lists»."
+     ],
+     "kapitel": 30.63
+    },
+    {
+     "titel": "Change a photo",
+     "satz": "Click a photo on the page to swap it.",
+     "punkte": [
+      "You can choose from all photos of the website.",
+      "«Upload» adds a new photo: at least 900 pixels wide, at most 25 MB, as JPG, PNG or WebP.",
+      "The tool makes the sizes for computer and phone.",
+      "Screen readers and search engines read the photo description. Write one sentence about what is in the photo."
+     ],
+     "kapitel": 36.13
+    },
+    {
+     "titel": "Phone, address & hours",
+     "satz": "Details that appear on many pages are kept in one place.",
+     "punkte": [
+      "«Phone, address & hours» lists every such detail, and how often and on how many pages it appears.",
+      "You change it once, and it is new everywhere, also in the link to call from a phone.",
+      "«Where exactly?» lists each spot.",
+      "Other times, sizes and durations are under «Times & prices».",
+      "Prices come from «Menus & price lists»."
+     ],
+     "kapitel": 68.03
+    },
+    {
+     "titel": "Notice for guests",
+     "satz": "A notice shows at the top of every page.",
+     "punkte": [
+      "Under «Notice for guests» you write one or two sentences, for example when you are closed for a day.",
+      "You can switch the notice on and off and add a link.",
+      "With a start and an end date, the notice shows and goes away by itself.",
+      "With empty dates, it shows from now on until you switch it off."
+     ],
+     "kapitel": 81.27
+    },
+    {
+     "titel": "Save, compare, publish",
+     "satz": "Nothing goes online by itself. What you save waits in the draft until you publish it.",
+     "punkte": [
+      "As long as something is not saved, the bar at the bottom says so and «Save» lights up.",
+      "After saving, a short message shows with «Before/After» and «Undo».",
+      "Shortcut: Cmd + S on a Mac, Ctrl + S on Windows.",
+      "«Draft & compare» shows every change with the old and the new wording. You can undo each one by itself.",
+      "«Publish» puts the draft on the website, texts and photos together, with a short note for the earlier versions.",
+      "When it is done, the bar says «Everything is published»."
+     ],
+     "kapitel": 61.97
+    },
+    {
+     "titel": "Earlier versions",
+     "satz": "Every publish is kept.",
+     "punkte": [
+      "«Earlier versions» lists every publish with its date and note.",
+      "«Restore» puts that version in the draft.",
+      "It goes on the website only when you publish again."
+     ],
+     "kapitel": 104.13
+    },
+    {
+     "titel": "When something goes wrong",
+     "satz": "Every message leads to help.",
+     "punkte": [
+      "Every message has a «What to do?» button. It opens the checks page.",
+      "The checks page works even when the tool itself does not start.",
+      "It tells you what is wrong and what to do.",
+      "What you saved is never lost.",
+      "«Short tour» shows where things are."
+     ],
+     "kapitel": null
+    }
+   ]
+  },
+  {
+   "id": "carte",
+   "name": "Menus & price lists",
+   "video": "c",
+   "satz": "Here you keep the dishes, drinks and prices of The Cat & Gun. The same data makes the PDF for the printer and the menu page of the website.",
+   "bereiche": [
+    {
+     "titel": "Three menus",
+     "satz": "Drinks, Coffee & juices and Kitchen, with the pages, sections and order of the printed menu.",
+     "punkte": [
+      "The menus are on the left. On the right the chosen menu shows as it will be printed.",
+      "On the phone the «Menu» button at the top right opens the side panel.",
+      "One click on an item shows it in the list and in the menu at the same height, and it flashes briefly.",
+      "The menu in the café is printed on boards. A change here is for the next printed menu and for the website. The boards stay as they are."
+     ],
+     "kapitel": 14.5
+    },
+    {
+     "titel": "Change an item («Simple»)",
+     "satz": "Double-click or the pencil opens an item.",
+     "punkte": [
+      "The item has a name, marks (V, R), a price, a second price line where there are two (Bagel, Focaccia) and a description.",
+      "«Show on the menu» is part of the item.",
+      "Prices are written like on the menu: «260», «220/GLASS» or «240 | 260».",
+      "On the right you see how it will look."
+     ],
+     "kapitel": 27.2
+    },
+    {
+     "titel": "Add, copy, move, hide",
+     "satz": "Each item has its own buttons.",
+     "punkte": [
+      "Copy makes a new item in the same format.",
+      "The eye hides an item for a while, the bin takes it away.",
+      "The arrows change the order.",
+      "«New item» and «Add item» add an item at the end of a section.",
+      "«New section» adds a section."
+     ],
+     "kapitel": 40.63
+    },
+    {
+     "titel": "Menu or website",
+     "satz": "A switch above the preview changes the view.",
+     "punkte": [
+      "«Menu» shows the menu as it will be printed.",
+      "«Website» shows the menu page with your draft, the way a guest will see it after publishing.",
+      "The «Website» view shows only the menu page."
+     ],
+     "kapitel": 47.47
+    },
+    {
+     "titel": "Design the menu («Advanced»)",
+     "satz": "In «Advanced» you design right on the menu.",
+     "punkte": [
+      "One click picks a text, an item, the logo or the footer.",
+      "Drag to move. The corners make a part bigger or smaller. It snaps to edges and centres, except with the Alt key held.",
+      "«Design» opens on the right: font, size, text style (normal or capitals), colour, alignment, line spacing, space before and after.",
+      "A double-click writes straight into the text.",
+      "«Menu data» shows the pages of the menu as text."
+     ],
+     "kapitel": 55.5
+    },
+    {
+     "titel": "Draft, check, publish",
+     "satz": "Every change is a draft first. PDF and website change only when you publish.",
+     "punkte": [
+      "«Save» puts the change in the draft. «Undo» takes it back.",
+      "Before, after shows each place on the left (today) and on the right (draft), new words marked.",
+      "Test PDF prints the draft to look at.",
+      "«Publish» prints the PDF, compares it word for word with the data, builds the menu page of the website and only then replaces the old version.",
+      "While the website is not online, the new menu page waits in the tool, ready to go online."
+     ],
+     "kapitel": 63.0
+    },
+    {
+     "titel": "Earlier versions and log",
+     "satz": "The last versions stay in the tool.",
+     "punkte": [
+      "«Earlier versions» keeps every published menu.",
+      "«Put in the draft» brings one back.",
+      "«Original menu» is the menu as it was built.",
+      "Until handover the log says «Team The Cat & Gun», without a login.",
+      "After handover a login comes first: kitchen and service change the menus and print test PDFs, the manager publishes, brings back earlier versions and switches the website link."
+     ],
+     "kapitel": 76.43
+    },
+    {
+     "titel": "Keys and messages",
+     "satz": "Shortcuts and keywords help with daily work.",
+     "punkte": [
+      "⌘Z undoes, ⌘⇧Z or ⌘Y redoes, also text you wrote.",
+      "⌘S saves, also while writing in the menu.",
+      "Arrow keys move the chosen part by 0.5 mm, with Shift by 5 mm. Delete hides the chosen part, Esc unselects.",
+      "Every message carries a keyword, for example KONFLIKT, PASST or VERBINDUNG. The guide says what each one means.",
+      "«Short tour» on the left under «Links» shows in four steps where things are."
+     ],
+     "kapitel": null
+    }
+   ]
+  },
+  {
+   "id": "reception",
+   "name": "Inquiries & chat",
+   "video": "d",
+   "satz": "Here you see what guests ask the chat on the website when it has no answer, and you give the chat new answers. The chat works without AI.",
+   "bereiche": [
+    {
+     "titel": "Overview",
+     "satz": "The start page shows what waits for you.",
+     "punkte": [
+      "At the top, three fields: new inquiries in the inbox, questions without answer, and how many answers the chat has.",
+      "Below, the latest inquiries and the latest questions.",
+      "On the left the sections: «Inbox», «Questions», «Your answers», «What the chat knows» and «How the chat works».",
+      "The number next to a section shows what waits for you. On the phone, «Sections» opens the list."
+     ],
+     "kapitel": 25.63
+    },
+    {
+     "titel": "Try the chat",
+     "satz": "You see the chat the way a guest will see it.",
+     "punkte": [
+      "«Try the chat» at the top right opens a window: four questions to tap, and the chat as a guest sees it on the phone.",
+      "Without an answer, the chat offers «Send to the house». Name and contact are optional.",
+      "A question sent from here lands in the inbox as an example.",
+      "«The chat as on the website» opens a test page with the published answers.",
+      "The chat is not built into the website yet."
+     ],
+     "kapitel": 9.5
+    },
+    {
+     "titel": "Inbox",
+     "satz": "Guests who send a question and leave a contact are in the inbox.",
+     "punkte": [
+      "«All», «New», «Open» and «Done» filter the list. Inquiries are sorted by day.",
+      "Opening an inquiry marks it as read. It shows the contact, when it was sent, from which page, and the question.",
+      "«Done» marks an inquiry as answered. «Open again» brings it back.",
+      "Inquiries are kept for twelve months. The bin button and «Delete for good» delete one when a guest asks for it."
+     ],
+     "kapitel": 46.77
+    },
+    {
+     "titel": "Personal reply",
+     "satz": "Under the question is a sheet with the logo for a reply to one guest.",
+     "punkte": [
+      "Write the reply into the sheet.",
+      "«Save reply» (Ctrl+S, on a Mac ⌘S) keeps it with the inquiry.",
+      "«Copy text» puts the reply on the clipboard. You send it yourself by phone, message or Instagram.",
+      "Nothing is sent from the tool, and no mail program opens.",
+      "If two windows save the same inquiry, the second gets «changed in another window». Nothing is overwritten."
+     ],
+     "kapitel": 51.83
+    },
+    {
+     "titel": "Questions and answers for every guest",
+     "satz": "Every question guests sent stands here by topic.",
+     "punkte": [
+      "«Questions» shows all questions, without answer, answers by you and with contact.",
+      "«Without answer» shows only the questions that still need you.",
+      "«Answer for every guest» opens a form for one answer that the chat gives to everyone after «Publish».",
+      "«Other ways guests ask» takes other words, with commas, for example toilet, restroom.",
+      "«Valid until» ends an answer on a date. Leave it empty for no end.",
+      "«Mark as done without answer» is for questions that do not fit the house.",
+      "Questions marked «Example» are samples until real ones come in."
+     ],
+     "kapitel": 31.93
+    },
+    {
+     "titel": "Your answers",
+     "satz": "All answers you wrote stand here as cards.",
+     "punkte": [
+      "«Change» on a card changes the answer.",
+      "«Remove» takes it out of the draft. After «Publish» the chat no longer knows it.",
+      "«Add an answer» gives the chat an answer before anyone asks."
+     ],
+     "kapitel": 59.0
+    },
+    {
+     "titel": "What the chat knows",
+     "satz": "The chat only answers with the lines here.",
+     "punkte": [
+      "Lines come from the website (opening hours, address, phone, menu, drinks, the pool table, the playground, events) and from you.",
+      "Tap a line, change the text, «Save». The website itself stays as it is.",
+      "«Hidden» stops the chat from saying a line. «As on the website» brings back the original line.",
+      "«Valid until» sets a date after which the chat no longer says the line.",
+      "«Something new» or «Add a line» adds a line with title, text, area and an optional photo.",
+      "The search field searches all areas.",
+      "«Ask, like a guest» answers from the draft. The question is not saved."
+     ],
+     "kapitel": 64.63
+    },
+    {
+     "titel": "Publish and earlier versions",
+     "satz": "Everything you save goes into the draft first. Guests see it only after «Publish».",
+     "punkte": [
+      "The bar at the bottom shows «Draft: n changes wait».",
+      "«Before, after» lists each change: new, changed, removed or hidden.",
+      "«Publish» opens a window with the list and a note. «Publish now» writes the answers file of the chat again. The website pages stay as they are.",
+      "When it is done: «It is online.» If something goes wrong, the old answers file stays.",
+      "«Earlier versions» lists each version with date, number of answers and note. «Original state» holds the answers from the website.",
+      "«Put in the draft» changes nothing on the website until you publish.",
+      "«How the chat works» shows the way of a question in eight steps, with the numbers of today."
+     ],
+     "kapitel": 84.17
+    }
+   ]
+  },
+  {
+   "id": "editor",
+   "name": "Brand book editor",
+   "video": "e",
+   "satz": "The Brand book editor holds the colours, fonts, photos, lines and elements of The Cat & Gun. The Sticker editor, Print & feed and the Brand book take them from here.",
+   "bereiche": [
+    {
+     "titel": "What is where",
+     "satz": "The editor is built like the other tools.",
+     "punkte": [
+      "On the left: «Colours», «Fonts», «Photos», «Lines» and «Logo & elements», below them «Earlier versions».",
+      "At the top right: the Control panel, the guide and «View website».",
+      "At the bottom the bar shows what is waiting, with «Before / after», «Save» and «Publish».",
+      "On the phone, «Sections» opens the list."
+     ],
+     "kapitel": 14.7
+    },
+    {
+     "titel": "Colours",
+     "satz": "All colours of the house stand in their palettes: Print, Super Juices and Website.",
+     "punkte": [
+      "Each card shows the name, what the colour is for and the value.",
+      "Tap a colour. In the window, choose a colour of the house or type HEX (like #A8232A) or R, G and B from 0 to 255.",
+      "«Use this colour» takes it. «Hide» takes the colour out of use; it stays under «Hidden».",
+      "«New colour» adds a colour to a palette.",
+      "Every element that wears a colour changes with it.",
+      "«Pipette» picks a colour on the screen in Chrome and Edge; in Safari and Firefox it opens the photos of the house.",
+      "«Colours from a photo» shows the main colours of a photo. «Offer as a new palette» keeps them. The photo is only read in your browser."
+     ],
+     "kapitel": 20.77
+    },
+    {
+     "titel": "More options",
+     "satz": "Switch «Mode» to «More options» for palettes, shades and contrast.",
+     "punkte": [
+      "«New palette» or «Edit palette»: give it a name and tick its colours.",
+      "«Tints and shades» shows four lighter and four darker steps. «Add all nine as a palette» keeps them.",
+      "«Contrast check» shows the value for text in one colour on another: 4.5 for normal text, 3 for large titles.",
+      "The mode stays as you left it, on this computer."
+     ],
+     "kapitel": 34.87
+    },
+    {
+     "titel": "Fonts",
+     "satz": "Four uses, each with one font: titles, running text, numbers and titles in print.",
+     "punkte": [
+      "Under «Which font for what», choose a font for a use. The sample changes at once.",
+      "Rename a font in its field. «Hide» takes a font out of use, as long as no use needs it.",
+      "«Add a font» uploads a font file (WOFF2, WOFF, TTF or OTF, up to 6 MB).",
+      "Under «More options» you choose which weights of a font may be used."
+     ],
+     "kapitel": 40.7
+    },
+    {
+     "titel": "Photos",
+     "satz": "The photos of the website, each with its title.",
+     "punkte": [
+      "Search with a word. «In use», «Added» and «Hidden» narrow the list.",
+      "Tap a photo to change its title, hide it or swap it.",
+      "Swapping hides the old photo. It stays under «Hidden».",
+      "«Add a photo» takes JPG, PNG or WebP, up to 25 MB, at least 900 pixels on the long side."
+     ],
+     "kapitel": 48.1
+    },
+    {
+     "titel": "Lines",
+     "satz": "Name, place, opening hours and the sentences of the house, as the design tools use them.",
+     "punkte": [
+      "Change the title or the text in its field. A counter shows the characters (5,000 is the most).",
+      "«New line» adds a line. «Hide» takes it out of use.",
+      "Under each line stands where it comes from.",
+      "A line may not stay empty."
+     ],
+     "kapitel": 53.93
+    },
+    {
+     "titel": "Logo & elements",
+     "satz": "The wordmark, the ampersand, the pool ball and the stickers. Each colour in them is a part.",
+     "punkte": [
+      "Tap an element. Its parts stand on the right, each with its house colour.",
+      "Choose another house colour for a part. The picture changes at once.",
+      "Under «More options», «Own value» gives a part a colour only in this element. «Back to the house colour» undoes it.",
+      "Rename or hide an element in the same window. New elements cannot be added here."
+     ],
+     "kapitel": 61.07
+    },
+    {
+     "titel": "Save, publish, earlier versions",
+     "satz": "Changes wait in a draft. Publishing puts them into every tool.",
+     "punkte": [
+      "«Save» keeps your changes in the draft. A note shows what was saved, with «Undo».",
+      "«Before / after» lists every change.",
+      "«Publish» shows the list once more, takes an optional note and asks you to confirm.",
+      "If someone saved in another window, the editor says so. Nothing is overwritten.",
+      "«Earlier versions»: «Bring into draft» puts a version back in the draft. «Original version» is the brand collection as built.",
+      "«Discard draft» brings back what is published.",
+      "Each note has «What to do?», which leads to the help in the guide."
+     ],
+     "kapitel": 72.73
+    }
+   ]
+  },
+  {
+   "id": "livre",
+   "name": "Brand book",
+   "video": "f",
+   "satz": "The Brand book is the brand of The Cat & Gun in one place: photos in the right size, logo files and colour values. It saves nothing and changes nothing.",
+   "bereiche": [
+    {
+     "titel": "Overview",
+     "satz": "Three parts for every day and the style guide.",
+     "punkte": [
+      "On the left: «Photos», «Logo & files» and «Colour check», below them the style guide.",
+      "At the top right: «Control panel», the guide and «View website».",
+      "At the bottom: the source of the photos, «Change» and all files of the brand at once.",
+      "On the phone, «Sections» opens the parts as a menu.",
+      "What you get lands on your computer."
+     ],
+     "kapitel": 15.8
+    },
+    {
+     "titel": "Photos",
+     "satz": "All photos of the house are under «Photos».",
+     "punkte": [
+      "Type into the search field, for example «pool», «juice» or «bagel».",
+      "Choose portrait or landscape.",
+      "Above the photos it says how many fit. «Reset filters» shows all again.",
+      "For an Instagram post, choose «Portrait»; then the least is cut away."
+     ],
+     "kapitel": 21.0
+    },
+    {
+     "titel": "The right size",
+     "satz": "A click on a photo opens it large, with four ready sizes.",
+     "punkte": [
+      "«Instagram post» is 1080 × 1350, «Story» 1080 × 1920. The crop appears in the picture.",
+      "Drag the frame to the part that should show. «Get» takes exactly this crop.",
+      "«Website» gets the photo with 2000 pixels on the longest side, «Print» in full size.",
+      "Two buttons open the photo in Print & feed.",
+      "If a photo is too small for a story, the file name says «upscaled»."
+     ],
+     "kapitel": 26.07
+    },
+    {
+     "titel": "Logo & files",
+     "satz": "Everything a designer or a print shop needs.",
+     "punkte": [
+      "The wordmark and the ampersand, each in black for light grounds and in white for dark grounds.",
+      "«SVG» stays sharp at any size. «PNG» has a clear background.",
+      "The herringbone pattern of the website comes as a tile.",
+      "«All files (ZIP)» gets everything at once, with the fonts.",
+      "The files are made from the brand book as it is published."
+     ],
+     "kapitel": 34.97
+    },
+    {
+     "titel": "Colour values",
+     "satz": "The colours stand with name and note: the print pieces, the six Super Juices and the website.",
+     "punkte": [
+      "Click a colour: the value (for example #A8232A for pool table red) is copied.",
+      "A click on the RGB line copies the RGB values.",
+      "Colours come as CSS, JSON or ASE (for InDesign and Illustrator), fonts as WOFF2 or one ZIP.",
+      "Each colour says where it comes from."
+     ],
+     "kapitel": 41.0
+    },
+    {
+     "titel": "Colour check",
+     "satz": "Check if the colours of a draft from a designer fit The Cat & Gun.",
+     "punkte": [
+      "Drag the draft into the field or press «Choose file»: JPG, PNG or WebP, up to 30 MB. For a PDF, save the first page as a picture.",
+      "Press «Measure». The colours are measured in the browser. Nothing is sent.",
+      "One sentence says how much of the draft is in the colours of the house. Each colour stands next to the closest house colour.",
+      "Colours that are not house colours come first, with a red line. Pure black is not a house colour.",
+      "«Copy as text» gives the result for an email. «Save result» saves it as a file.",
+      "The check measures colours only. It does not judge pictures or words."
+     ],
+     "kapitel": 47.93
+    },
+    {
+     "titel": "Style guide and changes",
+     "satz": "The style guide shows the brand page by page.",
+     "punkte": [
+      "Press «Style guide» on the left or on the overview.",
+      "At the top you jump to each page. «Save as PDF» saves it as a PDF.",
+      "Changes are made in the Brand book editor: «Change» at the bottom or «Change in the Brand book editor» above the photos.",
+      "After publishing there, the Brand book shows the new state right away in the same browser, otherwise within half a minute."
+     ],
+     "kapitel": null
+    }
+   ]
+  },
+  {
+   "id": "sticker",
+   "name": "Sticker editor",
+   "video": "g",
+   "satz": "With the Sticker editor you change the stickers of the house, design new ones and get print files. It works without AI.",
+   "bereiche": [
+    {
+     "titel": "All stickers",
+     "satz": "The overview shows the stickers of the house by area.",
+     "punkte": [
+      "«All stickers» shows every sticker. You can search and filter by area.",
+      "Favourites stand in front. A sticker can be moved to the front or to the back.",
+      "Each card says if the sticker is published, changed or not published yet.",
+      "The buttons on a card copy a sticker or get its PDF."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Quick changes",
+     "satz": "The tab «Quick» changes words and colours.",
+     "punkte": [
+      "Change the words of the sticker.",
+      "A colour changed here changes every part in that colour.",
+      "After a colour change, text that would vanish on the new ground turns black or paper."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Design",
+     "satz": "Click a part of the sticker to change it in the panel «Design».",
+     "punkte": [
+      "Words, font, size, capitals, letter spacing, colour and alignment.",
+      "Every part can take its own colour, for example the six dots in the Super Juices oval.",
+      "Colours come from the brand palette, as a value or with the pipette.",
+      "The pipette works anywhere on the screen in Chrome and Edge; in other browsers it works in the sticker and in uploaded photos.",
+      "Colours from an uploaded photo appear in every colour choice.",
+      "Drag to move, use the handles to resize or turn. Keys: ⌘Z, ⇧⌘Z, ⌘D and the arrow keys."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "More tools",
+     "satz": "«More tools» opens the advanced tools.",
+     "punkte": [
+      "Arc text, shapes and lines.",
+      "Position in millimetres, lining up and a grid.",
+      "Layers, hide and lock."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "A new sticker",
+     "satz": "New stickers start from a shape or a sticker of the house.",
+     "punkte": [
+      "«New sticker» starts from a shape: round, oval, square, strip or bubble.",
+      "Or copy a sticker of the house and change it.",
+      "«Brand elements» adds the pool ball, the wordmark or the ampersand.",
+      "«Already used» shows when a motif is already on a sticker."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Print check and print file",
+     "satz": "Before printing, the tool checks the sticker.",
+     "punkte": [
+      "«Print check» shows what to fix before printing (margin, resolution, missing text) and what is only a note. On the phone it is in the menu «Print».",
+      "«PDF for the printer» has 3 mm bleed, a cut line and the fonts embedded.",
+      "A sticker can also be downloaded as a picture or as the working file.",
+      "Characters the font does not have, such as emoji, are named by the print check and left out of the PDF."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Save, publish, print files",
+     "satz": "The bar at the bottom works like in the other tools.",
+     "punkte": [
+      "«Save» keeps changes in the draft. They are still there after reloading.",
+      "«Before, after» lists the changes. «Earlier versions» brings back an earlier state.",
+      "«Publish» makes the print files of the changed stickers.",
+      "The print files wait under «Print files» in the overview, ready to download. Print & feed reads them from there."
+     ],
+     "kapitel": null
+    }
+   ]
+  },
+  {
+   "id": "imprimerie",
+   "name": "Print & feed",
+   "video": "h",
+   "satz": "Print & feed makes signs, coasters, table cards, posters and Instagram posts from templates of the house, as PDF to print or as a picture. It works without AI.",
+   "bereiche": [
+    {
+     "titel": "Start page",
+     "satz": "The start page shows what you can make.",
+     "punkte": [
+      "It shows the areas of the house, notices, the Instagram feed and your own designs.",
+      "Templates come in kinds such as coasters, beer mats, signs, chalkboards, posters, table cards, labels, cups, placemat, napkin, cup sleeve, banner and Instagram.",
+      "The search field searches the templates.",
+      "«Blank page» starts an empty design."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "House pieces",
+     "satz": "The printed pieces of the house can be edited as documents.",
+     "punkte": [
+      "«House pieces» shows the pieces in groups.",
+      "The pieces of the house also stand first in each kind.",
+      "A changed piece is saved under «My designs».",
+      "«Work on a copy» and «Back to the original» stand under «Piece of the house»."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Design",
+     "satz": "A template opens in the editor.",
+     "punkte": [
+      "Click a text and change it.",
+      "The panel «Design» changes font, size and colour.",
+      "«Arrange» and position in millimetres place a part.",
+      "The toolbar adds text, a photo, a mark, a shape or a frame, and sets ground and pattern.",
+      "A design can have a back side and several pages.",
+      "Round formats such as beer mats and coasters have a round cut line."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Brand kit",
+     "satz": "The tab «Brand kit» holds the colours, fonts and elements of the Brand book editor.",
+     "punkte": [
+      "Elements such as the pool ball go into the design.",
+      "The parts of an element can be recoloured one by one.",
+      "Elements go into the PDF as vectors.",
+      "Changes from the Brand book editor arrive without reloading.",
+      "The views «Photos of the house», «Colours & fonts» and «Brand book» show the photos, colours, fonts and wordmark."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Instagram",
+     "satz": "Posts and stories are made in the same editor.",
+     "punkte": [
+      "«Phone preview and caption» shows the post on a phone, with a carousel.",
+      "Captions are written by hand, with the lines of the house.",
+      "A design is saved as a PNG picture for Instagram."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Print",
+     "satz": "Before printing, the tool checks the design.",
+     "punkte": [
+      "«Print check» shows what to fix before printing.",
+      "«Save for print» makes a PDF for the print shop with 3 mm bleed.",
+      "A photo with too low resolution gets a dpi warning.",
+      "The PDF names characters the font does not have."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "My designs and release",
+     "satz": "Your designs are kept in the browser.",
+     "punkte": [
+      "«My designs» holds your own designs.",
+      "«Release» publishes a design for the areas of the house. «Take back» withdraws it.",
+      "If two windows change the same design, the tool reports a conflict and saves the second version as a copy."
+     ],
+     "kapitel": null
+    }
+   ]
+  },
+  {
+   "id": "registre",
+   "name": "Visitors",
+   "video": "i",
+   "satz": "Visitors shows who visits the website: from which country and website guests come, on which device, and what they look at. Here you only read.",
+   "bereiche": [
+    {
+     "titel": "How Visitors is built",
+     "satz": "The sections stand on the left.",
+     "punkte": [
+      "«Overview», then «Visits», «Origin» and «Time» for the guests, «Pages», «Trend» and «On the way» for the website, last «How we count».",
+      "Under the title of each view you pick the period: 7, 30 or 90 days.",
+      "At the top: the Control panel, the guide and «View website». The bar at the bottom names the visits of today.",
+      "The first time, a sign offers a «Short tour». It opens again from the left side."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Overview",
+     "satz": "Four numbers and the visits per day.",
+     "punkte": [
+      "Visits (next to the period before), pages viewed, minutes per visit and how many guests were on the way.",
+      "Cloudflare counts visits and pages viewed. For the other two the real view shows «–» and «not counted by Cloudflare».",
+      "Move the mouse over a column: day and number of visits appear.",
+      "«Where guests come from» and «Viewed most» show the first places, with a link to the whole list."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Origin",
+     "satz": "Where guests come from.",
+     "punkte": [
+      "From the Philippines and from abroad, and the countries. Cloudflare tells the country.",
+      "«Came from» names the website that brought the guest: Instagram, Google, Google Maps, Facebook or TravelGO.",
+      "«Typed in directly» means the address was typed in, a bookmark or a link from a message.",
+      "«Device» tells mobile, tablet and computer apart."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Time",
+     "satz": "When visits start, in Siargao time.",
+     "punkte": [
+      "Four peaks: when most guests come, the busiest day, how many from 6PM and how many on weekends.",
+      "«At what time» shows 24 columns, one per hour.",
+      "«Weekday and hour» puts both together: the darker a field, the more visits."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Pages and trend",
+     "satz": "What is viewed and how visits develop.",
+     "punkte": [
+      "«Pages» lists every page of the website with its views, the most visited on top.",
+      "«Trend» puts the chosen period next to the period before.",
+      "«Next to the period before» compares visits, pages viewed and pages per visit, with the difference in percent.",
+      "«Week by week» sums up Monday to Sunday."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "On the way",
+     "satz": "A guest is on the way when they tap Call or open the directions.",
+     "punkte": [
+      "Cloudflare does not count these taps. The real view says «Taps are not counted.».",
+      "It shows how often the Visit page with the map was opened.",
+      "«See the pages» opens «Pages»."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "Test data",
+     "satz": "The tool has test data to show all views.",
+     "punkte": [
+      "«Show test data» switches to test data. Every view marks them as test data.",
+      "Only the test data have a list of single visits, the path through the website, places, browser language, time on a page and taps.",
+      "«Save as table» saves the visits as a table file (CSV)."
+     ],
+     "kapitel": null
+    },
+    {
+     "titel": "How we count",
+     "satz": "«How we count» lists what is counted and what is never counted.",
+     "punkte": [
+      "Cloudflare Web Analytics counts the page, the time, the country, the device and the name of the website the guest came from.",
+      "Never counted: names, emails and anything a guest types.",
+      "No cookies are set. The address of the connection is not used to follow a guest.",
+      "The privacy note of the website should name Cloudflare Web Analytics before it is switched on."
+     ],
+     "kapitel": null
+    }
+   ]
+  }
+ ],
+ "offen": [
+  "Edit website: Die Anleitung nennt den Knopf «As built», Video B zeigt «Back to original». Welche Beschriftung steht heute im Werkzeug?",
+  "Vorher/nachher ist je Werkzeug verschieden geschrieben («Before/After» in Edit website, «Before / after» im Brand book editor, «Before, after» in Inquiries & chat); für Menus & price lists und Sticker editor ist der genaue Wortlaut des Knopfs nicht belegt (Anleitung ohne «», Video sagt «Before and after»).",
+  "Frühere Fassung zurückholen heisst je Werkzeug anders («Restore», «Put in the draft», «Bring into draft»); für Menus & price lists nennt nur das Video «Put in the draft», die Anleitung keinen Knopf.",
+  "Control panel, Tafel Visitors: «Countries and cities of the visits» und «how long they stay». Laut Visitors-Anleitung zählt Cloudflare weder Ort noch Zeit auf einer Seite (nur Testdaten). Nicht übernommen.",
+  "Control panel, Tafel Inquiries & chat: «Guests can ask on every page of the website». Der Chat ist auf der Website noch nicht eingebaut. Nicht übernommen.",
+  "Kosten: Das Next-Steps-PDF (20.11.2026) nennt sechs Werkzeuge mit 0 PHP. Brand book editor, Sticker editor und Inquiries & chat stehen dort nicht. Für sie ist kein Betrag belegt.",
+  "Inquiries & chat: Anleitung sagt «by phone, message or Instagram», Video D «by WhatsApp, mail or Instagram». Testknopf heisst in der Anleitung «Ask, like a guest», im Video «Test a question», im STAND «Test the chat».",
+  "Brand book: Anleitung sagt «Two buttons open the photo in Print & feed», Video und STAND nennen «Design in Print & feed». Beschriftung der zwei Knöpfe offen.",
+  "Print & feed: Beschriftungen der Vorlagen-Filter (Art, Grösse, Bereich, Grund/Anlass) und der Werkzeugleiste sind nur auf Deutsch im Konzept belegt, nicht wörtlich. Keine Anleitung, kein Video.",
+  "Sticker editor: Video-Entwurf spricht von fünf Bereichen, STAND kennt die Stücke sticker bis sticker7 und zuletzt 36 Sticker (Entwurf wartet auf «Publish»). Anzahl Bereiche und Sticker weggelassen.",
+  "Sticker editor und Print & feed: keine englische Anleitung vorhanden, Inhalte nur aus STAND, Konzept und Video-Entwurf; Wortlaut einzelner Knöpfe vor Veröffentlichung im Werkzeug prüfen.",
+  "Menus & price lists: Desserts, Cookies, Chilled Drinks und das Bagel-Kombi stehen auf der Website, aber nicht im Werkzeug.",
+  "Control panel: «Guides» führt heute zur Fusszeile «The guides come with the tools.», nicht zur Academy. Die Sprungmarken der Leiste erscheinen erst ab rund 2500 px, «Today … pages» zeigt «–», Fusszeile «Email and phone: not given yet.»",
+  "Upload-Mindestmass: Edit website sagt «at least 900 pixels wide», Brand book editor «at least 900 pixels on the long side».",
+  "Menus & price lists: Wer nach der Übergabe «manager», «kitchen» und «service» ist und wie die Anmeldung läuft, ist nicht belegt.",
+  "Visitors: Wann Cloudflare Web Analytics eingeschaltet wird und wer den Datenschutzhinweis der Website ergänzt, ist offen."
+ ]
+}

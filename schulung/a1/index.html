@@ -1,0 +1,90 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontaktbogen A1 · The Cat &amp; Gun</title><style>
+@font-face{font-family:"Instrument Sans";src:url("../../drucksachen/schrift/instrument.woff2") format("woff2");font-weight:400 700;font-display:block}
+@font-face{font-family:"DM Serif Display";src:url("../../drucksachen/schrift/dmserif.woff2") format("woff2");font-display:block}
+:root{--tief:#15120f;--nacht:#211c18;--gold:#c99d70;--braun:#8a5634;--rot:#b5343a;--papier:#f5f1ea;--papier2:#ece5d9;--blatt:#fbf8f3;--tinte:#1d1915;--leise:#6c6157;--linie:#ddd3c4}
+*{box-sizing:border-box}
+html{background:var(--papier)}
+body{margin:0;color:var(--tinte);font:16px/1.6 "Instrument Sans",system-ui,sans-serif;background:var(--papier)}
+.kopf{background:var(--tief);color:var(--papier);padding:72px 24px 64px}
+.kopf__in,.inhalt{max-width:960px;margin:0 auto}
+.zier{font:500 13px/1 ui-monospace,"DM Mono",monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1{font:400 clamp(44px,7vw,96px)/1 "DM Serif Display",Georgia,serif;margin:18px 0 22px}
+.kopf p{font-size:20px;line-height:1.55;max-width:760px;margin:0;color:#e9e1d5}
+.inhalt{padding:56px 24px 96px}
+section{margin:0 0 64px}
+h2{font:400 40px/1.1 "DM Serif Display",Georgia,serif;margin:8px 0 18px}
+h3{font-size:20px;margin:32px 0 10px}
+p{margin:0 0 14px;max-width:780px}
+ul,ol{margin:0 0 14px;padding-left:22px;max-width:780px}
+li{margin:0 0 6px}
+.tafel{background:var(--blatt);border:1px solid var(--linie);border-radius:14px;padding:24px 26px;margin:0 0 18px}
+.tafel--dunkel{background:var(--nacht);color:var(--papier);border-color:var(--nacht)}
+.tafel--dunkel .zier{color:var(--gold)}
+.tafel--dunkel p,.tafel--dunkel li{color:#e9e1d5}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:0 0 8px}
+th{text-align:left;font:500 13px/1.3 ui-monospace,"DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--leise);padding:10px 12px;border-bottom:1px solid var(--linie)}
+td{vertical-align:top;padding:12px;border-bottom:1px solid var(--linie)}
+td:first-child{white-space:nowrap;font:500 14px/1.5 ui-monospace,"DM Mono",monospace;color:var(--braun);width:56px}
+td.t{font-weight:600;width:230px}
+td.l{white-space:nowrap;color:var(--leise);width:70px}
+.grund{display:inline-block;font:500 13px/1 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:var(--tief);padding:4px 7px;border-radius:5px;margin-left:6px;vertical-align:2px}
+.kap{border-top:2px solid var(--tinte);padding-top:22px;margin-top:40px}
+.kap__k{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.kap__k span{font:500 13px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--leise)}
+.frage{border-left:3px solid var(--rot);padding:4px 0 4px 18px;margin:0 0 22px}
+.frage b{display:block;margin-bottom:4px}
+code{font:14px ui-monospace,monospace;background:var(--papier2);padding:1px 5px;border-radius:4px}
+.ablauf li{margin-bottom:10px}
+@media (max-width:700px){
+  .kopf{padding:48px 16px 40px}.kopf p{font-size:18px}.inhalt{padding:40px 16px 72px}
+  h2{font-size:32px}
+  table,tbody,tr,td{display:block;width:100%!important}
+  thead{display:none}
+  tr{border-bottom:1px solid var(--linie);padding:10px 0}
+  td{border:0;padding:2px 0;white-space:normal!important}
+}
+.auf{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.auf.da{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.auf{opacity:1;transform:none;transition:none}}
+
+figure.schritt{margin:0 0 56px}
+figure.schritt img{display:block;width:100%;height:auto;border-radius:14px}
+figure.schritt figcaption{display:flex;gap:24px;flex-wrap:wrap;align-items:baseline;margin-top:14px;font-size:15px;color:var(--leise)}
+figure.schritt figcaption b{color:var(--tinte);font-size:17px}
+.ok{color:#3c7a4a;font-weight:600}
+</style>
+<noscript><style>.auf{opacity:1;transform:none}</style></noscript></head><body>
+<header class="kopf"><div class="kopf__in"><div class="zier">Guides · Video A1 · Kontaktbogen · Stand 24.11.2026</div>
+<h1>The control panel</h1>
+<p>Jeder Schritt von A1 als Standbild, so wie er im Video steht: Überschrift und Satz über dem Laptop, im Bildschirm das Control panel mit dem Lichtrahmen. Der Rahmen ist am Element gemessen und für jeden Schritt geprüft: höchstens 2 px Abweichung, ganz im Bild, kein Stück angeschnitten. Das Video steht direkt darunter.</p></div></header>
+<main class="inhalt">
+<section><div class="zier">Video A1 · 0:39 · 16:9</div><h2>Das Video</h2>
+<video src="a1-control-panel.mp4" poster="poster-ut.jpg" controls playsinline preload="auto" width="1920" height="1080" style="display:block;width:100%;height:auto;border-radius:14px;background:#15120f"></video>
+<p style="margin-top:14px"><b>Mit Untertiteln (24.11.2026):</b> Der erklärende Satz läuft im Bildschirm direkt am gerahmten Stück; die Wörter steigen einzeln und im Fluss hoch. Oben steht nur noch die Überschrift. Weiter geht es, sobald der Satz steht. Kein Untertitel liegt über einem Rahmen, das prüft die Aufnahme in jedem Schritt.</p>
+<p style="margin-top:14px">Jeder Lichtrahmen wurde auch in der laufenden Aufnahme in der Mitte seiner Lesezeit noch einmal am Element gemessen: Abweichung 0 px in allen sieben Schritten. Musik leise (derselbe Titel wie im Tasty-Reel), keine Stimme.</p></section>
+<section><div class="zier">Im Video dazu</div><h2>Ablauf</h2>
+<p>Die Überschrift kommt Wort für Wort, das letzte Wort bleibt grau, bis der Satz steht; der Laptop steigt ein Stück auf und blendet ein. Zwischen den Schritten blendet der Rahmen aus, die Seite scrollt ruhig, der Zeiger gleitet langsam zum nächsten Stück, dann blendet der Rahmen dort ein. Am Ende «Next guide: Save, check, publish, go back.»</p></section>
+<section><div class="zier">Sieben Schritte</div><h2>Die Standbilder</h2>
+<figure class="schritt"><img src="bild-01.jpg" alt="Schritt 1: This is your control panel." width="1920" height="1080" decoding="sync">
+<figcaption><b>1 · This is your control panel.</b><span>Ziel <code>.m-f5__ort, .m-f5__titel, .m-f5__gruss, .m-f5__datum</code></span><span>Rahmen 56, 173 bis 1384, 444 px</span><span class="ok">✓ geprüft</span></figcaption></figure><figure class="schritt"><img src="bild-02.jpg" alt="Schritt 2: One window per tool." width="1920" height="1080" decoding="sync">
+<figcaption><b>2 · One window per tool.</b><span>Ziel <code>.m-f5__reihe .m-f5__t</code></span><span>Rahmen 16, 654 bis 1424, 842 px</span><span class="ok">✓ geprüft</span></figcaption></figure><figure class="schritt"><img src="bild-03.jpg" alt="Schritt 3: Today on the website." width="1920" height="1080" decoding="sync">
+<figcaption><b>3 · Today on the website.</b><span>Ziel <code>.m-f5__zeile</code></span><span>Rahmen 498, 446 bis 942, 520 px</span><span class="ok">✓ geprüft</span></figcaption></figure><figure class="schritt"><img src="bild-04.jpg" alt="Schritt 4: Back to the top." width="1920" height="1080" decoding="sync">
+<figcaption><b>4 · Back to the top.</b><span>Ziel <code>.m-insel</code></span><span>Rahmen 442, 6 bis 770, 84 px</span><span class="ok">✓ geprüft</span></figcaption></figure><figure class="schritt"><img src="bild-05.jpg" alt="Schritt 5: Each tool has a section." width="1920" height="1080" decoding="sync">
+<figcaption><b>5 · Each tool has a section.</b><span>Ziel <code>#bureau .m-saal__kopf</code></span><span>Rahmen 300, 160 bis 1140, 356 px</span><span class="ok">✓ geprüft</span></figcaption></figure><figure class="schritt"><img src="bild-06.jpg" alt="Schritt 6: How it works." width="1920" height="1080" decoding="sync">
+<figcaption><b>6 · How it works.</b><span>Ziel <code>#bureau .m-tafel</code></span><span>Rahmen 875, 60 bis 1364, 816 px</span><span class="ok">✓ geprüft</span></figcaption></figure><figure class="schritt"><img src="bild-07.jpg" alt="Schritt 7: All pieces and the website." width="1920" height="1080" decoding="sync">
+<figcaption><b>7 · All pieces and the website.</b><span>Ziel <code>.m-oben__rechts</code></span><span>Rahmen 1010, 12 bis 1384, 78 px</span><span class="ok">✓ geprüft</span></figcaption></figure>
+</section>
+<section><div class="zier">Gefunden beim Aufnehmen</div><h2>Zwei Punkte</h2>
+<ul><li>Die acht Sprungmarken in der Leiste oben zeigt das Control panel erst ab rund 2500 px Breite. Auf Julies Laptop sieht sie nur «Control panel». Schritt 4 sagt deshalb nur, was sie sieht. Der Punkt steht im Konzept bei «Vor der ersten Aufnahme».</li>
+<li>Die Kamera-Aussparung des MacBooks lag über der Leiste. Oben im Bildschirm steht jetzt ein dunkler Streifen wie die Menüleiste am echten Mac, die Seite beginnt darunter.</li></ul></section>
+</main>
+<script>
+(function(){var el=[].slice.call(document.querySelectorAll('.inhalt section, .kap, .schritt'));
+el.forEach(function(e){e.classList.add('auf');});
+if(!('IntersectionObserver' in window)){el.forEach(function(e){e.classList.add('da');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('da');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+el.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add('da');else io.observe(e);});})();
+</script>
+<script src="besuch.js?v=1795531253" defer></script>
+</body></html>

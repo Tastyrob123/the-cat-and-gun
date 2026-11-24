@@ -1,0 +1,794 @@
+{
+  "_hinweis": "Daten der Academy. Ein neues Video: beim Eintrag status auf \"fertig\" setzen, video, poster und zeitplan eintragen, dann python3 bau.py. Wege relativ zu schulung/akademie/.",
+  "stand": "24 November 2026",
+  "kurse": [
+    {
+      "id": "start",
+      "titel": "Start here",
+      "satz": "Three short videos on the control panel and on the way every tool saves, checks and publishes.",
+      "videos": [
+        "a1",
+        "a2",
+        "a3"
+      ]
+    },
+    {
+      "id": "werkzeuge",
+      "titel": "The tools",
+      "satz": "One video per tool, in the order of the toolbar. Each video shows every function of the tool once.",
+      "videos": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i"
+      ]
+    }
+  ],
+  "videos": {
+    "a1": {
+      "code": "A1",
+      "titel": "The control panel",
+      "status": "fertig",
+      "video": "../a1/a1-control-panel.mp4",
+      "poster": "../a1/poster-ut.jpg",
+      "zeitplan": "../_bau/film-a1-ut/zeitplan.json",
+      "satz": "Every tool of The Cat & Gun opens from the control panel. The video shows the seven windows, the visits of today, the bar at the top and the section of each tool."
+    },
+    "a2": {
+      "code": "A2",
+      "titel": "Save, check, publish, go back",
+      "status": "fertig",
+      "video": "../a2/a2-save-publish.mp4",
+      "poster": "../a2/poster-ut.jpg",
+      "zeitplan": "../_bau/film-a2-ut/zeitplan.json",
+      "satz": "The bar at the bottom, Save, Undo, Before and after, Publish with a note and Earlier versions. Edit website, Menus & price lists, Brand book editor and Sticker editor use the same bar."
+    },
+    "a3": {
+      "code": "A3",
+      "titel": "One brand for all tools",
+      "status": "fertig",
+      "laenge": "about 1:00",
+      "bild": "../../drucksachen/billard/img/kugeln-acht.webp",
+      "bildart": "stueck",
+      "plan": "The brand in the house: wordmark, billiard ball, stickers. A colour is changed in the Brand book editor and published, then the same colour appears in the Sticker editor, in Print & feed and in the Brand book. What the Brand book editor keeps and which tools read it.",
+      "video": "../a3/a3-one-brand.mp4",
+      "poster": "../a3/poster.jpg",
+      "zeitplan": "../_bau/film-a3-ut/zeitplan.json",
+      "satz": "A colour is changed in the Brand book editor and published. Then the Sticker editor, Print & feed and the Brand book show the new colour. The change in the video is an example in a copy."
+    },
+    "b": {
+      "code": "B",
+      "titel": "Edit website",
+      "status": "fertig",
+      "video": "../b/edit-website-komplett.mp4",
+      "poster": "../b/poster.jpg",
+      "zeitplan": "../_bau/film-ws-ut/zeitplan.json",
+      "satz": "Texts, photos, opening hours and a notice for guests on the six pages of the website. Nothing goes online before you publish it."
+    },
+    "c": {
+      "code": "C",
+      "titel": "Menus & price lists",
+      "status": "fertig",
+      "video": "../c/menus-komplett.mp4",
+      "poster": "../c/poster.jpg",
+      "zeitplan": "../_bau/film-menus-ut/zeitplan.json",
+      "satz": "Drinks, coffee and juices, kitchen: one list makes the printed menu as a PDF and the menu page of the website."
+    },
+    "d": {
+      "code": "D",
+      "titel": "Inquiries & chat",
+      "status": "fertig",
+      "video": "../d/inquiries-komplett.mp4",
+      "poster": "../d/poster.jpg",
+      "zeitplan": "../_bau/film-chat-ut/zeitplan.json",
+      "satz": "Guests will ask the chat on the website, you give the answers. Here you see what they asked and what the chat knows."
+    },
+    "e": {
+      "code": "E",
+      "titel": "Brand book editor",
+      "status": "fertig",
+      "laenge": "about 1:55",
+      "bild": "../../drucksachen/sticker/img/haus-sticker.webp",
+      "bildart": "foto",
+      "plan": "The brand on real pieces (sticker, billiard ball, menu), then the tool. Colours with the colour window, HEX, eyedropper and «Colours from a photo»; in «More options» palettes, shades and «Contrast check». Fonts with their four roles and «Add a font». Adding and changing photos, changing lines. «Logo & elements»: every part in its colour. Save, Publish, Earlier versions.",
+      "video": "../e/brand-book-editor-komplett.mp4",
+      "poster": "../e/poster.jpg",
+      "zeitplan": "../_bau/film-editor-ut/zeitplan.json",
+      "satz": "Colours, fonts, photos, lines and the logo with its elements. What you publish here shows up in the Brand book, the Sticker editor and Print & feed."
+    },
+    "f": {
+      "code": "F",
+      "titel": "Brand book",
+      "status": "fertig",
+      "laenge": "about 1:35",
+      "bild": "../../drucksachen/sticker/img/sticker-wortmarke.webp",
+      "bildart": "stueck",
+      "plan": "What it is for: a photo for Instagram, the logo for the print shop. Photos with search and filter, a photo in the right size with crop and «Get», «Design in Print & feed», logo and marks as SVG and PNG, colours as CSS, JSON and ASE, fonts, «All files (ZIP)», «Colour check» for a design made elsewhere, the Style guide with «Save as PDF».",
+      "video": "../f/brand-book-komplett.mp4",
+      "poster": "../f/poster.jpg",
+      "zeitplan": "../_bau/film-buch-ut/zeitplan.json",
+      "satz": "Photos in the right size, the logo as SVG and PNG, the colours and fonts, a colour check for a design made elsewhere, and the style guide as PDF."
+    },
+    "g": {
+      "code": "G",
+      "titel": "Sticker editor",
+      "status": "fertig",
+      "laenge": "about 2:15",
+      "bild": "../../website/assets/bild/b16-800.webp",
+      "bildart": "foto",
+      "plan": "The stickers of the house, printed and on things, then the tool. Areas and «All stickers» with favourites and status, the tab «Quick» for words and colours, the panel «Design» with font, size, letter spacing, colour, curved text, eyedropper and colours from a photo, «More tools» with position in mm, align, layers, lock and grid, «New sticker» from a shape or a template, «Brand elements», «Print check», «PDF for the printer», «Print files».",
+      "zeitplan": "../_bau/film-sticker-ut/zeitplan.json",
+      "video": "../g/sticker-editor-komplett.mp4",
+      "poster": "../g/poster.jpg",
+      "satz": "The stickers of the house: change words and colours, design new stickers and get the files for the printer."
+    },
+    "h": {
+      "code": "H",
+      "titel": "Print & feed",
+      "status": "fertig",
+      "laenge": "about 2:20",
+      "bild": "../../drucksachen/untersetzer/img/haus-bier.webp",
+      "bildart": "foto",
+      "plan": "What comes out of it: beer mat, board, notice, Instagram post, then the tool. The start page with areas, notices, Instagram and your own designs, finding a template by type, size, area and occasion, changing a text, the panel «Design» with font, size, colour, «Arrange» and position in mm, the toolbar with text, photo, mark, shape and frame, «Brand kit», background and pattern, back and pages, «Phone preview and caption» with carousel, «Print check» and «Save for print», «My designs» and «Release for areas».",
+      "zeitplan": "../_bau/film-print-ut/zeitplan.json",
+      "video": "../h/print-feed-komplett.mp4",
+      "poster": "../h/poster.jpg",
+      "satz": "Templates for coasters, beer mats, signs, posters and Instagram posts, as PDFs for the printer and as images."
+    },
+    "i": {
+      "code": "I",
+      "titel": "Visitors",
+      "status": "fertig",
+      "laenge": "about 1:40",
+      "bild": "../../website/assets/bild/b31-800.webp",
+      "bildart": "foto",
+      "plan": "The website from outside: visitors who open it, then the tool. Period of 7, 30 or 90 days, Visits, Pages viewed, Time per visit, On the way, where guests come from and how they found the website, phone or computer, one visit step by step, Origin, Time, Pages, Trend, the way from a visit to a call, «Save as table», «How we count» (no cookies, no names). Shown with the band «Test data».",
+      "video": "../i/visitors-komplett.mp4",
+      "poster": "../i/poster.jpg",
+      "zeitplan": "../_bau/film-besuche-ut/zeitplan.json",
+      "satz": "Where guests come from and what they read on the website, for 7, 30 or 90 days, without cookies and without names."
+    }
+  },
+  "lektionen": [
+    {
+      "id": "website",
+      "nr": "01",
+      "titel": "How the website is built",
+      "satz": "Six pages, made from finished files, with the photos, sentences and menu of The Cat & Gun.",
+      "bild": "../../website/assets/bild/b24-800.webp",
+      "abschnitte": [
+        {
+          "titel": "Six pages",
+          "laptop": "../../drucksachen/img/welt/web-rechner.webp",
+          "text": [
+            "The website has six pages. Every page works on a phone as well as on a computer."
+          ],
+          "seiten": [
+            [
+              "Home",
+              "Brekky Specials, the kitchen, the Super Juices, the playground, the pool table, the beers on tap, the Sunday Community Market and what is coming up."
+            ],
+            [
+              "Menu",
+              "The whole menu in PHP: Brekky from 7AM, Kitchen, Juices and coffee, Beer and Bar."
+            ],
+            [
+              "Super Juices",
+              "The juices on the menu, coffee hot or iced, and kombucha."
+            ],
+            [
+              "Playground",
+              "The backyard for children and the Sunday Community Market."
+            ],
+            [
+              "Pool & Bar",
+              "The pool table, ten beers on draught, espresso martini at the bar and live screenings."
+            ],
+            [
+              "Visit",
+              "Opening hours, address and phone."
+            ]
+          ]
+        },
+        {
+          "titel": "What it is made of",
+          "text": [
+            "There is no website builder and no plugin. Every line is written for The Cat & Gun.",
+            "The website consists of finished files. When a guest opens a page, no program runs and no database is asked. There is no login on the pages that could be attacked.",
+            "Every photo comes in four sizes. Each device loads only the size it needs, so the pages also open on slow mobile data.",
+            "Opening hours, address, phone and menu sit in the code in a form that Google and AI assistants can read."
+          ]
+        },
+        {
+          "titel": "Who changes what",
+          "text": [
+            "Two tools change the website. Each part of a page belongs to exactly one of them."
+          ],
+          "liste": [
+            "Edit website: texts, photos, phone, address, opening hours, times and sizes, and the notice for guests on top of every page.",
+            "Menus & price lists: every dish, drink and price of the menu, and the Menu page of the website. In Edit website, dishes, drinks and prices are visible but locked, with a way to Menus & price lists.",
+            "Inquiries & chat: the answers of the chat. The chat is not on the website yet."
+          ]
+        },
+        {
+          "titel": "Where it is today",
+          "text": [
+            "Today the website opens at tastyrob123.github.io/the-cat-and-gun/website. Once you have bought the domain, Tasty Studios connects the website to it, and the same pages run under your own address."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zusammenhang",
+      "nr": "02",
+      "titel": "How the website and the tools fit together",
+      "satz": "Each fact is kept in one place. Every change waits in a draft until you publish it.",
+      "bild": "../../website/assets/bild/b09-800.webp",
+      "abschnitte": [
+        {
+          "titel": "Each fact in one place",
+          "text": [
+            "Phone, address and opening hours are kept once, in Edit website. Change them there and every page follows, including every link to call the house.",
+            "Every dish and price is kept once, in Menus & price lists. When you publish, the tool sets the PDF for the next printed menu, checks the PDF word by word against your list and builds the menu page of the website from the same list."
+          ],
+          "schema": "eine-quelle"
+        },
+        {
+          "titel": "The brand in the Brand book editor",
+          "text": [
+            "The Brand book editor keeps the colours, the fonts with their roles, the wordmark and the other elements, the photos and the sentences of the house.",
+            "The Sticker editor, Print & feed and the Brand book read the brand from there. When you publish a change in the Brand book editor, these tools show it without reloading. Changes to the brand are made only in the Brand book editor."
+          ],
+          "schema": "marke"
+        },
+        {
+          "titel": "Draft and publish",
+          "text": [
+            "Edit website, Menus & price lists, Brand book editor and Sticker editor have the same bar at the bottom. Inquiries & chat works the same way."
+          ],
+          "schritte": [
+            [
+              "Save",
+              "The change goes into the draft. Guests do not see it yet. «Undo» takes it back."
+            ],
+            [
+              "Before / after",
+              "Every change waiting in the draft, the old version next to the new one."
+            ],
+            [
+              "Publish",
+              "The draft goes online. A note helps you find this change later. Only the changed files are uploaded."
+            ],
+            [
+              "Earlier versions",
+              "Every published state is kept. «Restore» brings one back as a draft, then you publish it."
+            ]
+          ],
+          "nachsatz": "In Print & feed, «Release» makes a design available for the areas of the house, «Take back» withdraws it.",
+          "video": "a2"
+        },
+        {
+          "titel": "The chat without AI",
+          "text": [
+            "The answers of the chat lie as a file on the website. The search runs in the browser of the guest. When the chat has no answer, the guest can send the question to the house, with a name and a way to reach them.",
+            "You enter the answer in Inquiries & chat. From then on the chat gives it to every guest who asks."
+          ],
+          "video": "d"
+        },
+        {
+          "titel": "The control panel",
+          "text": [
+            "The control panel opens every tool. Under each name it shows what is waiting in that tool, and how many visits the website had today."
+          ],
+          "video": "a1"
+        }
+      ]
+    },
+    {
+      "id": "werkzeuge",
+      "nr": "03",
+      "titel": "The nine tools",
+      "satz": "What each tool is for, and the guide that shows it.",
+      "bild": "../../website/assets/bild/b27-480.webp",
+      "werkzeuge": [
+        [
+          "Control panel",
+          "Start",
+          "All tools in one place, each showing what is waiting today.",
+          "a1"
+        ],
+        [
+          "Edit website",
+          "Website",
+          "Texts, photos, opening hours and a notice for guests on the six pages. Nothing goes online before you publish it.",
+          "b"
+        ],
+        [
+          "Menus & price lists",
+          "Menu",
+          "Drinks, coffee and juices, kitchen: one list makes the printed menu as a PDF and the menu page of the website.",
+          "c"
+        ],
+        [
+          "Inquiries & chat",
+          "Guests",
+          "The answers of the chat on the website, and the inquiries of guests who left a contact.",
+          "d"
+        ],
+        [
+          "Brand book editor",
+          "Brand",
+          "Colours, fonts, photos, sentences, the wordmark and the other elements of the house. The other tools read the brand from here.",
+          "e"
+        ],
+        [
+          "Brand book",
+          "Brand",
+          "Wordmark, colours, fonts and photos, ready for the print shop and for Instagram. It only reads; changes are made in the Brand book editor.",
+          "f"
+        ],
+        [
+          "Sticker editor",
+          "Print",
+          "The stickers of the house: change them, make new ones and get the files for the printer.",
+          "g"
+        ],
+        [
+          "Print & feed",
+          "Print and Instagram",
+          "Coasters, beer mats, signs, chalkboards, posters, labels, banners and Instagram posts from templates, as PDFs to print and as images.",
+          "h"
+        ],
+        [
+          "Visitors",
+          "Visits",
+          "Where your guests come from and what they read, without cookies and without names. Until there are real visits, it shows test data, marked as such.",
+          "i"
+        ]
+      ]
+    },
+    {
+      "id": "betrieb",
+      "nr": "04",
+      "titel": "Where it runs and what it costs",
+      "satz": "Website and tools run in the Cloudflare account of The Cat & Gun, on the free plan.",
+      "bild": "../../website/assets/bild/b19-800.webp",
+      "abschnitte": [
+        {
+          "titel": "Where it runs",
+          "text": [
+            "Website and tools run in the Cloudflare account of The Cat & Gun, on the free plan. Cloudflare Pages holds the files of the website and the tools. Cloudflare Workers with their storage save drafts and publish changes.",
+            "The account belongs to the house. No part of the website or the tools runs on an account of Tasty Studios, and no service with an invoice is used.",
+            "This account does not exist yet. Until it does, the tools are built and tested on a local server, and the website opens at tastyrob123.github.io/the-cat-and-gun/website."
+          ]
+        },
+        {
+          "titel": "What it costs",
+          "kosten": [
+            [
+              "The domain",
+              "Bought by you, your own address for the website",
+              "800 PHP per year"
+            ],
+            [
+              "The website",
+              "Runs as it is, no hosting fee",
+              "0 PHP per year"
+            ],
+            [
+              "The tools",
+              "Control panel, Edit website, Menus & price lists, Brand book, Visitors, Print & feed",
+              "0 PHP per year"
+            ]
+          ],
+          "text": [
+            "As of 20 November 2026, from «The next steps for The Cat & Gun». Brand book editor, Sticker editor and Inquiries & chat run on the same free plan."
+          ]
+        },
+        {
+          "titel": "No AI, no keys",
+          "text": [
+            "None of the tools uses AI. The chat answers only with what you entered. There is no key for an AI service anywhere in the tools.",
+            "Visitors counts with Cloudflare Web Analytics, without cookies and without names."
+          ]
+        },
+        {
+          "titel": "Help",
+          "text": [
+            "For the website, the menu, the tools or the domain: robert@tasty-studios.de or WhatsApp +49 173 7230530. Tasty Studios replies the same day."
+          ]
+        }
+      ]
+    }
+  ],
+  "bereiche": [
+    {
+      "id": "start",
+      "nr": "01",
+      "titel": "Start here",
+      "gold": "here",
+      "bild": "../../website/assets/bild/b24-1200.webp",
+      "satz": "The control panel and the way every tool saves, checks and publishes.",
+      "intro": [
+        "Every tool of The Cat & Gun opens from the control panel. Under each name it shows what is waiting in that tool.",
+        "Edit website, Menus & price lists, Brand book editor and Sticker editor share one bar at the bottom: Save, Before / after, Publish and Earlier versions. Inquiries & chat works the same way. Once you know this order, you know it for every tool."
+      ],
+      "videos": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "lektionen": [],
+      "anim": "zyklus",
+      "anim_titel": "From a change to the website",
+      "anim_satz": "Four steps in every tool with the bar at the bottom.",
+      "emp": {
+        "titel": "Before you publish",
+        "intro": "Each tool with the bar at the bottom works in the same order:",
+        "schritte": [
+          "Save",
+          "Before / after",
+          "Publish",
+          "Earlier versions"
+        ],
+        "punkte": [
+          "Change what you need and press Save. It goes into the draft, guests do not see it yet.",
+          "Open Before / after and read the old and the new version side by side.",
+          "Publish and write a short note, so you find this change later.",
+          "If something is wrong, open Earlier versions and restore the last good state."
+        ],
+        "zeichen": [
+          "save",
+          "compare",
+          "upload",
+          "clock"
+        ]
+      },
+      "learnings": [
+        "Every tool opens from the control panel.",
+        "Saved changes wait in the draft.",
+        "Guests see a change only after Publish.",
+        "Every published state can be restored."
+      ]
+    },
+    {
+      "id": "website",
+      "nr": "02",
+      "titel": "The website",
+      "gold": "website",
+      "bild": "../../website/assets/bild/b08-1200.webp",
+      "satz": "Six pages with the photos, sentences and menu of the house, changed in Edit website.",
+      "intro": [
+        "The website has six pages: Home, Menu, Super Juices, Playground, Pool & Bar and Visit. Every page works on a phone and on a computer.",
+        "Texts, photos, opening hours and a notice for guests are changed in Edit website. Dishes, drinks and prices come from Menus & price lists."
+      ],
+      "videos": [
+        "b"
+      ],
+      "lektionen": [
+        "website"
+      ],
+      "anim": "einmal",
+      "anim_titel": "Change it once, every page follows",
+      "anim_satz": "Phone, address and opening hours are kept in one place.",
+      "emp": {
+        "titel": "Changing the website",
+        "intro": "For a change on the website, this order works:",
+        "schritte": [
+          "Find the line",
+          "Type",
+          "Phone view",
+          "Publish"
+        ],
+        "punkte": [
+          "Search the page for a word to find the line you want to change.",
+          "Click the text in the list and type. The page next to it changes as you type.",
+          "Look at the page as guests see it on a phone before you save.",
+          "Save, check Before / after, then publish with a note."
+        ],
+        "zeichen": [
+          "search",
+          "pencil",
+          "phone",
+          "upload"
+        ]
+      },
+      "learnings": [
+        "The website has six pages.",
+        "Texts, photos and hours are changed in Edit website.",
+        "Dishes and prices come from Menus & price lists.",
+        "A notice for guests has a start and an end date."
+      ]
+    },
+    {
+      "id": "menu",
+      "nr": "03",
+      "titel": "The menu",
+      "gold": "menu",
+      "bild": "../../website/assets/bild/b23-1200.webp",
+      "satz": "One list for drinks, coffee and juices and the kitchen. It makes the printed menu and the Menu page.",
+      "intro": [
+        "Menus & price lists holds the three menus of the house: Drinks, Coffee & juices and Kitchen, like the printed ones.",
+        "When you publish, the tool sets the PDF for the next printed menu, checks it word by word against your list and builds the Menu page of the website from the same list."
+      ],
+      "videos": [
+        "c"
+      ],
+      "lektionen": [],
+      "anim": "liste",
+      "anim_titel": "One list, two results",
+      "anim_satz": "Publish runs five steps.",
+      "emp": {
+        "titel": "Changing a price",
+        "intro": "A change on the menu goes this way:",
+        "schritte": [
+          "Edit item",
+          "Save",
+          "Test PDF",
+          "Publish"
+        ],
+        "punkte": [
+          "Click the pencil next to the item. «Edit item» opens with name, marks and price.",
+          "Change what you need and save. The PDF and the website stay as they are.",
+          "«Test PDF» shows the printed menu with your draft.",
+          "Publish builds the PDF and the Menu page from the same list."
+        ],
+        "zeichen": [
+          "pencil",
+          "save",
+          "printer",
+          "upload"
+        ]
+      },
+      "learnings": [
+        "Drinks, Coffee & juices and Kitchen are three menus.",
+        "One list makes the PDF and the Menu page.",
+        "«Advanced» changes fonts, sizes and spacing.",
+        "Every published menu is kept."
+      ]
+    },
+    {
+      "id": "gaeste",
+      "nr": "04",
+      "titel": "Guests",
+      "gold": "Guests",
+      "bild": "../../website/assets/bild/b14-1200.webp",
+      "satz": "The chat for the website and the inquiries of guests, answered by you.",
+      "intro": [
+        "Guests will ask the chat on the website. It answers from what you entered in Inquiries & chat. The chat is not on the website yet.",
+        "When the chat has no answer, the guest can send the question to the house. Your answer then counts for every guest who asks the same."
+      ],
+      "videos": [
+        "d"
+      ],
+      "lektionen": [],
+      "anim": "chat",
+      "anim_titel": "A question without an answer",
+      "anim_satz": "How an answer gets into the chat.",
+      "emp": {
+        "titel": "Answering guests",
+        "intro": "To keep the chat up to date:",
+        "schritte": [
+          "Inbox",
+          "Answer",
+          "Test",
+          "Publish"
+        ],
+        "punkte": [
+          "Look at the inbox for new inquiries and for questions without an answer.",
+          "Write an «Answer for every guest» and add «Other ways guests ask».",
+          "Use «Test a question» and ask like a guest before you publish.",
+          "Publish puts the new answers into the chat."
+        ],
+        "zeichen": [
+          "inbox",
+          "chat",
+          "check",
+          "upload"
+        ]
+      },
+      "learnings": [
+        "The chat answers from what you entered.",
+        "Questions without an answer go to the house.",
+        "A personal reply is copied and sent by you.",
+        "The chat works without AI."
+      ]
+    },
+    {
+      "id": "marke",
+      "nr": "05",
+      "titel": "The brand",
+      "gold": "brand",
+      "bild": "../../drucksachen/sticker/img/haus-sticker.webp",
+      "satz": "Colours, fonts, photos and the logo of the house, kept in one place.",
+      "intro": [
+        "The Brand book editor keeps the colours, the fonts with their roles, the wordmark and the other elements, the photos and the lines of the house.",
+        "The Sticker editor, Print & feed and the Brand book read the brand from there. The Brand book gives the files: photos in fixed sizes, the logo as SVG and PNG, the colours and the fonts."
+      ],
+      "videos": [
+        "e",
+        "f"
+      ],
+      "lektionen": [],
+      "anim": "marke",
+      "anim_titel": "One colour, three tools",
+      "anim_satz": "A colour published in the Brand book editor appears in the tools that read the brand.",
+      "emp": {
+        "titel": "Keeping the brand",
+        "intro": "For anything that has to look like The Cat & Gun:",
+        "schritte": [
+          "Change",
+          "Publish",
+          "Tools follow",
+          "Get files"
+        ],
+        "punkte": [
+          "Colours, fonts, photos and the logo are changed only in the Brand book editor.",
+          "Publish there. The Sticker editor, Print & feed and the Brand book show the change.",
+          "«Contrast check» shows whether text stays readable on a colour.",
+          "Files for a print shop come from the Brand book."
+        ],
+        "zeichen": [
+          "drop",
+          "upload",
+          "pages",
+          "download"
+        ]
+      },
+      "learnings": [
+        "The brand is kept in one place.",
+        "Three tools read the brand from there.",
+        "The Brand book gives photos in fixed sizes.",
+        "The Colour check compares a design with the house colours."
+      ]
+    },
+    {
+      "id": "druck",
+      "nr": "06",
+      "titel": "Print & Instagram",
+      "gold": "Instagram",
+      "bild": "../../drucksachen/untersetzer/img/haus-bier.webp",
+      "satz": "Stickers, coasters, boards, posters and Instagram posts from templates.",
+      "intro": [
+        "The Sticker editor holds the stickers of the house. You change them, make new ones and get the files for the printer.",
+        "Print & feed has templates for coasters, beer mats, signs, chalkboards, posters, labels, banners and Instagram posts. Fonts, colours and elements come from the brand."
+      ],
+      "videos": [
+        "g",
+        "h"
+      ],
+      "lektionen": [],
+      "anim": "druck",
+      "anim_titel": "From a template to the printer",
+      "anim_satz": "Every piece comes out as a PDF for the print shop.",
+      "emp": {
+        "titel": "Before printing",
+        "intro": "A printed piece goes this way:",
+        "schritte": [
+          "Template",
+          "Text",
+          "Print check",
+          "PDF"
+        ],
+        "punkte": [
+          "Start from a template. Find it by type, size, area and occasion.",
+          "Change the text. Fonts and colours come from the brand.",
+          "Run «Print check» before you save for print.",
+          "«PDF for the printer» and «Save for print» give the files for the print shop, with 3 mm bleed."
+        ],
+        "zeichen": [
+          "template",
+          "pencil",
+          "check",
+          "printer"
+        ]
+      },
+      "learnings": [
+        "Stickers are made in the Sticker editor.",
+        "Coasters, boards, posters and posts come from Print & feed.",
+        "Print files come with 3 mm bleed.",
+        "Posts can be previewed on a phone with caption."
+      ]
+    },
+    {
+      "id": "besuche",
+      "nr": "07",
+      "titel": "Visits",
+      "gold": "Visits",
+      "bild": "../../website/assets/bild/b29-1200.webp",
+      "satz": "Where guests come from and what they read on the website, without cookies and without names.",
+      "intro": [
+        "Visitors shows the visits of the website for 7, 30 or 90 days: where guests come from, how they found the website, which pages they read and whether they used a phone or a computer.",
+        "The numbers come from Cloudflare Web Analytics. There are no real visits yet. Until then the tool shows test data, marked with the band «Test data»."
+      ],
+      "videos": [
+        "i"
+      ],
+      "lektionen": [],
+      "anim": "besuch",
+      "anim_titel": "From a visit to a call",
+      "anim_satz": "One visit, step by step.",
+      "emp": {
+        "titel": "Reading the visits",
+        "intro": "To see what guests do on the website:",
+        "schritte": [
+          "Period",
+          "Origin",
+          "Pages",
+          "Table"
+        ],
+        "punkte": [
+          "Choose 7, 30 or 90 days at the top.",
+          "Origin shows where guests come from and how they found the website.",
+          "Pages shows which pages they read.",
+          "«Save as table» gives the visits as a file."
+        ],
+        "zeichen": [
+          "calendar",
+          "pin",
+          "pages",
+          "table"
+        ]
+      },
+      "learnings": [
+        "Visitors counts without cookies and without names.",
+        "The numbers come from Cloudflare Web Analytics.",
+        "Until real visits come in, the tool shows test data.",
+        "One visit can be followed step by step."
+      ]
+    },
+    {
+      "id": "basics",
+      "nr": "08",
+      "titel": "Basics",
+      "gold": "Basics",
+      "bild": "../../website/assets/bild/b19-1200.webp",
+      "satz": "Four lessons on how the website and the tools work and where everything runs.",
+      "intro": [
+        "Four short lessons in text and pictures. They explain how the website is built, how it works together with the tools, what each tool is for, and where everything runs and what it costs."
+      ],
+      "videos": [],
+      "lektionen": [
+        "website",
+        "zusammenhang",
+        "werkzeuge",
+        "betrieb"
+      ],
+      "anim": "betrieb",
+      "anim_titel": "Where everything runs",
+      "anim_satz": "The Cloudflare account of the house, on the free plan.",
+      "emp": {
+        "titel": "Reading order",
+        "intro": "The lessons build on each other:",
+        "schritte": [
+          "The website",
+          "Together",
+          "Nine tools",
+          "Running"
+        ],
+        "punkte": [
+          "How the website is built: the six pages and what they are made of.",
+          "How the website and the tools fit together: each fact in one place, draft and publish.",
+          "The nine tools: what each one is for.",
+          "Where it runs and what it costs: the account of the house and the domain."
+        ],
+        "zeichen": [
+          "pages",
+          "compare",
+          "template",
+          "cloud"
+        ]
+      },
+      "learnings": [
+        "Website and tools run in the account of the house.",
+        "The domain costs 800 PHP a year.",
+        "Website and tools run without fees.",
+        "No tool uses AI."
+      ]
+    }
+  ]
+}

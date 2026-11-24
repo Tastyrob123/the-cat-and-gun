@@ -1,0 +1,1814 @@
+{
+ "antworten": [
+  {
+   "id": "control-panel",
+   "frage": "What is the control panel?",
+   "andere": [
+    "Where do I find all tools?",
+    "How do I open a tool?",
+    "What is the start page?"
+   ],
+   "stichwoerter": [
+    "control panel",
+    "start",
+    "tools",
+    "open",
+    "window",
+    "overview",
+    "home",
+    "dashboard",
+    "all tools"
+   ],
+   "antwort": "Every tool of The Cat & Gun opens from the control panel. Seven windows show the tools, and under each name stands what is waiting in that tool. A click on a window opens the tool.",
+   "werkzeug": "Control panel",
+   "raum": "start"
+  },
+  {
+   "id": "keys-1-8",
+   "frage": "Is there a shortcut to open a tool?",
+   "andere": [
+    "Which keys open the tools?",
+    "Keyboard shortcut for the tools?"
+   ],
+   "stichwoerter": [
+    "key",
+    "keys",
+    "shortcut",
+    "keyboard",
+    "1 to 8",
+    "number",
+    "open tool",
+    "fast"
+   ],
+   "antwort": "In the control panel, the keys 1 to 8 open the tools. The bar at the top comes back as soon as you scroll up, and «Control panel» brings you to the top.",
+   "werkzeug": "Control panel",
+   "raum": "start"
+  },
+  {
+   "id": "today-visits",
+   "frage": "Where do I see how many people visited the website today?",
+   "andere": [
+    "Visits today?",
+    "How many visitors today?",
+    "Where are today's numbers?"
+   ],
+   "stichwoerter": [
+    "today",
+    "visits",
+    "visitors",
+    "pages",
+    "numbers",
+    "website",
+    "count",
+    "guests"
+   ],
+   "antwort": "In the control panel, the line «Today … visits · … pages» shows the visits and pages viewed today. «Open Visitors» opens the Visitors tool with all numbers. The bar at the bottom of Visitors also names the visits of today.",
+   "werkzeug": "Control panel",
+   "raum": "start"
+  },
+  {
+   "id": "all-pieces",
+   "frage": "Where do I see all printed pieces of the house?",
+   "andere": [
+    "Where are the menus, stickers and signs?",
+    "What is «All pieces»?"
+   ],
+   "stichwoerter": [
+    "all pieces",
+    "printed",
+    "pieces",
+    "print",
+    "stickers",
+    "signs",
+    "coasters",
+    "overview"
+   ],
+   "antwort": "«All pieces» in the bar at the top of the control panel shows every printed piece of the house. It also stands in the section of Print & feed.",
+   "werkzeug": "Control panel",
+   "raum": "start"
+  },
+  {
+   "id": "view-website",
+   "frage": "How do I look at the website?",
+   "andere": [
+    "Open the website",
+    "Where is the link to the website?",
+    "See the website as a guest"
+   ],
+   "stichwoerter": [
+    "view website",
+    "website",
+    "open",
+    "look",
+    "link",
+    "guest view",
+    "see"
+   ],
+   "antwort": "«View website» in the control panel opens the website. Most tools also have «View website» at the top right.",
+   "werkzeug": "Control panel",
+   "raum": "start"
+  },
+  {
+   "id": "how-it-works",
+   "frage": "What does each tool do?",
+   "andere": [
+    "Which tool do I need?",
+    "What is «How it works»?",
+    "Which tool is for what?"
+   ],
+   "stichwoerter": [
+    "how it works",
+    "which tool",
+    "what for",
+    "section",
+    "explain",
+    "tool",
+    "purpose"
+   ],
+   "antwort": "Further down in the control panel, each tool has its own section with one line on what it is for. «How it works» explains in three lines what you do there, and the button at the end opens the tool.",
+   "werkzeug": "Control panel",
+   "raum": "start"
+  },
+  {
+   "id": "draft",
+   "frage": "What is the draft?",
+   "andere": [
+    "What happens when I save?",
+    "Do guests see my change right away?",
+    "Is my change online after saving?"
+   ],
+   "stichwoerter": [
+    "draft",
+    "save",
+    "saved",
+    "online",
+    "guests see",
+    "not live",
+    "waiting",
+    "entwurf"
+   ],
+   "antwort": "What you save waits in the draft. Guests do not see it. Only «Publish» puts the draft online. This works the same in Edit website, Menus & price lists, Brand book editor, Sticker editor and Inquiries & chat.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "save",
+   "frage": "How do I save a change?",
+   "andere": [
+    "Save button?",
+    "Shortcut to save?",
+    "Where is «Save»?"
+   ],
+   "stichwoerter": [
+    "save",
+    "saving",
+    "button",
+    "cmd s",
+    "ctrl s",
+    "shortcut",
+    "keep",
+    "bar"
+   ],
+   "antwort": "Press «Save» in the bar at the bottom. The bar says when something is not saved yet. Shortcut: Cmd + S on a Mac, Ctrl + S on Windows. After saving, a short message shows with «Undo».",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "undo",
+   "frage": "How do I undo a change?",
+   "andere": [
+    "I made a mistake",
+    "Take back a change",
+    "Undo last step"
+   ],
+   "stichwoerter": [
+    "undo",
+    "mistake",
+    "take back",
+    "wrong",
+    "revert",
+    "cmd z",
+    "back"
+   ],
+   "antwort": "After saving, a short message shows with «Undo», which takes the change back. In Edit website, «Draft & compare» lets you undo each change by itself. In Menus & price lists ⌘Z undoes and ⌘⇧Z or ⌘Y redoes.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "before-after",
+   "frage": "How do I see what I changed?",
+   "andere": [
+    "Compare old and new",
+    "What is Before / after?",
+    "List of my changes"
+   ],
+   "stichwoerter": [
+    "before",
+    "after",
+    "compare",
+    "changes",
+    "old",
+    "new",
+    "difference",
+    "draft & compare"
+   ],
+   "antwort": "Before / after lists every change waiting in the draft, the old text next to the new one. In Edit website it is «Draft & compare», in Inquiries & chat «Before, after», in the Brand book editor «Before / after».",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "publish",
+   "frage": "How do I put my changes online?",
+   "andere": [
+    "How do I publish?",
+    "Make it live",
+    "Changes not on the website"
+   ],
+   "stichwoerter": [
+    "publish",
+    "online",
+    "live",
+    "go live",
+    "website",
+    "note",
+    "release",
+    "put online"
+   ],
+   "antwort": "Press «Publish» in the bar at the bottom. Add a short note so you find this change later under «Earlier versions». When it is done, the bar says «Everything is published» again.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "earlier-versions",
+   "frage": "How do I bring back an earlier version?",
+   "andere": [
+    "Restore old version",
+    "Go back to before",
+    "I want the old text back"
+   ],
+   "stichwoerter": [
+    "earlier versions",
+    "restore",
+    "old version",
+    "go back",
+    "history",
+    "previous",
+    "bring back"
+   ],
+   "antwort": "Every published state is kept under «Earlier versions». A version goes back into the draft («Restore» in Edit website, «Put in the draft» in Inquiries & chat, «Bring into draft» in the Brand book editor). It goes online only when you publish again.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "what-to-do",
+   "frage": "A message appeared. What do I do?",
+   "andere": [
+    "Error message",
+    "Something went wrong",
+    "What does this message mean?"
+   ],
+   "stichwoerter": [
+    "error",
+    "message",
+    "problem",
+    "what to do",
+    "wrong",
+    "help",
+    "checks",
+    "warning"
+   ],
+   "antwort": "Messages in Edit website and the Brand book editor have a «What to do?» button. In Edit website it opens the checks page, which works even when the tool does not start. What you saved is never lost.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "two-windows",
+   "frage": "Someone else changed the same thing at the same time. What now?",
+   "andere": [
+    "Two windows open",
+    "Conflict message",
+    "Changed in another window"
+   ],
+   "stichwoerter": [
+    "conflict",
+    "two windows",
+    "someone else",
+    "overwritten",
+    "same time",
+    "another window",
+    "konflikt"
+   ],
+   "antwort": "The tools say when someone saved in another window first. Nothing is overwritten and your input stays. In the Brand book editor choose «Save my changes» or «Discard my changes». In Menus & price lists (KONFLIKT) reload the page and look at the other change.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "no-network",
+   "frage": "The network is gone. Is my work lost?",
+   "andere": [
+    "No connection",
+    "Internet stopped while saving",
+    "Offline"
+   ],
+   "stichwoerter": [
+    "network",
+    "offline",
+    "connection",
+    "internet",
+    "lost",
+    "wifi",
+    "no connection",
+    "verbindung"
+   ],
+   "antwort": "Your input stays on the page. When the network is back, press «Save» again. In Menus & price lists do not reload before that, or unsaved input is lost.",
+   "werkzeug": "All tools",
+   "raum": "start"
+  },
+  {
+   "id": "ws-change-text",
+   "frage": "How do I change a text on the website?",
+   "andere": [
+    "Edit a sentence",
+    "Change wording on a page",
+    "Fix a typo on the website"
+   ],
+   "stichwoerter": [
+    "text",
+    "change",
+    "sentence",
+    "wording",
+    "typo",
+    "page",
+    "edit",
+    "words"
+   ],
+   "antwort": "Open «Edit website», choose a page and click the text on the right. A field opens on the left, and the page changes as you type. Then «Save» and «Publish».",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-hide",
+   "frage": "How do I hide a section of the website?",
+   "andere": [
+    "Remove a part of a page",
+    "Take something off the website",
+    "Hide a line"
+   ],
+   "stichwoerter": [
+    "hide",
+    "remove",
+    "section",
+    "take off",
+    "delete",
+    "part",
+    "show again"
+   ],
+   "antwort": "In «Edit website» you can hide a whole section and show it again later. «Hide» takes a line off the page.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-photo",
+   "frage": "How do I change a photo on the website?",
+   "andere": [
+    "Swap a picture",
+    "Upload my own photo",
+    "New image on a page"
+   ],
+   "stichwoerter": [
+    "photo",
+    "picture",
+    "image",
+    "swap",
+    "upload",
+    "change photo",
+    "jpg",
+    "png",
+    "webp"
+   ],
+   "antwort": "Click the photo on the page. Choose one of the photos of the website, or «Upload» your own: at least 900 pixels wide, at most 25 MB, JPG, PNG or WebP. The tool makes the sizes for computer and phone.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-photo-description",
+   "frage": "What do I write as photo description?",
+   "andere": [
+    "Photo description",
+    "Alt text",
+    "Text under a photo"
+   ],
+   "stichwoerter": [
+    "description",
+    "alt",
+    "photo text",
+    "screen reader",
+    "search engine",
+    "google",
+    "caption"
+   ],
+   "antwort": "Screen readers and search engines read the photo description. Write one sentence about what is in the photo.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-hours",
+   "frage": "How do I change the opening hours?",
+   "andere": [
+    "New opening times",
+    "Change when we open",
+    "Closing time"
+   ],
+   "stichwoerter": [
+    "opening hours",
+    "hours",
+    "open",
+    "close",
+    "closing",
+    "times",
+    "opens daily",
+    "schedule"
+   ],
+   "antwort": "In «Edit website», open «Phone, address & hours». Change the hours once, and they are new on every page. «Where exactly?» lists each spot. Then «Save» and «Publish».",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-phone",
+   "frage": "How do I change the phone number on the website?",
+   "andere": [
+    "New phone number",
+    "Change the address",
+    "Call link"
+   ],
+   "stichwoerter": [
+    "phone",
+    "number",
+    "address",
+    "call",
+    "contact",
+    "telephone",
+    "mobile"
+   ],
+   "antwort": "Open «Phone, address & hours» in «Edit website». You change the detail once, and it is new everywhere, also in the link to call from a phone.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-times",
+   "frage": "Where do I change other times and sizes on the website?",
+   "andere": [
+    "Times in the text",
+    "Sizes and durations"
+   ],
+   "stichwoerter": [
+    "times",
+    "sizes",
+    "duration",
+    "time",
+    "size",
+    "times & prices"
+   ],
+   "antwort": "Other times, sizes and durations are under «Times & prices» in «Edit website». Prices come from «Menus & price lists».",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-notice",
+   "frage": "How do I tell guests we are closed for a day?",
+   "andere": [
+    "Notice for guests",
+    "Holiday message on the website",
+    "Banner closed today"
+   ],
+   "stichwoerter": [
+    "notice",
+    "closed",
+    "holiday",
+    "message",
+    "banner",
+    "announcement",
+    "today",
+    "info"
+   ],
+   "antwort": "In «Edit website», open «Notice for guests» and write one or two sentences. They show at the top of every page. You can switch the notice on and off and add a link.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-notice-dates",
+   "frage": "Can the notice go away by itself?",
+   "andere": [
+    "Notice with end date",
+    "Timed notice"
+   ],
+   "stichwoerter": [
+    "notice",
+    "date",
+    "start",
+    "end",
+    "automatic",
+    "by itself",
+    "until"
+   ],
+   "antwort": "Give the notice a start and an end date, and it shows and goes away by itself. With empty dates it shows from now on until you switch it off.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-menu-locked",
+   "frage": "Why can't I change the prices on the Menu page?",
+   "andere": [
+    "Menu page locked",
+    "Change a dish on the website"
+   ],
+   "stichwoerter": [
+    "menu",
+    "price",
+    "locked",
+    "dish",
+    "drink",
+    "cannot",
+    "prices"
+   ],
+   "antwort": "Dishes, drinks and prices on the Menu page are locked in «Edit website». You change them in «Menus & price lists».",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-pages",
+   "frage": "Which pages does the website have?",
+   "andere": [
+    "How many pages?",
+    "List of pages"
+   ],
+   "stichwoerter": [
+    "pages",
+    "home",
+    "menu",
+    "super juices",
+    "playground",
+    "pool & bar",
+    "visit",
+    "website"
+   ],
+   "antwort": "The website has six pages: Home, Menu, Super Juices, Playground, Pool & Bar and Visit. In «Edit website» each page stands as a card with a photo.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-phone-view",
+   "frage": "How does the page look on a phone?",
+   "andere": [
+    "Mobile view",
+    "Phone preview"
+   ],
+   "stichwoerter": [
+    "phone",
+    "mobile",
+    "preview",
+    "small screen",
+    "smartphone",
+    "view"
+   ],
+   "antwort": "«Edit website» shows the same page as guests see it on a phone. On the phone itself, «Sections» at the top opens the list of pages.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "ws-restore",
+   "frage": "How do I bring back an earlier version of the website?",
+   "andere": [
+    "Restore the website",
+    "Old website version"
+   ],
+   "stichwoerter": [
+    "restore",
+    "earlier versions",
+    "old",
+    "website",
+    "go back",
+    "publish"
+   ],
+   "antwort": "«Earlier versions» lists every publish with its date and note. «Restore» puts that version in the draft. It goes on the website only when you publish again.",
+   "werkzeug": "Edit website",
+   "raum": "website"
+  },
+  {
+   "id": "mn-price",
+   "frage": "How do I change a price?",
+   "andere": [
+    "New price for a dish",
+    "Change the price of a drink",
+    "Prices went up"
+   ],
+   "stichwoerter": [
+    "price",
+    "prices",
+    "php",
+    "cost",
+    "change",
+    "dish",
+    "drink",
+    "item"
+   ],
+   "antwort": "Open «Menus & price lists», choose the menu and double-click the item or press the pencil. Change the price, written like on the menu: «260», «220/GLASS» or «240 | 260». «Save», then «Publish».",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-add",
+   "frage": "How do I add a new dish or drink?",
+   "andere": [
+    "New item on the menu",
+    "Add a juice",
+    "New section"
+   ],
+   "stichwoerter": [
+    "add",
+    "new",
+    "item",
+    "dish",
+    "drink",
+    "juice",
+    "section",
+    "beer"
+   ],
+   "antwort": "«New item» or «Add item» at a section adds an item at the end of that section. «New section» adds a section. Copy makes a new item in the same format.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-remove",
+   "frage": "How do I take a dish off the menu?",
+   "andere": [
+    "Remove an item",
+    "Hide a sold-out drink",
+    "Delete a line"
+   ],
+   "stichwoerter": [
+    "remove",
+    "delete",
+    "hide",
+    "sold out",
+    "gone",
+    "bin",
+    "eye",
+    "item"
+   ],
+   "antwort": "The eye hides an item for a while, the bin takes it away. Delete hides the chosen part.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-menus",
+   "frage": "Which menus are in the tool?",
+   "andere": [
+    "What menus can I change?",
+    "Kitchen menu"
+   ],
+   "stichwoerter": [
+    "menus",
+    "drinks",
+    "coffee",
+    "juices",
+    "kitchen",
+    "food",
+    "list"
+   ],
+   "antwort": "Three menus: Drinks, Coffee & juices and Kitchen, with the same pages, sections and order as the printed menu in the café.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-boards",
+   "frage": "Does a change show on the boards in the café?",
+   "andere": [
+    "Printed boards",
+    "Menu in the café"
+   ],
+   "stichwoerter": [
+    "boards",
+    "café",
+    "printed",
+    "shop",
+    "wall",
+    "menu board"
+   ],
+   "antwort": "No. The menu in the café is printed on boards and cannot be swapped. A change in «Menus & price lists» is for the next printed menu and for the website.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-website",
+   "frage": "Does a new price also show on the website?",
+   "andere": [
+    "Menu page on the website",
+    "Website menu"
+   ],
+   "stichwoerter": [
+    "website",
+    "menu page",
+    "online",
+    "price",
+    "same",
+    "menu.html",
+    "guests"
+   ],
+   "antwort": "Yes, after «Publish». The same data makes the PDF for the printer and the menu page of the website. «Website» above the preview shows the menu page with your draft. While the website is not online yet, the new menu page waits in the tool.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-test-pdf",
+   "frage": "How do I see the menu before printing?",
+   "andere": [
+    "Test PDF",
+    "Print preview of the menu"
+   ],
+   "stichwoerter": [
+    "test pdf",
+    "pdf",
+    "preview",
+    "print",
+    "check",
+    "look"
+   ],
+   "antwort": "Test PDF prints the draft to look at. Before, after shows each place today and in the draft, new words marked.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-publish",
+   "frage": "What happens when I publish the menu?",
+   "andere": [
+    "Publish menu",
+    "Menu PDF for the printer"
+   ],
+   "stichwoerter": [
+    "publish",
+    "pdf",
+    "printer",
+    "menu",
+    "steps",
+    "website"
+   ],
+   "antwort": "«Publish» prints the PDF, compares it word for word with the data, builds the menu page of the website and only then replaces the old version. The last version stays under «Earlier versions».",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-design",
+   "frage": "How do I change the font or layout of the menu?",
+   "andere": [
+    "Advanced mode",
+    "Change font size on the menu",
+    "Move a part of the menu"
+   ],
+   "stichwoerter": [
+    "font",
+    "layout",
+    "design",
+    "advanced",
+    "size",
+    "colour",
+    "move",
+    "drag",
+    "spacing"
+   ],
+   "antwort": "Switch to «Advanced». One click picks a text, an item, the logo or the footer. Drag to move, use the corners to resize. «Design» on the right changes font, size, text style, colour, alignment, line spacing and space.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-messages",
+   "frage": "What does a keyword like PASST or KONFLIKT mean?",
+   "andere": [
+    "Menu error keyword",
+    "Message with a code"
+   ],
+   "stichwoerter": [
+    "passt",
+    "konflikt",
+    "keyword",
+    "code",
+    "error",
+    "message",
+    "verbindung",
+    "pdf"
+   ],
+   "antwort": "Every message in «Menus & price lists» carries a keyword. PASST means not everything fits on the pages: shorten, hide or move an item. KONFLIKT means someone else changed the menu: reload and look at their change. The guide of the tool lists every keyword.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "mn-who",
+   "frage": "Who can change the menus?",
+   "andere": [
+    "Login for the menu",
+    "Roles kitchen and service"
+   ],
+   "stichwoerter": [
+    "who",
+    "login",
+    "role",
+    "kitchen",
+    "service",
+    "manager",
+    "team"
+   ],
+   "antwort": "Until handover the log says «Team The Cat & Gun», without a login. After that, kitchen and service change the menus and print test PDFs; the manager publishes, brings back earlier versions and switches the website link.",
+   "werkzeug": "Menus & price lists",
+   "raum": "menu"
+  },
+  {
+   "id": "iq-what",
+   "frage": "What is Inquiries & chat?",
+   "andere": [
+    "How does the chat work?",
+    "Guest questions tool"
+   ],
+   "stichwoerter": [
+    "chat",
+    "inquiries",
+    "questions",
+    "guests",
+    "answers",
+    "tool"
+   ],
+   "antwort": "Here you see what guests ask the chat on the website when it has no answer, and you give the chat new answers. The chat searches its answers in the guest's browser. There is no AI and no cost per question.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-live",
+   "frage": "Is the chat already on the website?",
+   "andere": [
+    "Can guests use the chat now?",
+    "Chat live?"
+   ],
+   "stichwoerter": [
+    "chat",
+    "live",
+    "website",
+    "online",
+    "built in",
+    "guests",
+    "now"
+   ],
+   "antwort": "Not yet. The chat is not built into the website yet. «Try the chat» shows it the way guests will see it.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-try",
+   "frage": "How do I test the chat?",
+   "andere": [
+    "Try the chat",
+    "Ask the chat a question"
+   ],
+   "stichwoerter": [
+    "try",
+    "test",
+    "chat",
+    "question",
+    "guest view",
+    "preview"
+   ],
+   "antwort": "«Try the chat» at the top right opens the chat as a guest sees it on the phone. «Ask, like a guest» in «What the chat knows» answers from the draft. «The chat as on the website» opens a test page with the published answers.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-answer-all",
+   "frage": "How do I answer a question for every guest?",
+   "andere": [
+    "Answer once",
+    "Teach the chat an answer"
+   ],
+   "stichwoerter": [
+    "answer",
+    "every guest",
+    "all guests",
+    "teach",
+    "question",
+    "reply"
+   ],
+   "antwort": "At the question, press «Answer for every guest». Write the answer, add «Other ways guests ask» if you like, then «Add to the draft». After «Publish» the chat gives it to everyone.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-inbox",
+   "frage": "Where do I see guests who want a reply?",
+   "andere": [
+    "Inbox",
+    "Guest left a phone number"
+   ],
+   "stichwoerter": [
+    "inbox",
+    "reply",
+    "contact",
+    "guest",
+    "inquiry",
+    "new",
+    "open",
+    "done"
+   ],
+   "antwort": "Open «Inbox». «All», «New», «Open» and «Done» filter the list. Click an inquiry to see the contact, when it was sent, from which page, and the question.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-reply",
+   "frage": "How do I reply to one guest?",
+   "andere": [
+    "Personal reply",
+    "Send an answer to a guest"
+   ],
+   "stichwoerter": [
+    "reply",
+    "personal",
+    "send",
+    "copy text",
+    "whatsapp",
+    "instagram",
+    "message"
+   ],
+   "antwort": "Write the reply into the sheet under the question and press «Save reply». «Copy text» puts it on the clipboard. Send it yourself by phone, message or Instagram; nothing is sent from the tool.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-done",
+   "frage": "How do I mark an inquiry as done?",
+   "andere": [
+    "Close an inquiry",
+    "Inquiry answered"
+   ],
+   "stichwoerter": [
+    "done",
+    "close",
+    "answered",
+    "open again",
+    "finished",
+    "inquiry",
+    "mark"
+   ],
+   "antwort": "Press «Done». The inquiry stays in the list, paler, and «Open again» brings it back.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-delete",
+   "frage": "A guest wants their data deleted. How?",
+   "andere": [
+    "Delete an inquiry",
+    "Remove guest contact"
+   ],
+   "stichwoerter": [
+    "delete",
+    "privacy",
+    "data",
+    "remove",
+    "contact",
+    "twelve months",
+    "bin"
+   ],
+   "antwort": "Inquiries are kept for twelve months. Open the inquiry, press the round button with the bin and «Delete for good».",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-valid-until",
+   "frage": "Can an answer stop after a date?",
+   "andere": [
+    "Valid until",
+    "Answer only for a while"
+   ],
+   "stichwoerter": [
+    "valid until",
+    "date",
+    "end",
+    "expire",
+    "holiday",
+    "temporary"
+   ],
+   "antwort": "Yes. «Valid until» sets a date after which the chat no longer says the answer or line. Leave it empty for no end.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-knows",
+   "frage": "How do I change what the chat knows?",
+   "andere": [
+    "What the chat knows",
+    "Chat says something wrong"
+   ],
+   "stichwoerter": [
+    "knows",
+    "line",
+    "change",
+    "wrong",
+    "hide",
+    "as on the website",
+    "chat"
+   ],
+   "antwort": "Open «What the chat knows», tap a line, change the text and «Save». «Hidden» stops the chat from saying a line, «As on the website» brings back the original line. The website itself stays as it is.",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-new-line",
+   "frage": "How do I tell the chat about an event?",
+   "andere": [
+    "Add a line",
+    "New event in the chat",
+    "Something new"
+   ],
+   "stichwoerter": [
+    "event",
+    "new",
+    "add a line",
+    "something new",
+    "special",
+    "closing",
+    "photo",
+    "poster"
+   ],
+   "antwort": "Under «Something new», write a title the way a guest would ask and the text with date, time and price if known. Pick the area, «Add a photo» if you like, then «Add to the draft» and «Publish».",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "iq-publish",
+   "frage": "How do the new answers reach the chat?",
+   "andere": [
+    "Publish answers",
+    "Chat does not know my answer"
+   ],
+   "stichwoerter": [
+    "publish",
+    "answers",
+    "chat",
+    "draft",
+    "online",
+    "it is online"
+   ],
+   "antwort": "Everything you save goes into the draft. «Publish», then «Publish now», writes the answers file of the chat again. When it is done: «It is online.»",
+   "werkzeug": "Inquiries & chat",
+   "raum": "gaeste"
+  },
+  {
+   "id": "be-colour",
+   "frage": "How do I change a colour of the brand?",
+   "andere": [
+    "Change a house colour",
+    "New colour value"
+   ],
+   "stichwoerter": [
+    "colour",
+    "color",
+    "hex",
+    "rgb",
+    "brand",
+    "palette",
+    "change",
+    "red"
+   ],
+   "antwort": "Open «Colours» in the Brand book editor and tap a colour. Choose a colour or type HEX (like #A8232A) or R, G and B, then «Use this colour». Every element that wears this colour changes with it after «Publish».",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-pipette",
+   "frage": "Can I take a colour from a photo?",
+   "andere": [
+    "Pipette",
+    "Colour from a picture"
+   ],
+   "stichwoerter": [
+    "pipette",
+    "eyedropper",
+    "photo",
+    "colour from a photo",
+    "pick",
+    "color"
+   ],
+   "antwort": "«Pipette» picks a colour on the screen in Chrome and Edge; in Safari and Firefox it opens the photos of the house. «Colours from a photo» shows the main colours of a photo from your computer or phone. The photo is only read in your browser.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-contrast",
+   "frage": "How do I check if text can be read on a colour?",
+   "andere": [
+    "Contrast check",
+    "Readable text"
+   ],
+   "stichwoerter": [
+    "contrast",
+    "readable",
+    "text",
+    "check",
+    "4.5",
+    "background"
+   ],
+   "antwort": "Switch «Mode» to «More options». «Contrast check» shows the value for text in one colour on another: 4.5 for normal text, 3 for large titles.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-font",
+   "frage": "How do I change a font?",
+   "andere": [
+    "Swap the font",
+    "Add a new font"
+   ],
+   "stichwoerter": [
+    "font",
+    "fonts",
+    "typeface",
+    "woff",
+    "ttf",
+    "otf",
+    "add a font",
+    "titles"
+   ],
+   "antwort": "Under «Which font for what», choose a font for one of the four uses: titles, running text, numbers and titles in print. «Add a font» uploads WOFF2, WOFF, TTF or OTF, up to 6 MB.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-photo",
+   "frage": "How do I add a photo of the house?",
+   "andere": [
+    "Upload a brand photo",
+    "Swap a brand photo"
+   ],
+   "stichwoerter": [
+    "photo",
+    "add",
+    "upload",
+    "swap",
+    "hide",
+    "brand",
+    "picture"
+   ],
+   "antwort": "In «Photos» of the Brand book editor, «Add a photo» takes JPG, PNG or WebP, up to 25 MB, at least 900 pixels on the long side. Tap a photo to change its title, hide it or swap it.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-lines",
+   "frage": "Where do I change the sentences of the house?",
+   "andere": [
+    "Lines",
+    "Opening hours for print"
+   ],
+   "stichwoerter": [
+    "lines",
+    "sentences",
+    "text",
+    "name",
+    "hours",
+    "new line"
+   ],
+   "antwort": "«Lines» in the Brand book editor hold name, place, opening hours and the sentences of the house, as the design tools use them. Change the text in its field; «New line» adds one.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-elements",
+   "frage": "Can I change a colour in the logo or a sticker?",
+   "andere": [
+    "Logo colour",
+    "Recolour the pool ball"
+   ],
+   "stichwoerter": [
+    "logo",
+    "element",
+    "pool ball",
+    "wordmark",
+    "sticker",
+    "part",
+    "recolour"
+   ],
+   "antwort": "Open «Logo & elements» and tap an element. Each colour in it is a part. Choose another house colour for a part; under «More options», «Own value» gives a part a colour only in this element.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "be-publish",
+   "frage": "When do the other tools get my brand change?",
+   "andere": [
+    "Brand change not showing",
+    "Publish the brand"
+   ],
+   "stichwoerter": [
+    "publish",
+    "brand",
+    "sticker editor",
+    "print & feed",
+    "brand book",
+    "other tools"
+   ],
+   "antwort": "Nothing you change reaches the other tools before you press «Publish». After that, the Brand book, the Sticker editor and Print & feed show it. The Brand book shows it right away in the same browser, otherwise within half a minute.",
+   "werkzeug": "Brand book editor",
+   "raum": "marke"
+  },
+  {
+   "id": "bb-photo-size",
+   "frage": "How do I get a photo for Instagram?",
+   "andere": [
+    "Photo in the right size",
+    "Story size",
+    "Download a photo"
+   ],
+   "stichwoerter": [
+    "instagram",
+    "story",
+    "post",
+    "size",
+    "crop",
+    "download",
+    "photo",
+    "get"
+   ],
+   "antwort": "In the Brand book, open «Photos» and click a photo. Point at «Instagram post» (1080 × 1350) or «Story» (1080 × 1920), drag the frame, then «Get». «Website» and «Print» give other sizes.",
+   "werkzeug": "Brand book",
+   "raum": "marke"
+  },
+  {
+   "id": "bb-find-photo",
+   "frage": "How do I find a photo?",
+   "andere": [
+    "Search photos",
+    "Portrait photos"
+   ],
+   "stichwoerter": [
+    "find",
+    "search",
+    "photo",
+    "portrait",
+    "landscape",
+    "filter"
+   ],
+   "antwort": "Type into the search field under «Photos», for example «pool», «juice» or «bagel», and choose portrait or landscape. «Reset filters» shows all again.",
+   "werkzeug": "Brand book",
+   "raum": "marke"
+  },
+  {
+   "id": "bb-logo",
+   "frage": "Where is the logo for a designer or print shop?",
+   "andere": [
+    "Logo file",
+    "SVG or PNG",
+    "Send the logo"
+   ],
+   "stichwoerter": [
+    "logo",
+    "wordmark",
+    "svg",
+    "png",
+    "zip",
+    "designer",
+    "print shop",
+    "files"
+   ],
+   "antwort": "Under «Logo & files» in the Brand book: the wordmark and the ampersand in black and white, as «SVG» or «PNG». «All files (ZIP)» gets everything at once, with the fonts.",
+   "werkzeug": "Brand book",
+   "raum": "marke"
+  },
+  {
+   "id": "bb-colour-values",
+   "frage": "How do I copy a colour value?",
+   "andere": [
+    "Colour code",
+    "Hex code",
+    "ASE for InDesign"
+   ],
+   "stichwoerter": [
+    "colour value",
+    "hex",
+    "rgb",
+    "code",
+    "copy",
+    "css",
+    "json",
+    "ase"
+   ],
+   "antwort": "Click a colour in the Brand book: the value is copied. A click on the RGB line copies the RGB values. Below, the colours come as CSS, JSON or ASE.",
+   "werkzeug": "Brand book",
+   "raum": "marke"
+  },
+  {
+   "id": "bb-colour-check",
+   "frage": "How do I check the colours of a designer's draft?",
+   "andere": [
+    "Colour check",
+    "Does the poster fit the brand?"
+   ],
+   "stichwoerter": [
+    "colour check",
+    "draft",
+    "designer",
+    "poster",
+    "flyer",
+    "measure",
+    "check"
+   ],
+   "antwort": "Open «Colour check», drag the draft into the field or press «Choose file» (JPG, PNG or WebP, up to 30 MB), then «Measure». Nothing is sent. «Copy as text» gives the result for an email.",
+   "werkzeug": "Brand book",
+   "raum": "marke"
+  },
+  {
+   "id": "bb-style-guide",
+   "frage": "How do I save the style guide as a PDF?",
+   "andere": [
+    "Style guide",
+    "Brand rules PDF"
+   ],
+   "stichwoerter": [
+    "style guide",
+    "pdf",
+    "save",
+    "brand",
+    "rules",
+    "brand book",
+    "print",
+    "download"
+   ],
+   "antwort": "Press «Style guide» on the left or on the overview of the Brand book. At the top, «Save as PDF» saves it.",
+   "werkzeug": "Brand book",
+   "raum": "marke"
+  },
+  {
+   "id": "se-change",
+   "frage": "How do I change the words on a sticker?",
+   "andere": [
+    "Edit a sticker",
+    "Sticker text"
+   ],
+   "stichwoerter": [
+    "sticker",
+    "words",
+    "text",
+    "change",
+    "quick",
+    "edit"
+   ],
+   "antwort": "Open the sticker in the Sticker editor. The tab «Quick» changes words and colours. A click on a part opens the panel «Design» with font, size, letter spacing, colour and alignment.",
+   "werkzeug": "Sticker editor",
+   "raum": "druck"
+  },
+  {
+   "id": "se-new",
+   "frage": "How do I make a new sticker?",
+   "andere": [
+    "New sticker",
+    "Sticker from a shape"
+   ],
+   "stichwoerter": [
+    "new sticker",
+    "shape",
+    "round",
+    "oval",
+    "square",
+    "strip",
+    "bubble",
+    "copy"
+   ],
+   "antwort": "«New sticker» starts from a shape: round, oval, square, strip or bubble. Or copy a sticker of the house and change it. «Brand elements» adds the pool ball, the wordmark or the ampersand.",
+   "werkzeug": "Sticker editor",
+   "raum": "druck"
+  },
+  {
+   "id": "se-print",
+   "frage": "How do I get a sticker ready for the printer?",
+   "andere": [
+    "Sticker PDF",
+    "Print file for stickers"
+   ],
+   "stichwoerter": [
+    "print",
+    "pdf",
+    "printer",
+    "bleed",
+    "cut line",
+    "print check",
+    "print files"
+   ],
+   "antwort": "Press «Print check» first. «PDF for the printer» has 3 mm bleed and a cut line. After «Publish», the print files wait under «Print files» in the overview.",
+   "werkzeug": "Sticker editor",
+   "raum": "druck"
+  },
+  {
+   "id": "pf-template",
+   "frage": "How do I make a sign or a coaster?",
+   "andere": [
+    "Print & feed template",
+    "Design a poster"
+   ],
+   "stichwoerter": [
+    "sign",
+    "coaster",
+    "poster",
+    "template",
+    "beer mat",
+    "chalkboard",
+    "table card",
+    "print"
+   ],
+   "antwort": "Open Print & feed and choose a template of the house, or search for one. Click a text to change it. The panel «Design» changes font, size and colour.",
+   "werkzeug": "Print & feed",
+   "raum": "druck"
+  },
+  {
+   "id": "pf-instagram",
+   "frage": "How do I make an Instagram post?",
+   "andere": [
+    "Instagram story",
+    "Post for the feed"
+   ],
+   "stichwoerter": [
+    "instagram",
+    "post",
+    "story",
+    "feed",
+    "caption",
+    "carousel",
+    "png"
+   ],
+   "antwort": "Choose an Instagram template in Print & feed. «Phone preview and caption» shows the post on a phone, with a carousel. Captions are written by hand. The design is saved as a PNG picture.",
+   "werkzeug": "Print & feed",
+   "raum": "druck"
+  },
+  {
+   "id": "pf-print",
+   "frage": "How do I print a design from Print & feed?",
+   "andere": [
+    "PDF for the print shop",
+    "Save for print"
+   ],
+   "stichwoerter": [
+    "print",
+    "pdf",
+    "print shop",
+    "save for print",
+    "bleed",
+    "print check"
+   ],
+   "antwort": "Press «Print check», then «Save for print». It makes a PDF for the print shop with 3 mm bleed.",
+   "werkzeug": "Print & feed",
+   "raum": "druck"
+  },
+  {
+   "id": "pf-house-pieces",
+   "frage": "Can I edit the printed pieces of the house?",
+   "andere": [
+    "House pieces",
+    "Edit the existing coaster"
+   ],
+   "stichwoerter": [
+    "house pieces",
+    "piece",
+    "existing",
+    "copy",
+    "original",
+    "my designs"
+   ],
+   "antwort": "Yes. «House pieces» shows them in groups. A changed piece is saved under «My designs». «Work on a copy» and «Back to the original» stand under «Piece of the house».",
+   "werkzeug": "Print & feed",
+   "raum": "druck"
+  },
+  {
+   "id": "pf-release",
+   "frage": "What do «Release» and «Take back» do?",
+   "andere": [
+    "Release a design",
+    "Publish in Print & feed"
+   ],
+   "stichwoerter": [
+    "release",
+    "take back",
+    "publish",
+    "areas",
+    "design",
+    "withdraw",
+    "house",
+    "print & feed"
+   ],
+   "antwort": "«Release» publishes a design for the areas of the house. «Take back» withdraws it.",
+   "werkzeug": "Print & feed",
+   "raum": "druck"
+  },
+  {
+   "id": "vi-what",
+   "frage": "What does Visitors show?",
+   "andere": [
+    "Visitor statistics",
+    "Who visits the website?"
+   ],
+   "stichwoerter": [
+    "visitors",
+    "statistics",
+    "visits",
+    "analytics",
+    "numbers",
+    "who"
+   ],
+   "antwort": "Visitors shows who visits the website: from which country and which website guests come, on which device, and what they look at. Here you only read. Nothing can be changed.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-period",
+   "frage": "How do I see the last 30 days?",
+   "andere": [
+    "Change the period",
+    "Last week"
+   ],
+   "stichwoerter": [
+    "period",
+    "days",
+    "7",
+    "30",
+    "90",
+    "week",
+    "month"
+   ],
+   "antwort": "Under the title of each view you pick the period: 7, 30 or 90 days. All numbers of the view count for this period.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-origin",
+   "frage": "Where do the guests come from?",
+   "andere": [
+    "Countries of visitors",
+    "Did they find us on Instagram?"
+   ],
+   "stichwoerter": [
+    "origin",
+    "country",
+    "countries",
+    "instagram",
+    "google",
+    "came from",
+    "abroad",
+    "device"
+   ],
+   "antwort": "«Origin» shows how many come from the Philippines and from abroad, the countries, the website that brought the guest (Instagram, Google, Google Maps, Facebook or TravelGO) and the device.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-time",
+   "frage": "When do most guests visit the website?",
+   "andere": [
+    "Busiest time",
+    "Best time for a post"
+   ],
+   "stichwoerter": [
+    "time",
+    "hour",
+    "weekday",
+    "busiest",
+    "peak",
+    "when",
+    "post"
+   ],
+   "antwort": "«Time» shows at which hour and on which weekday the visits start, in Siargao time. «Weekday and hour» puts both together: the darker a field, the more visits.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-pages",
+   "frage": "Which page is viewed most?",
+   "andere": [
+    "Most popular page",
+    "Page views"
+   ],
+   "stichwoerter": [
+    "pages",
+    "views",
+    "most",
+    "popular",
+    "viewed",
+    "page",
+    "visitors",
+    "list"
+   ],
+   "antwort": "«Pages» lists every page of the website with its views, the most visited page on top.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-calls",
+   "frage": "Can I see how many guests called us from the website?",
+   "andere": [
+    "Calls from the website",
+    "Directions taps"
+   ],
+   "stichwoerter": [
+    "call",
+    "calls",
+    "directions",
+    "map",
+    "on the way",
+    "taps"
+   ],
+   "antwort": "No. Cloudflare does not count taps on Call or Directions. «On the way» shows how often the Visit page with the map was opened.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-privacy",
+   "frage": "Does Visitors use cookies or store names?",
+   "andere": [
+    "Privacy of visitors",
+    "Is it GDPR friendly?"
+   ],
+   "stichwoerter": [
+    "cookies",
+    "names",
+    "privacy",
+    "data",
+    "tracking",
+    "personal",
+    "email"
+   ],
+   "antwort": "No cookies are set, and names, emails and anything a guest types are never counted. «How we count» lists what is counted: the page, the time, the country, the device and the name of the website the guest came from.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "vi-test-data",
+   "frage": "Why do I see test data?",
+   "andere": [
+    "Numbers are made up",
+    "No real visits"
+   ],
+   "stichwoerter": [
+    "test data",
+    "made up",
+    "real",
+    "example",
+    "fake",
+    "numbers"
+   ],
+   "antwort": "There are no real visits yet. «Show test data» shows all views with made-up numbers, marked as test data. Your real visits will come from Cloudflare Web Analytics.",
+   "werkzeug": "Visitors",
+   "raum": "besuche"
+  },
+  {
+   "id": "academy",
+   "frage": "What is the Academy?",
+   "andere": [
+    "How does the Academy work?",
+    "Where are the guide videos?",
+    "Is my progress saved?"
+   ],
+   "stichwoerter": [
+    "academy",
+    "guides",
+    "videos",
+    "lessons",
+    "progress",
+    "rooms",
+    "learn",
+    "training"
+   ],
+   "antwort": "The Academy has guide videos and lessons on the website and the tools of The Cat & Gun, sorted in rooms. Your progress (videos watched, lessons read) is kept in this browser.",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  },
+  {
+   "id": "where-runs",
+   "frage": "Where do the website and the tools run?",
+   "andere": [
+    "Hosting",
+    "Cloudflare account",
+    "Server"
+   ],
+   "stichwoerter": [
+    "cloudflare",
+    "hosting",
+    "server",
+    "account",
+    "pages",
+    "workers",
+    "runs",
+    "where"
+   ],
+   "antwort": "Online, everything runs in the Cloudflare account of The Cat & Gun, on the free plan: Pages for the files, Workers for saving and publishing. This account does not exist yet. Until then the tools run on a local server.",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  },
+  {
+   "id": "costs",
+   "frage": "What does it cost to run?",
+   "andere": [
+    "Running costs",
+    "Is there a monthly fee?",
+    "Domain price"
+   ],
+   "stichwoerter": [
+    "cost",
+    "costs",
+    "price",
+    "fee",
+    "domain",
+    "php",
+    "free",
+    "pay"
+   ],
+   "antwort": "As stated in the Next Steps PDF of 20 November 2026: the domain costs 800 PHP a year and is bought by the house. The website costs 0 PHP, and the tools named there cost 0 PHP.",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  },
+  {
+   "id": "domain",
+   "frage": "Who buys the domain?",
+   "andere": [
+    "Own web address",
+    "Domain"
+   ],
+   "stichwoerter": [
+    "domain",
+    "address",
+    "url",
+    "buy",
+    "own address",
+    "800 php",
+    "per year",
+    "connect"
+   ],
+   "antwort": "The house buys the domain, 800 PHP a year. Tasty Studios connects the website to it, then it runs under your own address.",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  },
+  {
+   "id": "no-ai",
+   "frage": "Do the tools use AI?",
+   "andere": [
+    "Is there AI in the chat?",
+    "Artificial intelligence"
+   ],
+   "stichwoerter": [
+    "ai",
+    "artificial intelligence",
+    "chatgpt",
+    "automatic",
+    "bot",
+    "chat",
+    "without ai",
+    "tools"
+   ],
+   "antwort": "No. The tools work without AI. The chat answers only with what you entered.",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  },
+  {
+   "id": "support",
+   "frage": "Who do I ask for help?",
+   "andere": [
+    "Support",
+    "Contact Tasty Studios"
+   ],
+   "stichwoerter": [
+    "help",
+    "support",
+    "contact",
+    "email",
+    "whatsapp",
+    "tasty studios",
+    "problem"
+   ],
+   "antwort": "For the website, the menu, the tools or the domain: robert@tasty-studios.de or WhatsApp +49 173 7230530. Tasty Studios replies the same day.",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  },
+  {
+   "id": "brand-flow",
+   "frage": "How are the tools connected to the brand?",
+   "andere": [
+    "Where do colours and fonts come from?",
+    "One brand for all tools"
+   ],
+   "stichwoerter": [
+    "brand",
+    "connected",
+    "colours",
+    "fonts",
+    "sticker",
+    "print",
+    "brand book"
+   ],
+   "antwort": "The Brand book editor holds colours, fonts, photos, lines and elements. The Sticker editor, Print & feed and the Brand book take them from there, after «Publish».",
+   "werkzeug": "All tools",
+   "raum": "basics"
+  }
+ ]
+}
