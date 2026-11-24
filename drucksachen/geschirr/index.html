@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="wartet">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glasses, plates and boards · The Cat &amp; Gun</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../zeichen/et-schwarz.svg" type="image/svg+xml">
+<link rel="preload" href="../schrift/dmserif.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'DM Serif Display';src:url(../schrift/dmserif.woff2) format('woff2');font-weight:400;font-style:normal;font-display:block}@font-face{font-family:'Instrument Sans';src:url(../schrift/instrument.woff2) format('woff2');font-weight:400 600;font-style:normal;font-display:block}
+:root{--schwarz:#141210;--papier:#f5f0e7;--rot:#a8232a;--gruen:#24452f;--grau:#6e675e;--karton:#e9dfcf;--linie:rgba(20,18,16,.14);--tief:#ebe3d5}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.wartet body{visibility:hidden}
+body{margin:0;background:var(--papier);color:var(--schwarz);font:400 17px/1.62 'Instrument Sans',system-ui,sans-serif;font-synthesis:none;overflow-x:clip}
+html{overflow-x:clip}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.leiste{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1280px;margin:0 auto;padding:18px 40px;border-bottom:1px solid var(--linie)}
+.leiste .logo{height:50px;width:auto;display:block}
+.leiste a.zur{font:500 14px/1 'Instrument Sans';letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--rot)}
+.auftakt{max-width:1280px;margin:0 auto;padding:80px 40px 40px;text-align:left}
+.auftakt .zeile{font:500 14px/1 'Instrument Sans';letter-spacing:.24em;text-transform:uppercase;color:var(--rot);margin:0 0 24px}
+.auftakt h1{font:400 clamp(52px,7.4vw,108px)/1 'DM Serif Display',serif;margin:0 0 28px;max-width:12em;text-wrap:balance}
+.auftakt p.lead{font-size:clamp(18px,1.5vw,20px);max-width:740px;margin:0;color:var(--grau)}
+.imhaus{max-width:1280px;margin:0 auto;padding:12px 40px 0;display:grid;gap:22px}
+.imhaus.zwei{grid-template-columns:repeat(2,minmax(0,1fr))}
+.imhaus figure{margin:0;border-radius:14px;overflow:hidden;background:var(--tief);position:relative}
+.imhaus figure img{width:100%;height:100%;object-fit:cover}
+.imhaus.eins figure img{height:auto}
+.imhaus.zwei figure{aspect-ratio:10/9}
+.imhaus figcaption{position:absolute;left:16px;bottom:16px;right:16px;max-width:36em;background:rgba(20,18,16,.78);color:var(--papier);font-size:15px;line-height:1.45;padding:10px 14px;border-radius:8px}
+.gruppe{max-width:1280px;margin:0 auto;padding:64px 40px 8px}
+.kopf{display:flex;align-items:baseline;gap:28px;border-top:1px solid var(--linie);padding-top:26px;margin-bottom:40px}
+.kopf h2{font:400 clamp(30px,3.2vw,44px)/1.05 'DM Serif Display',serif;margin:0;flex:none}
+.kopf p{margin:0;color:var(--grau);font-size:17px}
+.stueck{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:52px;align-items:center;margin:0 0 64px}
+.karton{background-color:var(--karton);background-image:var(--fisch-k);background-size:46px 46px;border-radius:10px;padding:7% 6%;display:flex;flex-direction:column;gap:22px;justify-content:center;min-height:360px}
+.reihe{display:flex;justify-content:center;align-items:center;gap:3.7%}
+/* Safari schneidet einen Filterschatten an der Kante des Bildes ab, dann steht ein Kasten dahinter (Robert 23.11.2026). Luft rund um das Bild, durch negativen Rand ausgeglichen: Lage und Grösse bleiben gleich */
+/* Prüfpunkt 39 (Robert 23.11.2026): jeder Schatten folgt der Form (drop-shadow, nie box-shadow um freigestellte Bilder) und hat rundum Luft von mindestens dem 1,5-fachen seines Scheins in der bewegten Ebene; sonst kappt Safari eckig */
+.tipp{flex-basis:100%;margin:4px 0 0;font-size:15px;color:var(--grau)}
+.reihe .rw--edit{cursor:pointer}.reihe .rw--edit img{transition:scale .5s cubic-bezier(.32,.72,0,1)}.reihe .rw--edit:hover img{scale:1.04}
+.reihe .rw{display:block;flex:none;width:var(--w);box-sizing:content-box;padding:40px;margin:-40px}
+.reihe img{display:block;height:auto;width:100%;filter:drop-shadow(0 10px 14px rgba(20,18,15,.3)) drop-shadow(0 2px 3px rgba(20,18,15,.24))}
+.karton.ohne .reihe img{filter:none}
+/* Billardkugeln: runder Schatten statt Filter (Robert 23.11.2026: «am Anfang sehr lange Schatten»; der Filter wurde beim Hereinschweben in Safari eckig und lang) */
+.text .idee{font:500 14px/1 'Instrument Sans';letter-spacing:.24em;text-transform:uppercase;color:var(--rot);margin:0 0 14px}
+.text h3{font:400 clamp(28px,2.4vw,36px)/1.08 'DM Serif Display',serif;margin:0 0 16px}
+.text .satz{font-size:18px;margin:0 0 12px}
+.text .wozu{font-size:16px;margin:0 0 16px;color:var(--grau)}
+.text .format{font:500 14px/1.5 'Instrument Sans';letter-spacing:.1em;text-transform:uppercase;color:var(--rot);margin:0 0 22px}
+.knoepfe{display:flex;flex-wrap:wrap;gap:10px}
+.knopf{display:inline-flex;align-items:center;gap:14px;text-decoration:none;background:linear-gradient(180deg,#2c2925,var(--schwarz));color:var(--papier);border-radius:999px;padding:7px 8px 7px 22px;font:500 14px/1 'Instrument Sans';letter-spacing:.12em;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 6px 14px -6px rgba(18,17,16,.55);transition:transform .25s ease}
+.knopf i{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#d9504a,var(--rot));color:var(--papier);display:grid;place-items:center;box-shadow:0 1px 2px rgba(0,0,0,.35)}
+.knopf svg{width:14px;height:14px}
+.knopf:hover{transform:translateY(-1px)}
+.knopf--hell{background:var(--papier);color:var(--schwarz);box-shadow:inset 0 1px 0 #fff,0 6px 14px -6px rgba(18,17,16,.35),0 0 0 1px rgba(18,17,16,.1)}
+.weiter{max-width:1280px;margin:24px auto 0;padding:0 40px}
+.weiter h2{font:400 clamp(26px,2.6vw,34px)/1.1 'DM Serif Display',serif;margin:0 0 22px;border-top:1px solid var(--linie);padding-top:26px}
+.wege{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.weg{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-radius:10px;background:var(--tief);text-decoration:none;font:500 14px/1.3 'Instrument Sans';letter-spacing:.1em;text-transform:uppercase}
+.weg i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--schwarz);color:var(--papier);display:grid;place-items:center}
+.weg svg{width:14px;height:14px}
+.schluss{max-width:1280px;margin:56px auto 0;padding:48px 40px 64px;border-top:1px solid var(--linie);display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--grau);font-size:15px}
+.schluss .logo{height:64px;width:auto}
+/* Bewegung beim Hereinkommen, aus dem Werkbank-Kit (werkbank.css) wie bei SanaBowl: hochschweben, reinzoomen, beim Scrollen leicht treiben */
+:root{--ein:cubic-bezier(.16,1,.3,1)}
+[data-a]{transition:opacity .9s var(--ein),transform 1.25s var(--ein);transition-delay:calc(var(--vz,0ms) + var(--i,0)*90ms)}
+[data-a="auf"]{opacity:0;transform:translateY(42px)}
+[data-a="schweb"]{opacity:0;transform:translateY(120px) rotate(var(--r0,0deg)) scale(.93);transition-duration:1.05s,1.7s}
+[data-a="gross"]{opacity:0;transform:scale(.92)}
+[data-a].da{opacity:1;transform:none}
+[data-a="schweb"].da{transform:rotate(var(--r,0deg))}
+/* kein will-change auf allen treibenden Stücken: Safari hielt jedes in einer eigenen Ebene, Schatten wurden eckig, die Seite flackerte */
+@media (max-width:760px){.reihe img{filter:drop-shadow(0 6px 8px rgba(20,18,15,.28))}.reihe .rw{padding:22px;margin:-22px}}
+@media (max-width:980px){.karton [data-a="schweb"]{transform:translateY(28px) scale(.97)}.karton [data-a="schweb"].da{transform:none}.stueck .text[data-a="auf"]{--vz:420ms;transform:translateY(18px)}.stueck .text[data-a="auf"].da{transform:none}}
+@media (prefers-reduced-motion:reduce){[data-a]{opacity:1!important;transform:rotate(var(--r,0deg))!important;transition:none!important}}
+/* Bühne im Auftakt: Stücke schweben neben dem Titel */
+.auftakt{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:center}
+.buehne{position:relative;aspect-ratio:1/1.04;margin:-3% -4% -3% 0}
+.buehne .st{position:absolute;display:block;box-sizing:content-box;padding:76px;margin:-76px}
+.buehne .st img{display:block;width:100%;height:auto;filter:drop-shadow(0 22px 26px rgba(20,18,15,.32)) drop-shadow(0 3px 5px rgba(20,18,15,.24))}
+.buehne .st.flach img{border-radius:10px}
+@media (max-width:980px){.auftakt{grid-template-columns:1fr;text-align:center}.auftakt h1{margin:0 auto 28px}.auftakt p.lead{margin:0 auto}.buehne{aspect-ratio:1/.98;margin:0 auto;width:min(100%,640px)}}
+@media (max-width:900px){.stueck{grid-template-columns:1fr;gap:26px;margin-bottom:56px}.karton{min-height:0}.wege{grid-template-columns:repeat(2,minmax(0,1fr))}.imhaus.zwei{grid-template-columns:1fr}}
+@media (max-width:600px){body{font-size:16px}.leiste{padding:14px 16px}.leiste .logo{height:42px}.auftakt{padding:48px 16px 24px}.auftakt h1{font-size:clamp(40px,12vw,56px)}.text h3{font-size:26px}.kopf h2{font-size:28px}.gruppe{padding:44px 16px 4px}.kopf{flex-direction:column;gap:8px;margin-bottom:26px}.karton{padding:9% 6%;gap:14px}.weiter{padding:0 16px}.wege{grid-template-columns:1fr}.imhaus{padding:8px 16px 0}.imhaus figcaption{position:static;border-radius:0;background:var(--schwarz)}.schluss{padding:40px 16px 56px;flex-direction:column;align-items:flex-start}}
+:root{--fisch-k:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%238a5634%22%20stroke-opacity%3D%220.12%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}</style>
+<noscript><style>html.wartet body{visibility:visible}[data-a]{opacity:1;transform:none}</style></noscript>
+<script>
+(function(){var d=document.documentElement,f=false;function zeig(){if(!f){f=true;d.classList.remove('wartet');window.__los=1;dispatchEvent(new Event('los'))}}setTimeout(zeig,2600);
+document.addEventListener('DOMContentLoaded',function(){var h=innerHeight,w=[];document.querySelectorAll('img').forEach(function(i){var r=i.getBoundingClientRect();if(r.top<h&&r.bottom>0){i.loading='eager';if(!i.complete)w.push(new Promise(function(o){i.addEventListener('load',o);i.addEventListener('error',o)}))}});
+Promise.all(w.concat([document.fonts?document.fonts.ready:0])).then(zeig)});})();
+</script>
+</head>
+<body>
+<nav class="leiste"><a href="../index.html" aria-label="All pieces"><img class="logo" src="../zeichen/wortmarke-schwarz.svg" alt="The Cat &amp; Gun" width="58" height="50"></a><a class="zur" href="../index.html">All pieces</a></nav>
+<header class="auftakt"><div>
+  <p class="zeile">Glasses and plates · ideas for The Cat &amp; Gun</p>
+  <h1>Glasses, plates and boards</h1>
+  <p class="lead">Beer, wine and shot glasses with the wordmark etched in, a plate with the house’s name around the rim, a cutting board for the bagels and the glass dome for the cookies on its wooden base.</p>
+</div><div class="buehne" aria-hidden="true"><span class="st flach" data-a="schweb" data-drift="0.1" style="left:1.9%;top:1.9%;width:30.2%;z-index:1;--i:1;--r:-5deg;--r0:-15deg"><img src="img/glaeser-bier.webp?v=1795452986" alt="" decoding="sync"></span><span class="st flach" data-a="schweb" data-drift="-0.1" style="left:28.2%;top:0.0%;width:34.8%;z-index:2;--i:2;--r:4deg;--r0:12deg"><img src="img/teller-teller.webp?v=1795452988" alt="" decoding="sync"></span><span class="st flach" data-a="schweb" data-drift="0.13" style="left:56.4%;top:5.6%;width:29.0%;z-index:3;--i:3;--r:6deg;--r0:18deg"><img src="img/glaeser-wein.webp?v=1795452986" alt="" decoding="sync"></span><span class="st flach" data-a="schweb" data-drift="-0.07" style="left:5.6%;top:43.2%;width:32.5%;z-index:4;--i:4;--r:4deg;--r0:12deg"><img src="img/brett-brett.webp?v=1795452989" alt="" decoding="sync"></span><span class="st flach" data-a="schweb" data-drift="0.09" style="left:33.8%;top:37.6%;width:32.5%;z-index:5;--i:5;--r:-4deg;--r0:-12deg"><img src="img/glocke-glocke.webp?v=1795453472" alt="" decoding="sync"></span><span class="st flach" data-a="schweb" data-drift="-0.11" style="left:56.4%;top:45.1%;width:29.0%;z-index:6;--i:6;--r:5deg;--r0:15deg"><img src="img/glaeser-schnaps.webp?v=1795452987" alt="" decoding="sync"></span></div></header>
+<section class="gruppe"><header class="kopf" data-a="auf"><h2>At the bar</h2><p>Etched into the glass.</p></header><article class="stueck" id="glaeser">
+  <div class="karton" data-a="gross"><div class="reihe"><span class="rw" data-a="schweb" style="--w:30.89%;--i:1;--r0:4deg"><img src="img/glaeser-bier.webp?v=1795452986" width="958" height="1183" alt="" decoding="sync"></span><span class="rw" data-a="schweb" style="--w:30.89%;--i:2;--r0:-6deg"><img src="img/glaeser-wein.webp?v=1795452986" width="958" height="1183" alt="" decoding="sync"></span><span class="rw" data-a="schweb" style="--w:30.89%;--i:3;--r0:8deg"><img src="img/glaeser-schnaps.webp?v=1795452987" width="958" height="1183" alt="" decoding="sync"></span></div></div>
+  <div class="text" data-a="auf" style="--i:2">
+    <p class="idee">Idea</p>
+    <h3>Beer, wine and shot glasses</h3>
+    <p class="satz">The wordmark with Catangnan etched into the pint glass, the ampersand on the wine glass and the small wordmark on the shot glasses.</p>
+    <p class="wozu">Etched or sandblasted, so the mark stays through every wash. The product photos are stand-ins; the mark on them is the house’s own. The print file gives the three motifs in actual size.</p>
+    <p class="format">etched · pint glass 60 mm · wine glass 25 mm · shot glass 22 mm</p>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-glaeser.pdf?v=1795451929" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="knopf knopf--hell" href="http://127.0.0.1:9738/_werkzeuge/imprimerie/?stueck=glaeser"><span>Edit in Print &amp; feed</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+  </div>
+</article></section><section class="gruppe"><header class="kopf" data-a="auf"><h2>On the table and the counter</h2><p>The plate, the board and the cookie dome.</p></header><article class="stueck" id="teller">
+  <div class="karton" data-a="gross"><div class="reihe"><span class="rw" data-a="schweb" style="--w:57.48%;--i:1;--r0:4deg"><img src="img/teller-teller.webp?v=1795452988" width="958" height="1183" alt="" decoding="async" loading=lazy></span></div></div>
+  <div class="text" data-a="auf" style="--i:2">
+    <p class="idee">Idea</p>
+    <h3>Plate with the name around the rim</h3>
+    <p class="satz">A white plate with «The Cat &amp; Gun · Catangnan · Siargao · Your neighbourhood hangout» running around the rim in the red of the pool table.</p>
+    <p class="wozu">Fired on as a ceramic decal, safe for the dishwasher. The product photo is a stand-in; the print file gives the ring in actual size.</p>
+    <p class="format">plate Ø 270 mm · ceramic decal in the red of the pool table</p>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-teller.pdf?v=1795451930" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="knopf knopf--hell" href="http://127.0.0.1:9738/_werkzeuge/imprimerie/?stueck=teller"><span>Edit in Print &amp; feed</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+  </div>
+</article><article class="stueck" id="brett">
+  <div class="karton" data-a="gross"><div class="reihe"><span class="rw" data-a="schweb" style="--w:57.48%;--i:1;--r0:4deg"><img src="img/brett-brett.webp?v=1795452989" width="958" height="1183" alt="" decoding="async" loading=lazy></span></div></div>
+  <div class="text" data-a="auf" style="--i:2">
+    <p class="idee">Idea</p>
+    <h3>Cutting board for the bagels</h3>
+    <p class="satz">An oak board with the wordmark and «Homemade Bagels» burnt into the wood, to serve the bagels on.</p>
+    <p class="wozu">Laser engraved, so it lasts through oil and washing. The product photo is a stand-in; the print file gives the engraving in actual size.</p>
+    <p class="format">oak board · laser engraving 120 mm wide</p>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-brett.pdf?v=1795451931" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="knopf knopf--hell" href="http://127.0.0.1:9738/_werkzeuge/imprimerie/?stueck=brett"><span>Edit in Print &amp; feed</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+  </div>
+</article><article class="stueck" id="glocke">
+  <div class="karton" data-a="gross"><div class="reihe"><span class="rw" data-a="schweb" style="--w:57.31%;--i:1;--r0:4deg"><img src="img/glocke-glocke.webp?v=1795453472" width="952" height="1179" alt="" decoding="async" loading=lazy></span></div></div>
+  <div class="text" data-a="auf" style="--i:2">
+    <p class="idee">Idea</p>
+    <h3>Glass dome for the cookies</h3>
+    <p class="satz">The glass dome on its wooden base at the counter, with «The Cat &amp; Gun · Cookies» burnt into the edge of the base and the ampersand etched into the glass.</p>
+    <p class="wozu">For the Chocolate Cookie and the Double Chocolate Cookie from the menu. The product photo is a stand-in; the print file gives both motifs in actual size.</p>
+    <p class="format">wooden base · engraving 160 × 10 mm · ampersand etched 40 mm</p>
+    <div class="knoepfe"><a class="knopf" href="pdf/the-cat-and-gun-glocke.pdf?v=1795453250" target="_blank" rel="noopener"><span>PDF, actual size</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a><a class="knopf knopf--hell" href="http://127.0.0.1:9738/_werkzeuge/imprimerie/?stueck=glocke"><span>Edit in Print &amp; feed</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></i></a></div>
+  </div>
+</article></section>
+<style>
+/* «More for …» als Karussell mit Miniaturen (mehr_karussell.py, 23.11.2026): nur transform und opacity */
+.mk{overflow:hidden}
+.mk .mk__k{position:relative;outline:none;margin-top:6px}
+.mk .mk__b{position:relative;height:clamp(210px,22vw,330px)}
+.mk .mk__blatt{position:absolute;left:50%;top:0;height:100%;aspect-ratio:64/44;display:block;text-decoration:none;cursor:pointer;
+  --x:0%;--s:.5;--o:0;transform:translateX(calc(-50% + var(--x))) scale(var(--s));opacity:var(--o);pointer-events:none;
+  transition:transform .95s cubic-bezier(.2,.8,.2,1),opacity .6s cubic-bezier(.2,.8,.2,1)}
+.mk .mk__blatt[data-p="0"]{--x:0%;--s:1;--o:1;z-index:5;pointer-events:auto}
+.mk .mk__blatt[data-p="-1"]{--x:-88%;--s:.66;--o:.55;z-index:4;pointer-events:auto}
+.mk .mk__blatt[data-p="1"]{--x:88%;--s:.66;--o:.55;z-index:4;pointer-events:auto}
+.mk .mk__blatt[data-p="-2"]{--x:-150%;--s:.46;--o:.22;z-index:3;pointer-events:auto}
+.mk .mk__blatt[data-p="2"]{--x:150%;--s:.46;--o:.22;z-index:3;pointer-events:auto}
+.mk .mk__k[data-gerade] .mk__blatt[data-p="-2"]{--o:0;pointer-events:none}
+.mk .mk__blatt[data-p="-3"]{--x:-192%}.mk .mk__blatt[data-p="3"]{--x:192%}
+/* Hülle schwebt, Bild trägt den Schatten; Hülle und Blatt haben Luft für den ganzen Schein, sonst kappt Safari eckig (Robert 23.11.2026, Prüfpunkt 39) */
+.mk .mk__mini{position:absolute;inset:54px;display:flex;align-items:center;justify-content:center;gap:3.4%}
+.mk .mk__s{display:block;box-sizing:content-box;width:var(--w);padding:64px;margin:-64px;transform:rotate(var(--r))}
+.mk .mk__mini img{display:block;width:100%;height:auto;object-fit:contain;
+  filter:drop-shadow(0 10px 14px rgba(20,16,12,.22)) drop-shadow(0 2px 3px rgba(20,16,12,.16))}
+.mk .mk__mini img.flach{border-radius:8px}
+.mk .mk__s{animation:mk-schweb 4.6s ease-in-out infinite;animation-delay:calc(var(--n,0) * -1.5s)}
+@keyframes mk-schweb{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.mk .mk__fuss{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(12px,2vw,28px);max-width:600px;margin:clamp(16px,1.8vw,26px) auto 0}
+.mk .mk__texte{display:grid;text-align:center}
+.mk .mk__texte>div{grid-area:1/1;display:flex;flex-direction:column;align-items:center;gap:14px;opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .4s ease,transform .6s ease,visibility 0s .45s}
+.mk .mk__texte>div.an{opacity:1;visibility:visible;transform:none;transition:opacity .6s ease .15s,transform .8s ease .15s}
+.mk .mk__texte h3{margin:0;font-family:var(--mk-titelschrift);font-size:clamp(24px,2.2vw,32px);line-height:1.08;color:var(--mk-titel)}
+.mk .mk__auf{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:500 15px/1.2 var(--mk-schrift);color:var(--mk-titel)}
+.mk .mk__auf i,.mk .mk__pf{flex:none;border-radius:50%;background:var(--mk-knopf);color:var(--mk-knopf-text);display:grid;place-items:center}
+.mk .mk__auf i{width:32px;height:32px}
+.mk .mk__pf{width:52px;height:52px;border:0;cursor:pointer;box-shadow:0 12px 20px -12px rgba(0,0,0,.55);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.mk .mk__pf:hover{transform:scale(1.06)}
+.mk svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mk .mk__zahl{margin:14px 0 0;text-align:center;font:500 13px/1 var(--mk-schrift);letter-spacing:.22em;color:var(--mk-titel);opacity:.7}
+@media (max-width:700px){
+  .mk .mk__b{height:min(62vw,250px)}
+  .mk .mk__blatt[data-p="-1"]{--x:-82%;--s:.55;--o:.4}.mk .mk__blatt[data-p="1"]{--x:82%;--s:.55;--o:.4}
+  .mk .mk__blatt[data-p="-2"],.mk .mk__blatt[data-p="2"]{--o:0}
+}
+@media (prefers-reduced-motion:reduce){.mk .mk__blatt,.mk .mk__texte>div{transition:none}.mk .mk__s{animation:none}}
+.mk{--mk-titel:var(--schwarz);--mk-knopf:var(--schwarz);--mk-knopf-text:#fff;--mk-schrift:'Instrument Sans',system-ui,sans-serif;--mk-titelschrift:'DM Serif Display',serif}.mk--haufen .mk__mini{display:block;inset:72px}.mk--haufen .hf{box-sizing:content-box;padding:72px;margin:-72px;animation:none}.mk--haufen .hf{position:absolute;left:var(--x);top:var(--y);width:var(--w);transform:rotate(var(--r))}.mk--haufen .hf img{width:100%}.mk--haufen .hf img.flach{border-radius:4px}.mk--haufen .rein .hf{animation:hf-rein 1.15s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--n) * 70ms)}@keyframes hf-rein{from{transform:translate(var(--fx),var(--fy)) rotate(calc(var(--r) * 4)) scale(.82);opacity:0}to{transform:rotate(var(--r));opacity:1}}.mk--haufen .mk__blatt[data-p="-2"],.mk--haufen .mk__blatt[data-p="2"],.mk--haufen .mk__blatt[data-p="-3"],.mk--haufen .mk__blatt[data-p="3"]{visibility:hidden}@media (max-width:700px){.mk--haufen .mk__blatt[data-p="-1"],.mk--haufen .mk__blatt[data-p="1"]{visibility:hidden}}@media (max-width:700px){.mk--haufen .rein .hf{animation-name:hf-rein-m}}@keyframes hf-rein-m{from{transform:translateY(-44px) rotate(calc(var(--r) * 2)) scale(.9);opacity:0}to{transform:rotate(var(--r));opacity:1}}@media (prefers-reduced-motion:reduce){.mk--haufen .rein .hf{animation:none}}</style><section class="weiter mk mk--haufen" aria-label="More for the house"><h2>More for the house</h2>
+<div class="mk__k" data-mk data-gerade aria-roledescription="carousel">
+  <div class="mk__b"><a class="mk__blatt" href="../draussen/index.html" data-p="0" aria-label="For hostels and surf camps"><span class="mk__mini"><span class="hf" style="--w:24.00%;--x:6%;--y:8%;--r:-8deg;--fx:-360px;--fy:0px;--n:0"><img src="../draussen/img/flyer-vorn-garten.webp?v=1795453156" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:30.00%;--x:30%;--y:22%;--r:4deg;--fx:40px;--fy:-120px;--n:1"><img src="../draussen/img/postkarten-vorn-raum.webp?v=1795453159" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:30.00%;--x:56%;--y:6%;--r:10deg;--fx:-40px;--fy:-120px;--n:2"><img src="../draussen/img/postkarten-vorn-zapf.webp?v=1795453161" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:22.00%;--x:70%;--y:52%;--r:-5deg;--fx:360px;--fy:0px;--n:3"><img src="../draussen/img/kaertchen-vorn.webp?v=1795453166" alt="" loading="lazy" decoding="async" class=flach></span></span></a><a class="mk__blatt" href="../instagram/index.html" data-p="1" aria-label="Instagram feed"><span class="mk__mini"><span class="hf" style="--w:24.00%;--x:4%;--y:12%;--r:-8deg;--fx:-360px;--fy:0px;--n:0"><img src="../instagram/img/ig-posts-post-saefte.webp?v=1795453173" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:20.00%;--x:24%;--y:30%;--r:5deg;--fx:-360px;--fy:60px;--n:1"><img src="../instagram/img/ig-stories-garten.webp?v=1795453194" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:24.00%;--x:45%;--y:6%;--r:-4deg;--fx:-40px;--fy:-120px;--n:2"><img src="../instagram/img/ig-posts-post-fass.webp?v=1795453174" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:20.00%;--x:66%;--y:24%;--r:8deg;--fx:360px;--fy:0px;--n:3"><img src="../instagram/img/ig-stories-pool.webp?v=1795453195" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:19.00%;--x:34%;--y:58%;--r:-10deg;--fx:-40px;--fy:240px;--n:4"><img src="../instagram/img/ig-posts-post-sonntag.webp?v=1795453176" alt="" loading="lazy" decoding="async" class=flach></span></span></a><a class="mk__blatt" href="../index.html" data-p="2" aria-label="All pieces"><span class="mk__mini"><span class="hf" style="--w:28.00%;--x:4%;--y:10%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../sticker/img/sticker-wortmarke.webp?v=1795452851" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:26.00%;--x:36%;--y:4%;--r:5deg;--fx:40px;--fy:-120px;--n:1"><img src="../untersetzer/img/bierdeckel-vorn.webp?v=1795452921" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:24.00%;--x:68%;--y:12%;--r:-4deg;--fx:360px;--fy:120px;--n:2"><img src="../schilder/img/plakate-pool.webp?v=1795452975" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:20.00%;--x:14%;--y:52%;--r:4deg;--fx:-360px;--fy:0px;--n:3"><img src="../tisch/img/aufsteller2-coffee.webp?v=1795452996" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:24.00%;--x:44%;--y:50%;--r:-5deg;--fx:-40px;--fy:240px;--n:4"><img src="../billard/img/kugeln-acht.webp?v=1795453129" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:22.00%;--x:70%;--y:56%;--r:6deg;--fx:360px;--fy:120px;--n:5"><img src="../mitnehmen/img/foto-shirt-vorn.webp?v=1795455044" alt="" loading="lazy" decoding="async" class=flach></span></span></a><a class="mk__blatt" href="../sticker/index.html" data-p="3" aria-label="Stickers"><span class="mk__mini"><span class="hf" style="--w:30.00%;--x:6%;--y:16%;--r:-8deg;--fx:-360px;--fy:0px;--n:0"><img src="../sticker/img/sticker-wortmarke.webp?v=1795452851" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:20.00%;--x:70%;--y:4%;--r:9deg;--fx:360px;--fy:60px;--n:1"><img src="../sticker/img/sticker4-mango-tango.webp?v=1795452893" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:38.00%;--x:32%;--y:4%;--r:6deg;--fx:-40px;--fy:-120px;--n:2"><img src="../sticker/img/sticker2-juices.webp?v=1795452861" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:22.00%;--x:30%;--y:44%;--r:-12deg;--fx:40px;--fy:240px;--n:3"><img src="../sticker/img/sticker-et.webp?v=1795452853" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:20.00%;--x:52%;--y:46%;--r:-4deg;--fx:-40px;--fy:240px;--n:4"><img src="../sticker/img/sticker5-drei-jahre.webp?v=1795452867" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:21.00%;--x:72%;--y:42%;--r:10deg;--fx:360px;--fy:120px;--n:5"><img src="../sticker/img/sticker-catangnan.webp?v=1795452855" alt="" loading="lazy" decoding="async"></span></span></a><a class="mk__blatt" href="../untersetzer/index.html" data-p="4" aria-label="Beer mats and coasters"><span class="mk__mini"><span class="hf" style="--w:34.00%;--x:4%;--y:10%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../untersetzer/img/bierdeckel-vorn.webp?v=1795452921" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:28.00%;--x:40%;--y:4%;--r:7deg;--fx:40px;--fy:-120px;--n:1"><img src="../untersetzer/img/untersetzer-saft-vorn.webp?v=1795452939" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:26.00%;--x:68%;--y:22%;--r:-5deg;--fx:360px;--fy:120px;--n:2"><img src="../untersetzer/img/untersetzer-drei-vorn.webp?v=1795452949" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:26.00%;--x:22%;--y:52%;--r:5deg;--fx:-360px;--fy:0px;--n:3"><img src="../untersetzer/img/untersetzer-kaffee-vorn.webp?v=1795452936" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:30.00%;--x:52%;--y:50%;--r:-8deg;--fx:-40px;--fy:240px;--n:4"><img src="../untersetzer/img/bierdeckel-hinten.webp?v=1795452923" alt="" loading="lazy" decoding="async"></span></span></a><a class="mk__blatt" href="../schilder/index.html" data-p="-5" aria-label="Signs for the street"><span class="mk__mini"><span class="hf" style="--w:24.00%;--x:4%;--y:8%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../schilder/img/plakate-pool.webp?v=1795452975" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:24.00%;--x:28%;--y:18%;--r:3deg;--fx:-360px;--fy:60px;--n:1"><img src="../schilder/img/kundenstopper-brekky.webp?v=1795452953" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:21.00%;--x:54%;--y:6%;--r:7deg;--fx:-40px;--fy:-120px;--n:2"><img src="../schilder/img/kreidetafel2-on-tap.webp?v=1795452969" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:22.00%;--x:74%;--y:22%;--r:-4deg;--fx:360px;--fy:0px;--n:3"><img src="../schilder/img/plakate-juices.webp?v=1795452972" alt="" loading="lazy" decoding="async" class=flach></span></span></a><a class="mk__blatt" href="../tisch/index.html" data-p="-4" aria-label="On the table"><span class="mk__mini"><span class="hf" style="--w:20.00%;--x:6%;--y:10%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../tisch/img/aufsteller2-coffee.webp?v=1795452996" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:20.00%;--x:28%;--y:22%;--r:4deg;--fx:-360px;--fy:60px;--n:1"><img src="../tisch/img/aufsteller3-brekky.webp?v=1795452998" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:42.00%;--x:50%;--y:4%;--r:7deg;--fx:-40px;--fy:-120px;--n:2"><img src="../tisch/img/tischset-bagels.webp?v=1795453005" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:16.00%;--x:20%;--y:70%;--r:0deg;--fx:-360px;--fy:0px;--n:3"><img src="../tisch/img/becher-becher-schwarz.webp?v=1795453031" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:26.00%;--x:62%;--y:50%;--r:-5deg;--fx:360px;--fy:60px;--n:4"><img src="../tisch/img/serviette-serviette.webp?v=1795453007" alt="" loading="lazy" decoding="async" class=flach></span></span></a><a class="mk__blatt" href="../billard/index.html" data-p="-3" aria-label="At the pool table"><span class="mk__mini"><span class="hf" style="--w:28.00%;--x:6%;--y:14%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../billard/img/kugeln-acht.webp?v=1795453129" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:28.00%;--x:30%;--y:40%;--r:4deg;--fx:40px;--fy:240px;--n:1"><img src="../billard/img/kugeln-spielball.webp?v=1795453131" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:28.00%;--x:56%;--y:8%;--r:8deg;--fx:-40px;--fy:-120px;--n:2"><img src="../billard/img/kugeln-drei.webp?v=1795453134" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:32.00%;--x:50%;--y:46%;--r:-4deg;--fx:40px;--fy:240px;--n:3"><img src="../billard/img/tafel-pool-naechste.webp?v=1795453143" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:34.00%;--x:8%;--y:64%;--r:3deg;--fx:-360px;--fy:60px;--n:4"><img src="../billard/img/kreide-kreide.webp?v=1795453137" alt="" loading="lazy" decoding="async"></span></span></a><a class="mk__blatt" href="../mitnehmen/index.html" data-p="-2" aria-label="To take home"><span class="mk__mini"><span class="hf" style="--w:30.00%;--x:4%;--y:10%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../mitnehmen/img/foto-shirt-vorn.webp?v=1795455044" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:28.00%;--x:36%;--y:4%;--r:5deg;--fx:40px;--fy:-120px;--n:1"><img src="../mitnehmen/img/foto-tasse.webp?v=1795455052" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:28.00%;--x:66%;--y:16%;--r:-4deg;--fx:360px;--fy:120px;--n:2"><img src="../mitnehmen/img/foto-beutel.webp?v=1795455046" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:14.00%;--x:30%;--y:66%;--r:0deg;--fx:40px;--fy:240px;--n:3"><img src="../mitnehmen/img/pins-et.webp?v=1795453148" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:14.00%;--x:48%;--y:70%;--r:0deg;--fx:-40px;--fy:240px;--n:4"><img src="../mitnehmen/img/pins-acht.webp?v=1795453150" alt="" loading="lazy" decoding="async"></span></span></a><a class="mk__blatt" href="../verpackung/index.html" data-p="-1" aria-label="To go and the bill"><span class="mk__mini"><span class="hf" style="--w:36.00%;--x:4%;--y:12%;--r:-6deg;--fx:-360px;--fy:0px;--n:0"><img src="../verpackung/img/box-box.webp?v=1795453101" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:22.00%;--x:40%;--y:12%;--r:6deg;--fx:40px;--fy:-120px;--n:1"><img src="../verpackung/img/tueten-bagels.webp?v=1795453105" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:20.00%;--x:70%;--y:30%;--r:-4deg;--fx:360px;--fy:120px;--n:2"><img src="../verpackung/img/sauce-bbq-sauce.webp?v=1795453113" alt="" loading="lazy" decoding="async"></span><span class="hf" style="--w:18.00%;--x:28%;--y:56%;--r:3deg;--fx:-360px;--fy:0px;--n:3"><img src="../verpackung/img/bon-bon.webp?v=1795453125" alt="" loading="lazy" decoding="async" class=flach></span><span class="hf" style="--w:22.00%;--x:52%;--y:60%;--r:-6deg;--fx:-40px;--fy:240px;--n:4"><img src="../verpackung/img/stempel-abdruck.webp?v=1795453108" alt="" loading="lazy" decoding="async"></span></span></a></div>
+  <div class="mk__fuss">
+    <button type="button" class="mk__pf" data-f="-1" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+    <div class="mk__texte" aria-live="polite"><div class=an><h3>For hostels and surf camps</h3><a class="mk__auf" href="../draussen/index.html">Open</a></div><div><h3>Instagram feed</h3><a class="mk__auf" href="../instagram/index.html">Open</a></div><div><h3>All pieces</h3><a class="mk__auf" href="../index.html">Open</a></div><div><h3>Stickers</h3><a class="mk__auf" href="../sticker/index.html">Open</a></div><div><h3>Beer mats and coasters</h3><a class="mk__auf" href="../untersetzer/index.html">Open</a></div><div><h3>Signs for the street</h3><a class="mk__auf" href="../schilder/index.html">Open</a></div><div><h3>On the table</h3><a class="mk__auf" href="../tisch/index.html">Open</a></div><div><h3>At the pool table</h3><a class="mk__auf" href="../billard/index.html">Open</a></div><div><h3>To take home</h3><a class="mk__auf" href="../mitnehmen/index.html">Open</a></div><div><h3>To go and the bill</h3><a class="mk__auf" href="../verpackung/index.html">Open</a></div></div>
+    <button type="button" class="mk__pf" data-f="1" aria-label="Next"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+  </div>
+  <p class="mk__zahl"><span data-zahl>1</span> / 10</p>
+</div></section>
+<script>(function(){var f=document.querySelector('[data-mk]');if(!f)return;
+var bl=[].slice.call(f.querySelectorAll('.mk__blatt')),tx=[].slice.call(f.querySelectorAll('.mk__texte>div')),z=f.querySelector('[data-zahl]'),n=bl.length,ist=0,halb=Math.floor(n/2);
+function zeige(k){ist=(k%n+n)%n;bl.forEach(function(b,i){var p=((i-ist+n+halb)%n)-halb;b.setAttribute('data-p',p);b.tabIndex=p===0?0:-1;b.setAttribute('aria-hidden',p!==0)});
+tx.forEach(function(t,i){t.classList.toggle('an',i===ist);[].forEach.call(t.querySelectorAll('a'),function(a){a.tabIndex=i===ist?0:-1})});if(z)z.textContent=ist+1}
+[].forEach.call(f.querySelectorAll('[data-f]'),function(b){b.addEventListener('click',function(){zeige(ist+(+b.getAttribute('data-f')))})});
+bl.forEach(function(b,i){b.addEventListener('click',function(ev){if(i!==ist){ev.preventDefault();zeige(i)}})});
+f.tabIndex=0;f.addEventListener('keydown',function(ev){if(ev.key==='ArrowRight')zeige(ist+1);else if(ev.key==='ArrowLeft')zeige(ist-1)});
+var x0=null,st=f.querySelector('.mk__b');st.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+st.addEventListener('touchend',function(ev){if(x0===null)return;var d=ev.changedTouches[0].clientX-x0;x0=null;if(Math.abs(d)>40)zeige(ist+(d<0?1:-1))},{passive:true});
+zeige(0)})();</script><script>(function(){var k=document.querySelector('.mk--haufen');if(!k)return;var bl=[].slice.call(k.querySelectorAll('.mk__blatt')),ruhig=matchMedia('(prefers-reduced-motion: reduce)').matches,sicht=false;
+    function rein(b){if(ruhig)return;b.classList.remove('rein');void b.offsetWidth;b.classList.add('rein')}
+    new MutationObserver(function(ms){ms.forEach(function(m){var b=m.target;if(b.getAttribute('data-p')==='0'&&m.oldValue!=='0'&&sicht)rein(b)})}).observe(k,{subtree:true,attributes:true,attributeFilter:['data-p'],attributeOldValue:true});
+    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!sicht){sicht=true;var b=k.querySelector('.mk__blatt[data-p="0"]');if(b)rein(b)}})},{rootMargin:'0px 0px -20% 0px'}).observe(k)})();</script><style>.mk h2{margin-bottom:8px!important}.mk .mk__texte h3{font-weight:400}</style>
+<footer class="schluss"><img class="logo" src="../zeichen/wortmarke-schwarz.svg" alt="The Cat &amp; Gun" width="58" height="50"><span>Ideas for The Cat &amp; Gun, Catangnan, Siargao · photos on the pieces are the house’s own · a design study by Tasty Studios</span></footer>
+<script>(function(){var z=[].slice.call(document.querySelectorAll('[data-a]')),ruhig=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function start(){if(!('IntersectionObserver' in window)||ruhig){z.forEach(function(x){x.classList.add('da')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);x.target.classList.add('da')}})},{rootMargin:'0px 0px -4% 0px'});z.forEach(function(x){io.observe(x)});
+var dr=[].slice.call(document.querySelectorAll('[data-drift]')),t=0;function lauf(){t=0;if(innerWidth<900){return}var vh=innerHeight,w=dr.map(function(el){var r=el.getBoundingClientRect(),g=vh*.65+r.height/2;return Math.max(-g,Math.min(g,r.top+r.height/2-vh/2))});
+dr.forEach(function(el,i){el.style.translate='0 '+(w[i]*+el.getAttribute('data-drift')).toFixed(1)+'px'})}
+addEventListener('scroll',function(){if(!t)t=requestAnimationFrame(lauf)},{passive:true});lauf()}
+if(window.__los)start();else addEventListener('los',start,{once:true});
+addEventListener('pageshow',function(ev){if(ev.persisted)z.forEach(function(x){x.classList.add('da')})});})();</script>
+<script src="../besuch.js?v=1795512063" defer></script>
+</body>
+</html>
