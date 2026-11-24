@@ -254,6 +254,6 @@ document.querySelectorAll('.handy__s').forEach(function(s){var sicht=false,ruhe=
 function halt(){ruhe=performance.now()+4000;pos=s.scrollTop}['wheel','touchstart','pointerdown','keydown'].forEach(function(e){s.addEventListener(e,halt,{passive:true})});
 function lauf(t){var dt=t0?Math.min(t-t0,64):0;t0=t;if(sicht&&!ruhig&&t>ruhe){var max=s.scrollHeight-s.clientHeight;if(Math.abs(s.scrollTop-pos)>2)pos=s.scrollTop;pos+=dir*dt*.03;if(pos>=max){pos=max;dir=-1}if(pos<=0){pos=0;dir=1}s.scrollTop=pos}requestAnimationFrame(lauf)}requestAnimationFrame(lauf)});})();
 </script>
-<script src="besuch.js?v=1795520031" defer></script>
+<script src="besuch.js?v=1795520976" defer></script>
 </body>
 </html>
