@@ -1,0 +1,74 @@
+/* Menus & price lists · The Cat & Gun — Satz der Karten (22.11.2026, satz_bau.py; Vorlage satz.css der Pairing-Karte im Culinarium). Eine Datei für Vorschau und PDF.
+   Farben und Schriften der Website (website/assets/cg.css :root): Putz, Tinte, Holz, Filzrot nur als Linie; Gloock, Instrument Sans, DM Mono. Nie fett, nie kursiv.
+   Masse in mm, Schrift in pt über --s (blatt.js passt je Seite an, damit nichts überläuft). Feste Schnitte statt variabler Schriften (fonts_statisch.py):
+   Chromium bettet variable Schriften als «Type 3» ein (Fehlerbuch 10a, 21.10.2026). Gesperrte Versalien höchstens .08em (Abschnitt 9). */
+@font-face{font-family:'Gloock';src:url('../fonts/Gloock-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Instrument Sans';src:url('../fonts/Instrument-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Instrument Sans';src:url('../fonts/Instrument-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'DM Mono';src:url('../fonts/DMMono-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
+:root{--putz:#f5f1ea;--putz2:#ece5d9;--tinte:#15120f;--text:#1d1915;--grau:#6c6157;--holz:#8a5634;--holz-tief:#4a2f20;--filz:#b5343a;--linie:rgba(21,18,15,.2)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#211c18;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* Abnahme 28.11.2026: «Font size» an einem Posten (Faktor data-gt am Behälter) änderte nichts, weil Name, Preis und Beschreibung feste Grössen (pt × --s)
+   haben. Alles im Behälter rechnet darum mit dem Schriftmass der Seite (--s0) mal dem Faktor des Behälters (--gt, gesetzt von blatt.js). Ohne data-gt gilt nichts davon. */
+.blatt{--s0:var(--s)}
+.blatt [data-gt] *{--s:calc(var(--s0)*var(--gt,1))}
+.blatt{--s:1;position:relative;overflow:hidden;margin:8mm auto;background:var(--putz);color:var(--text);display:flex;flex-direction:column;
+  font-family:'Instrument Sans',Arial,sans-serif;font-weight:400;font-size:calc(9.2pt*var(--s));line-height:1.42;page-break-after:always;break-after:page}
+:where(.blatt) :where(h1,h2,h3,h4,p){margin:0;padding:0;font-weight:inherit}
+:where(.blatt) b{font-weight:400}
+:where(.blatt) em,:where(.blatt) i{font-style:normal}
+/* oben eine schwarze Kante wie das Hausschild */
+.blatt::before{content:'';position:absolute;left:0;right:0;top:0;height:2.2mm;background:var(--tinte);pointer-events:none}
+.inhalt{position:relative;z-index:1;flex:1;min-height:0;display:flex;flex-direction:column}
+
+/* Kästen mit innerem Schatten statt Rand: Firefox liess dünne Ränder in der verkleinerten Vorschau auf drei Seiten weg (23.11.2026) */
+/* Seiten wie die gedruckte Karte (_karte-aktuell/): Spalten nebeneinander, Rubrik, Unterrubrik, Posten mit Name, Marke, Punkte bis zum Preis und
+   Beschreibung, Kästen für Hinweise und Add-ons, Legende und Fuss. Schmale Seiten (120 × 297 mm) mit engerem Rand. */
+.blatt.schmal .inhalt{padding:12mm 7mm 6mm}
+.blatt:not(.schmal) .inhalt{padding:14mm 14mm 8mm}
+.sb-spalten{flex:1;min-height:0;display:grid;grid-template-rows:minmax(0,1fr);gap:calc(7mm*var(--s))}
+.blatt.schmal .sb-spalten{gap:calc(4.5mm*var(--s))}
+.sb-spalten.n1{grid-template-columns:minmax(0,1fr)}
+.sb-spalten.n2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.sb-liste{display:flex;flex-direction:column;min-width:0;min-height:0}
+.sb-logo{align-self:flex-start;box-shadow:inset 0 0 0 .5mm var(--tinte);padding:calc(1.6mm*var(--s)) calc(2mm*var(--s));margin-bottom:calc(2mm*var(--s));color:var(--tinte)}
+.sb-zeichen{display:block;color:var(--tinte)}
+.cg-wm{display:block;width:calc(21mm*var(--s));height:auto}
+.cg-et{display:block;width:10mm;height:auto}
+.sb-h{font-family:'Gloock',Georgia,serif;font-weight:400;font-size:calc(15pt*var(--s));line-height:1.1;color:var(--tinte);margin-top:calc(4.5mm*var(--s) + var(--luft,0px));margin-bottom:calc(1.4mm*var(--s));padding-bottom:calc(.8mm*var(--s));border-bottom:.25mm solid var(--tinte);break-after:avoid}
+.sb-liste>.sb-h:first-child{margin-top:0}
+.sb-logo+.sb-h{margin-top:calc(2.5mm*var(--s))}
+.sb-zw{font-family:'DM Mono',Menlo,monospace;font-weight:400;font-size:calc(7.2pt*var(--s));letter-spacing:.06em;color:var(--holz);margin-top:calc(2.4mm*var(--s) + var(--luft,0px));margin-bottom:calc(.4mm*var(--s))}
+.sb-h+.sb-zw{margin-top:calc(.6mm*var(--s))}
+.sb-hinweis{font-size:calc(7.6pt*var(--s));line-height:1.35;color:var(--text);text-align:center;box-shadow:inset 0 0 0 .35mm var(--tinte);padding:calc(1.2mm*var(--s)) calc(2mm*var(--s));margin:calc(1.8mm*var(--s) + var(--luft,0px)) 0 calc(.6mm*var(--s))}
+.sb-g{break-inside:avoid;padding:calc(.7mm*var(--s) + var(--luft,0px)) 0 calc(.7mm*var(--s))}   /* --luft: Restplatz der Spalte (blatt.js rest0) */
+.sb-zeile,.sb-var{display:flex;align-items:baseline;gap:1.6mm}
+.sb-pn{font-weight:500;font-size:calc(8.6pt*var(--s));line-height:1.25;color:var(--tinte);min-width:0;overflow-wrap:anywhere}
+.sb-vn{font-weight:500;font-size:calc(8pt*var(--s));color:var(--tinte)}
+.sb-k{font-family:'DM Mono',Menlo,monospace;font-size:calc(6.2pt*var(--s));letter-spacing:.04em;color:var(--holz);border:.2mm solid currentColor;border-radius:2mm;padding:0 .9mm;line-height:1.3;position:relative;top:-.3mm;white-space:nowrap}
+.sb-k:empty{display:none}
+.sb-punkte{flex:1;min-width:4mm;height:.5mm;align-self:baseline;background:radial-gradient(circle,rgba(21,18,15,.55) 0 .14mm,transparent .18mm) 0 50%/1mm .5mm repeat-x}   /* Punkte als Muster, nicht als gepunkteter Rand: Firefox zeichnete den Rand verkleinert lückenhaft */
+.sb-preis{white-space:nowrap;font-family:'DM Mono',Menlo,monospace;color:var(--tinte)}
+.sb-preis b{font-size:calc(8.4pt*var(--s))}
+.sb-t{font-size:calc(7.6pt*var(--s));color:var(--grau);line-height:1.35;margin-top:calc(.3mm*var(--s))}
+.sb-addon{box-shadow:inset 0 0 0 .35mm var(--tinte);padding:calc(1.6mm*var(--s)) calc(2.4mm*var(--s));margin-top:calc(2mm*var(--s) + var(--luft,0px));break-inside:avoid}
+.sb-at{font-family:'DM Mono',Menlo,monospace;font-size:calc(6.8pt*var(--s));letter-spacing:.05em;color:var(--holz);margin-bottom:calc(1.2mm*var(--s))}
+.sb-al{list-style:none;margin:0;padding:0;columns:2;column-gap:5mm;font-size:calc(7.2pt*var(--s));line-height:1.45}
+.sb-al li{display:flex;justify-content:space-between;gap:2mm;break-inside:avoid}
+.sb-ap{font-family:'DM Mono',Menlo,monospace;white-space:nowrap}
+.sb-leg{flex:none;display:flex;justify-content:space-between;gap:6mm;margin-top:calc(4mm*var(--s));padding-top:calc(2mm*var(--s));border-top:.25mm solid var(--tinte);font-size:calc(7.2pt*var(--s));color:var(--grau)}
+.sb-lt{font-weight:500;color:var(--tinte)}
+.sb-legende .sb-k{margin:0 .6mm}
+.sb-fuss{flex:none;display:flex;justify-content:space-between;gap:4mm;margin-top:calc(4mm*var(--s));padding-top:calc(2mm*var(--s));border-top:.3mm solid var(--tinte);font-size:calc(6.8pt*var(--s));line-height:1.35;color:var(--grau)}
+.sb-fr{text-align:right}
+.sb-fn{font-family:'Gloock',Georgia,serif;font-size:calc(8pt*var(--s));color:var(--tinte)}
+
+/* Gestalten (Fortgeschritten): Stile, die satz.js an ein Element legt (nie fett, nie kursiv) */
+[data-gf]{font-family:var(--gf)!important}
+[data-gc]{color:var(--gc)!important}
+[data-ga="versal"]{text-transform:uppercase!important;letter-spacing:.06em}
+[data-ga="normal"]{text-transform:none!important;letter-spacing:0!important}
+[data-gal]{text-align:var(--gal)!important;justify-content:var(--gai)!important;align-items:var(--gai)}
+[data-gz]{line-height:var(--gz)!important}
+@media print{html,body{background:none}.blatt{margin:0}}

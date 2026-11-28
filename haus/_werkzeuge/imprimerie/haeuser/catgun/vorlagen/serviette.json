@@ -1,0 +1,27 @@
+{
+"art": "serviette",
+"format": "q330",
+"vorlagen": [
+{
+"id": "serviette-001",
+"titel": "Napkin · Name of the house",
+"bereich": "Café and kitchen",
+"vorlage": "deckel",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Catangnan · Siargao",
+"titel": "The Cat & Gun",
+"unter": "Your neighbourhood hangout",
+"fuss": ""
+}
+}
+]
+}

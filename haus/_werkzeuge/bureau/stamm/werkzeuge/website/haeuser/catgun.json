@@ -1,0 +1,172 @@
+{
+ "_lies_mich": "Beschreibung des Hauses für das Werkzeug «website» (Edit website). The Cat & Gun, Catangnan, Siargao: Café und Bar, Website englisch. Jeder Text, jede Zahl, jedes Foto wird aus den gebauten Seiten gelesen (website/ des Projekts). Läuft im Rahmen des Hauses: /the-cat-and-gun/haus/_werkzeuge/bureau/. Geschrieben von _werkzeuge/bureau/beschreibung.py, nie von Hand ändern.",
+ "seiten": [
+  {
+   "datei": "index.html"
+  },
+  {
+   "datei": "menu.html"
+  },
+  {
+   "datei": "juices.html"
+  },
+  {
+   "datei": "playground.html"
+  },
+  {
+   "datei": "pool.html"
+  },
+  {
+   "datei": "visit.html"
+  }
+ ],
+ "sprachen": [],
+ "kopie": {
+  "unter": "website",
+  "ordner": [
+   "assets"
+  ]
+ },
+ "gesperrt": [
+  {
+   "wahl": ".liste-h, .zapf, .aufsteller .karte, .k-buehne, .k-liste, .saft-liste, #brekky, .rubriknav, .gruppe-s",
+   "werkzeug": "karten"
+  }
+ ],
+ "frei_links": [
+  "#brekky a[href^=\"tel:\"]"
+ ],
+ "auslassen": [
+  ".film",
+  "video"
+ ],
+ "vorschau": {
+  "ohne_skripte": [],
+  "zusatz_css": "@media (hover:none){[data-ws-e],img[data-ws-b]{cursor:pointer}} @media (min-width:900px){html body .auftakt{--H:max(520px,calc(900px - 148px - var(--ecke)))}html body .at-marke{width:min(100%,586px)}}"
+ },
+ "bereiche": {
+  "zimmer": {
+   "an": false
+  },
+  "preisstufen": {
+   "an": false
+  },
+  "packages": {
+   "an": false
+  },
+  "saele": {
+   "an": false
+  },
+  "unterlagen": {
+   "an": false
+  },
+  "stellen": {
+   "an": false
+  }
+ },
+ "zahlen": {
+  "muster": "(\\bPHP\\b|₱|\\d{1,2}[.:]\\d{2}\\s?(?:[–-]|to)\\s?\\d{1,2}[.:]\\d{2}|\\b\\d{1,2}\\s?(?:AM|PM)\\b|\\d+\\s?(?:minutes|min|hours|km|people|%))"
+ },
+ "kleid": {
+  "foto": "b24"
+ },
+ "website": [
+  {
+   "key": "start",
+   "name": "Home",
+   "satz": "The first look: what The Cat & Gun is, the food, the juices, the people and how to find you.",
+   "seiten": [
+    "index.html"
+   ],
+   "foto": "b24"
+  },
+  {
+   "key": "menu",
+   "name": "Menu",
+   "satz": "The page with every dish and drink. Dishes and prices come from Menus & price lists.",
+   "seiten": [
+    "menu.html"
+   ],
+   "foto": "b28"
+  },
+  {
+   "key": "juices",
+   "name": "Super Juices",
+   "satz": "Juices, coffee and kombucha. Drinks and prices come from Menus & price lists.",
+   "seiten": [
+    "juices.html"
+   ],
+   "foto": "b36"
+  },
+  {
+   "key": "playground",
+   "name": "Playground",
+   "satz": "The garden at the back with the climbing wall and the slide.",
+   "seiten": [
+    "playground.html"
+   ],
+   "foto": "b34"
+  },
+  {
+   "key": "pool",
+   "name": "Pool & Bar",
+   "satz": "The pool table, the beers on draught and the evenings.",
+   "seiten": [
+    "pool.html"
+   ],
+   "foto": "b09"
+  },
+  {
+   "key": "visit",
+   "name": "Visit",
+   "satz": "Where you are, when you are open, how to get there.",
+   "seiten": [
+    "visit.html"
+   ],
+   "foto": "b29"
+  }
+ ],
+ "angaben": [
+  {
+   "key": "telefon",
+   "label": "Phone",
+   "art": "telefon",
+   "wert": "+63 962 040 3853",
+   "link": "tel:+639620403853",
+   "quelle": "website/index.html (gebaut aus website/bau.py)"
+  },
+  {
+   "key": "adresse",
+   "label": "Address",
+   "art": "text",
+   "wert": "Catangnan, General Luna",
+   "quelle": "website/index.html (gebaut aus website/bau.py)"
+  },
+  {
+   "key": "auf",
+   "label": "Opens daily at",
+   "art": "text",
+   "wert": "7AM",
+   "quelle": "website/index.html (gebaut aus website/bau.py)"
+  },
+  {
+   "key": "zu",
+   "label": "Closes daily at",
+   "art": "text",
+   "wert": "10PM",
+   "quelle": "website/index.html (gebaut aus website/bau.py)"
+  }
+ ],
+ "google": {
+  "an": false
+ },
+ "hochladen": {
+  "an": true,
+  "ordner": "assets/bild"
+ },
+ "funktionen": [
+  "leiste_klar",
+  "team_wer"
+ ],
+ "anleitung": "/the-cat-and-gun/haus/_werkzeuge/bureau/anleitung.html"
+}

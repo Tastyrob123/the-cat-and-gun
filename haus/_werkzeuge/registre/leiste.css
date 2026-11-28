@@ -1,0 +1,45 @@
+/* Seitenleiste von Visitors · The Cat & Gun, gemeinsam für das Werkzeug (index.html) und den Guide (anleitung.html), Robert 27.11.2026.
+   Genau wie bei Edit website (bureau: aside.wo-rand.dx-rail.dx-lack6, dash.css + dash-eigen.css, gemessen 27.11.2026 bei 1440 × 900):
+   280 px breit, Rand 8 px, Rahmen innen 20/8/14, Wortmarke 118 px, Einträge 12 px Innenabstand, Titel 15 px, Untertitel 12,5 px.
+   So hoch wie ihr Inhalt; ab 1200 px fährt sie mit (leiste.js › mitfahren setzt top). Unter 1181 px steht sie nicht (Handy wie bisher). */
+.dx-rail{--serif:'Gloock',Georgia,serif;--sans:'Catgun Sans','Instrument Sans',system-ui,sans-serif;--mono:'Catgun Mono','DM Mono',ui-monospace,monospace;--gold1:#e6c39a;--gold2:#a8734a;font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.dx-rail{position:relative;top:auto;align-self:start;display:flex;flex-direction:column;padding:8px;border-radius:30px;
+  background:linear-gradient(170deg,#1d1814,#110e0b 60%,#0e0b09);border:1px solid rgba(230,195,154,.35);box-shadow:0 40px 80px -50px rgba(0,0,0,.95);
+  --li:rgba(230,195,154,.16);--li2:rgba(230,195,154,.32);--tx:#f3ece2;--tx2:rgba(243,236,226,.7);--tx3:rgba(243,236,226,.46);color:var(--tx);font-size:15px;line-height:1.55}
+@media (min-width:1200px){.dx-rail{position:sticky;top:22px}}
+.dx-rail *{box-sizing:border-box}
+.dx-rail a{color:inherit;text-decoration:none}
+.dx-rail .dx-ico{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.dx-rail .dx-mono{font-family:var(--mono);font-size:13px;letter-spacing:.17em;text-transform:uppercase;color:var(--tx3);display:flex;align-items:center;gap:9px}
+.dx-rail .dx-s6rahmen{flex:1;display:flex;flex-direction:column;border:1px solid rgba(230,195,154,.22);border-radius:23px;padding:20px 8px 14px}
+.dx-rail .dx-marke{display:flex;flex-direction:column;align-items:center;gap:12px;padding:6px 0 22px;border-bottom:1px solid var(--li)}
+.dx-rail .dx-marke a{display:block}
+.dx-rail .dx-marke img{display:block;width:118px;height:auto}
+.dx-rail .dx-marke .dx-mono{font-size:13px;letter-spacing:.22em}
+/* Abnahme 28.11.2026: «Tools · keys 1–8» 13 px (Projektregel Schrift mindestens 13 px), vorher 12,5 px */
+.dx-rail .dx-rk{justify-content:space-between;padding:18px 10px 8px;font-size:13px;letter-spacing:.15em;color:rgba(230,195,154,.7)}
+.dx-rail .dx-rk span{letter-spacing:.08em;font-size:13px}
+.dx-rail nav{display:block}
+.dx-rail nav a,.dx-rail .dx-rfuss a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:13px;color:var(--tx2);position:relative;transition:background-color .3s}
+.dx-rail nav a{padding:12px;border-radius:15px}
+.dx-rail nav a:not(.dx-jetzt):hover,.dx-rail .dx-rfuss a:hover{background:rgba(255,240,222,.06)}
+.dx-rail nav a b,.dx-rail .dx-rfuss a b{display:block;font-weight:500;font-size:14px;color:var(--tx)}
+.dx-rail nav a b{font-size:15px}
+.dx-rail nav a i,.dx-rail .dx-rfuss a i{display:block;font-style:normal;font-size:13px;color:var(--tx3);margin-top:1px}
+.dx-rail nav a .dx-ico,.dx-rail .dx-rfuss .dx-ico{color:var(--gold1)}
+.dx-rail nav a.dx-jetzt{background:linear-gradient(150deg,var(--gold1),var(--gold2));box-shadow:none}
+.dx-rail nav a.dx-jetzt b{color:#1a120c}
+.dx-rail nav a.dx-jetzt i{color:rgba(26,18,12,.7)}
+.dx-rail nav a.dx-jetzt kbd{color:#1a120c;border-color:rgba(26,18,12,.35)}
+.dx-rail nav a.dx-jetzt .dx-ico{color:#1a120c;stroke:#1a120c}
+.dx-rail kbd{font-family:var(--mono);font-size:13px;line-height:1.55;width:24px;height:24px;border-radius:6px;border:1px solid var(--li2);display:grid;place-items:center;color:var(--tx3);flex:none}
+.dx-rail .dx-rhaus{margin-top:14px;border-top:1px solid var(--li);padding:16px 10px 2px;display:flex;flex-direction:column;gap:9px;font-size:13px;color:var(--tx2)}
+.dx-rail .dx-rhaus span{display:flex;gap:9px;align-items:center}
+.dx-rail .dx-rhaus .dx-ico{width:14px;height:14px;color:var(--gold1)}
+.dx-rail .dx-rfuss{margin-top:8px;border-top:1px solid var(--li);padding-top:10px;display:block}
+.dx-rail nav,.dx-rail p,.dx-rail span,.dx-rail b,.dx-rail i{margin:0}
+@media (max-width:1180px){.dx-rail{display:none}}
+/* Guide: Leiste links, der Guide rechts daneben (Raster wie im Werkzeug) */
+.anl-lay{display:grid;grid-template-columns:280px minmax(0,1fr);column-gap:22px;align-items:start;max-width:1528px;margin:0 auto;padding:clamp(20px,2.4vw,44px) clamp(16px,2.4vw,44px) 28px}
+.anl-lay>.anl-spalte{min-width:0}
+@media (max-width:1180px){.anl-lay{display:block;max-width:none;padding:0}}

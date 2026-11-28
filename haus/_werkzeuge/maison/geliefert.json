@@ -1,0 +1,4 @@
+{
+ "_hinweis": "Werkzeuge, die fertig sind und auf ihrem Port laufen (Robert 23.11.2026, Ports 9730–9738). Die Kacheln und «Open» zeigen auf sie, der Stand kommt aus ihnen. Gilt auch nach dem Zusammenführen der Zweige (bau.py: geliefert()).",
+ "werkzeuge": ["bureau", "carte", "reception", "livre", "markenbuch-editor", "sticker", "imprimerie", "registre"]
+}

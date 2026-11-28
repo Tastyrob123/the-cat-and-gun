@@ -1,0 +1,123 @@
+/* Style guide · The Cat & Gun · Ergänzungen zu marke.css der Vorlage: Zeichen kommen als SVG aus dem Fundus (statt <use> der Vorlage), Sticker und Sätze des Hauses
+   in vollen Reihen (Fehlerbuch 10a 20.10. und 09.11.2026: höchstens vier je Reihe, die letzte Reihe teilt sich die Breite). */
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.leiste__z{width:42px;height:42px;flex:none}
+.titel__z svg{display:block;width:clamp(64px,7vw,104px);height:auto;margin:0 auto}
+.bu-wm{display:block;width:clamp(200px,26vw,380px);margin:0 auto}.bu-wm svg{display:block;width:100%;height:auto}
+.lock>div svg{display:block;width:62%;height:auto;max-height:78%;margin:0 auto}
+.lock>div.bu-et svg{width:36%}
+.bu-zei{display:grid;place-items:center;height:120px;margin-bottom:14px}.bu-zei svg{display:block;max-width:70%;max-height:120px;width:auto;height:100%}
+.bu-sticker{display:flex;flex-wrap:wrap;gap:18px;margin-top:clamp(28px,3vw,44px)}
+.bu-st{flex:1 1 calc((100% - (var(--sp,4) - 1) * 18px) / var(--sp,4));min-width:0;margin:0;padding:22px 18px 18px;border-radius:14px;background:rgba(251,248,243,.06);box-shadow:inset 0 0 0 1px rgba(201,157,112,.24);color:var(--weiss)}
+.bu-st__b{display:grid;place-items:center;height:150px;margin-bottom:14px}.bu-st__b svg{display:block;max-width:82%;max-height:150px;width:auto;height:100%}
+.bu-st b{display:block;font:400 1.15rem/1.2 var(--serif)}.bu-st small{display:block;margin-top:6px;font-size:.88rem;line-height:1.45;color:color-mix(in srgb,var(--weiss) 70%,transparent)}
+@media (max-width:1000px){.bu-st{flex-basis:calc((100% - 18px) / 2)}}
+.bu-saetze{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,2.4vw,36px) clamp(28px,3vw,52px)}
+.bu-saetze h3{font-size:clamp(1.25rem,1.6vw,1.6rem)}.bu-saetze p{margin-top:6px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--taupe-tief)}
+@media (max-width:700px){.bu-saetze{grid-template-columns:minmax(0,1fr)}}
+.bu-ende svg{display:block;width:clamp(120px,14vw,180px);height:auto;margin:0 auto}
+.bu-voll{display:flex!important;flex-wrap:wrap;gap:16px!important}.bu-voll>.fk{flex:1 1 calc((100% - (var(--sp,4) - 1) * 16px) / var(--sp,4));min-width:0}
+@media (max-width:900px){.bu-voll>.fk{flex-basis:calc((100% - 16px) / 2)}}
+@media print{.bu-st,.gr,.sch{break-inside:avoid}}
+/* 23.11.2026: zwei Zeichen in einer Reihe (Ampersand, Sticker), THE CAT ohne GUN raus (Robert) */
+@media (min-width:900px){html body #zeichen .reihe5{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+.bu-zei img{display:block;max-width:70%;max-height:120px;width:auto;height:100%;object-fit:contain}
+[data-fundus],[data-fundus] svg{stroke:none;stroke-width:0}
+.bu-zei svg,.lock>div svg,.bu-st__b svg{overflow:hidden}
+
+/* ---------- Mindestschrift 13 px (CLAUDE.md «Oberflächen-Prüfung», Prüfung 23.11.2026 A1 Punkt 17) ---------- */
+.leiste .kw,.leiste small,.leiste__k,.leiste__k a,.titel__ort .kw,.kn .kw,small .kw,.kerbe .kw,.zei small,.fa__n,.fa__n small,.fa__ok,.fk__hex,.fk__ok,.fk__w,.fk__w span,dl dt{font-size:13px!important}
+.leiste .kw,.titel__ort .kw,.kn .kw,small .kw,.kerbe .kw,.leiste__k{letter-spacing:.08em!important}
+.titel__kap b .kw,.titel__kap .kw,.mk__kap .kw,.mk__kap b,.laden li small{font-size:13px!important}
+
+/* ---------- Farbgruppen (Prüfung 23.11.2026, A1 Punkt 10): Name und Satz der Gruppe laufen neben den Farbkarten mit, keine Leerfläche darunter ---------- */
+@media (min-width:761px){.gr>.gr__k{position:sticky;top:104px;align-self:start}}
+/* Prüfung 23.11.2026, A1 Punkte 21 und 37: Kapiteltitel passen in ihre Spalte (1728/1920) und berühren sich am Handy nicht */
+.mk__t{font-size:clamp(2.7rem,5.6vw,5rem)}
+@media (max-width:760px){.mk__t{line-height:1.2}}
+.fk__w{min-width:0}.fk__w>*{min-width:0;overflow-wrap:anywhere}
+@media (max-width:520px){.fk__w{letter-spacing:0}.fk__w span{letter-spacing:.06em!important}}
+/* Prüfung 23.11.2026, A1 Punkt 18: bei 1728/1920 nie mehr als 380 px leer zwischen zwei Kapiteln */
+:root{--ab:clamp(110px,11.5vw,166px)}
+/* A1 Punkt 37 am Handy: Farbwerte unter ihrer Bezeichnung, damit «245 · 240 · 231» in die halbe Karte passt */
+@media (max-width:520px){.fk__w{grid-template-columns:minmax(0,1fr);gap:0}.fk__w span+*{margin-bottom:6px}}
+.bu-ende img{display:block;width:clamp(120px,14vw,180px);height:auto;margin:0 auto}
+/* Prüfung 23.11.2026: Farbwert auf dem Fächer voll deckend, sonst zu wenig Kontrast */
+.fa__n small{opacity:1!important}
+/* 23.11.2026: das einzelne & über der Wortmarke ist weg (Robert); der Abstand bleibt beim Titel */
+.titel__w{margin-top:clamp(34px,4vw,56px)}
+
+/* ---------- 23.11.2026, Robert: Zeichen im dunklen Kopf in Messing wie die anderen Zeichen auf dunklem Grund («ich erkenne das Symbol nicht mehr, weil es schwarz ist») ---------- */
+span.leiste__z{display:block;background:var(--gold);-webkit-mask:url('/the-cat-and-gun/haus/_werkzeuge/livre/_ob/kleid/catgun-zeichen.svg') center/contain no-repeat;mask:url('/the-cat-and-gun/haus/_werkzeuge/livre/_ob/kleid/catgun-zeichen.svg') center/contain no-repeat}
+
+/* ---------- 23.11.2026, Robert: Farbfelder füllen sich von links nach rechts (neuer Standard, wie Schlössli livre/buch.js: clip-path inset(0 100% 0 0) → inset(0), 1 s, gestaffelt 90 ms) ---------- */
+@media screen and (prefers-reduced-motion:no-preference){
+  .js .fk[data-r] .fk__f{clip-path:inset(0 100% 0 0);transition:clip-path 1s var(--e1);transition-delay:calc(.35s + var(--i,0) * 90ms)}
+  .js .fk[data-r].da .fk__f{clip-path:inset(0)}
+  /* Fotos zoomen in ihren Rahmen aus 1,08 (Effekte-Standard, 1,04 bis 1,08) */
+  .js [data-r="feder"] .k3__b img{transform:scale(1.08)}
+  .js [data-r="feder"].da .k3__b img{transform:none}
+}
+@media print{.fk__f{clip-path:none!important}}
+
+/* ---------- 23.11.2026, Robert: die Sätze des Hauses in Kästen («das geht sonst so verloren»): Papierkarte mit runder Ecke und weichem Schatten wie die Zeichen-Karten,
+   zwei Spalten, Karten einer Reihe gleich hoch, Satz oben; bei ungerader Zahl nimmt die letzte Karte die ganze Breite ---------- */
+.bu-saetze{gap:clamp(14px,1.4vw,22px)}
+.bu-satz{display:flex;flex-direction:column;justify-content:flex-start;min-width:0;padding:clamp(22px,2.2vw,32px) clamp(22px,2.4vw,34px);border-radius:var(--r);background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie),0 30px 40px -32px rgba(20,16,24,.4)}
+.bu-satz h3{margin:0}
+.bu-satz p{margin-top:14px!important}
+.bu-saetze>.bu-satz:last-child:nth-child(odd){grid-column:1/-1}
+
+/* ---------- 23.11.2026, Robert: die helle Logotafel hebt sich vom Seitengrund ab (Papierweiss ohne Tapete, feiner Rand, Schatten wie die dunklen) ---------- */
+.lock--hell{background:var(--weiss);color:var(--tinte);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--tinte) 18%,transparent),0 36px 48px -30px color-mix(in srgb,var(--tinte) 50%,transparent)}
+
+/* ---------- PDF («Save as PDF», Abnahme 28.11.2026) ----------
+   Im Druck riss der Seitenwechsel Karten auseinander (Foto auf der einen, Text auf der nächsten Seite), der Farbfächer blieb eine leere Fläche mit einer
+   Leerseite dahinter, und hinter kurzen Kapiteln stand der dunkle Seitengrund als schwarze Fläche. */
+@media print{
+  /* Robert 28.11.2026 (Bild aus Safari): Schatten wurden im PDF zu grauen Kästen, um jede Seite lag ein weisser Rand, unter kurzen Kapiteln eine weisse Fläche.
+     Im PDF deshalb kein Schatten, kein Weichzeichner; Seite ohne Rand, Grund im Papierton des Hauses, abgeschnittene Kapitel beginnen auf der neuen Seite mit Abstand. */
+  @page{size:A4 landscape;margin:0}
+  html,body{background:#f5f1ea!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  *,*::before,*::after{box-shadow:none!important;text-shadow:none!important;filter:none!important;-webkit-filter:none!important}
+  section.ab{-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .titel{min-height:100vh!important;box-sizing:border-box;display:flex!important;flex-direction:column;justify-content:center}
+  .schluss{min-height:100vh!important;box-sizing:border-box}
+  /* Goldschrift mit Verlauf (background-clip:text) zeichnet die PDF-Ansicht von macOS als Kasten («7AM–10PM» und dahinter ein heller Block): im PDF schlichtes Gold */
+  .titel__kap b,.titel__ort,.leiste__m b{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:var(--gold)!important;-webkit-text-fill-color:var(--gold)!important}
+  /* Sticker: je Seite zwei volle Reihen, damit die dunkle Fläche bis zum Seitenende reicht (Seite 794 px hoch: 30 oben, 18 zwischen den Reihen, 14 unten) */
+  .bu-sticker .bu-st{height:calc((100vh - 62px) / 2)!important;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;break-inside:avoid}
+  .blatt{margin-top:0!important;border-radius:0!important}
+  .faecher{display:none!important}
+  .k3,.bi,.bu-st,.bu-satz,.fk,.gr__k,.mk{break-inside:avoid}
+  .mk{break-after:avoid}
+  .schluss{padding-bottom:24px!important}
+  section.ab{padding-bottom:14px!important}
+  section#farben.ab{padding-bottom:0!important}
+  .gr:last-child,.schs>:last-child,.bu-sticker,.collage,.bu-saetze{margin-bottom:0!important}
+  .ende{margin-top:28px!important;break-inside:avoid}
+  .laden{break-inside:avoid}
+  /* Robert 28.11.2026 «Nacharbeiten»: kein Kapiteltitel allein auf einer Seite. Titel kleiner und enger, Karten mit flacheren Fotos, die Farbgruppen
+     dürfen zwischen zwei Kartenreihen umbrechen, die Fotos des Kapitels «Photos» stehen als zwei volle Reihen (drei, dann vier),
+     die drei Tafeln der Wortmarke nebeneinander. */
+  .mk{padding-bottom:10px!important;margin-bottom:14px!important;gap:10px 28px!important}
+  .mk__t{font-size:34px!important;margin-top:8px!important}
+  .mk__lead{font-size:13px!important}
+  .drei{gap:16px!important}
+  .k3--karte .k3__b{aspect-ratio:4/2.7!important}
+  .gr{break-inside:auto!important}
+  .gr__k{break-after:avoid}
+  .collage{grid-template-columns:repeat(12,minmax(0,1fr))!important;grid-template-rows:none!important;grid-auto-rows:auto!important;gap:12px!important}
+  .collage .bi{grid-column:span 3!important;grid-row:auto!important}
+  .collage .bi:nth-child(-n+3){grid-column:span 4!important}
+  .collage .bi .k3__b{aspect-ratio:4/2.7!important;height:auto!important}
+  .schluss .laden li{padding:10px 0!important}
+  .ende{margin-top:14px!important}
+  .bu-ende img{max-height:74px!important;width:auto!important}
+  /* Abnahme 28.11.2026: Einleitungszeilen der Kapitel (.mk__lead) erscheinen erst beim Hereinscrollen; ohne vorheriges Scrollen fehlten sie im PDF. Im Druck stehen sie und alles Übrige mit Auftritt sofort da. */
+  .mk__lead,.titel__lead,.titel__kap,.titel__ort,.titel .kw,.ende__w,.ende__s,.ende__w img{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}
+  .lockups{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+  .lock{min-height:240px!important;padding:18px 16px 52px!important}
+  .lock>div svg{width:40%!important;max-height:none!important}
+  .lock>div.bu-et svg{width:24%!important}
+}

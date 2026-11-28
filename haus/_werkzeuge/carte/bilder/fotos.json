@@ -1,0 +1,15 @@
+{
+ "drinks": "b32",
+ "coffee-juices": "b14",
+ "kitchen": "b16",
+ "rubriken": {
+  "BEERS": "b27",
+  "COCKTAILS": "b10",
+  "COFFEE": "b26",
+  "SUPER JUICES": "b36",
+  "CURRY": "b28",
+  "PITA POCKETS": "b33",
+  "BAGELS": "b16",
+  "BREAKFAST": "b23"
+ }
+}

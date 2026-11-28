@@ -1,0 +1,232 @@
+{
+"art": "aufsteller",
+"format": "tk102",
+"vorlagen": [
+{
+"id": "aufsteller-001",
+"titel": "Table card · Desserts",
+"bereich": "Café and kitchen",
+"vorlage": "deckel",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Homemade",
+"titel": "Save room for dessert. Always.",
+"fuss": ""
+},
+"rueck": {
+"vorlage": "karte",
+"inhalt": {
+"ueber": "Homemade desserts",
+"titel": "Homemade desserts",
+"liste": [
+{
+"name": "Tiramisu",
+"detail": "Italian blend of coffee, cocoa and mascarpone.",
+"preis": ""
+},
+{
+"name": "Mango Float",
+"detail": "Sweet mangoes, silky cream and crunchy biscuit.",
+"preis": ""
+},
+{
+"name": "Cookie Cream Crunch",
+"detail": "Crunchy, creamy and chocolatey.",
+"preis": ""
+},
+{
+"name": "Pick & Mix Mini Cheesecakes",
+"detail": "Ask staff for flavours of the day.",
+"preis": ""
+}
+],
+"fuss": ""
+},
+"ton": "hell"
+}
+},
+{
+"id": "aufsteller-002",
+"titel": "Table card · Wi-Fi",
+"bereich": "Café and kitchen",
+"vorlage": "aushang",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Wi-Fi",
+"titel": "Network",
+"text": "Password",
+"aktion": ""
+}
+},
+{
+"id": "aufsteller-003",
+"titel": "Table card · Coffee",
+"bereich": "Café and kitchen",
+"vorlage": "buehne",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b26",
+"ueber": "Coffee",
+"titel": "Coffee, hot or iced.",
+"aktion": "Every coffee hot or iced"
+},
+"rueck": {
+"vorlage": "karte",
+"inhalt": {
+"ueber": "Coffee · hot or iced",
+"titel": "Coffee",
+"liste": [
+{
+"name": "Espresso",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Americano",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Long Black",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Flat White",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Latte",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Cappuccino",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Mocha",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Matcha",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Chai Latte",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Dirty Matcha",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Spanish Latte",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Espresso Fizz",
+"detail": "",
+"preis": ""
+}
+],
+"fuss": ""
+},
+"ton": "hell"
+}
+},
+{
+"id": "aufsteller-004",
+"titel": "Table card · Super Juices",
+"bereich": "Super Juices",
+"vorlage": "buehne",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b36",
+"ueber": "Super Juices",
+"titel": "Because feeling good should taste this good.",
+"aktion": "Available all day, everyday."
+},
+"rueck": {
+"vorlage": "karte",
+"inhalt": {
+"ueber": "Super Juices",
+"titel": "Super Juices",
+"liste": [
+{
+"name": "Melonberry",
+"detail": "Strawberry, watermelon, lemon, mint and local honey.",
+"preis": ""
+},
+{
+"name": "Mango Tango",
+"detail": "Mango, orange, lemon, local honey and basil.",
+"preis": ""
+},
+{
+"name": "Pineapple Punch",
+"detail": "Pineapple, watermelon, strawberry and lemon.",
+"preis": ""
+},
+{
+"name": "The Green Glow",
+"detail": "Cucumber, parsley, lemon, ginger and local honey.",
+"preis": ""
+},
+{
+"name": "Turbo Tonic",
+"detail": "Lemon, orange, pineapple, carrots, ginger and turmeric.",
+"preis": ""
+},
+{
+"name": "The Purple Potion",
+"detail": "Beetroot, carrot, ginger, lemon and pineapple.",
+"preis": ""
+}
+],
+"fuss": ""
+},
+"ton": "hell"
+}
+}
+]
+}

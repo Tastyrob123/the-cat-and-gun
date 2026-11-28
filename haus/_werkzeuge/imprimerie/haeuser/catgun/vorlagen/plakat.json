@@ -1,0 +1,70 @@
+{
+"art": "plakat",
+"format": "a3h",
+"vorlagen": [
+{
+"id": "plakat-001",
+"titel": "Poster · Pool table",
+"bereich": "Pool table",
+"vorlage": "deckel",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Pool table",
+"titel": "Then someone picked up a cue.",
+"unter": "THE CAT & GUN · CATANGNAN, SIARGAO",
+"text": "Plans were probably just drinks and a bite."
+}
+},
+{
+"id": "plakat-002",
+"titel": "Poster · Playground",
+"bereich": "Playground",
+"vorlage": "buehne",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b34",
+"ueber": "Playground in the backyard",
+"titel": "Good food for grown-ups, fun times for the little ones.",
+"aktion": "OPEN 7AM – 10PM DAILY"
+}
+},
+{
+"id": "plakat-003",
+"titel": "Poster · Coconut",
+"bereich": "Super Juices",
+"vorlage": "geteilt",
+"ton": "creme",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b14",
+"ueber": "Hot day?",
+"titel": "Grab a coconut.",
+"text": "Stay cool, Siargao. Fresh coconut water at The Cat & Gun.",
+"aktion": "7AM – 10PM DAILY"
+}
+}
+]
+}

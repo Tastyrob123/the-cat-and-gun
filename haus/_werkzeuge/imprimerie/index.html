@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Print &amp; feed · The Cat &amp; Gun</title>
+<!-- Bildschirmschriften und Daten des Hauses sofort holen (wie in der Vorlage) -->
+<link rel="preload" href="haeuser/catgun/marke.json" as="fetch" crossorigin>
+<link rel="preload" href="haeuser/catgun/druck.json" as="fetch" crossorigin>
+<link rel="preload" href="/the-cat-and-gun/haus/_werkzeuge/fundus/fundus.json" as="fetch" crossorigin>
+<link rel="preload" href="haeuser/catgun/schriften/dmserif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="haeuser/catgun/schriften/instrument-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="haeuser/catgun/schriften/dmmono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/imprimerie/_ob/kleid/catgun-zeichen.svg">
+<script>/* Fehlermelder (Werkzeug-Master R03, vor allem anderen, Prüfung 16.10.2026): Skriptfehler nach localStorage «cu-imprimerie-fehler»
+   (letzte 20, die Prüfseite pruefung.html zeigt sie). Netz- und Ladefehler nie melden, höchstens 20 je Seite. L’Imprimerie hat keinen Dienst
+   für Fehler: alles, was sie tut, bleibt im Browser des Hauses. */
+(function () { var n = 0, K = 'cg-imprimerie-fehler';
+  function melde(t) { if (n >= 20) return; n++; t = String(t).slice(0, 300); window.__dsFehler = t;
+    try { var l = JSON.parse(localStorage.getItem(K) || '[]'); l.push({ z: new Date().toISOString(), t: t }); localStorage.setItem(K, JSON.stringify(l.slice(-20))); } catch (e) {} }
+  addEventListener('error', function (e) { if (e.target && e.target !== window) return; if (/ResizeObserver loop/.test(e.message || '')) return; melde((e.message || 'Error') + ' @ ' + String(e.filename || '').split('/').pop() + ':' + (e.lineno || 0)); }, true);
+  addEventListener('unhandledrejection', function (e) { var r = e.reason, t = String(r && r.message || r); if (/fetch|network|load failed|abort/i.test(t)) return; melde('Promise: ' + t); });
+  /* Startfehler-Tür (R04): steht nach 15 s noch nichts, sagt die Seite es mit Grund, statt leer zu bleiben */
+  setTimeout(function () { if (window.DS && DS.M && window.DSStudio) return; var d = document.createElement('div'); d.className = 'startfehler'; d.setAttribute('role', 'alert');
+    var g = window.__dsFehler || (navigator.onLine ? 'The data of the house did not arrive.' : 'This computer is offline right now.');
+    d.innerHTML = '<div><b>Print &amp; feed does not start.</b><p></p><a href="">Reload</a> <a href="pruefung.html">Open the check</a></div>'; d.querySelector('p').textContent = g;
+    document.body.appendChild(d);
+    /* Abnahme 28.11.2026 (G3): startet das Werkzeug doch noch (langsames Netz), verschwindet die Tafel wieder */
+    var w = setInterval(function () { if (window.DS && DS.M && window.DSStudio) { clearInterval(w); d.remove(); } }, 500); }, 15000);
+})();</script>
+<style>.startfehler{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#15120f;color:#f5f1ea;font:15px/1.5 "Instrument Sans",system-ui,sans-serif}
+.startfehler>div{max-width:440px;padding:32px;border:1px solid rgba(201,157,112,.5);border-radius:14px;text-align:center}.startfehler b{font:400 22px Gloock,Georgia,serif;color:#c99d70}
+.startfehler a{display:inline-block;margin:6px;padding:9px 18px;border-radius:999px;background:#c99d70;color:#15120f;text-decoration:none}</style>
+<script>if(!/[?&](demo|hilfe=fuehrung)/.test(location.search))document.documentElement.classList.add('start-gleich')</script>
+<script>/* Rückfall, falls das Studio nicht startet: die Startseite zeigt sich spätestens nach 5 s (start.js setzt «bereit» sonst selbst, sobald die Fotos da sind) */
+addEventListener('DOMContentLoaded',function(){setTimeout(function(){var s=document.getElementById('start');if(s)s.classList.add('bereit')},5000)});</script>
+<!-- Katalog früh (hängt von nichts ab) und die Kachelfotos des ersten Bildschirms gleich mit anfragen (30.10.2026: die Startseite wartet auf sie, vorher kamen sie erst ab 2,5 s). Dieselbe Auswahl wie start.js kommend()/kachel(): die nächsten vier Anlässe und die ersten drei Abteilungen, kleine Fassung. -->
+<script src="katalog.js?v=38-cg1"></script>
+<script>(function(){try{var K=window.DSKATALOG;if(!K||/[?&]haus=(?!catgun)/.test(location.search))return;var h=new Date();h.setHours(0,0,0,0);var k=K.ANLAESSE.filter(function(a){return new Date(a.bis+"T00:00")>=h}).sort(function(x,y){return((new Date(x.von+"T00:00")<h)-(new Date(y.von+"T00:00")<h))||x.von.localeCompare(y.von)}).slice(0,4).map(function(a){return a.fotos[0]}).concat(K.ABTEILUNGEN.slice(0,3).map(function(a){return a.foto}));k.filter(function(f,i){return f&&k.indexOf(f)===i}).forEach(function(f){var l=document.createElement("link");l.rel="preload";l.as="image";l.href="/the-cat-and-gun/haus/assets/bild/"+f+"-480.webp";document.head.appendChild(l)})}catch(e){}})();</script>
+<link rel="stylesheet" href="lib/auswahl.css?v=36-cg1">
+<link rel="stylesheet" href="studio.css?v=86-cg7">
+<link rel="stylesheet" href="ms-bureau.css?v=27-cg5">
+<script src="/the-cat-and-gun/haus/_werkzeuge/fundus/fundus.js?v=1795872050"></script>
+<script>/* Hauseigene Stilschicht wie in der Vorlage; Kleid = gemeinsames Kleid des Hauses (_werkzeuge/oberflaeche/, kleid/catgun.*) */
+(function(){var HAUS_STIL={catgun:1},h=new URLSearchParams(location.search).get('haus')||'catgun';if(!HAUS_STIL[h])return;var b='haeuser/'+h+'/';var o='/the-cat-and-gun/haus/_werkzeuge/imprimerie/_ob/';
+document.write('<link rel="stylesheet" href="'+b+'hell.css?v=1-cg2"><link rel="stylesheet" href="'+b+'feder.css?v=3-hs1"><link rel="stylesheet" href="'+b+'bausteine.css?v=10-hs2">'
+ +'<script src="'+b+'buehne.js?v=2-hs1" defer><\/script>'
+ +'<script src="'+b+'feder.js?v=5-hs3" defer><\/script>'
+ +'<link rel="stylesheet" href="'+o+'grund.css?v=1795872050"><link rel="stylesheet" href="'+o+'rahmen-buehne.css?v=1795872050"><link rel="stylesheet" href="'+o+'kleid/catgun.css?v=1795872050"><link rel="stylesheet" href="'+b+'oberflaeche.css?v=1-cg2">'
+ +'<script src="'+o+'kleid/catgun.js?v=1795872050"><\/script><script src="'+o+'oberflaeche.js?v=1795872050" defer><\/script><script src="'+b+'oberflaeche.js?v=1-cg1" defer><\/script>'
+ +'<link rel="stylesheet" href="'+b+'nacht/nacht.css?v=1795872050"><script src="'+b+'nacht/nacht.js?v=1795872050" defer><\/script>');})();</script>
+</head>
+<body>
+<header class="kopf">
+  <button class="kopf__marke" id="kopfMarke" type="button" aria-label="To the overview"><span class="kopf__zeichen" id="kopfZeichen"></span><span><b>Print &amp; feed</b><small>Print and Instagram · <span id="kopfName">The Cat &amp; Gun</span></small></span></button>
+  <div class="kopf__mitte"><input class="kopf__name" id="docName" aria-label="Name of the design" spellcheck="false" autocomplete="off"><span class="kopf__gespeichert" id="gespeichert">Saved</span></div>
+  <div class="kopf__werk">
+    <button class="rund" id="btnZurueck" data-tip="Undo" aria-label="Undo (⌘Z)"><svg viewBox="0 0 24 24"><path d="M9 4.5 4 9.5l5 5M4 9.5h11a5 5 0 0 1 0 10h-3"/></svg></button>
+    <button class="rund" id="btnVor" data-tip="Redo" aria-label="Redo (⇧⌘Z)"><svg viewBox="0 0 24 24"><path d="m15 4.5 5 5-5 5M20 9.5H9a5 5 0 0 0 0 10h3"/></svg></button>
+    <button class="rund" id="btnVerwerfen" data-tip="Discard" aria-label="Discard this design"><svg viewBox="0 0 24 24"><path d="M5 7h14M10 7V4.5h4V7M7 7l1 13h8l1-13M10.5 11v5.5M13.5 11v5.5"/></svg></button>
+    <span class="kopf__trenn"></span>
+    <button class="kn kn--klein kn--ohne neu" id="btnNeu"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg><span>Overview</span></button>
+    <button class="rund" data-livre="1" data-tip="Brand kit" aria-label="Open the brand kit"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.6-1 5.2-.8 8 1 2.8-1.8 5.4-2 8-1v13c-2.6-1-5.2-.8-8 1-2.8-1.8-5.4-2-8-1z"/><path d="M12 6.5v13"/></svg></button>
+    <button class="rund hilfe" id="btnHilfe" data-tip="Help" aria-label="Help"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.1-2.4 3.6M12 17.2v.1"/></svg></button>
+    <button class="kn kn--klein kn--ohne pruef" id="btnPruefen"><span class="pruef__zahl" id="pruefZahl">0</span><span class="pruef__t">Print check</span></button>
+    <div class="ausgabe">
+      <button class="kn" id="btnSpeichern"><span class="nb">Save for print</span><span class="nk">Save</span><i><svg viewBox="0 0 24 24"><path d="M12 5v12m-5-5 5 5 5-5"/></svg></i></button>
+      <div class="menue" id="menueSpeichern" hidden>
+        <button data-aus="pdf"><i><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 16.5h5"/></svg></i><span><b>PDF for the printer</b><small>Final size with 3 mm bleed, fonts embedded, photos up to 300 dpi</small></span></button>
+        <button data-aus="marken"><i><svg viewBox="0 0 24 24"><path d="M3 7h3M7 3v3M21 7h-3M17 3v3M3 17h3M7 21v-3M21 17h-3M17 21v-3"/><rect x="8" y="8" width="8" height="8"/></svg></i><span><b>PDF with crop marks</b><small>For a copy shop or printing it yourself</small></span></button>
+        <button data-aus="png"><i><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 16 5-5 4 4 2.5-2.5L20 17"/><circle cx="15.5" cy="9.5" r="1.4"/></svg></i><span><b>Image of this page</b><small>PNG, for Instagram or to send</small></span></button>
+        <button data-aus="zip" hidden><i><svg viewBox="0 0 24 24"><rect x="3.5" y="6.5" width="13" height="13" rx="2"/><path d="M7.5 3.5h11a2 2 0 0 1 2 2v11"/><path d="m4 17 4-4 3 3 2-2 3.5 3.5"/></svg></i><span><b>All images of the carousel</b><small>Numbered PNGs, 1080 × 1350, in one ZIP file with the caption</small></span></button>
+        <button data-aus="json"><i><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg></i><span><b>Save the work file</b><small>To keep working later, also on another computer</small></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="studio">
+  <aside class="links">
+    <nav class="reiter" role="tablist"><span class="reiter__gleiter" aria-hidden="true"></span>
+      <button class="an" data-tab="entwerfen">Brand kit</button>
+      <button data-tab="vorlagen">Templates</button>
+      <button data-tab="fotos">Photos</button>
+      <button data-tab="ablage">Saved</button>
+    </nav>
+
+    <section class="tab an" data-tab="entwerfen">
+      <h2>From the brand book</h2>
+      <p class="leise">Colours, fonts and elements of The Cat &amp; Gun, as Julie keeps them in the brand book editor. A click puts them on the page or on what you picked.</p>
+      <div id="bausteine"></div>
+    </section>
+
+    <section class="tab" data-tab="vorlagen">
+      <h2>Start from a <span style="white-space:nowrap">template</span></h2>
+      <div class="zeile2">
+        <label>Size<select id="vorlageFormat"></select></label>
+        <label>Ground<select id="vorlageTon"><option value="dunkel">Black with herringbone</option><option value="hell">Paper</option><option value="creme">White with herringbone</option><option value="dc">Pool table red</option><option value="gruen">Palm green</option></select></label>
+      </div>
+      <div class="vorlagen" id="vorlagen"></div>
+    </section>
+
+    <section class="tab" data-tab="fotos">
+      <h2>Photos</h2>
+      <label class="hochladen" id="hochladen"><input type="file" id="fotoDatei" accept="image/*,.heic,.heif" multiple hidden>
+        <span class="hochladen__ic"><svg viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span>
+        <span><b>Add your own photos</b><small>Click or drop photos here. They stay saved in this browser.</small></span></label>
+      <input type="search" id="fotoSuche" placeholder="Search: coffee, pool, juice …" autocomplete="off">
+      <div class="filter" id="fotoFilter"></div>
+      <div class="segment segment--klein" id="fotoLage"><button data-lage="alle" class="an">All shapes</button><button data-lage="quer">Landscape</button><button data-lage="hoch">Portrait</button></div>
+      <p class="leise" id="fotoInfo"></p>
+      <div class="fotos" id="fotos"></div>
+    </section>
+
+    <section class="tab" data-tab="ablage">
+      <h2>Your designs</h2>
+      <div class="zeile2">
+        <button class="leicht" id="btnNeuLeer">Blank page</button>
+        <label class="leicht">Open a work file<input type="file" id="dateiLaden" accept=".json,application/json" hidden></label>
+      </div>
+      <div class="ablage" id="ablage"></div>
+    </section>
+  </aside>
+
+  <section class="mitte">
+    <div class="werkzeug" id="werkzeug">
+      <div class="insel">
+        <button data-neu="titel" title="Add a title"><svg viewBox="0 0 24 24"><path d="M5 6.5V5h14v1.5M12 5v14M9.5 19h5"/></svg><span>Title</span></button>
+        <button data-neu="text" title="Add text"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 11.5h16M4 16h11"/></svg><span>Text</span></button>
+        <button data-neu="zeile" title="Line in capitals"><svg viewBox="0 0 24 24"><path d="M3 12h3M8 12h3M13 12h3M18 12h3"/></svg><span>Line</span></button>
+        <i class="insel__trenn"></i>
+        <button data-neu="bild" title="Add a photo"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 16 5-5 4 4 2.5-2.5L20 17"/><circle cx="15.5" cy="9.5" r="1.4"/></svg><span>Photo</span></button>
+        <button data-neu="zeichen" title="Ampersand of the house"><span class="insel__zeichen" id="inselZeichen"></span><span>Mark</span></button>
+        <i class="insel__trenn"></i>
+        <button data-neu="linie" title="Line"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg><span>Rule</span></button>
+        <button data-neu="flaeche" title="Shape"><svg viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="12" rx="1.5" fill="currentColor" fill-opacity=".25"/></svg><span>Shape</span></button>
+        <button data-neu="rahmen" title="Frame"><svg viewBox="0 0 24 24"><rect x="4.5" y="5.5" width="15" height="13" rx="2"/><rect x="7" y="8" width="10" height="8" rx="1"/></svg><span>Frame</span></button>
+        <i class="insel__trenn"></i>
+        <button data-livre="1" title="Brand kit: photos, wordmark, elements, pattern, colours"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.6-1 5.2-.8 8 1 2.8-1.8 5.4-2 8-1v13c-2.6-1-5.2-.8-8 1-2.8-1.8-5.4-2-8-1z"/><path d="M12 6.5v13"/></svg><span>Brand</span></button>
+      </div>
+      <div class="seitenwahl" id="seitenwahl"></div>
+    </div>
+    <div class="flaeche arbeitsfenster" id="flaeche"><!-- das Blatt ist ein Fenster auf die Seite (Prüfpunkt 18: Inhalt in .el-Kästen, keine Lücke) -->
+      <div class="wirt" id="wirt"></div>
+    </div>
+    <div class="fussleiste"><div class="insel insel--klein">
+      <span id="formatInfo"></span>
+      <i class="insel__trenn"></i>
+      <label class="schalter"><input type="checkbox" id="zeigeHilfen"><b></b><span>Trim edge</span></label>
+      <i class="insel__trenn"></i>
+      <button class="rund rund--klein" id="zoomAus" aria-label="Smaller"><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg></button><span id="zoomWert">100 %</span><button class="rund rund--klein" id="zoomEin" aria-label="Larger"><svg viewBox="0 0 24 24"><path d="M6 12h12M12 6v12"/></svg></button>
+    </div></div>
+  </section>
+
+  <aside class="rechts" id="rechts"></aside>
+</main>
+
+<div class="dialog" id="dialog" hidden><div class="dialog__karte" id="dialogKarte"></div></div>
+<div class="start ms" id="start" hidden>
+  <aside class="ms-leiste">
+    <div class="ms-marke"><span class="ms-zeichen" id="kapitelZeichen"></span><div><b>The Cat &amp; Gun</b><small>Print &amp; feed</small></div></div>
+    <span class="ms-haar"></span>
+    <button class="kn ms-kn-gold glanz-kn" data-akt="neu"><span>Make something new</span><i><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></i></button>
+    <nav class="ms-nav ms-nav--haupt" id="msNav"><span class="ms-gleiter" aria-hidden="true"></span>
+      <button data-ansicht="start"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Overview</span></button>
+      <button data-ansicht="events"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg><span>Events</span><em id="evZahl"></em></button>
+      <button data-ansicht="abteilungen"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg><span>Areas of the house</span><em id="abZahl"></em></button>
+      <button data-ansicht="hinweise"><svg viewBox="0 0 24 24"><path d="M12 3 2.5 20h19zM12 10v4.5M12 17.5v.1"/></svg><span>Notices in the house</span><em id="hiZahl"></em></button>
+      <button data-ansicht="newsletter"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><path d="M16.6 7.4h.01"/></svg><span>Instagram feed</span><em id="nlZahl"></em></button>
+      <span class="ms-trenn"></span>
+      <button data-ansicht="stuecke"><svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z"/><path d="M4 7v13h3M20 7v13h-3M10 8h4M10 11.5h4"/></svg><span>House pieces</span><em id="hsZahl"></em></button>
+      <button data-ansicht="meine"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5"/></svg><span>My designs</span><em id="meineZahl">0</em></button>
+      <button data-ansicht="freigegeben"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="6"/><path d="m9.5 10 1.8 1.8 3.4-3.6M8.5 15 7 21l5-2.5 5 2.5-1.5-6"/></svg><span>Released</span><em id="fgZahl">0</em></button>
+      <button data-ansicht="neu"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M9 9v11"/></svg><span>Kinds and templates</span><em id="artZahl"></em></button>
+      <button data-ansicht="fotos"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 16l5-5 4 4 2.5-2.5L20 17M15.5 8.2a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6"/></svg><span>Photos of the house</span><em id="fotoZahl"></em></button>
+      <button data-ansicht="marke"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.8 1.5-1.6 0-1.3-1-1.6-1-2.6 0-.8.7-1.3 1.5-1.3H16a5 5 0 0 0 5-5c0-4-4-7.5-9-7.5zM7.5 11.5h.01M10 7.5h.01M15 7.5h.01"/></svg><span>Colours &amp; fonts</span></button>
+    </nav>
+    <div class="ms-fuss"><button id="startHilfe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.1-2.4 3.6M12 17.2v.1"/></svg><span>Help and tour</span></button><span class="ms-wege"><a data-weg="stube" target="_blank" rel="noopener">Control panel</a><a data-weg="website" target="_blank" rel="noopener">Website</a><a href="pruefung.html" target="_blank" rel="noopener">Check</a></span><small>Everything stays saved in this browser</small></div>
+  </aside>
+  <header class="ms-kopf">
+    <button class="rund ms-bereiche" id="msBereiche" type="button" aria-label="Sections" aria-expanded="false" aria-controls="msNav"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    <span class="ms-kopf-zeichen" id="msKopfZeichen"></span><span class="ms-kopf-name"><b>Print &amp; feed</b><small>The Cat &amp; Gun</small></span>
+    <label class="ms-suche"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="startSuche" placeholder="Search …" aria-label="Search" autocomplete="off"><kbd>⌘ K</kbd></label>
+    <span class="ms-frei"></span>
+    <button class="kn kn--klein kn--ohne start__zu" id="startZu" hidden><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span>Back to the design</span></button>
+    <a class="rund ms-rund ms-pruef" href="pruefung.html" target="_blank" rel="noopener" data-tip="Check" aria-label="Check: is everything all right?"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></a>
+    <button class="rund ms-rund" data-ansicht="livre" data-tip="Brand book" aria-label="Brand book"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.6-1 5.2-.8 8 1 2.8-1.8 5.4-2 8-1v13c-2.6-1-5.2-.8-8 1-2.8-1.8-5.4-2-8-1z"/><path d="M12 6.5v13"/></svg></button>
+    <button class="kn kn--klein ms-kn-neu" data-akt="neu" aria-label="New"><span>New</span><i><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></i></button>
+  </header>
+  <div class="start__in ms-haupt">
+    <section class="start__wahl" id="startWahl">
+      <div id="msStart">
+        <div class="ms-gruss">
+          <h1 id="msGruss">Good evening</h1>
+          <p id="msSatz">What do you want to make today?</p>
+          <div class="ms-feld">
+            <span class="ms-feld__ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span>
+            <textarea id="startFrei" rows="1" placeholder="For example: beer mat" aria-label="Find a template" autocomplete="off"></textarea>
+            <button class="kn knopf--voll glanz-kn" data-st="frei"><span>Find templates</span><i><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></i></button>
+          </div>
+          <button class="ms-lnk ms-lnk--alle" data-ansicht="neu" id="msAlle" hidden><span></span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </div>
+        <div class="ms-zeile"><h2>Coming up</h2><button class="ms-lnk" data-ansicht="events"><span>All events</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+        <div class="ms-wochen" id="startWochen"></div>
+        <div class="ms-zeile"><h2>Areas of the house</h2><button class="ms-lnk" data-ansicht="abteilungen"><span>All areas</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+        <div class="ms-wochen ms-wochen--abt" id="startAbteilungen"></div>
+        <div class="ms-zeile"><h2>Last edited</h2><button class="ms-lnk" data-ansicht="meine"><span>All designs</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+        <p class="ms-leise pk-zuletzt-satz" id="startZuletztSatz" hidden>Examples from the templates of the house. As soon as you save something yourself, your own designs show here.</p>
+        <div class="ms-raster" id="startZuletzt"></div>
+      </div>
+      <div id="msEvents" hidden>
+        <div class="ms-titel"><h1>Events</h1><span class="ms-leise">What happens at the house. Each event comes with ready designs for print and Instagram.</span></div>
+        <div id="evListe"></div>
+        <div class="vb__alle" id="evAlle"></div>
+      </div>
+      <div id="msAbteilungen" hidden>
+        <div class="ms-titel"><h1>Areas of the house</h1><span class="ms-leise">Café, juice bar, pool table, playground and the street out front: what each area needs in print.</span></div>
+        <div class="ms-wochen" id="abListe"></div>
+        <div class="vb__alle" id="abAlle"></div>
+      </div>
+      <div id="msHinweise" hidden>
+        <div class="ms-titel"><h1>Notices in the house</h1><span class="ms-leise">Opening hours, Brekky Specials, food delivery: ready in the style of the house. Change the details and hang it up.</span></div>
+        <div class="ms-raster" id="hiRaster"></div>
+        <div class="vb__alle" id="hiAlle"></div>
+      </div>
+      <div id="msNewsletter" hidden>
+        <div class="ms-titel"><h1>Instagram feed</h1><span class="ms-leise">Posts and stories for @thecatandgun, in the sizes Instagram uses. Save the image and post it from the phone.</span></div>
+        <div class="ms-raster" id="nlRaster"></div>
+      </div>
+      <div id="msDetail" hidden></div>
+      <div id="msFotos" hidden>
+        <div class="ms-titel"><h1>Photos <span style="white-space:nowrap">of the house</span></h1><span class="ms-leise" id="fotoSatz"></span></div>
+        <div class="ms-chips" id="fotoGruppen"></div>
+        <div class="ms-fotos" id="fotoRaster"></div>
+      </div>
+      <div id="msMarke" hidden></div>
+      <div id="msLivre" hidden></div>
+      <div id="msFreigegeben" hidden>
+        <div class="ms-titel"><h1>Released</h1><span class="ms-leise">These designs are released: each named area may print and hang them up without asking, even when nobody is around.</span></div>
+        <div id="fgListe"></div>
+      </div>
+      <div id="msStuecke" hidden>
+        <div class="ms-titel"><h1>House pieces</h1><span class="ms-leise">The print pieces of The Cat &amp; Gun as they go to the printer, sorted like the print files of the house. Click one to change it in the editor, make a copy or save the PDF.</span></div>
+        <div id="hsListe"></div>
+        <p class="start__nichts" id="hsNichts" hidden>No piece fits this word. Try another one.</p>
+      </div>
+      <div id="msMeine" hidden>
+        <div class="ms-titel"><h1>My designs</h1><span class="ms-leise" id="meineSatz"></span></div>
+        <div class="ms-raster" id="bibliothek"></div>
+      </div>
+      <div id="msNeu" class="ms-buehne" hidden>
+        <h1>What do you want to make?</h1>
+        <p class="start__satz">Type what you need and pick from the templates, or choose a kind below.</p>
+        <div class="start__direkt">
+          <span class="start__direkt-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span>
+          <textarea id="startDirekt" rows="1" placeholder="For example: chalkboard" aria-label="Find a template" autocomplete="off"></textarea>
+          <button class="kn knopf--voll glanz-kn" data-st="direkt"><span>Find templates</span><i><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></i></button>
+        </div>
+        <p class="start__fehler" id="startDirektFehler" hidden>No template fits these words. Try another word or pick a kind below.</p>
+        <div class="start__filter"><div class="start__gruppen" id="startGruppen"></div></div>
+        <div class="atelier" id="arten"></div>
+      </div>
+      <p class="start__nichts" id="startNichts" hidden>Nothing found.</p>
+    </section>
+    <section class="start__weg ms-buehne" id="startWeg" hidden></section>
+  </div>
+</div>
+<div class="meldung" id="meldung" role="status" aria-live="polite" hidden></div>
+<div class="lader" id="lader" hidden><div class="lader__in"><span class="lader__zeichen" id="laderZeichen"></span><b id="laderText">One moment</b><small id="laderZeile">Print &amp; feed is working</small><span class="lader__band"><i></i></span></div></div>
+
+<script src="lib/auswahl.js?v=35-cg1"></script>
+<script src="satz.js?v=55-hs1"></script>
+<script src="haeuser/catgun/stuecke.js?v=1795872050"></script>
+<script src="eigene.js?v=36-cg1"></script>
+<script src="vorlagen.js?v=49-cg3"></script>
+<script src="haeuser/catgun/dokumente.js?v=1795872050"></script>
+<script src="druck.js?v=61-hs1"></script>
+<script src="studio.js?v=1795872050"></script>
+<script src="reihen.js?v=3-hs1"></script>
+<script src="vorschaubild.js?v=8-cg1"></script>
+<script src="instagram.js?v=39-cg2"></script>
+<script src="lelivre.js?v=1795872050"></script>
+<script src="siegel.js?v=1-cg1"></script>
+<script src="start.js?v=1795872050"></script>
+<script src="fuehrung.js?v=1795872050"></script>
+<script>/* Handy (R07, Prüfung 16.10.2026): die Seitenleiste mit den Bereichen war unter 900 px ganz weg. Der Knopf «Bereiche» klappt sie als Fach auf,
+   nach der Wahl schliesst sie sich; Escape und Tippen daneben schliessen auch. */
+(function(){var k=document.getElementById('msBereiche'),s=document.getElementById('start');if(!k||!s)return;
+function zu(){s.classList.remove('leiste-auf');k.setAttribute('aria-expanded','false');}
+k.addEventListener('click',function(e){e.stopPropagation();var auf=!s.classList.contains('leiste-auf');s.classList.toggle('leiste-auf',auf);k.setAttribute('aria-expanded',String(auf));});
+s.addEventListener('click',function(e){if(!s.classList.contains('leiste-auf'))return;if(e.target.closest('.ms-leiste [data-ansicht],.ms-leiste [data-akt],.ms-leiste .ms-fuss button'))return setTimeout(zu,0);if(!e.target.closest('.ms-leiste'))zu();});
+addEventListener('keydown',function(e){if(e.key==='Escape')zu();});})();</script>
+<script>/* «Zur Werkbank» (R19): nur wenn aus der Werkbank geöffnet. Online liegt L’Imprimerie auf der Adresse des Hauses (werkzeuge/imprimerie/),
+   lokal auf eigenem Server: dann data-fremd, die Werkbank-Adresse kommt aus dem Link. */
+(function(){var s=document.createElement('script');s.src='zur-werkbank.js?v=1-cu1';s.defer=true;s.setAttribute('data-ueber','.ms-fuss');if(location.port==='9738'||!/\/_?werkzeuge\/imprimerie\//.test(location.pathname))s.setAttribute('data-fremd','');document.body.appendChild(s);})();</script>
+</body>
+</html>

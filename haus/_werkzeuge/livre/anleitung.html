@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · Brand book · The Cat &amp; Gun</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15120f">
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/livre/_ob/kleid/catgun-zeichen.svg" type="image/svg+xml">
+<script src="/the-cat-and-gun/haus/_werkzeuge/livre/_ob/kleid/catgun.js?v=1795872050"></script>
+<script src="wege.js?v=1795872050"></script>
+<link rel="preload" href="/the-cat-and-gun/haus/assets/schrift/Gloock.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Gloock;font-style:normal;font-weight:400;font-display:block;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2') format('woff2')}
+:root{--nacht:#15120f;--navy:#15120f;--blau:#211c18;--papier:#f5f1ea;--weiss:#fbf8f3;--gold:#c99d70;--taupe:#8a5634;--tinte:#1d1915;--blatt:#fbf8f3;--linie:rgba(29,25,21,.14);--leise:#6c6157;
+  --serif:Gloock,Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,figure{margin:0;padding:0}ol,ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,.thema a span{font-family:var(--serif);font-weight:400;letter-spacing:-.005em}
+:focus-visible{outline:1.5px solid var(--taupe);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.kn{position:relative;display:inline-flex;align-items:center;gap:12px;height:48px;padding:0 6px 0 22px;border-radius:7px;font:13px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,#4a2f20,#211c18 46%,#0d0b09);box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -3px 0 rgba(0,0,0,.55),0 14px 22px -14px rgba(29,25,21,.55);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#fbf8f3,#ece5d9);color:var(--tinte);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -2px 0 rgba(0,0,0,.22)}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.3}
+.kn--hell{background:linear-gradient(180deg,#fbf8f3,#ece5d9 50%,#ece5d9);color:var(--tinte);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(33,28,24,.38),0 14px 22px -14px rgba(0,0,0,.5)}
+.kn--hell i{background:linear-gradient(180deg,#4a2f20,#15120f);color:var(--weiss)}
+/* Kopf */
+.kopf{position:relative;isolation:isolate;color:var(--weiss);background-color:var(--navy);background-image:url('/the-cat-and-gun/haus/_werkzeuge/livre/_ob/kleid/tapete-dunkel.svg');background-size:46px 46px;background-position:0 0;border-radius:0 0 34px 34px;overflow:hidden}
+.kopf::after{content:'';position:absolute;inset:auto 0 0 0;height:60%;z-index:-1;background:linear-gradient(0deg,rgba(29,25,21,.8),transparent)}
+.kopf__in{max-width:1180px;margin:0 auto;padding:36px 28px 74px}
+.kopf nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px;font:13px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.kopf nav a:hover{color:#fff}
+.kopf h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.02;max-width:14ch}.kopf h1 em{font-style:normal;color:var(--gold)}
+.kopf p{margin-top:22px;max-width:56ch;font-size:1.08rem;color:rgba(244,239,231,.84)}
+/* Tor 3 (31.10.2026): Knöpfe als Gruppe, beim Umbruch bündig links und mit normalem Abstand */
+.kopf__kn{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+/* Inhalt */
+main{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+.inhalt{margin:58px 0 70px}
+.inhalt h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;margin:8px 0 8px}.inhalt h2 em{font-style:normal;color:var(--taupe)}
+.inhalt>p{max-width:60ch;color:var(--leise)}
+.themen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}.themen>.thema:last-child:nth-child(odd){grid-column:1/-1}
+.thema{background:var(--blatt);border-radius:22px;box-shadow:inset 0 0 0 1px var(--linie);padding:22px 24px}
+.thema h3{font-size:1.35rem;line-height:1.15;display:grid;gap:3px}.thema h3 small{font:13px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}.thema h3 em{font:13px var(--mono);font-style:normal;color:var(--leise)}
+.thema ol{margin-top:12px;display:grid;gap:2px}
+.thema a{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 6px;border-radius:12px;transition:background-color .3s}
+.thema a:hover{background:rgba(255,255,255,.7)}.thema a b{font:13px var(--mono);color:var(--taupe)}.thema a span{font-family:var(--serif)}.thema a i{font:13px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Kapitel */
+.kap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,60px);align-items:start;padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}
+.kap:nth-of-type(even) .kap__t{order:2}
+.kap h2{font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.08;margin:12px 0 14px;text-wrap:balance}
+.einl{color:rgba(29,25,21,.78);max-width:54ch}
+.schritte{display:grid;gap:12px;margin:22px 0}
+.schritte li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.schritte li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold);font:13px var(--mono)}
+.schritte p{padding-top:3px}
+.wissen{padding:16px 18px;border-radius:16px;background:rgba(201,157,112,.34);font-size:14.5px;color:var(--tinte)}.wissen b{display:block;margin-bottom:3px;font:13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte)}
+.kap__b{position:sticky;top:20px}
+.bild{display:block;width:100%;border-radius:20px;overflow:hidden;background:var(--navy);box-shadow:0 30px 50px -28px rgba(29,25,21,.6),inset 0 0 0 1px rgba(201,157,112,.3);cursor:zoom-in;transition:transform .6s var(--e2)}
+.bild:hover{transform:translateY(-3px)}.bild img{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Bild gross */
+.gross{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vmin;background:rgba(29,25,21,.88);cursor:zoom-out;animation:auf .35s var(--e1) both}
+.gross[hidden]{display:none}.gross img{width:auto;height:auto;max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 40px 80px -30px #000}.gross small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+@keyframes auf{from{opacity:0}}
+.fuss{margin-top:20px;padding:34px 0 0;border-top:1px solid var(--linie);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--leise);font-size:14px}
+@media (max-width:900px){.themen{grid-template-columns:1fr}.kap{grid-template-columns:1fr;padding:40px 0}.kap:nth-of-type(even) .kap__t{order:0}.kap__b{position:static}.kopf__in{padding:26px 18px 54px}.kopf nav{margin-bottom:36px}main{padding:0 18px 80px}}
+/* Effekte-Standard (Robert 23.11.2026, Vorbild Schlössli livre.js auftritte() und maison.css «Bewegung wie in den Hafenbüros»): der Kopf kommt beim Öffnen aus 40 px,
+   Inhaltskarten und Kapitel schweben beim Hereinscrollen gestaffelt an ihren Platz (40 px, Feder, höchstens vier), Bilder zoomen in ihrem Rahmen aus 1,06.
+   Nur transform und scale, alles deckend ab dem ersten Bild, einmal. Ohne Skript und bei «weniger Bewegung» steht alles sofort. */
+@keyframes an-auf{from{transform:translate3d(0,40px,0)}to{transform:none}}
+@keyframes an-feder{from{transform:translate3d(0,40px,0) scale(.97)}to{transform:none}}
+@keyframes an-bild{from{scale:1.06}to{scale:1}}
+.kopf__in>*{animation:an-auf 1.1s var(--e1) both;animation-delay:calc(var(--i,0) * 90ms)}
+.kopf__in>nav{--i:0}.kopf__in>h1{--i:1}.kopf__in>p{--i:2}.kopf__in>.kopf__kn{--i:3}
+.an .kommt{transform:translate3d(0,40px,0) scale(.97)}
+.an .kommt .bild img{scale:1.06}
+.an .da{animation:an-feder 1.1s cubic-bezier(.28,1.42,.42,1) both;animation-delay:calc(var(--k,0) * 90ms)}
+.an .da .bild img{animation:an-bild 1.7s var(--e1) both;animation-delay:calc(var(--k,0) * 90ms + .1s)}
+@media print{.kommt,.da{transform:none!important;animation:none!important}.bild img{scale:1!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (prefers-reduced-motion:reduce){.an .kommt{transform:none}.an .kommt .bild img{scale:1}}
+.zurueck{border-bottom:1px solid currentColor}
+/* Messlauf 29.10.2026 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+/* Prüfung 23.11.2026: Zeilen berührten sich (Inhaltskarten, Kapiteltitel mit Unterlängen) */.inhalt h2,.kap h2{line-height:1.16}.thema h3{gap:8px}</style>
+</head>
+<body>
+<!-- Guide · Brand book · The Cat & Gun: gebaut von anleitung_bau.py aus dieser Vorlage (Kopie der Anleitung der Vorlage, Culinarium Hannover) -->
+<header class="kopf"><div class="kopf__in">
+  <nav><span>Guide · The Cat &amp; Gun</span><a href="./#start">Open the Brand book</a></nav>
+  <h1>Photos, files <em>and colours.</em></h1>
+  <p>9 short chapters. How to get a photo in the right size, where the logo and the colours for a designer are, and how to measure the colours of a draft.</p>
+  <div class="kopf__kn"><a class="kn" href="./#start">Open the Brand book<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a><a class="kn kn--hell" href="#inhalt">To the chapters<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></i></a></div>
+</div></header>
+<main>
+  <section class="inhalt" id="inhalt"><span class="mono">00 · Contents</span><h2>9 chapters, <em>five topics.</em></h2><p>Each chapter shows the part and names the steps. A click makes the picture large, a second click or Esc brings it back.</p>
+    <div class="themen"><section class="thema"><h3><small>Basics</small>How the Brand book works<em>1 chapter</em></h3><ol><li><a href="#k01"><b>01</b><span>How the Brand book is built.</span><i>Overview</i></a></li></ol></section><section class="thema"><h3><small>Photos</small>Find and get<em>2 chapters</em></h3><ol><li><a href="#k02"><b>02</b><span>Find a photo.</span><i>Photos</i></a></li><li><a href="#k03"><b>03</b><span>Get the right size.</span><i>Photos</i></a></li></ol></section><section class="thema"><h3><small>Logo &amp; files</small>Files and colours<em>2 chapters</em></h3><ol><li><a href="#k04"><b>04</b><span>The wordmark for a designer.</span><i>Logo &amp; files</i></a></li><li><a href="#k05"><b>05</b><span>Copy colour values.</span><i>Logo &amp; files</i></a></li></ol></section><section class="thema"><h3><small>Colour check</small>Measure and read<em>2 chapters</em></h3><ol><li><a href="#k06"><b>06</b><span>Measure a draft.</span><i>Colour check</i></a></li><li><a href="#k07"><b>07</b><span>Read the result.</span><i>Colour check</i></a></li></ol></section><section class="thema"><h3><small>Look up</small>Style guide and changes<em>2 chapters</em></h3><ol><li><a href="#k08"><b>08</b><span>Look things up in the style guide.</span><i>Style guide</i></a></li><li><a href="#k09"><b>09</b><span>Change the brand.</span><i>Changes</i></a></li></ol></section></div></section>
+<article class="kap" id="k01">
+  <div class="kap__t"><span class="mono">01 · Overview</span><h2>How the Brand book <span style="white-space:nowrap">is&nbsp;built.</span></h2><p class="einl">The Brand book is the brand of The Cat &amp; Gun in one place. Three parts for every day, and the style guide to look things up.</p>
+    <ol class="schritte"><li><span>1</span><p>Under the title is a row of tabs: «Overview», «Photos», «Logo &amp; files», «Colour check» and «Style guide».</p></li><li><span>2</span><p>On the left are all tools of the house, and below them «Control panel», the guide and the short tour. At the bottom of every page are the guide, «View website», «Change» and all files of the brand at once.</p></li><li><span>3</span><p>On the phone the list on the left is hidden. «Control panel» is at the top right.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The Brand book saves nothing. What you get lands on your computer. Everything it shows comes from the Brand book editor.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: How the Brand book is built."><img src="anleitung/k01.jpg?v=bed3cd2237" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Overview: How the Brand book is built."></button>
+    <figcaption><span>brand book / overview</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k02">
+  <div class="kap__t"><span class="mono">02 · Photos</span><h2>Find <span style="white-space:nowrap">a&nbsp;photo.</span></h2><p class="einl">All photos of the house are under «Photos»: breakfast, drinks, the pool table, the garden, the market and the team.</p>
+    <ol class="schritte"><li><span>1</span><p>Type into the search field, for example «pool», «juice» or «bagel».</p></li><li><span>2</span><p>Next to it, choose portrait or landscape.</p></li><li><span>3</span><p>Above the photos it says how many fit. «Reset filters» shows all of them again.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>For an Instagram post, portrait photos work best: choose «Portrait», then the least is cut away.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Find a photo."><img src="anleitung/k02.jpg?v=18a5499904" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Photos: Find a photo."></button>
+    <figcaption><span>brand book / photos</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k03">
+  <div class="kap__t"><span class="mono">03 · Photos</span><h2>Get the <span style="white-space:nowrap">right&nbsp;size.</span></h2><p class="einl">A click on a photo opens it large. On the right are four ready sizes.</p>
+    <ol class="schritte"><li><span>1</span><p>Point at «Instagram post» (1080 × 1350) or «Story» (1080 × 1920). The crop appears in the picture.</p></li><li><span>2</span><p>Drag the frame to the part that should show. «Get» takes exactly this crop.</p></li><li><span>3</span><p>«Website» gets the photo with 2000 pixels on the longest side, «Print» in full size. Two buttons open the photo in Print &amp; feed.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>If a photo is too small for a story, the file name says «upscaled».</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Get the right size."><img src="anleitung/k03.jpg?v=bc6bf9473f" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Photos: Get the right size."></button>
+    <figcaption><span>brand book / photos</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k04">
+  <div class="kap__t"><span class="mono">04 · Logo &amp; files</span><h2>The wordmark for <span style="white-space:nowrap">a&nbsp;designer.</span></h2><p class="einl">Under «Logo &amp; files» is everything a designer or a print shop needs.</p>
+    <ol class="schritte"><li><span>1</span><p>The wordmark and the ampersand, each in black for light grounds and in white for dark grounds.</p></li><li><span>2</span><p>«SVG» stays sharp at any size. «PNG» has a clear background, for presentations and office programs.</p></li><li><span>3</span><p>The herringbone pattern of the website comes as a tile. «All files (ZIP)» gets everything at once, with the fonts.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The files are made from the brand book as it is published. If a colour changes in the Brand book editor, the files change too.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: The wordmark for a designer."><img src="anleitung/k04.jpg?v=2e3f85f964" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Logo &amp; files: The wordmark for a designer."></button>
+    <figcaption><span>brand book / logo &amp; files</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k05">
+  <div class="kap__t"><span class="mono">05 · Logo &amp; files</span><h2>Copy <span style="white-space:nowrap">colour&nbsp;values.</span></h2><p class="einl">The colours stand with name and note: the print pieces, the six Super Juices and the website. One click is enough.</p>
+    <ol class="schritte"><li><span>1</span><p>Click a colour: the value (for example #A8232A for pool table red) is copied.</p></li><li><span>2</span><p>A click on the RGB line copies the RGB values.</p></li><li><span>3</span><p>Below, get the colours as CSS, JSON or ASE (for InDesign and Illustrator) and the fonts as WOFF2 or as one ZIP.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Each colour says where it comes from, for example the cloth of the pool table.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Copy colour values."><img src="anleitung/k05.jpg?v=d18eec1736" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Logo &amp; files: Copy colour values."></button>
+    <figcaption><span>brand book / logo &amp; files</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k06">
+  <div class="kap__t"><span class="mono">06 · Colour check</span><h2>Measure <span style="white-space:nowrap">a&nbsp;draft.</span></h2><p class="einl">When a designer sends a poster, a flyer or a post, check here if its colours fit The Cat &amp; Gun.</p>
+    <ol class="schritte"><li><span>1</span><p>Drag the draft into the field or press «Choose file». JPG, PNG or WebP, up to 30 MB. For a PDF, save the first page as a picture.</p></li><li><span>2</span><p>Press «Measure». The colours are measured here in the browser. Nothing is sent.</p></li><li><span>3</span><p>Below the empty field there is always an example.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The check measures colours only. It does not judge pictures or words.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Measure a draft."><img src="anleitung/k06.jpg?v=14e5294fb0" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Colour check: Measure a draft."></button>
+    <figcaption><span>brand book / colour check</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k07">
+  <div class="kap__t"><span class="mono">07 · Colour check</span><h2>Read <span style="white-space:nowrap">the&nbsp;result.</span></h2><p class="einl">At the top, one sentence says how much of the draft is in the colours of the house. Below, colour by colour.</p>
+    <ol class="schritte"><li><span>1</span><p>Each colour of the draft stands next to the closest colour of the house, with its name and one sentence. Colours that are not house colours come first.</p></li><li><span>2</span><p>The line on the left is red when a colour is not a house colour. Pure black is not a house colour.</p></li><li><span>3</span><p>«Copy as text» gives you the result for an email to the designer. «Save result» puts it on your computer as a file.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The example was drawn for this guide. Its colours are really measured.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Read the result."><img src="anleitung/k07.jpg?v=f96fbe9859" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Colour check: Read the result."></button>
+    <figcaption><span>brand book / colour check</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k08">
+  <div class="kap__t"><span class="mono">08 · Style guide</span><h2>Look things up in the <span style="white-space:nowrap">style&nbsp;guide.</span></h2><p class="einl">The style guide shows the brand page by page: the house, wordmark, colours, fonts, stickers, photos, the lines of the house and the files.</p>
+    <ol class="schritte"><li><span>1</span><p>Press «Style guide» in the row of tabs or on the overview.</p></li><li><span>2</span><p>Below the title of the style guide is a row of chapters. A click jumps to that page. «Save as PDF» at the top right saves it as a PDF.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The style guide always shows the brand book as it is published.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Look things up in the style guide."><img src="anleitung/k08.jpg?v=7d7eb24700" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Style guide: Look things up in the style guide."></button>
+    <figcaption><span>brand book / style guide</span><span>View larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k09">
+  <div class="kap__t"><span class="mono">09 · Changes</span><h2>Change <span style="white-space:nowrap">the&nbsp;brand.</span></h2><p class="einl">The Brand book only shows the brand. Colours, photos, fonts and lines are changed in the Brand book editor.</p>
+    <ol class="schritte"><li><span>1</span><p>Press «Change» at the bottom or «Change in the Brand book editor» above the photos.</p></li><li><span>2</span><p>Save and publish there. The Brand book shows the new state right away in the same browser, otherwise within half a minute.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Earlier versions are kept in the Brand book editor and can be brought back there.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="View larger: Change the brand."><img src="anleitung/k09.jpg?v=7e2a490251" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book, Changes: Change the brand."></button>
+    <figcaption><span>brand book / changes</span><span>View larger</span></figcaption></figure>
+</article>
+  <div class="fuss"><span>Brand book · The Cat &amp; Gun</span><a class="zurueck" href="./#start">Back</a></div>
+</main>
+<div class="gross" id="gross" hidden role="dialog" aria-modal="true" aria-label="Large picture"><img alt="" width="1200" height="714"><small>Click or Esc to close</small></div>
+<script src="anleitung.js?v=1795872050"></script>
+</body>
+</html>

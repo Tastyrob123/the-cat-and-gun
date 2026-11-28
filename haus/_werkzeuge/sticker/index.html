@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sticker editor · The Cat &amp; Gun</title>
+<!-- Gerüst aus der Vorlage (Culinarium Hannover, _werkzeuge/imprimerie/index.html): Kopf, Arbeitsfläche mit Platten links/rechts, Übersicht #start mit Seitenleiste.
+     Geändert: Kleid (The Cat & Gun), Inhalt (Sticker des Hauses aus dem Markenfundus), Sprache (Englisch), Umfang (AUFTRAG.md Sticker editor). Ohne KI. -->
+<script src="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/catgun.js?v=1795872050"></script>
+<link rel="preload" href="/the-cat-and-gun/haus/_werkzeuge/fundus/fundus.json" as="fetch" crossorigin>
+<link rel="preload" href="/the-cat-and-gun/haus/assets/schrift/Gloock.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="look/held-sticker.webp" as="image" fetchpriority="high">
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/catgun-zeichen.svg">
+<script>/* Fehlermelder (Werkzeug-Master R03, vor allem anderen): Skriptfehler nach localStorage «catgun-sticker-fehler» (letzte 20, die Prüfseite zeigt sie)
+   und an api/fehler. Netz- und Ladefehler nie melden, höchstens 20 je Seite, eigener Fehlschlag nie erneut melden. */
+(function () { var n = 0, K = 'catgun-sticker-fehler';
+  function melde(t) { if (n >= 20) return; n++; t = String(t).slice(0, 300); window.__skFehler = t;
+    try { var l = JSON.parse(localStorage.getItem(K) || '[]'); l.push({ z: new Date().toISOString(), t: t }); localStorage.setItem(K, JSON.stringify(l.slice(-20))); } catch (e) {}
+    try { fetch('api/fehler', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: t, wo: location.pathname }) }).catch(function () {}); } catch (e) {} }
+  addEventListener('error', function (e) { if (e.target && e.target !== window) return; melde((e.message || 'Error') + ' @ ' + String(e.filename || '').split('/').pop() + ':' + (e.lineno || 0)); }, true);
+  addEventListener('unhandledrejection', function (e) { var r = e.reason, t = String(r && r.message || r); if (/fetch|network|load failed|abort/i.test(t)) return; melde('Promise: ' + t); });
+  /* Startfehler-Tür (R04): steht nach 15 s noch nichts, sagt die Seite es mit Grund */
+  setTimeout(function () { if (window.SKStart && SKStart.bereit) return; var d = document.createElement('div'); d.className = 'startfehler'; d.setAttribute('role', 'alert');
+    var g = window.__skFehler || (navigator.onLine ? 'The data of the house did not arrive.' : 'This computer is offline right now.');
+    d.innerHTML = '<div><b>The Sticker editor does not start.</b><p></p><a href="">Reload</a> <a href="pruefung.html">Open check</a></div>'; d.querySelector('p').textContent = g;
+    document.body.appendChild(d); }, 15000);
+})();</script>
+<style>.startfehler{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#0d0b09;color:#f5f1ea;font:15px/1.5 "Instrument Sans",system-ui,sans-serif}
+.startfehler>div{max-width:440px;padding:32px;border:1px solid rgba(201,157,112,.5);border-radius:14px;text-align:center}.startfehler b{font:400 22px Gloock,Georgia,serif;color:#c99d70}
+.startfehler a{display:inline-block;margin:6px;padding:9px 18px;border-radius:999px;background:#c99d70;color:#0d0b09;text-decoration:none}</style>
+<script>document.documentElement.classList.add('start-gleich')</script>
+<script>addEventListener('DOMContentLoaded',function(){setTimeout(function(){var s=document.getElementById('start');if(s)s.classList.add('bereit')},5000)});</script>
+<link rel="stylesheet" href="lib/auswahl.css?v=1795872050">
+<link rel="stylesheet" href="studio.css?v=1795872050">
+<link rel="stylesheet" href="ms-bureau.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/grund.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/rahmen-buehne.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/catgun.css?v=1795872050">
+<link rel="stylesheet" href="haus.css?v=1795872050">
+<link rel="stylesheet" href="sticker.css?v=1795872050">
+<link rel="stylesheet" href="feder.css?v=1795872050">   <!-- Effekte-Standard 23.11.2026: Kacheln, Sticker, Listen schweben herein, Fotos zoomen, Farbfelder füllen sich von links (Kopie aus Print & feed) -->
+<link rel="stylesheet" href="neu.css?v=1795872050">   <!-- Neuer Look wie das Control panel (Robert 26.11.2026): Vorlage _entwurf-dashboard/stickers-bereich, helle Schicht hell.css entfällt -->
+<link rel="stylesheet" href="leiste.css?v=1795872050">   <!-- Seitenleiste wie bei Edit website (Robert 27.11.2026) -->
+<script src="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/oberflaeche.js?v=1795872050"></script>
+</head>
+<body>
+<header class="kopf">
+  <button class="kopf__marke" id="kopfMarke" type="button" aria-label="To the overview"><span class="kopf__zeichen" id="kopfZeichen"></span><span><b>Sticker editor</b><small>Stickers · <span id="kopfName">The Cat &amp; Gun</span></small></span></button>
+  <div class="kopf__mitte"><textarea class="kopf__name" id="docName" rows="1" aria-label="Name of the sticker" spellcheck="false" maxlength="120"></textarea><!-- Abnahme 28.11.2026: Textfläche statt Feld, damit ein langer Name umbricht und ganz zu lesen ist (studio.css kennt textarea.kopf__name aus der Vorlage) --><span class="kopf__gespeichert" id="gespeichert">Kept</span></div>
+  <div class="kopf__werk">
+    <button class="rund" id="btnZurueck" data-tip="Undo" aria-label="Undo (⌘Z)"><svg viewBox="0 0 24 24"><path d="M9 4.5 4 9.5l5 5M4 9.5h11a5 5 0 0 1 0 10h-3"/></svg></button>
+    <button class="rund" id="btnVor" data-tip="Redo" aria-label="Redo (⇧⌘Z)"><svg viewBox="0 0 24 24"><path d="m15 4.5 5 5-5 5M20 9.5H9a5 5 0 0 0 0 10h3"/></svg></button>
+    <button class="rund" id="btnVerwerfen" data-tip="Delete sticker" aria-label="Delete this sticker"><svg viewBox="0 0 24 24"><path d="M5 7h14M10 7V4.5h4V7M7 7l1 13h8l1-13M10.5 11v5.5M13.5 11v5.5"/></svg></button>
+    <span class="kopf__trenn"></span>
+    <button class="kn kn--klein kn--ohne neu" id="btnNeu"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg><span>Overview</span></button>
+    <button class="rund" data-livre="1" data-tab-auf="elemente" data-tip="Brand elements" aria-label="Elements and colours from the brand book"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.6-1 5.2-.8 8 1 2.8-1.8 5.4-2 8-1v13c-2.6-1-5.2-.8-8 1-2.8-1.8-5.4-2-8-1z"/><path d="M12 6.5v13"/></svg></button>
+    <button class="rund hilfe" id="btnHilfe" data-tip="Guide" aria-label="Guide"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.1-2.4 3.6M12 17.2v.1"/></svg></button>
+    <button class="kn kn--klein kn--ohne pruef" id="btnPruefen"><span class="pruef__zahl" id="pruefZahl">0</span><span class="pruef__t">Print check</span></button>
+    <div class="ausgabe">
+      <button class="kn" id="btnSpeichern"><span class="nb">Print file</span><span class="nk">Print</span><i><svg viewBox="0 0 24 24"><path d="M12 5v12m-5-5 5 5 5-5"/></svg></i></button>
+      <div class="menue" id="menueSpeichern" hidden>
+        <button data-aus="pruefung" class="sk-nur-handy"><i><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></i><span><b>Print check</b><small>Empty words, edges, photo sharpness</small></span></button>
+        <button data-aus="pdf"><i><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 16.5h5"/></svg></i><span><b>PDF for the printer</b><small>3 mm bleed, cut line, fonts embedded, photos up to 300 dpi</small></span></button>
+        <button data-aus="png"><i><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 16 5-5 4 4 2.5-2.5L20 17"/><circle cx="15.5" cy="9.5" r="1.4"/></svg></i><span><b>Picture of the sticker</b><small>PNG, to send or to post</small></span></button>
+        <button data-aus="json"><i><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg></i><span><b>Working file</b><small>To keep a copy or open it on another computer</small></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="studio">
+  <aside class="links">
+    <nav class="reiter" role="tablist"><span class="reiter__gleiter" aria-hidden="true"></span>
+      <button class="an" data-tab="einfach">Quick</button>
+      <button data-tab="vorlagen">Templates</button>
+      <button data-tab="elemente">Elements</button>
+      <button data-tab="fotos">Photos</button>
+    </nav>
+
+    <section class="tab an" data-tab="einfach">
+      <h2>Words and colours</h2>
+      <p class="leise">Change the words and the colours. Tap a part of the sticker to change it on its own.</p>
+      <div id="einfachTexte"></div>
+      <h3>Colours</h3>
+      <div id="einfachFarben"></div>
+      <div class="sk-motiv" id="einfachMotiv" hidden></div>
+      <button class="kn knopf--voll glanz-kn" id="btnFertig"><span>Done</span><i><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></i></button>
+      <details class="dna">
+        <summary>About this sticker</summary>
+        <div id="dna"></div>
+      </details>
+    </section>
+
+    <section class="tab" data-tab="vorlagen">
+      <h2>Start from a template</h2>
+      <p class="leise">An empty shape, or a sticker of the house as a starting point. Your sticker is replaced only after you confirm.</p>
+      <div class="zeile2">
+        <label>Area<select id="vorlageBereich"></select></label>
+      </div>
+      <div class="vorlagen sk-vorlagen" id="vorlagen"></div>
+    </section>
+
+    <section class="tab" data-tab="elemente">
+      <h2>From the brand book</h2>
+      <p class="leise">Pool ball, wordmark and signs of the house. Tap one to put it on the sticker.</p>
+      <div class="sk-elemente" id="elemente"></div>
+      <h3>Colours of the house</h3>
+      <div id="elementeFarben"></div>
+    </section>
+
+    <section class="tab" data-tab="fotos">
+      <h2>Photos</h2>
+      <label class="hochladen" id="hochladen"><input type="file" id="fotoDatei" accept="image/*" hidden>
+        <span class="hochladen__ic"><svg viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span>
+        <span><b>Upload a photo</b><small>Click or drop a photo here. It goes on the sticker and its colours show below.</small></span></label>
+      <p class="leise" id="fotoInfo"></p>
+      <div id="profil"></div>
+      <div class="fotos sk-fotos" id="fotos"></div>
+    </section>
+  </aside>
+
+  <section class="mitte">
+    <div class="werkzeug" id="werkzeug">
+      <div class="insel">
+        <button data-neu="text" title="Add a line of text"><svg viewBox="0 0 24 24"><path d="M5 6.5V5h14v1.5M12 5v14M9.5 19h5"/></svg><span>Text</span></button>
+        <button data-neu="bogen" title="Text along the edge" class="sk-erw"><svg viewBox="0 0 24 24"><path d="M4 15a8 8 0 0 1 16 0"/><path d="M9 7.5 12 5l3 2.5"/></svg><span>Arc</span></button>
+        <i class="insel__trenn"></i>
+        <button data-neu="bild" title="Add a photo"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 16 5-5 4 4 2.5-2.5L20 17"/><circle cx="15.5" cy="9.5" r="1.4"/></svg><span>Photo</span></button>
+        <button data-neu="zeichen" title="Signs of the house"><span class="insel__zeichen" id="inselZeichen"></span><span>Sign</span></button>
+        <i class="insel__trenn sk-erw"></i>
+        <button data-neu="kreis" title="Round shape" class="sk-erw"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/></svg><span>Round</span></button>
+        <button data-neu="oval" title="Oval shape" class="sk-erw"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="6"/></svg><span>Oval</span></button>
+        <button data-neu="eckig" title="Square shape" class="sk-erw"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/></svg><span>Square</span></button>
+        <button data-neu="streifen" title="Strip" class="sk-erw"><svg viewBox="0 0 24 24"><rect x="2.5" y="9" width="19" height="6" rx="3"/></svg><span>Strip</span></button>
+        <button data-neu="blase" title="Speech bubble" class="sk-erw"><svg viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-9l-4 3.5.6-3.5H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg><span>Bubble</span></button>
+        <button data-neu="linie" title="Line" class="sk-erw"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg><span>Line</span></button>
+      </div>
+      <div class="seitenwahl" id="seitenwahl"><button class="sk-modus" id="btnModus" aria-pressed="false"><span>More tools</span></button></div>
+    </div>
+    <div class="flaeche" id="flaeche">
+      <div class="wirt" id="wirt"></div>
+    </div>
+    <div class="fussleiste"><div class="insel insel--klein">
+      <span id="formatInfo"></span>
+      <i class="insel__trenn"></i>
+      <label class="schalter"><input type="checkbox" id="zeigeHilfen" checked><b></b><span>Cut line</span></label>
+      <label class="schalter sk-erw"><input type="checkbox" id="zeigeRaster"><b></b><span>Grid</span></label>
+      <i class="insel__trenn"></i>
+      <button class="rund rund--klein" id="zoomAus" aria-label="Smaller"><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg></button><span id="zoomWert">100 %</span><button class="rund rund--klein" id="zoomEin" aria-label="Bigger"><svg viewBox="0 0 24 24"><path d="M6 12h12M12 6v12"/></svg></button>
+    </div></div>
+  </section>
+
+  <aside class="rechts" id="rechts"></aside>
+</main>
+
+<!-- Leiste unten (R08): Stand, Vorher/Nachher, Speichern, Veröffentlichen; in jeder Ansicht -->
+<div class="sk-leiste" id="leiste" role="region" aria-label="Save and publish">
+  <span class="sk-leiste__text" id="leisteText">Loading …</span>
+  <button class="sk-l-kn sk-l-kn--leicht sk-l-kn--ic" id="btnVerlauf" type="button" title="Earlier versions" aria-label="Earlier versions"><svg class="sk-ic" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4.5v3.8h3.8"/><path d="M12 8v4.4l3 1.8"/></svg><span>Earlier versions</span></button>
+  <button class="sk-l-kn sk-l-kn--leicht sk-l-kn--ic" id="btnVorher" type="button" title="Before, after" aria-label="Before, after"><svg class="sk-ic" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M12 3v18"/><path d="m7 10.5-1.5 1.5L7 13.5M17 10.5l1.5 1.5-1.5 1.5"/></svg><span>Before, after</span></button>
+  <button class="sk-l-kn sk-l-kn--speichern" id="btnSichern" type="button" data-z="grau"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Save</span></button>
+  <button class="sk-l-kn sk-l-kn--haupt" id="btnVeroeff" type="button"><span>Publish</span></button>
+</div>
+
+<div class="dialog" id="dialog" hidden><div class="dialog__karte" id="dialogKarte" role="dialog" aria-modal="true"></div></div>
+<div class="start ms" id="start" hidden>
+  <aside class="ms-leiste">
+    <div class="ms-marke"><span class="ms-zeichen" id="kapitelZeichen"></span><div><b>The Cat &amp; Gun</b><small>Sticker editor</small></div></div>
+    <span class="ms-haar"></span>
+    <button class="kn ms-kn-gold glanz-kn" data-akt="neu"><span>New sticker</span><i><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></i></button>
+    <nav class="ms-nav ms-nav--haupt" id="msNav"><span class="ms-gleiter" aria-hidden="true"></span>
+      <button class="sk-zum-sticker" id="startZuFach" type="button" hidden><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span>Back to the sticker</span></button>
+      <button data-ansicht="start"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Overview</span></button>
+      <button data-ansicht="bereiche"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><span>Areas</span><em id="bereichZahl"></em></button>
+      <button data-ansicht="galerie"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="4.5"/><rect x="13" y="4" width="8" height="8" rx="2"/><rect x="3" y="15" width="18" height="5" rx="2.5"/></svg><span>All stickers</span><em id="galerieZahl">0</em></button>
+      <span class="ms-trenn"></span>
+      <button data-ansicht="neu"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M9 9v11"/></svg><span>New from a shape</span><em>5</em></button>
+      <button data-ansicht="druck"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 16.5h5"/></svg><span>Print files</span><em id="druckZahl">0</em></button>
+      <button data-ansicht="elemente"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/></svg><span>Brand elements</span><em id="elementZahl"></em></button>
+      <button data-ansicht="farben"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.8 1.5-1.6 0-1.3-1-1.6-1-2.6 0-.8.7-1.3 1.5-1.3H16a5 5 0 0 0 5-5c0-4-4-7.5-9-7.5zM7.5 11.5h.01M10 7.5h.01M15 7.5h.01"/></svg><span>Colours &amp; fonts</span></button>
+    </nav>
+    <div class="ms-fuss"><button id="startHilfe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.1-2.4 3.6M12 17.2v.1"/></svg><span>Guide</span></button><span class="ms-wege"><a data-weg="zentrale" target="_blank" rel="noopener">Control panel</a><a data-weg="website" target="_blank" rel="noopener">Website</a><a href="pruefung.html" target="_blank" rel="noopener">Check</a></span><small id="startOrt">Saved for the house, not only in this browser</small></div>
+  </aside>
+  <header class="ms-kopf">
+    <button class="rund ms-bereiche" id="msBereiche" type="button" aria-label="Sections" aria-expanded="false" aria-controls="msNav"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    <span class="ms-kopf-zeichen" id="msKopfZeichen"></span><span class="ms-kopf-name"><b>Sticker editor</b><small>The Cat &amp; Gun</small></span>
+    <label class="ms-suche"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="startSuche" placeholder="Search stickers …" aria-label="Search stickers"><kbd>⌘ K</kbd></label>
+    <span class="ms-frei"></span>
+    <button class="kn kn--klein kn--ohne start__zu" id="startZu" hidden><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span>Back to the sticker</span></button>
+    <a class="rund ms-rund ms-pruef" href="pruefung.html" target="_blank" rel="noopener" data-tip="Check" aria-label="Check: is everything in order?"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></a>
+    <a class="rund ms-rund" id="zumMarkenbuch" target="_blank" rel="noopener" data-tip="Brand book" aria-label="Brand book"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.6-1 5.2-.8 8 1 2.8-1.8 5.4-2 8-1v13c-2.6-1-5.2-.8-8 1-2.8-1.8-5.4-2-8-1z"/><path d="M12 6.5v13"/></svg></a>
+    <button class="kn kn--klein ms-kn-neu" data-akt="neu" aria-label="New"><span>New</span><i><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></i></button>
+  </header>
+  <div class="start__in ms-haupt">
+    <section class="start__wahl" id="startWahl">
+      <div id="msStart">
+        <div class="ms-gruss">
+          <h1 id="msGruss">Good evening.</h1>
+          <p id="msSatz">Stickers of the house, ready to change and print.</p>
+          <div class="sk-startknoepfe">
+            <button class="kn knopf--voll glanz-kn" data-akt="neu"><span>New sticker</span><i><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></i></button>
+          </div>
+          <button class="ms-lnk ms-lnk--alle" data-ansicht="galerie" id="msAlle"><span></span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </div>
+        <div class="ms-zeile"><h2>Areas</h2><button class="ms-lnk" data-ansicht="bereiche"><span>All areas</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+        <div class="ms-wochen ms-wochen--abt ev-raster" id="startBereiche"></div>
+        <div class="ms-zeile"><h2>Favourites and last changed</h2><button class="ms-lnk" data-ansicht="galerie"><span>All stickers</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+        <div class="ms-raster" id="startZuletzt"></div>
+      </div>
+      <div id="msArten" hidden>
+        <div class="ms-titel"><h1>Areas</h1><span class="ms-leise">Each kind of sticker of the house in its own area. A sticker belongs to one area.</span></div>
+        <div class="ms-wochen ms-wochen--abt ev-raster" id="bereichListe"></div>
+      </div>
+      <div id="msDetail" hidden></div>
+      <div id="msGalerie" hidden>
+        <div class="ms-titel"><h1>All stickers</h1><span class="ms-leise" id="galerieSatz"></span></div>
+        <div class="ms-chips" id="galerieFilter"></div>
+        <div class="ms-raster" id="galerie"></div>
+      </div>
+      <div id="msDruck" hidden>
+        <div class="ms-titel"><h1>Print files</h1><span class="ms-leise">The published stickers, each as a PDF for the printer: 3 mm bleed, cut line, fonts embedded. Print &amp; feed takes them from here.</span></div>
+        <div id="druckListe"></div>
+      </div>
+      <div id="msElemente" hidden>
+        <div class="ms-titel"><h1>Brand elements</h1><span class="ms-leise">Pool ball, wordmark, signs and stickers from the brand book. Each shows where it is already used.</span></div>
+        <div class="ms-raster" id="elementRaster"></div>
+      </div>
+      <div id="msFarben" hidden>
+        <div class="ms-titel"><h1>Colours &amp; fonts</h1><span class="ms-leise">From the brand book. When a colour changes there, it changes in every sticker that uses it.</span></div>
+        <div id="farbSeite"></div>
+      </div>
+      <div id="msNeu" class="ms-buehne" hidden>
+        <h1>Which shape?</h1>
+        <p class="start__satz">Pick a shape, write the words, choose the colours. Or start from a sticker of the house.</p>
+        <div class="start__filter"><div class="start__gruppen" id="neuBereich"></div></div>
+        <div class="atelier" id="arten"></div>
+        <div class="ms-zeile"><h2>Start from a sticker of the house</h2></div>
+        <div class="ms-raster" id="neuVorlagen"></div>
+      </div>
+      <p class="start__nichts" id="startNichts" hidden>Nothing found.</p>
+    </section>
+  </div>
+</div>
+<div class="meldung" id="meldung" role="status" aria-live="polite" hidden></div>
+
+<script src="/the-cat-and-gun/haus/_werkzeuge/fundus/fundus.js?v=1795872050"></script>
+<script src="lib/auswahl.js?v=1795872050"></script>
+<script src="kern.js?v=1795872050"></script>
+<script src="ablage.js?v=1795872050"></script>
+<script src="druck.js?v=1795872050"></script>
+<script src="editor.js?v=1795872050"></script>
+<script src="start.js?v=1795872050"></script>
+<script src="haus.js?v=1795872050"></script>
+<script src="rundgang.js?v=1795872050"></script>
+<script src="reihen.js?v=1795872050"></script>
+<script src="feder.js?v=1795872050" defer></script>
+<script src="neu.js?v=1795872050"></script>
+</body>
+</html>

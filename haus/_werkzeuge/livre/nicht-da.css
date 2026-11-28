@@ -1,0 +1,16 @@
+/* nicht-da.html · Kleid von The Cat & Gun (Farben und Schriften wie kleid/catgun.css) */
+@font-face{font-family:'Gloock';font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Catgun Sans';font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'Catgun Mono';font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2') format('woff2')}
+:root{--nacht:#15120f;--putz:#F5F1EA;--tinte:#1D1915;--leise:#6C6157;--rot:#A8232A}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{display:grid;place-items:center;padding:24px 16px;background:var(--nacht);color:var(--putz);font:400 17px/1.55 'Catgun Sans',system-ui,sans-serif}
+main{width:100%;max-width:560px;padding:40px 36px;border-radius:12px;background:var(--putz);color:var(--tinte);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+img{display:block;width:54px;height:auto;margin-bottom:20px}
+small{display:block;font:400 13px/1.4 'Catgun Mono',ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--rot)}
+h1{margin-top:14px;font:400 clamp(30px,6vw,40px)/1.2 'Gloock',Georgia,serif;letter-spacing:-.006em}
+p{margin-top:14px;color:var(--leise)}
+a{display:inline-flex;align-items:center;gap:10px;height:48px;margin-top:26px;padding:0 22px;border-radius:10px;background:var(--nacht);color:var(--putz);text-decoration:none;font:400 13px/1 'Catgun Mono',ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase}
+a:hover{background:var(--rot)}
+@media (max-width:480px){main{padding:30px 22px}}

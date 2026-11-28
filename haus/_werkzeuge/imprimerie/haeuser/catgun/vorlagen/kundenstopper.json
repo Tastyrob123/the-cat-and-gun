@@ -1,0 +1,111 @@
+{
+"art": "kundenstopper",
+"format": "a1h",
+"vorlagen": [
+{
+"id": "kundenstopper-001",
+"titel": "A-board · Super Juices",
+"bereich": "Out front",
+"vorlage": "karte",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Available all day, everyday",
+"titel": "Super Juices",
+"liste": [
+{
+"name": "Melonberry",
+"detail": "Strawberry, watermelon, lemon, mint and local honey.",
+"preis": ""
+},
+{
+"name": "Mango Tango",
+"detail": "Mango, orange, lemon, local honey and basil.",
+"preis": ""
+},
+{
+"name": "Pineapple Punch",
+"detail": "Pineapple, watermelon, strawberry and lemon.",
+"preis": ""
+},
+{
+"name": "The Green Glow",
+"detail": "Cucumber, parsley, lemon, ginger and local honey.",
+"preis": ""
+},
+{
+"name": "Turbo Tonic",
+"detail": "Lemon, orange, pineapple, carrots, ginger and turmeric.",
+"preis": ""
+},
+{
+"name": "The Purple Potion",
+"detail": "Beetroot, carrot, ginger, lemon and pineapple.",
+"preis": ""
+}
+],
+"fuss": "OPEN 7AM – 10PM DAILY · CATANGNAN"
+},
+"rueck": {
+"vorlage": "buehne",
+"inhalt": {
+"bild": "b36",
+"ueber": "Super Juices",
+"titel": "Because feeling good should taste this good.",
+"aktion": "OPEN 7AM – 10PM DAILY"
+},
+"ton": "dunkel"
+}
+},
+{
+"id": "kundenstopper-002",
+"titel": "A-board · Pool table",
+"bereich": "Out front",
+"vorlage": "aushang",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Pool table",
+"titel": "Then someone picked up a cue.",
+"text": "Plans were probably just drinks and a bite.",
+"aktion": "OPEN 7AM – 10PM DAILY"
+}
+},
+{
+"id": "kundenstopper-003",
+"titel": "A-board · Brekky",
+"bereich": "Out front",
+"vorlage": "buehne",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b23",
+"ueber": "Brekky Specials · 7:00 – 10:30",
+"titel": "Good mornings start here.",
+"text": "we’re ready from the early hours.",
+"aktion": "Bagel & Coffee Combo · 350 PHP"
+}
+}
+]
+}

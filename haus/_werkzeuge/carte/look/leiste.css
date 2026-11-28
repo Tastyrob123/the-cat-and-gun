@@ -1,0 +1,28 @@
+/* Seitenleiste wie bei Edit website (Robert 27.11.2026; dash.css .dx-rail.dx-lack6, bureau dash-eigen.css): 280 px, fährt ab 1200 px mit (look/leiste.js › mitfahren).
+   Bausteine der Vorlage: look/vorlage.css im Werkzeug, look/leiste-vorlage.css auf Anleitung und Prüfseite. */
+.cgl .rail{position:relative;align-self:start;line-height:1.55}
+@media (min-width:1200px){.cgl .rail{position:sticky;top:22px}}   /* fährt mit (Robert 27.11.2026): top setzt carte.js › mitfahren() */
+.cgl .rail .marke{color:var(--tx)}
+.cgl .rail nav{display:flex;flex-direction:column;gap:0}
+.cgl .rail .marke a,.cgl .rail .marke img{display:block}
+.cgl .rail nav span.wo-aus{display:flex;align-items:center;gap:12px;padding:12px;border-radius:15px;opacity:.5;cursor:default}
+.cgl .rail nav span.wo-aus b{display:block;font-weight:500;font-size:15px;color:var(--tx)}
+.cgl .rail nav span.wo-aus i{display:block;font-style:normal;font-size:13px;color:var(--tx3)}
+.cgl .rail nav span.wo-aus .ico{color:var(--gold1)}
+.cgl .rail nav a:not(.jetzt):hover{background:rgba(255,240,222,.06)}
+.cgl .rail nav a{transition:background-color .3s}
+.cgl .rail nav a span,.cgl .rail nav span.wo-aus span{min-width:0}
+.cgl .rail nav a{color:var(--tx2)}
+.cgl .rail .rhaus{padding:16px 10px 2px;margin-top:14px}
+.cgl .rail .rfuss{display:flex;flex-direction:column;gap:0}
+.cgl .rail .rfuss a:hover{background:rgba(255,240,222,.06)}
+.cgl .rail .rfuss a,.cgl .rail .rfuss span.wo-aus{display:flex;align-items:center;gap:12px;padding:10px;border-radius:13px;color:var(--tx);text-decoration:none}
+.cgl .rail .rfuss .ico{color:var(--gold1)}
+.cgl .rail .rfuss .zustand.rot .ico{color:var(--rot)}
+.cgl .rail .rfuss b{display:block;font-weight:500;font-size:14px;color:var(--tx)}
+.cgl .rail .rfuss span.wo-aus i{display:block;font-style:normal;font-size:13px;color:var(--tx3);margin-top:1px}   /* Abnahme 28.11.2026: Eintrag ohne Link («Control panel», wenn sein Server nicht antwortet) hatte einen kursiven Untertitel */
+.cgl .rail .zustand{height:auto;font:inherit;letter-spacing:0;text-transform:none;box-shadow:none}
+.cgl .rail kbd{font-family:var(--mono)}
+.cgl .rail .rhaus{font-size:13px}
+/* Gemeinsamer Punkt G1 (28.11.2026): Schrift mindestens 13 px auch in «Tools · keys 1–8», Ziffern, Öffnungszeit und Wortmarken-Zeile */
+html body.cgl .rail .mono,html body.cgl .rail .rk span,html body.cgl .rail kbd,html body.cgl .rail em,html body.cgl .rail .rhaus,html body.cgl .rail.lack6 .marke .mono{font-size:13px}

@@ -1,0 +1,39 @@
+/* oberflaeche-mindestschrift.css · Inquiries & chat (Mac-Lauf 23.11.2026). Das gemeinsame Kleid unter _werkzeuge/oberflaeche/ (Revier Control panel) setzt einige Beschriftungen unter 13 px.
+   Hier nur die Schriftgrösse auf mindestens 13 px, wie in der bisherigen Kopie reception/oberflaeche/ (CLAUDE.md «Schrift mindestens 13 px»). «html» davor, damit die Reihenfolge der Stile keine Rolle spielt. */
+html .wo-mk{font-size:13px}
+html .wo-kn{font-size:13px}
+html .wo-kn--klein{font-size:13px}
+html .wo-seg button b{font-size:13px}
+html .wo-feld>span{font-size:13px}
+html .wo-marke{font-size:13px}
+html .wo-sp{font-size:13px}
+html .wo-sb__zier{font-size:13px}
+html .wo-bk__t small{font-size:13px}
+html .wo-hinw{font-size:13px}
+html .wo-an__k{font-size:13px}
+html .wo-an__t small{font-size:13px}
+html .wo-an__st em{font-size:13px}
+html .wo-an__st small{font-size:13px}
+html .wo-det__daten dt{font-size:13px}
+html .wo-brief__kopf span{font-size:13px}
+html .wo-brief__an dt{font-size:13px}
+html .wo-brief__fuss{font-size:13px}
+html .wo-of em{font-size:13px}
+html .wo-kw__seite{font-size:13px}
+html .wo-ke__t small{font-size:13px}
+html .wo-ke__m{font-size:13px}
+html .wo-ka__unter{font-size:13px}
+html .wo-re .wo-zahl{font-size:13px}
+html .wo-rk__t small{font-size:13px}
+html .wo-re em.wo-rand__z{font-size:13px}
+html .wo-leiste__t small{font-size:13px}
+html .wo-marke-w small{font-size:13px}
+@media (max-width:700px){html .wo-ag__t>span{font-size:13px}}
+html .wo-kopf__mitte small{font-size:13px}
+@media (max-width:900px){html .wo-kopf__ber{font-size:13px}}
+html .wo-sb__foto figcaption span{font-size:13px}
+@media (max-width:1300px){html .wo-kopf__wz .wo-wz{font-size:13px}}
+@media (max-width:900px){html .wo-kopf__ber{font-size:13px}}
+
+/* Titel im Startbild: Gloock hat hohe Ober- und Unterlängen, bei 1.06 berühren sich zwei Zeilen (Oberflächen-Prüfung Punkt 21); wie in der Kopie 1.2 */
+html .wo-sb__h{line-height:1.2}

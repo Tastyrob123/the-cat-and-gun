@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · Brand book editor · The Cat &amp; Gun</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15120f">
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/_ob/kleid/catgun-zeichen.svg" type="image/svg+xml">
+<script src="/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/_ob/kleid/catgun.js?v=1795872050"></script>
+<link rel="preload" href="/the-cat-and-gun/haus/assets/schrift/Gloock.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Gloock;font-style:normal;font-weight:400;font-display:block;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2') format('woff2')}
+:root{--nacht:#15120f;--navy:#15120f;--blau:#211c18;--papier:#f5f1ea;--weiss:#f4efe7;--gold:#c99d70;--taupe:#8a5634;--filz:#b5343a;--tinte:#1d1915;--blatt:#fbf8f3;--linie:rgba(29,25,21,.14);--leise:#6c6157;
+  --serif:Gloock,Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,figure{margin:0;padding:0}ol,ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,.thema a span{font-family:var(--serif);font-weight:400;letter-spacing:-.006em}
+:focus-visible{outline:1.5px solid var(--taupe);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.kn{position:relative;display:inline-flex;align-items:center;gap:12px;height:48px;padding:0 6px 0 22px;border-radius:999px;font:11px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,#2c2520,#15120f 46%,#0b0908);box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -3px 0 rgba(0,0,0,.55),0 14px 22px -14px rgba(21,18,15,.55);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#f4efe7,#e3c9a8);color:var(--tinte);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -2px 0 rgba(0,0,0,.22)}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.3}
+.kn--hell{background:linear-gradient(180deg,#fbf8f3,#ece5d9 50%,#ece5d9);color:var(--tinte);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(29,25,21,.3),0 14px 22px -14px rgba(0,0,0,.5)}
+.kn--hell i{background:linear-gradient(180deg,#2c2520,#15120f);color:var(--weiss)}
+/* Kopf */
+.kopf{position:relative;isolation:isolate;color:var(--weiss);background-color:var(--navy);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f4efe7%22%20stroke-opacity%3D%220.055%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:46px 46px;border-bottom:2px solid var(--filz);background-position:0 0;border-radius:0 0 34px 34px;overflow:hidden}
+.kopf::after{content:'';position:absolute;inset:auto 0 0 0;height:60%;z-index:-1;background:linear-gradient(0deg,rgba(21,18,15,.8),transparent)}
+.kopf__in{max-width:1180px;margin:0 auto;padding:36px 28px 74px}
+.kopf nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px;font:10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.kopf nav a:hover{color:#fff}
+.kopf h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.02;max-width:14ch}.kopf h1 em{font-style:normal;color:var(--gold)}
+.kopf p{margin-top:22px;max-width:56ch;font-size:1.08rem;color:rgba(244,239,231,.84)}
+/* Tor 3 (31.10.2026): Knöpfe als Gruppe, beim Umbruch bündig links und mit normalem Abstand */
+.kopf__kn{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+/* Inhalt */
+main{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+.inhalt{margin:58px 0 70px}
+.inhalt h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;margin:8px 0 8px}.inhalt h2 em{font-style:normal;color:var(--taupe)}
+.inhalt>p{max-width:60ch;color:var(--leise)}
+.themen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}.themen>.thema:last-child:nth-child(odd){grid-column:1/-1}
+.thema{background:var(--blatt);border-radius:22px;box-shadow:inset 0 0 0 1px var(--linie);padding:22px 24px}
+.thema h3{font-size:1.35rem;line-height:1.15;display:grid;gap:3px}.thema h3 small{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}.thema h3 em{font:11px var(--mono);font-style:normal;color:var(--leise)}
+.thema ol{margin-top:12px;display:grid;gap:2px}
+.thema a{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 6px;border-radius:12px;transition:background-color .3s}
+.thema a:hover{background:rgba(255,255,255,.7)}.thema a b{font:12px var(--mono);color:var(--taupe)}.thema a span{font-family:var(--serif)}.thema a i{font:10px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Kapitel */
+.kap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,60px);align-items:start;padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}
+.kap:nth-of-type(even) .kap__t{order:2}
+.kap h2{font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.08;margin:12px 0 14px;text-wrap:balance}
+.einl{color:rgba(21,18,15,.78);max-width:54ch}
+.schritte{display:grid;gap:12px;margin:22px 0}
+.schritte li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.schritte li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold);font:12px var(--mono)}
+.schritte p{padding-top:3px}
+.wissen{padding:16px 18px;border-radius:16px;background:rgba(201,157,112,.26);font-size:14.5px;color:var(--tinte)}.wissen b{display:block;margin-bottom:3px;font:10.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte)}
+.kap__b{position:sticky;top:20px}
+.bild{display:block;width:100%;border-radius:20px;overflow:hidden;background:var(--navy);box-shadow:0 30px 50px -28px rgba(21,18,15,.6),inset 0 0 0 1px rgba(201,157,112,.3);cursor:zoom-in;transition:transform .6s var(--e2)}
+.bild:hover{transform:translateY(-3px)}.bild img{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Bild gross */
+.gross{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vmin;background:rgba(21,18,15,.88);cursor:zoom-out;animation:auf .35s var(--e1) both}
+.gross[hidden]{display:none}.gross img{width:auto;height:auto;max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 40px 80px -30px #000}.gross small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+@keyframes auf{from{opacity:0}}
+.fuss{margin-top:20px;padding:34px 0 0;border-top:1px solid var(--linie);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--leise);font-size:14px}
+@media (max-width:900px){.themen{grid-template-columns:1fr}.kap{grid-template-columns:1fr;padding:40px 0}.kap:nth-of-type(even) .kap__t{order:0}.kap__b{position:static}.kopf__in{padding:26px 18px 54px}.kopf nav{margin-bottom:36px}main{padding:0 18px 80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.zurueck{border-bottom:1px solid currentColor}
+/* Help (Brand book editor): ein Absatz je Meldung, Ziel von «What to do?» */
+.hilfe{padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}.hilfe h2{font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.08;margin:12px 0 10px}.hilfe h2 em{font-style:normal;color:var(--taupe)}.hilfe>p{color:var(--leise);max-width:60ch}
+.lexe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}.lex{padding:18px 20px;border-radius:16px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie);scroll-margin-top:20px}.lex b{display:block;font:400 1.2rem/1.2 var(--serif);margin-bottom:6px}.lex p{font-size:15px;color:rgba(29,25,21,.8)}.lex:target{box-shadow:inset 0 0 0 2px var(--filz)}
+@media (max-width:900px){.lexe{grid-template-columns:1fr}}
+/* Messlauf 29.10.2026 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+/* Mac-Prüfung 23.11.2026 (oberflaeche_pruefen.js): Schrift ab 13 px, Luft zwischen den Zeilen, Themen untereinander (Tafeln mit ungleich vielen Kapiteln nie nebeneinander) */
+.mono,.kn,.kopf nav,.thema h3 small,.thema h3 em,.thema a b,.thema a i,.wissen b,figcaption,.gross small,.schritte li span{font-size:13px}
+.mono,.kopf nav,.thema h3 small,.thema a i,.wissen b,figcaption{letter-spacing:.1em}
+.thema h3{line-height:1.25;gap:6px}.thema h3 small,.thema h3 em{display:block;line-height:1.5}
+.thema a span{line-height:1.3}.kopf h1{line-height:1.08}.kap h2,.hilfe h2,.inhalt h2{line-height:1.14}
+.themen{grid-template-columns:minmax(0,1fr)}
+/* Neuer Look wie das Control panel (26.11.2026): dunkler Raum, Rauchglas-Tafeln, Gold (Bausteine aus _entwurf-dashboard, wie der Editor) */
+:root{--papier:#110d0b;--tinte:#f3ece2;--blatt:rgba(255,238,215,.06);--linie:rgba(255,235,210,.14);--leise:rgba(243,236,226,.62);--taupe:#e6c39a;--gold:#e6c39a}
+body{background:radial-gradient(110% 60% at 50% 0%,rgba(168,115,74,.14),transparent 60%),#110d0b}
+.kopf{box-shadow:none!important;border-bottom:1px solid rgba(230,195,154,.22)}
+.einl{color:rgba(243,236,226,.78)}
+.thema,.lex{background:linear-gradient(165deg,rgba(255,238,215,.1),rgba(255,238,215,.03) 45%,rgba(18,13,10,.22));box-shadow:inset 0 0 0 1px rgba(255,235,210,.14),inset 0 1px 0 rgba(255,240,220,.16)}
+.thema a:hover{background:rgba(255,240,222,.07)}
+.wissen{background:rgba(230,195,154,.12);box-shadow:inset 0 0 0 1px rgba(230,195,154,.28)}
+.schritte li span{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c}
+.kn{background:rgba(255,240,222,.06);color:#f3ece2;box-shadow:inset 0 0 0 1px rgba(255,235,210,.2)}
+.kn i{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c;box-shadow:none}
+.kn--hell{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c;box-shadow:none}
+.kn--hell i{background:#1a120c;color:#e6c39a}
+.bild{box-shadow:0 30px 50px -28px #000,inset 0 0 0 1px rgba(230,195,154,.3)}
+</style>
+</head>
+<body>
+<!-- Guide · Brand book editor · The Cat & Gun: gebaut von anleitung_bau.py aus dieser Vorlage (Aufbau wie die Anleitung von Le Livre der Vorlage) -->
+<header class="kopf"><div class="kopf__in">
+  <nav><span>Guide · The Cat &amp; Gun</span><a href="./">Open the Brand book editor</a></nav>
+  <h1>Colours, fonts <em>and photos.</em></h1>
+  <p>10 short chapters. How you change a colour, swap a font or a photo, and how a change reaches the Sticker editor, Print &amp; feed and the Brand book.</p>
+  <div class="kopf__kn"><a class="kn" href="./">Open the editor<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a><a class="kn kn--hell" href="#inhalt">To the chapters<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></i></a></div>
+</div></header>
+<main>
+  <section class="inhalt" id="inhalt"><span class="mono">00 · Contents</span><h2>10 chapters, <em>five topics.</em></h2><p>Each chapter shows the section and names the steps. A tap makes the picture large, a second tap or Esc brings it back.</p>
+    <div class="themen"><section class="thema"><h3><small>Basics</small>How the Brand book editor works<em>1 chapter</em></h3><ol><li><a href="#k01"><b>01</b><span>What is where.</span><i>Overview</i></a></li></ol></section><section class="thema"><h3><small>Colours</small>Change, pick, build<em>3 chapters</em></h3><ol><li><a href="#k02"><b>02</b><span>Change a colour.</span><i>Colours</i></a></li><li><a href="#k03"><b>03</b><span>Pipette and colours from a photo.</span><i>Colours</i></a></li><li><a href="#k04"><b>04</b><span>Palettes, shades and contrast.</span><i>Colours</i></a></li></ol></section><section class="thema"><h3><small>Fonts and photos</small>Swap and add<em>2 chapters</em></h3><ol><li><a href="#k05"><b>05</b><span>Choose the fonts.</span><i>Fonts</i></a></li><li><a href="#k06"><b>06</b><span>Photos of the house.</span><i>Photos</i></a></li></ol></section><section class="thema"><h3><small>Lines and elements</small>Words and signs<em>2 chapters</em></h3><ol><li><a href="#k07"><b>07</b><span>The lines of the house.</span><i>Lines</i></a></li><li><a href="#k08"><b>08</b><span>Every part in its own colour.</span><i>Logo &amp; elements</i></a></li></ol></section><section class="thema"><h3><small>Save and publish</small>Keep and bring back<em>2 chapters</em></h3><ol><li><a href="#k09"><b>09</b><span>Save, then publish.</span><i>Save and publish</i></a></li><li><a href="#k10"><b>10</b><span>Bring an earlier version back.</span><i>Earlier versions</i></a></li></ol></section></div></section>
+<article class="kap" id="k01">
+  <div class="kap__t"><span class="mono">01 · Overview</span><h2>What <span style="white-space:nowrap">is&nbsp;where.</span></h2><p class="einl">The Brand book editor holds the colours, fonts, photos, lines and elements of The Cat &amp; Gun. The Sticker editor, Print &amp; feed and the Brand book take them from here.</p>
+    <ol class="schritte"><li><span>1</span><p>On the left stand the eight tools. Under «Brand editor»: «Overview», «Colours», «Fonts», «Photos», «Lines», «Logo &amp; elements» and «Earlier versions». The tabs under the title lead there too.</p></li><li><span>2</span><p>Lower down on the left: the Control panel, «View website», this guide and the short tour. The keys 1 to 8 open the tools.</p></li><li><span>3</span><p>At the bottom the bar shows what is waiting, with «Before / after», «Save» and «Publish».</p></li><li><span>4</span><p>On the phone the button «Sections» opens the list and closes after you choose.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Nothing you change reaches the other tools before you press «Publish».</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: What is where."><img src="anleitung/k01.jpg?v=319f4e4399" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Overview: What is where."></button>
+    <figcaption><span>brand book editor / overview</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k02">
+  <div class="kap__t"><span class="mono">02 · Colours</span><h2>Change <span style="white-space:nowrap">a&nbsp;colour.</span></h2><p class="einl">All colours of the house stand in their palettes: Print, Super Juices and Website. Each card shows the name, what it is for and the value.</p>
+    <ol class="schritte"><li><span>1</span><p>Tap a colour. A window opens.</p></li><li><span>2</span><p>Choose a colour from the palette of the house, or type the value: HEX like #A8232A, or R, G and B from 0 to 255.</p></li><li><span>3</span><p>Change the name if you like. «Use this colour» takes it. «Hide» takes the colour out of use; it stays under «Hidden».</p></li><li><span>4</span><p>«New colour» adds a colour to a palette.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Every element that wears this colour changes with it: change «Pool table red» and every sticker with that red follows.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Change a colour."><img src="anleitung/k02.jpg?v=68f53f2a1b" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Colours: Change a colour."></button>
+    <figcaption><span>brand book editor / colours</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k03">
+  <div class="kap__t"><span class="mono">03 · Colours</span><h2>Pipette and colours from <span style="white-space:nowrap">a&nbsp;photo.</span></h2><p class="einl">You can also take a colour from what you see.</p>
+    <ol class="schritte"><li><span>1</span><p>«Pipette»: in Chrome and Edge it picks a colour anywhere on the screen. In Safari and Firefox it opens the photos of the house; tap a spot.</p></li><li><span>2</span><p>«Colours from a photo»: choose a photo from your computer or phone. The main colours of the photo appear with their share.</p></li><li><span>3</span><p>Tap one of them to take it, or «Offer as a new palette» to keep all of them as a new palette.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>A photo for colours may have up to 30 MB. It is only read in your browser and not uploaded.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Pipette and colours from a photo."><img src="anleitung/k03.jpg?v=857f9fcb11" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Colours: Pipette and colours from a photo."></button>
+    <figcaption><span>brand book editor / colours</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k04">
+  <div class="kap__t"><span class="mono">04 · Colours</span><h2>Palettes, shades <span style="white-space:nowrap">and&nbsp;contrast.</span></h2><p class="einl">Under «More options» you build palettes and check if text can be read.</p>
+    <ol class="schritte"><li><span>1</span><p>Switch «Mode» to «More options».</p></li><li><span>2</span><p>«New palette» or «Edit palette»: give it a name and tick the colours that belong in it.</p></li><li><span>3</span><p>In the colour window, «Tints and shades» shows four lighter and four darker steps. «Add all nine as a palette» keeps them.</p></li><li><span>4</span><p>«Contrast check» shows the value for text in one colour on another: 4.5 for normal text, 3 for large titles.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Your mode stays as you left it, on this computer.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Palettes, shades and contrast."><img src="anleitung/k04.jpg?v=94d617526b" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Colours: Palettes, shades and contrast."></button>
+    <figcaption><span>brand book editor / colours</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k05">
+  <div class="kap__t"><span class="mono">05 · Fonts</span><h2>Choose <span style="white-space:nowrap">the&nbsp;fonts.</span></h2><p class="einl">Four uses, each with one font: titles, running text, numbers and titles in print.</p>
+    <ol class="schritte"><li><span>1</span><p>Under «Which font for what», open the list next to a use and choose a font. The sample changes at once.</p></li><li><span>2</span><p>Rename a font in its field. «Hide» takes a font out of use, as long as no use needs it.</p></li><li><span>3</span><p>«Add a font» uploads a font file (WOFF2, WOFF, TTF or OTF, up to 6 MB).</p></li><li><span>4</span><p>Under «More options» you choose which weights of a font may be used.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The fonts of the house are the same files as on the website and in the print pieces.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Choose the fonts."><img src="anleitung/k05.jpg?v=51fa508972" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Fonts: Choose the fonts."></button>
+    <figcaption><span>brand book editor / fonts</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k06">
+  <div class="kap__t"><span class="mono">06 · Photos</span><h2>Photos of <span style="white-space:nowrap">the&nbsp;house.</span></h2><p class="einl">The photos of the website, each with its title.</p>
+    <ol class="schritte"><li><span>1</span><p>Search with a word, for example «pool» or «juice». «In use», «Added» and «Hidden» narrow the list.</p></li><li><span>2</span><p>Tap a photo to change its title, hide it or swap it for another one.</p></li><li><span>3</span><p>«Add a photo» puts your own photo next to the others: JPG, PNG or WebP, up to 25 MB, at least 900 pixels on the long side.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Swapping hides the old photo. It stays under «Hidden» and can come back.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Photos of the house."><img src="anleitung/k06.jpg?v=9904242a40" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Photos: Photos of the house."></button>
+    <figcaption><span>brand book editor / photos</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k07">
+  <div class="kap__t"><span class="mono">07 · Lines</span><h2>The lines of <span style="white-space:nowrap">the&nbsp;house.</span></h2><p class="einl">Name, place, opening hours and the sentences of the house, word for word as the design tools use them.</p>
+    <ol class="schritte"><li><span>1</span><p>Change the title or the text right in its field. Below it you see how many characters it has (5,000 is the most).</p></li><li><span>2</span><p>«New line» adds a line. «Hide» takes it out of use.</p></li><li><span>3</span><p>Under each line stands where it comes from.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>A line may not stay empty. Write something or hide it.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: The lines of the house."><img src="anleitung/k07.jpg?v=e6cd8c9e43" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Lines: The lines of the house."></button>
+    <figcaption><span>brand book editor / lines</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k08">
+  <div class="kap__t"><span class="mono">08 · Logo &amp; elements</span><h2>Every part in its <span style="white-space:nowrap">own&nbsp;colour.</span></h2><p class="einl">The wordmark, the ampersand, the pool ball and the stickers. Each colour in them is a part.</p>
+    <ol class="schritte"><li><span>1</span><p>Tap an element. On the right stand its parts, each with its colour of the house.</p></li><li><span>2</span><p>Choose another colour of the house for a part. The picture changes at once.</p></li><li><span>3</span><p>Under «More options», «Own value» gives a part a colour only in this element. «Back to the house colour» undoes it.</p></li><li><span>4</span><p>Rename or hide an element in the same window.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The six dots in the Super Juices oval are six parts: each follows its own juice colour.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Every part in its own colour."><img src="anleitung/k08.jpg?v=5954bfef00" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Logo &amp; elements: Every part in its own colour."></button>
+    <figcaption><span>brand book editor / logo &amp; elements</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k09">
+  <div class="kap__t"><span class="mono">09 · Save and publish</span><h2>Save, <span style="white-space:nowrap">then&nbsp;publish.</span></h2><p class="einl">Changes first wait in a draft. Publishing puts them into every tool.</p>
+    <ol class="schritte"><li><span>1</span><p>The bar at the bottom counts what is not saved yet. «Before / after» lists every change.</p></li><li><span>2</span><p>«Save» keeps your changes in the draft. A note at the bottom says what was saved, with «Undo».</p></li><li><span>3</span><p>«Publish» shows the list once more. Add a note if you like and confirm.</p></li><li><span>4</span><p>If someone saved in another window in the meantime, the editor says so. Nothing is overwritten.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Without network your changes stay on the page. Try «Save» again once the network is back.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Save, then publish."><img src="anleitung/k09.jpg?v=4ddc2e1f48" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Save and publish: Save, then publish."></button>
+    <figcaption><span>brand book editor / save and publish</span><span>See it larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k10">
+  <div class="kap__t"><span class="mono">10 · Earlier versions</span><h2>Bring an earlier <span style="white-space:nowrap">version&nbsp;back.</span></h2><p class="einl">Every save and every publication is kept.</p>
+    <ol class="schritte"><li><span>1</span><p>Open «Earlier versions» on the left.</p></li><li><span>2</span><p>«Bring into draft» next to a version puts it back in the draft. «Original version» is the brand collection as it was built.</p></li><li><span>3</span><p>Look at it, then publish. Or «Discard draft», and everything is as published.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Bringing back changes nothing in the other tools until you publish.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Bring an earlier version back."><img src="anleitung/k10.jpg?v=38ebd7be78" width="1200" height="714" loading="lazy" decoding="async" alt="Brand book editor, Earlier versions: Bring an earlier version back."></button>
+    <figcaption><span>brand book editor / earlier versions</span><span>See it larger</span></figcaption></figure>
+</article>
+  <section class="hilfe" id="hilfe"><span class="mono">Help</span><h2>When a note <em>appears.</em></h2><p>Each note in the editor has «What to do?». It leads here.</p><div class="lexe"><div class="lex" id="lex-netz"><b>No connection</b><p>The server does not answer. Your changes stay on the page. Wait a moment and press «Save» again.</p></div><div class="lex" id="lex-konflikt"><b>Someone saved in the meantime</b><p>Another window saved first. Your changes are still there. The editor shows what changed there; then choose «Save my changes» or «Discard my changes».</p></div><div class="lex" id="lex-leer"><b>A field is empty</b><p>Names, titles and lines need at least one character. Write something or hide the piece.</p></div><div class="lex" id="lex-zu-lang"><b>Too long</b><p>A line holds up to 5,000 characters, a name up to 80. Shorten the text.</p></div><div class="lex" id="lex-farbe"><b>Not a colour</b><p>A colour value has a # and six signs, like #A8232A. R, G and B each take a number from 0 to 255.</p></div><div class="lex" id="lex-bild-gross"><b>Photo too large</b><p>A photo may have up to 25 MB, a photo for colours up to 30 MB. Make it smaller on your computer or phone and try again.</p></div><div class="lex" id="lex-bild-klein"><b>Photo too small</b><p>A photo for print and the website needs at least 900 pixels on the long side.</p></div><div class="lex" id="lex-bild-art"><b>Not a photo</b><p>JPG, PNG and WebP work. Other files are refused.</p></div><div class="lex" id="lex-schrift-art"><b>Not a font</b><p>WOFF2, WOFF, TTF and OTF work, up to 6 MB.</p></div><div class="lex" id="lex-groesse"><b>File too large</b><p>The file is larger than the editor takes. Make it smaller and try again.</p></div><div class="lex" id="lex-grenze"><b>Too many requests</b><p>Many saves in a short time. Wait a minute and try again.</p></div><div class="lex" id="lex-speicher"><b>The saved data cannot be read</b><p>The editor keeps a backup. Reload the page. If the note stays, ask the person who set up the tools.</p></div><div class="lex" id="lex-veroeffentlichen"><b>Not published</b><p>The new version could not be written. Everything is as before. Try again in a moment.</p></div><div class="lex" id="lex-eingabe"><b>The request is not complete</b><p>The page sent something the editor cannot read. Reload the page and do the step again. Your saved draft stays.</p></div><div class="lex" id="lex-zu-viele"><b>Too many entries</b><p>A list holds up to 240 colours, 40 palettes, 30 fonts, 400 photos and 200 lines. Hide or remove some before you add more.</p></div><div class="lex" id="lex-doppelt"><b>Two entries with the same key</b><p>Two pieces in one list carry the same key. Reload the page and do the step again.</p></div><div class="lex" id="lex-farbe-fehlt"><b>A palette names a missing colour</b><p>A palette holds a colour that no longer exists. Open the palette and take the colour out, or add it again.</p></div><div class="lex" id="lex-schrift"><b>Font file missing</b><p>The file of a new font did not arrive. Upload the font again.</p></div><div class="lex" id="lex-schrift-gross"><b>Font too large</b><p>A font file may have up to 6 MB.</p></div><div class="lex" id="lex-element"><b>Elements come from the print pieces</b><p>Logo, signs and stickers come from the print pieces of the house. They can be renamed, recoloured and hidden here. A new element cannot be added.</p></div><div class="lex" id="lex-bild"><b>Photo not complete</b><p>A new photo did not arrive completely. Choose it again.</p></div><div class="lex" id="lex-datei"><b>File not received</b><p>The file did not arrive or arrived damaged. Choose it again.</p></div><div class="lex" id="lex-datei-fehlt"><b>An uploaded file is gone</b><p>A photo or font of the draft is missing on the computer. Nothing was published. Upload the file again, save, then publish.</p></div><div class="lex" id="lex-pruefung"><b>The new version did not pass the check</b><p>The editor checks a new version before it goes out. This one could not be written cleanly. Nothing was published. Try again in a moment.</p></div><div class="lex" id="lex-fassung"><b>Version not found</b><p>This earlier version is not in the list any more. Reload the page and choose from «Earlier versions» again.</p></div><div class="lex" id="lex-fundus-quelle"><b>The brand collection cannot be read</b><p>The file with the brand of the house (fundus.json) is missing or damaged. Ask the person who set up the tools.</p></div><div class="lex" id="lex-server"><b>Something went wrong</b><p>Reload the page. Your saved draft stays. If it happens again, ask the person who set up the tools.</p></div></div></section>
+  <div class="fuss"><span>Brand book editor · The Cat &amp; Gun, Catangnan</span><a class="zurueck" href="./">Back</a></div>
+</main>
+<div class="gross" id="gross" hidden role="dialog" aria-modal="true" aria-label="Picture large"><img alt="" width="1200" height="714"><small>Tap or Esc to close</small></div>
+<script src="anleitung.js?v=1795872050"></script>
+</body>
+</html>

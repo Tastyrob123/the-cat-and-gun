@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Checks · Edit website</title>
+<link rel="stylesheet" href="/the-cat-and-gun/haus/stamm/welt.css?v=1795872050">
+<script src="/the-cat-and-gun/haus/stamm/welt.js?v=1795872050"></script>
+<link rel="stylesheet" href="pruefung.css?v=2026-10-12.1">
+</head>
+<body class="wsp">
+<header class="wsp-kopf auf-dunkel">
+  <div class="wsp-kopf__name">
+    <p class="kap"><span id="wsp-haus">Checks</span></p>
+    <p class="t-ansicht wsp-kopf__titel">Checks · <span data-werkzeug="website"></span></p>
+  </div>
+  <div class="wsp-reihe">
+    <a class="wsp-taste" id="wsp-zurueck" href="./">Back to the tool</a>
+    <button data-welt-knopf></button>
+  </div>
+</header>
+<main class="wsp-seite">
+  <p class="wsp-satz" data-du="This page checks the tool from the outside. It needs nothing from the tool itself and still runs when the tool does not start. It changes nothing on the published website unless you press one of the repairs below.">This page checks the tool from the outside. It needs nothing from the tool itself and still runs when the tool does not start. It changes nothing on the published website unless you press one of the repairs below.</p>
+
+  <section class="wsp-teil" aria-labelledby="wsp-t1">
+    <div><p class="kap"><span>First</span></p><h2 class="t-zwischen" id="wsp-t1">This browser</h2></div>
+    <div class="platte wsp-punkte" id="wsp-browser"><p class="wsp-wartet">Checking …</p></div>
+  </section>
+
+  <section class="wsp-teil" aria-labelledby="wsp-t2">
+    <div><p class="kap"><span>Second</span></p><h2 class="t-zwischen" id="wsp-t2">Server, version and pages</h2></div>
+    <div class="platte wsp-punkte" id="wsp-server"><p class="wsp-wartet">Checking …</p></div>
+  </section>
+
+  <section class="wsp-teil" aria-labelledby="wsp-t3">
+    <div><p class="kap"><span>Third</span></p><h2 class="t-zwischen" id="wsp-t3">Repairs</h2></div>
+    <p class="wsp-satz">Each repair takes two presses. The first says what will happen. The second does it.</p>
+    <div class="wsp-reparaturen" id="wsp-reparaturen"></div>
+    <p class="quittung" id="wsp-meldung" role="status" aria-live="polite" hidden></p>
+  </section>
+
+  <section class="wsp-teil" aria-labelledby="wsp-t4">
+    <div><p class="kap"><span>Help</span></p><h2 class="t-zwischen" id="wsp-t4" data-du="What you see, why it happens, what to do">What you see, why it happens, what to do</h2></div>
+    <div class="feld wsp-suche"><label for="wsp-such">Search the help</label><input id="wsp-such" type="text" autocomplete="off" placeholder="for example: save, photo, conflict"></div>
+    <div class="wsp-lexikon" id="wsp-lexikon"></div>
+  </section>
+</main>
+<noscript><p class="wsp-satz" style="padding:24px">The checks need JavaScript.</p></noscript>
+<script src="pruefung.js?v=2026-10-12.1"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+"art": "story",
+"format": "story",
+"vorlagen": [
+{
+"id": "story-001",
+"titel": "Story · Super Juices",
+"bereich": "Super Juices",
+"vorlage": "buehne",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b36",
+"ueber": "Super Juices",
+"titel": "Because feeling good should taste this good.",
+"text": "Available all day, everyday.",
+"aktion": "@thecatandgun"
+}
+},
+{
+"id": "story-002",
+"titel": "Story · Playground",
+"bereich": "Playground",
+"vorlage": "fenster",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b25",
+"ueber": "Playground",
+"titel": "Our backyard is full of smiles and laughter",
+"unter": "@thecatandgun",
+"text": "Good food for grown-ups, fun times for the little ones."
+}
+},
+{
+"id": "story-003",
+"titel": "Story · Good mornings",
+"bereich": "Café and kitchen",
+"vorlage": "buehne",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b26",
+"ueber": "Open daily",
+"titel": "Good mornings start here.",
+"text": "we’re ready from the early hours.",
+"aktion": "7AM – 10PM DAILY"
+}
+}
+]
+}

@@ -1,0 +1,285 @@
+=== PAGE CAt4 ===
+--- COLUMN 1 ---
+# BEERS
+## SIARGAO ISLAND BREWERY
+* CLOUD 9 LIGHT (5.4%) |  | 250
+* PIPE LINE PALE ALE (6.3%) |  | 300
+* BELLS BEACH WHEAT (6.3%) |  | 300
+## BAUHINIA
+* GERMAN LAGER (4.7%) |  | 260
+* PILSNER (5%) |  | 260
+* WHITE LAGER (5.3%) |  | 320
+* INDIAN PALE LAGER (6%) |  | 320
+## MADBUL
+* BULACAN LAGER (5%) |  | 200
+* VIENNA LAGER (5.5%) |  | 220
+* WHITE IPA (7%) |  | 260
+## ENGKANTO
+* LAGER (4.8%) |  | 200
+* PALE ALE (5%) |  | 200
+* HONEY ALE (5.1%) |  | 200
+* MANGO IPA (5.7%) |  | 230
+* IMPERIAL PILSNER (7.2%) |  | 250
+* DOUBLE IPA (8%) |  | 280
+* NON-ALCOHOLIC |  | 200
+## OTHERS
+* RED HORSE |  | 100
+* SAN MIGUEL PALE PILSEN |  | 100
+* SAN MIGUEL LIGHT |  | 100
+* SAN MIGUEL APPLE |  | 100
+* SAN MIGUEL SUPER DRY |  | 120
+* SAN MIGUEL DRAFT |  | 130
+* CORONA |  | 180
+# WINE
+* CAPE HEIGHTS |  | 1300
+> MERLOT
+* 19 CRIMES |  | 1450
+> CABARNET SAUVIGNON
+* CAMAS SYRAH |  | 1600
+> ROSE
+* CRYSTALLINE |  | 1600
+> CHARDONAY
+* MANTUA VALLEY |  | 1450
+> SAUVIGNON BLANC
+* CIWZANO |  | 1600
+> PROSECCO
+* HOUSE WINE |  | 220/GLASS
+> RED & WHITE
+--- COLUMN 2 ---
+# COCKTAILS
+* RUM & COKE |  | 100
+* GIN & TONIC |  | 200
+* VODKA TONIC |  | 200
+* VODKA CRANBERRY |  | 220
+* MOJITO |  | 220
+* TEQUILA SUNRISE |  | 250
+* AMARETTO SOUR |  | 250
+* WHISKEY SOUR |  | 250
+* ESPRESSO MARTINI |  | 250
+* PIÑA COLADA |  | 250
+* APEROL SPRITZ |  | 320
+* JACK & COKE |  | 280
+* OLD FASHIONED |  | 280
+* THE GODFATHER |  | 280
+# RUM
+* TANDUAY |  | 70
+* CAPTAIN MORGAN |  | 150
+* SAILOR JERRY |  | 180
+* DON PAPA |  | 250
+# GIN
+* GILBEYS |  | 100
+* BOMBAY SAPPHIRE |  | 180
+* TANQUERAY |  | 180
+* ZAFIRO |  | 100
+# TEQUILA
+* EL HOMBRE JOSE |  | 100
+* CUERVO |  | 180
+* CAZADORES |  | 250
+# VODKA
+* RED SQUARE |  | 100
+* ABSOLUT |  | 180
+* GREY GOOSE |  | 250
+# WHISKEY
+* RED LABEL |  | 150
+* JIM BEAM |  | 180
+* FIREBALL |  | 200
+* JACK DANIELS |  | 250
+* MAKERS MARK |  | 250
+# LIQUEUR
+* BAILEYS |  | 180
+* APEROL |  | 180
+* DISARONNO |  | 180
+* JAGERMEISTER |  | 200
+@ THE CAT & GUN
+@ Open daily · 7AM – 10PM
+@ Catangnan, General Luna, Siargao
+@ +63 962 040 3853
+
+=== PAGE CAt3 ===
+--- COLUMN 1 ---
+@ THE CAT & GUN
+# COFFEE
+* ESPRESSO |  | 120
+* AMERICANO |  | 120
+* LONG BLACK |  | 120
+* FLAT WHITE |  | 150
+* CAPPUCCINO |  | 150
+* LATTE |  | 150
+* MOCHA |  | 180
+* MATCHA |  | 180
+* CHAI LATTE |  | 180
+* ESPRESSO FIZZ |  | 180
+* DIRTY MATCHA |  | 200
+* SPANISH LATTE |  | 200
+! Oat Milk +50 | Flavored Syrups +50
+# SUPER JUICES
+* MELON BERRY |  | 260
+> Strawberry, Watermelon, Lemon, Fresh Mint and Honey
+* MANGO TANGO |  | 260
+> Mango, Orange, Lemon, Honey and Basil
+* PINEAPPLE PUNCH |  | 260
+> Pineapple, Watermelon, Strawberry and Lemon
+* GREEN GLOW |  | 260
+> Cucumber, Parsley, Lemon, Ginger and Honey
+* TURBO TONIC |  | 260
+> Lemon, Orange, Pineapple, Carrots, Ginger and Turmeric
+* PURPLE POTION |  | 260
+> Beetroot, Carrot, Ginger, Lemon and Pineapple
+* FRESH JUICE/SHAKE |  | 240 | 260
+> Mango / Watermelon / Orange / Pineapple
+* FRESH LEMONADE |  | 150
+> Freshly squeezed lemon juice served over ice
+! *All of our coffees and juices are available hot or iced and ready for takeout
+# CANNED DRINKS
+* COCA COLA |  | 100
+* SPRITE |  | 100
+* ROYAL |  | 100
+* SODA WATER |  | 100
+* TONIC WATER |  | 100
+* LEMON DOU 5% | 9% |  | 150
+* RED BULL |  | 220
+# KOMBUCHA
+* HIBISCUS + RED BERRIES |  | 200
+* TROPICAL MANGO |  | 200
+* GUAVA |  | 200
+
+=== PAGE CAt2 ===
+--- COLUMN 1 ---
+# PUB GRUB
+* FISH & CHIPS |  | 520
+> Beer battered catch of the day served with a wedge of lemon and tartar sauce
+* CHICKEN PARMIGIANA |  | 520
+> Breaded chicken breast topped with a classic parmigiana sauce and melted mozzarella
+* SLOW COOKED PORK RIB |  | 520
+> Cooked low and slow in a southern style bbq marinade
+! *All served with homemade chunky chips and side salad
+# CURRY
+* TOFU TIKKA MASALA | V | 450
+> A vegetarian delight of crispy tofu chunks mixed in a mild coconut and yogurt tikka masala sauce
+* CHICKEN TIKKA MASALA |  | 480
+> Succulent chunks of chicken breast mixed in a mild coconut and yogurt tikka masala sauce
+* BEEF ROGAN JOSH |  | 520
+> Beef chuck slow cooked in a mild blend of North Indian spices
+* COCONUT, LIME & FISH |  | 520
+> Catch of the day gently simmered in an aromatic blend of coriander, coconut, lime, and chili (*contains shellfish)
+! *All served with white rice and our homemade naan
+# BURGERS
+* CHICKEN |  | 350
+> Succulent chicken thigh, breaded in a herby crumb and dressed with our signature sweet and spicy bang bang sauce
+* FISH |  | 500
+> Breaded catch of the day, drizzled with our house-made wasabi aioli
+* BEEF |  | 520
+> Flame-grilled angus beef topped with our own smokey barbecue sauce
++ ADD ONS FOR BURGERS:
++ EGG | 40
++ CHEESE | 60
++ EXTRA BEEF PATTY | 240
++ ONION RINGS | 50
++ COLESLAW | 60
++ JALAPEÑOS | 60
+--- COLUMN 2 ---
+# PITA POCKETS
+* BEER BATTERED CATCH OF THE DAY | R | 360
+> Deep fried, served with garlic mayo and fresh salad
+* TEMPURA PRAWN | R | 360
+> Deep fried, served with spicy mayo, sweet mango salsa and fresh salad
+* CHICKEN GYROS | R | 260
+> Flame-grilled chicken breast marinated in mediterranean spices, served with homemade tzatziki and fresh salad
+* FALAFEL | V R | 260
+> A middle eastern blend of chickpeas, herbs and spices, topped with homemade tzatziki and fresh salad
+# BAR BITES
+* SALT & PEPPER CHICKEN |  | 240
+> Crispy chicken pieces in a classic salt and pepper seasoning
+* CHICKEN SATAY SKEWERS |  | 240
+> Grilled chicken chunks served with a mild peanut sauce
+* HONEY GARLIC TOFU | V | 250
+> Crispy tofu cubes tossed in a soy, garlic and honey glaze
+* BREADED FISH STICKS |  | 260
+> Breaded catch of the day served with garlic mayo
+# SIDES
+* CHIPS |  | 140
+> Hand cut chunky chips, twice fried
+* CHEESY CHIPS |  | 240
+> Hand cut chunky chips, twice fried and topped with grated mozzarella cheese
+* ONION RINGS |  | 150
+> Whole white onion rings, dipped and fried in a homemade beer batter served with garlic mayo
+* SIDE SALAD |  | 120
+> Lettuce, tomato, cucumber and red onion with house dressing
+* RICE |  | 40
+* GARLIC RICE |  | 60
+@ *RICE BOWLS - Dishes marked with Ⓡ can swap chips or bread for rice at no extra cost.
+@ *Vegetarian - Ⓥ
+
+=== PAGE CAt1 ===
+--- COLUMN 1 ---
+@ THE CAT & GUN
+# BAGELS
+* BACON & EGG | R | 260
+> Crispy, flame-grilled bacon served with a sunny-side-up egg and ketchup
+* SAUSAGE & EGG | R | 280
+> Flame-grilled English sausage served with a sunny-side-up egg and ketchup
+* BLT |  | 260
+> Crispy, flame-grilled bacon topped with fresh romaine lettuce and sliced tomato
+* TUNA MAYO |  | 260
+> Tuna, red onion and mayonnaise, topped with fresh romaine lettuce
+* SWEET & SPICE |  | 260
+> Crispy, flame-grilled bacon, homemade garlic and onion cream cheese with our own sweet chilli jam
+* THE MCBAGEL | R | 290
+> Our take on the classic sausage and egg McMuffin. Homemade pork and sage patty with a sunny-side-up egg, topped with melted cheese
+* THE OG |  | 340
+> Smoked salmon with homemade lemon & dill cream cheese, cucumber ribbons and red onion
+* CHICKEN PARMIGIANA | R |
+- (BAGEL) | 280
+- (FOCACCIA) | 380
+> Flame-grilled chicken breast with homemade parmigiana sauce topped with melted mozzarella
+* BBQ PULLED PORK |  |
+- (BAGEL) | 280
+- (FOCACCIA) | 380
+> Slow cooked pork shoulder, tossed in a tangy bbq sauce, topped with our homemade coleslaw
+* HONEY BEEF BRISKET |  |
+- (BAGEL) | 340
+- (FOCACCIA) | 480
+> Beef brisket cooked low and slow, served with homemade bbq sauce and crunchy coleslaw
+--- COLUMN 2 ---
+# BREAKFAST
+* SWEET BERRY PANCAKES |  | 260
+> Homemade pancakes topped with blueberries and creamy yogurt, served with honey on the side.
+* BALLS OUT BREKKIE | R | 500
+> Crispy flame-grilled bacon, oven roasted tomatoes, baked beans, homemade sausage, hash brown, sunny-side-up egg and sourdough
+* EGGS YOUR WAY | R | 220
+> Three eggs, scrambled, poached or fried, served on our homemade sourdough toast
++ ADD ONS FOR BAGELS & BREAKFAST:
++ EXTRA EGG | 40
++ SOURDOUGH | 60
++ CRISPY BACON | 90
++ SAUSAGE PATTY | 140
++ GRILLED TOMATO | 50
++ HASH BROWN | 50
++ SAUTEED SPINACH | 50
++ BAKED BEANS | 70
+# SMOOTHIE BOWLS
+* SPINACH & MATCHA |  | 320
+> Matcha, spinach, banana, mango and cinnamon blended with coconut water, topped with homemade granola, chia seeds, coconut flakes and banana.
+* MANGO & PINEAPPLE |  | 320
+> Mango, pineapple and banana blended with coconut water, topped with homemade granola, chia seeds, coconut flakes, fresh mango and banana.
+* MIXED BERRIES |  | 380
+> Mixed berries and banana blended with coconut water, topped with homemade granola, chia seeds, coconut flakes, banana and blueberries
+# KIDS MENU
+* CHICKEN NUGGETS | R | 260
+> Homemade chicken nuggets served with chips and watermelon
+* MINI FISH FINGERS | R | 280
+> Crispy fish bites served with chips and watermelon
+* GRILLED CHEESY CHICKEN | R | 260
+> Topped with tomato sauce and melted cheese, served with chips and watermelon
+* PIZZA PITA BREAD |  | 260
+> Topped with tomato sauce and melted cheese, served with chips and watermelon
+
+=== UNSURE ===
+- No [?] spots; everything was legible. Notes on choices:
+- CAt4 "CIWZANO" is printed this way (checked at 8x zoom), not "CINZANO". "CABARNET", "CHARDONAY", "LEMON DOU" are also printed this way.
+- CAt4 footer: the dash in "7AM – 10PM" looks like an en dash (–) but could be a hyphen. The separator in "Open daily · 7AM" is a middle dot.
+- The separators in "Oat Milk +50 | Flavored Syrups +50", "240 | 260" and "LEMON DOU 5% | 9%" show as a thin vertical bar (it looks like I/l in this font). I wrote it as "|". In the item line, "LEMON DOU 5% | 9%" therefore holds a "|" inside the name field.
+- CAt2 legend: I wrote the circled R/V in the footer text as the Unicode letters Ⓡ and Ⓥ.
+- Wine grape lines (MERLOT, etc.) are written as '>' descriptions, keeping their printed capitals.
+- The coffee add-on box on CAt3 has no title, so I wrote it as a '!' note.
+- "THE CAT & GUN" logo blocks on CAt3 and CAt1 are written as '@' lines.

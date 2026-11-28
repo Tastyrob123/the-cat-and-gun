@@ -1,0 +1,88 @@
+{
+"art": "tischset",
+"format": "a3q",
+"vorlagen": [
+{
+"id": "tischset-001",
+"titel": "Placemat · Homemade bagels",
+"bereich": "Café and kitchen",
+"vorlage": "karte",
+"ton": "creme",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Homemade",
+"titel": "Bagels",
+"liste": [
+{
+"name": "Bacon & Egg Bagel",
+"detail": "Crispy flame-grilled bacon with a sunny-side-up egg.",
+"preis": ""
+},
+{
+"name": "Sausage & Egg Bagel",
+"detail": "Flame-grilled Hungarian sausage with a sunny-side-up egg.",
+"preis": ""
+},
+{
+"name": "BLT Bagel",
+"detail": "Flame-grilled bacon with romaine lettuce and sliced tomato.",
+"preis": ""
+},
+{
+"name": "Tuna Mayo Bagel",
+"detail": "Tuna, red onion and mayonnaise with romaine lettuce.",
+"preis": ""
+},
+{
+"name": "Sweet & Spice Bagel",
+"detail": "Bacon, garlic and onion cream cheese with sweet chilli jam.",
+"preis": ""
+},
+{
+"name": "Sweet Berry Bagel",
+"detail": "Creamy yoghurt with mixed berries, peanut butter, cinnamon and honey.",
+"preis": ""
+},
+{
+"name": "The McBagel",
+"detail": "Homemade pork and sage patties with sunny-side-up egg and melted cheese.",
+"preis": ""
+},
+{
+"name": "Pulled Pork & Coleslaw Bagel",
+"detail": "Slow cooked pork shoulder in tangy BBQ sauce with coleslaw.",
+"preis": ""
+},
+{
+"name": "Chicken Parmigiana Bagel",
+"detail": "Flame-grilled chicken breast with parmigiana sauce and mozzarella.",
+"preis": ""
+},
+{
+"name": "Balls Out Breaky",
+"detail": "Bacon, roasted tomatoes, baked beans, sausage, hash browns and egg.",
+"preis": ""
+},
+{
+"name": "The OG Bagel",
+"detail": "Smoked salmon with lemon and dill cream cheese, cucumber and red onion.",
+"preis": ""
+},
+{
+"name": "BBQ Beef Brisket Bagel",
+"detail": "Low and slow beef brisket with BBQ sauce and crunchy coleslaw.",
+"preis": ""
+}
+],
+"fuss": ""
+}
+}
+]
+}

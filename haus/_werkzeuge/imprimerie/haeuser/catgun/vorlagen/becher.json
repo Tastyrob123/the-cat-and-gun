@@ -1,0 +1,61 @@
+{
+"art": "becher",
+"format": "r45",
+"vorlagen": [
+{
+"id": "becher-001",
+"titel": "Cup sticker · Coffee",
+"bereich": "Café and kitchen",
+"vorlage": "rund",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Coffee",
+"unter": "hot or iced"
+}
+},
+{
+"id": "becher-002",
+"titel": "Cup sticker · Matcha",
+"bereich": "Café and kitchen",
+"vorlage": "rund",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "MMMATCHA"
+}
+},
+{
+"id": "becher-003",
+"titel": "Cup sticker · Super Juices",
+"bereich": "Super Juices",
+"vorlage": "rund",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Super Juices"
+}
+}
+]
+}

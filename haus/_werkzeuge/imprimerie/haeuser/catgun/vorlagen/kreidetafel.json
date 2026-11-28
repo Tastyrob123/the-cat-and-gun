@@ -1,0 +1,193 @@
+{
+"art": "kreidetafel",
+"format": "tafel",
+"vorlagen": [
+{
+"id": "kreidetafel-001",
+"titel": "Chalkboard · Ten on draught",
+"bereich": "Bar and draught beer",
+"vorlage": "karte",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "On tap",
+"titel": "Ten on draught",
+"liste": [
+{
+"name": "Cloud 9 Light (5.4%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Pipeline Pale Ale (6.3%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Bells Beach Wheat (6.3%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "German Lager (4.7%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Pilsner (5%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "White Lager (5.3%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Indian Pale Lager (6%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Bulacan Lager (5%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Vienna Lager (5.5%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "White IPA (7%)",
+"detail": "",
+"preis": ""
+}
+],
+"fuss": ""
+}
+},
+{
+"id": "kreidetafel-002",
+"titel": "Chalkboard · Super Juices",
+"bereich": "Super Juices",
+"vorlage": "karte",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Available all day, everyday",
+"titel": "Super Juices",
+"liste": [
+{
+"name": "Melonberry",
+"detail": "Strawberry, watermelon, lemon, mint and local honey.",
+"preis": ""
+},
+{
+"name": "Mango Tango",
+"detail": "Mango, orange, lemon, local honey and basil.",
+"preis": ""
+},
+{
+"name": "Pineapple Punch",
+"detail": "Pineapple, watermelon, strawberry and lemon.",
+"preis": ""
+},
+{
+"name": "The Green Glow",
+"detail": "Cucumber, parsley, lemon, ginger and local honey.",
+"preis": ""
+},
+{
+"name": "Turbo Tonic",
+"detail": "Lemon, orange, pineapple, carrots, ginger and turmeric.",
+"preis": ""
+},
+{
+"name": "The Purple Potion",
+"detail": "Beetroot, carrot, ginger, lemon and pineapple.",
+"preis": ""
+}
+],
+"fuss": ""
+}
+},
+{
+"id": "kreidetafel-003",
+"titel": "Chalkboard · Eggs your way",
+"bereich": "Café and kitchen",
+"vorlage": "karte",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Build your own brekky",
+"titel": "Eggs your way",
+"text": "three eggs on homemade sourdough",
+"liste": [
+{
+"name": "Extra Egg",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Sourdough",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Crispy Bacon",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Sausage Patty",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Grilled Tomato",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Hash Brown",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Sautéed Spinach",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Baked Beans",
+"detail": "",
+"preis": ""
+}
+],
+"fuss": ""
+}
+}
+]
+}

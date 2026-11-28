@@ -1,0 +1,29 @@
+/* Anleitung und Prüfseite im neuen Look (26.11.2026): dunkler Grund mit Foto im Rauchglas, Platten aus Glas, Titel Gloock, Akzent Gold.
+   Gleiche Werte wie look/carte-look.css (Bausteine des Bereichs-Entwurfs «Menus»). */
+@font-face{font-family:"DM Mono";src:url(/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2) format("woff2");font-display:block}
+html{background:#0d0b09}
+body.anl.cgl{--tinte:#f3ece2;--navy:#f3ece2;--taupe:#e6c39a;--leise:rgba(243,236,226,.6);--tief:rgba(243,236,226,.62);--messing:#e6c39a;--gold:#e6c39a;
+  --platte:linear-gradient(165deg,rgba(255,238,215,.1),rgba(255,238,215,.03) 45%,rgba(18,13,10,.22));--platte-s:inset 0 0 0 1px rgba(255,235,210,.14),inset 0 1px 0 rgba(255,240,220,.16);
+  --kuhle:rgba(0,0,0,.28);--kuhle-s:inset 0 0 0 1px rgba(255,235,210,.18);
+  min-height:100vh;color:#f3ece2;background:transparent;padding:44px 0}
+body.anl.cgl::before{content:"";position:fixed;inset:-60px;z-index:-2;background:url('/the-cat-and-gun/haus/assets/bild/b23-1800.webp') center/cover;filter:blur(22px) saturate(1.1) brightness(.5);pointer-events:none}
+body.anl.cgl::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%)}
+.cgl.anl main{position:relative;border-radius:30px;border:1px solid rgba(230,195,154,.35);background:linear-gradient(170deg,rgba(29,24,20,.94),rgba(17,14,11,.95) 60%,rgba(14,11,9,.96));box-shadow:0 40px 80px -50px rgba(0,0,0,.95)}
+.cgl.anl h1,.cgl.anl h2,.cgl.anl h3{color:#f3ece2}
+.cgl.anl h1 em{color:#e6c39a}
+.cgl.anl h2{border-top-color:rgba(255,235,210,.16)}
+.cgl.anl p,.cgl.anl li{color:rgba(243,236,226,.78)}
+.cgl.anl main b,.cgl.anl main strong{color:#f3ece2}
+.cgl.anl main a:not(.kn){color:#e6c39a}
+.cgl.anl .stich b{color:#e6c39a}
+.cgl.anl .gesund div{color:#f3ece2}
+.cgl.anl .gesund .ja{color:#8cc29a}.cgl.anl .gesund .nein{color:#f2b2a6}
+.cgl.anl main .mono{color:rgba(243,236,226,.55)}
+.cgl.anl .kn{--o:transparent;--m:transparent;--u:transparent;--t:#f3ece2;height:40px;border:1px solid rgba(255,235,210,.18);background:rgba(255,240,222,.06);box-shadow:none;font:500 14px/1 "Instrument Sans",system-ui,sans-serif;letter-spacing:0;text-transform:none;color:#f3ece2}
+.cgl.anl .kn--gold{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c;border:0}
+.cgl.anl .kn i{background:none;box-shadow:none;color:#e6c39a}
+@media (max-width:900px){body.anl.cgl{padding:12px}.cgl.anl main{border-radius:22px}}
+/* Seitenleiste wie im Werkzeug und bei Edit website (Robert 27.11.2026): links 280 px, daneben der Text; am Handy ohne Leiste (Weg zurück: Knopf oben) */
+body.anl.cgl{display:grid;grid-template-columns:280px minmax(0,860px);column-gap:22px;justify-content:start;align-items:start;max-width:1528px;margin:0 auto;padding:clamp(20px,2.4vw,44px) clamp(16px,2.4vw,44px) 28px}
+.cgl.anl main{margin:0;width:100%}
+@media (max-width:900px){body.anl.cgl{display:block;padding:12px}.cgl.anl .rail{display:none}}

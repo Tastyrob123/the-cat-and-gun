@@ -1,0 +1,50 @@
+{
+ "_hinweis": "Je Werkzeug: Stand-Weg ab der Wurzel seines Servers (lokal über /_weiter/<werkzeug>/ von server.py), Adresse, Anleitung. Wege wie in der Vorlage (Master 4.1 «Stand-Wege»), Ports aus den AUFTRAG.md. Gilt, wenn das Werkzeug geliefert ist (geliefert.json oder _werkzeuge/<werkzeug>/index.html). Brand book editor und Sticker editor: Stand-Wege aus ihren server.py (23.11.2026).",
+ "bureau": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/bureau/",
+  "stand": "/the-cat-and-gun/haus/_werkzeuge/bureau/api/ueberblick",
+  "anleitung": ""
+ },
+ "carte": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/carte/",
+  "stand": "/the-cat-and-gun/haus/_werkzeuge/carte/api/status",
+  "anleitung": ""
+ },
+ "reception": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/reception/",
+  "stand": "/the-cat-and-gun/haus/_werkzeuge/reception/api/ueberblick",
+  "anleitung": ""
+ },
+ "livre": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/livre/",
+  "stand": "/the-cat-and-gun/haus/_werkzeuge/livre/livre.json",
+  "anleitung": ""
+ },
+ "markenbuch-editor": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/",
+  "stand": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/api/stand",
+  "anleitung": ""
+ },
+ "sticker": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/sticker/",
+  "stand": "/the-cat-and-gun/haus/api/stand/catgun/sticker",
+  "anleitung": ""
+ },
+ "imprimerie": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/imprimerie/",
+  "stand": "/the-cat-and-gun/haus/_werkzeuge/imprimerie/haeuser/catgun/vorlagen/index.json",
+  "anleitung": ""
+ },
+ "registre": {
+  "adresse": "/the-cat-and-gun/haus/_werkzeuge/registre/",
+  "stand": [
+   "/the-cat-and-gun/haus/api/registre?tage=30"
+  ],
+  "anleitung": ""
+ },
+ "drucksachen": {
+  "adresse": "http://localhost:8978/haus/The%20Cat%20%26%20Gun%20Siargao/drucksachen/",
+  "online": "",
+  "_hinweis": "Seite «All pieces» (alle Drucksachen). Kein Werkzeug; Knopf im Kopf und im Saal Print & feed (Robert 23.11.2026). Online: Adresse hier eintragen."
+ }
+}

@@ -1,0 +1,466 @@
+/* Visitors · The Cat & Gun · neuer Look des Control panels (26.11.2026).
+   Vorlage: _entwurf-dashboard/visitors-bereich (bau.py, visitors.css) mit runde2/stil.css, runde3/zusatz.css und website-bereich/website.css,
+   Thema «t-glas» (Rauchglas über dem weichen Foto b19), Seitenleiste «lack6» wie im Control panel (maison/dash.css).
+   Regeln daraus kopiert und auf body.vx gesetzt; Schrift überall mindestens 13 px (Oberflächen-Prüfung, Punkt 17).
+   Die Inhalte des Werkzeugs (Blätter, Ranglisten, Säulen, Besuche, Weg, Tabellen aus registre.css) bekommen hier die Töne und Flächen des neuen Looks. */
+
+:root{
+  --serif:'Gloock',Georgia,serif;--sans:'Catgun Sans','Instrument Sans',system-ui,sans-serif;--mono:'Catgun Mono','DM Mono',ui-monospace,monospace;
+  --gold1:#e6c39a;--gold2:#a8734a;--vrot:#e0645c;--vgruen:#8cc29a;
+  --tx:#f3ece2;--tx2:rgba(243,236,226,.7);--tx3:rgba(243,236,226,.56);--li:rgba(255,235,210,.1);--li2:rgba(255,235,210,.18);--akz:var(--gold1);--feld:rgba(0,0,0,.22);
+  /* Töne von registre.css auf dunkel */
+  --tinte:var(--tx);--leise:var(--tx3);--linie:var(--li);--blatt:transparent;--papier:#110d0b;--leinen:rgba(255,240,222,.06);
+  --nacht:var(--gold1);--stahl:var(--gold2);--hellgold:var(--gold1);--gold:var(--gold1);--titel:var(--serif);
+  --wo-titel-g:400;
+}
+html{background:#110d0b}
+body.vx{margin:0;min-height:100vh;background:#110d0b;color:var(--tx);font-family:var(--sans);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;position:relative;isolation:isolate;overflow-x:clip}
+.vx h1,.vx h2,.vx h3,.vx h4{font-family:var(--serif);font-weight:400;letter-spacing:-.005em;margin:0}
+.vx h2 em,.vx h3 em{color:var(--gold1)}
+.vx ::selection{background:var(--gold1);color:#1a120c}
+
+/* Hintergrund: weiches Foto, Rauchglas darüber, feines Korn (stil.css .szene + .t-glas) */
+.vx-bg{position:fixed;inset:-60px;z-index:-3;overflow:hidden}
+.vx-bg img{width:100%;height:100%;object-fit:cover;filter:blur(22px) saturate(1.1) brightness(.5);transform:scale(1.05)}
+.vx::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%),linear-gradient(180deg,rgba(14,11,9,.7),rgba(14,11,9,.15) 18%,rgba(14,11,9,.35) 70%,rgba(14,11,9,.85))}
+.vx::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* Rauchglas-Fläche (.t-glas .p) */
+.vx .p,.vx .blatt{border-radius:22px;position:relative;background:linear-gradient(165deg,rgba(255,238,215,.12),rgba(255,238,215,.035) 45%,rgba(18,13,10,.22));
+  backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35);
+  border:1px solid rgba(255,235,210,.14);box-shadow:inset 0 1px 0 rgba(255,240,220,.2),inset 0 -1px 0 rgba(0,0,0,.3)}
+
+/* Grundteile */
+.vx .mono{font-family:var(--mono);font-size:13px;letter-spacing:.17em;text-transform:uppercase;color:var(--tx3);display:flex;align-items:center;gap:9px}
+.vx .ico{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.vx .mi{width:14px;height:14px;stroke:var(--akz);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.vx .ck{width:13px;height:13px;stroke:var(--vgruen);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.vx .pf{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;box-shadow:0 6px 14px -8px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.4)}
+.vx .pf svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.vx .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--tx);border:0;padding:0;background:none;cursor:pointer}
+.vx .link .pf{width:24px;height:24px}.vx .link .pf svg{width:11px;height:11px}
+.vx .link:hover{color:var(--gold1)}
+.vx .kopf{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.vx .hin{font-size:13.5px;line-height:1.5;color:var(--tx2);margin-top:14px}
+.vx .hin .link{margin-left:6px}
+
+/* Knöpfe (website.css .wk) */
+.vx .wk{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px;border-radius:999px;border:1px solid var(--li2);background:rgba(255,240,222,.06);font:500 14.5px/1 var(--sans);color:var(--tx);white-space:nowrap;cursor:pointer;text-decoration:none;transition:border-color .3s,background-color .3s,transform .4s cubic-bezier(.32,.72,0,1)}
+.vx .wk .ico{width:17px;height:17px;color:var(--gold1)}
+.vx .wk:hover{border-color:rgba(230,195,154,.45);background:rgba(255,240,222,.1)}
+.vx .wk:active{transform:translateY(1px)}
+.vx .wk.gold{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;border:0;box-shadow:0 10px 24px -14px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.35)}
+.vx .wk.gold .ico{color:#1a120c}
+.vx .stp{display:inline-flex;align-items:center;gap:10px;font-size:14.5px;color:var(--tx)}
+.vx .pt{width:8px;height:8px;border-radius:50%;background:var(--vgruen);box-shadow:0 0 0 4px rgba(140,194,154,.2);flex:none}
+.vx .pt.ku{background:var(--gold1);box-shadow:0 0 0 4px rgba(230,195,154,.18)}
+
+/* Zeitraum (stil.css .seg, visitors.css .seg.zeit) */
+.vx .seg{display:inline-flex;padding:4px;border-radius:999px;border:1px solid var(--li2);background:var(--feld);flex:none}
+.vx .seg button{padding:8px 14px;border-radius:999px;font:400 13px/1.2 var(--sans);color:var(--tx2);background:none;border:0;cursor:pointer;white-space:nowrap;transition:background-color .3s,color .3s}
+.vx .seg button:hover{color:var(--tx)}
+.vx .seg button.an{background:rgba(255,240,222,.12);color:var(--tx)}
+.vx .seg.zeit{margin-left:6px}
+
+/* ---------- Gerüst ---------- */
+.vx-lay{display:grid;grid-template-columns:280px minmax(0,1fr);column-gap:22px;row-gap:22px;align-items:start;max-width:1528px;margin:0 auto;padding:clamp(20px,2.4vw,44px) clamp(16px,2.4vw,44px) 28px}
+.vx-main{display:flex;flex-direction:column;gap:18px;min-width:0}
+.vx .flaeche{outline:0}
+.vx .in{max-width:none;margin:0;padding:0}
+#ansicht{display:flex;flex-direction:column;gap:18px;min-width:0}
+#ansicht>*{margin-top:0;margin-bottom:0}
+
+/* Seitenleiste: leiste.css (gemeinsam mit dem Guide) */
+
+/* Handy-Kopf (unter 1181 px steht die Seitenleiste nicht; Weg zum Control panel und Marke oben) */
+.vx-kopf{display:none}
+
+/* Kopfkarte mit geschwungenem Foto (website.css .wkopf) */
+.vx .wkopf{overflow:hidden;min-height:400px;display:flex;flex-direction:column}
+.vx .wkb{position:absolute;top:0;right:0;bottom:0;width:58%;height:100%;object-fit:cover;border-radius:0 22px 22px 0;display:block;
+  -webkit-mask-image:radial-gradient(130% 120% at 100% 50%,#000 58%,transparent 58.4%);mask-image:radial-gradient(130% 120% at 100% 50%,#000 58%,transparent 58.4%)}
+.vx .wkopf::after{content:"";position:absolute;top:0;right:0;bottom:0;width:58%;pointer-events:none;border-radius:0 22px 22px 0;background:linear-gradient(90deg,rgba(14,11,9,.35),rgba(14,11,9,0) 40%,rgba(14,11,9,.25))}
+.vx .wki{position:relative;z-index:1;padding:44px 48px 30px;max-width:640px;display:flex;flex-direction:column;flex:1}
+.vx .wki h2{font-size:124px;line-height:.95;margin:18px 0 18px;letter-spacing:-.02em}
+.vx .wkopf.klein .wki h2{font-size:108px}
+.vx .wki p{font-size:19px;line-height:1.5;color:var(--tx2);max-width:540px;margin:0}
+.vx .wkst{display:flex;align-items:center;gap:12px;margin-top:28px;flex-wrap:wrap}
+.vx .wkst .stp{margin-right:12px;flex-basis:100%}
+.vx .tabs{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:6px;margin:0 20px 20px;padding:6px;border-radius:30px;background:linear-gradient(180deg,#1a1512,#120f0c);border:1px solid var(--li);align-self:flex-start}
+.vx .tab{padding:11px 18px;border-radius:999px;font:400 14px/1.2 var(--sans);color:var(--tx2);white-space:nowrap;background:none;border:0;cursor:pointer;text-decoration:none;transition:color .3s,background-color .3s}
+.vx .tab:hover{color:var(--tx);background:rgba(255,240,222,.06)}
+.vx .tab.an{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;font-weight:500}
+
+/* Robert 28.11.2026: die Reiterleiste ragt ins Foto der Kopfkarte; dort war «How we count» kaum lesbar. Die Leiste ist darum deckend (vorher 45 % mit Weichzeichner) */
+
+/* Abschnittstitel (website.css .stitel) */
+.vx .stitel{display:flex;align-items:center;gap:18px;margin:16px 2px 0}
+.vx .stitel .snr{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;flex:none;border:1px solid rgba(230,195,154,.35);background:rgba(230,195,154,.06)}
+.vx .stitel .snr .ico{width:22px;height:22px;color:var(--gold1)}
+.vx .stitel h3{font-size:32px;line-height:1}
+.vx .stitel .mono{margin-top:6px}
+
+/* Vier Zahlen mit Foto (visitors.css .v4) */
+.vx .v4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.vx .v4k{overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end}
+.vx .v4b{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;display:block}
+.vx .v4k::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,9,7,.2),rgba(12,9,7,.92) 70%)}
+.vx .ski{position:absolute;top:16px;left:16px;z-index:2;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(18,13,10,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,235,210,.22);color:var(--gold1)}
+.vx .v4t{position:relative;z-index:2;padding:18px 20px 20px;display:flex;flex-direction:column;gap:2px;color:#f3ece2}
+.vx .v4t b{font-family:var(--serif);font-weight:400;font-size:64px;line-height:1;width:fit-content;transform-origin:0 70%;font-variant-numeric:lining-nums tabular-nums}
+/* nur die Bezeichnung (direktes Kind): sonst traf die Regel auch die Spans des Zählers in der Zahl (bewegung.js, .wo-zl-z) und «Visits» und «On the way» zählten 1,4 s lang in 16 px hoch (Abnahme 28.11.2026) */
+.vx .v4t>span{font-size:16px;font-weight:500;margin-top:6px}
+.vx .v4t i,.vx .v4t .vgl{font-style:normal;font-size:13px;color:rgba(243,236,226,.66)}
+.vx .v4t .vgl.gut{color:var(--vgruen)}.vx .v4t .vgl.weniger{color:#f0a39c}
+
+/* Karten mit Kopf (website.css .wdt) */
+.vx .wdt{padding:24px 24px 22px;display:flex;flex-direction:column;min-width:0}
+.vx .wdt h4{font-size:27px;line-height:1.1;margin-top:10px}
+.vx .vkurve .kopf{align-items:center}
+.vx .r{display:grid;gap:18px}
+.vx .r2{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* Liste mit Symbol oder Foto, Balken unter dem Namen (website.css .dl, visitors.css .vdl) */
+.vx .dl{list-style:none;margin:16px 0 0;padding:0}
+.vx .dl li{display:flex;align-items:center;gap:14px;padding:11px 0;border-top:1px solid var(--li)}
+.vx .dl li:last-child{border-bottom:1px solid var(--li)}
+.vx .dl li>div{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.vx .dl b{display:block;font-weight:500;font-size:16px;overflow-wrap:anywhere}
+.vx .dl .dz{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-family:var(--mono);font-size:13px;color:var(--tx);min-width:44px;text-align:right}
+.vx .dl .dz em{font-style:normal;color:var(--tx3)}
+.vx .dl small{display:block;font-size:13px;color:var(--tx3)}
+/* zwei Karten nebeneinander: die kürzere Liste verteilt ihre Zeilen über die Höhe, nie ein Loch darunter (Fehlerbuch 10a) */
+.vx .r2>.wdt>.dl{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between}
+.vx .dsym{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:none;background:rgba(230,195,154,.1);border:1px solid rgba(230,195,154,.24);color:var(--gold1)}
+.vx .vdl .grau,.vx .vdl .bal{display:block;height:5px;width:100%;border-radius:4px;background:rgba(255,240,222,.07);overflow:hidden}
+.vx .vdl .bal i{display:block;height:100%;width:100%;border-radius:4px;background:linear-gradient(90deg,var(--gold2),var(--gold1));transform-origin:0 50%;transform:scaleX(var(--w));transition:transform 1.4s var(--feder-leise,cubic-bezier(.3,1.26,.4,1));transition-delay:calc(var(--i,0) * 90ms + 200ms)}
+.vx [data-r]:not(.rg-los) .vdl .bal i{transform:scaleX(0)}
+.vx .vimg img,.vx .vimg .sbild{width:52px;height:38px;border-radius:8px;object-fit:cover;flex:none;display:block}
+/* Miniaturbilder in Origin (Robert 28.11.2026): Bild im Passepartout, feiner goldener Rand, kein Schatten; Ersatzzeichen gleich gross, damit die Namen auf einer Linie stehen */
+.vx .vrahmen{display:block;flex:none;padding:3px;border-radius:12px;border:1px solid rgba(230,195,154,.3);background:rgba(255,240,222,.04)}
+.vx .vrahmen img{display:block;object-fit:cover}
+.vx .vmini img{width:72px;height:54px;border-radius:8px}
+.vx .vflag img{width:42px;height:28px;border-radius:4px}
+.vx .dsym.vmini-ers{width:80px;height:62px;border-radius:12px}
+.vx .dsym.vflag-ers{width:50px;height:36px;border-radius:9px}
+@media (max-width:620px){.vx .vmini img{width:60px;height:45px}.vx .dsym.vmini-ers{width:68px;height:53px}}
+
+/* So wird gezählt (visitors.css .vzaehl) */
+.vx .vzaehl{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:30px;align-items:center}
+.vx .vzt{display:flex;gap:18px;align-items:flex-start}
+.vx .eqi{width:70px;height:70px;border-radius:22px;display:grid;place-items:center;flex:none;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.vx .eqi .ico{width:32px;height:32px}
+.vx .vzt h4{font-size:27px;margin-top:8px}
+.vx .vzr{display:flex;flex-direction:column;gap:14px}
+.vx .chips2{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+.vx .chip{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;font-size:13px;color:var(--tx);background:rgba(255,240,222,.05);border:1px solid var(--li)}
+.vx .chip .ico{width:15px;height:15px;color:var(--gold1)}
+.vx .chip.nie{color:var(--tx2);text-decoration:line-through;text-decoration-color:rgba(224,100,92,.7)}
+
+/* Origin (visitors.css) */
+.vx .ph2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+.vx .ph2.n4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.vx .phk{padding:18px 20px;border-radius:16px;background:var(--feld);border:1px solid var(--li);display:flex;justify-content:space-between;align-items:center;gap:12px;min-width:0}
+.vx .phk .mono{min-width:0}
+.vx .phk b{font-family:var(--serif);font-weight:400;font-size:44px;line-height:1;flex:none}
+.vx .ph2.n4 .phk{flex-direction:column;align-items:flex-start;justify-content:space-between;min-height:118px}
+.vx .ph2.n4 .phk b{font-size:40px}
+.vx .karte{position:relative;margin-top:14px;height:260px;border-radius:16px;overflow:hidden;border:1px solid var(--li)}
+.vx .karte img{width:100%;height:100%;object-fit:cover;filter:grayscale(.6) brightness(.35);display:block}
+.vx .karte span{position:absolute;inset:0;display:grid;place-items:center;padding:0 20px;text-align:center;font-family:var(--serif);font-size:28px;line-height:1.15;color:#f3ece2}
+.vx .vq{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.vx .vq.n5{grid-template-columns:repeat(5,minmax(0,1fr))}.vx .vq.n4{grid-template-columns:repeat(4,minmax(0,1fr))}.vx .vq.n3{grid-template-columns:repeat(3,minmax(0,1fr))}.vx .vq.n2{grid-template-columns:repeat(2,minmax(0,1fr))}.vx .vq.n1{grid-template-columns:minmax(0,1fr)}
+.vx .qk{padding:20px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.vx .o2i{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin:0 0 8px;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;box-shadow:0 10px 18px -10px rgba(0,0,0,.8)}
+.vx .qlogo{background:none;border:0;padding:0;overflow:hidden}
+.vx .qlogo img{display:block;width:100%;height:100%}
+.vx .qk b{font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.15;overflow-wrap:anywhere}
+.vx .qk i{font-style:normal;font-family:var(--mono);font-size:22px;color:var(--gold1)}
+.vx .qk small{font-family:var(--mono);font-size:13px;color:var(--tx3)}
+.vx .vg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.vx .gk{display:flex;align-items:center;gap:14px;padding:20px 22px;min-width:0}
+.vx .gk b{flex:1;font-family:var(--serif);font-weight:400;font-size:24px;min-width:0}
+.vx .gk i{font-style:normal;font-family:var(--mono);font-size:22px;color:var(--gold1);text-align:right}
+.vx .gk i small{display:block;font-size:13px;color:var(--tx3)}
+.vx .vhin{padding:0 4px;margin:0}
+
+/* Leiste unten (website.css .wleist): letzte Reihe wie in der Vorlage, liegt nie über dem Inhalt */
+.vx .wleist{display:flex;align-items:center;gap:22px;padding:14px 14px 14px 26px;border-radius:999px}
+.vx .wleist:empty{display:none}
+.vx .wleist .stp .ico{width:15px;height:15px;color:var(--gold1)}
+.vx .wleist .wr{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.vx .wleist .wsatz{font-size:13.5px;color:var(--tx2);min-width:0}
+
+/* ---------- Inhalte des Werkzeugs im neuen Look ---------- */
+.vx .blatt{padding:24px 24px 22px;min-width:0}
+.vx .blatt>header{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.vx .blatt h3{font-size:27px;line-height:1.1}
+.vx .blatt>header p{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
+.vx .blatt>header .link{font-size:13px}
+.vx .zwei{margin-top:0;gap:18px}
+.vx .stapel,.vx .zwei--fuell>.stapel{gap:18px}
+.vx .tafel{margin-top:0}
+.vx .fein{margin:0;font-size:13.5px;color:var(--tx2);padding:0 4px}
+.vx .blatt .fein{padding:0;margin-top:12px}
+.vx .nichts{color:var(--tx3);font-size:14px}
+.vx .vgl{font-size:13px;color:var(--tx3)}
+.vx .vgl.gut{color:var(--vgruen)}.vx .vgl.weniger{color:#f0a39c}
+
+/* Band mit vier Werten (Time, Origin ohne Testdaten) im Stil der Origin-Kacheln */
+.vx .band{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:0;background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.vx .band>div{padding:18px 20px;border-radius:16px;background:linear-gradient(165deg,rgba(255,238,215,.1),rgba(255,238,215,.03) 45%,rgba(18,13,10,.22));border:1px solid rgba(255,235,210,.14);display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:118px}
+.vx .band b{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1}
+
+/* Ranglisten */
+.vx .rang li{font-size:15px;color:var(--tx)}
+.vx .rang__b{height:6px;background:rgba(255,240,222,.07)}
+.vx .rang__b i,.vx .rang li:first-child .rang__b i{background:linear-gradient(90deg,var(--gold2),var(--gold1))}
+.vx .rang li b{color:var(--tx)}
+.vx .rang li em{color:var(--tx3)}
+
+/* Säulen (Kurve der Vorlage: Linien im Feld, goldene Säulen) */
+.vx .saeulen{--h0:200px;margin:8px 0 0;padding-bottom:28px;background:repeating-linear-gradient(0deg,transparent 0 49px,var(--li) 49px 50px);background-size:100% calc(100% - 28px);background-repeat:no-repeat;border-bottom:0}
+.vx .saeulen::after{content:"";position:absolute;left:0;right:0;bottom:27px;height:1px;background:var(--li2)}
+.vx .saeulen .s i{background:linear-gradient(180deg,var(--gold1),rgba(168,115,74,.55));min-height:3px}
+.vx .saeulen .s i[style*="--h:0;"],.vx .saeulen .s i[style="--h:0"]{transform:none;height:3px;background:rgba(230,195,154,.4)}
+.vx .saeulen .s u{background:rgba(255,240,222,.14)}
+.vx .saeulen .s:hover i{background:linear-gradient(180deg,#f6dfc3,var(--gold1))}
+.vx .saeulen .s span{color:var(--tx3);margin-top:8px}
+.vx .saeulen .s::after{background:#1a1410;color:var(--tx);box-shadow:0 0 0 1px var(--li2)}
+.vx .punkt{background:var(--gold1)}.vx .punkt--hell{background:rgba(255,240,222,.3)}
+
+/* Raster Wochentag × Stunde */
+.vx .raster i{background:var(--gold1)}
+.vx .raster__w,.vx .raster__h{color:var(--tx3)}
+
+/* Zahlen in den Werten (On the way) */
+.vx .werte{gap:14px}
+.vx .wert{padding:20px 20px 18px}
+.vx .wert b{font-family:var(--serif);font-weight:400;font-size:44px;color:var(--gold1)}
+.vx .wert p{color:var(--tx2)}
+
+/* Besuche */
+.vx .besuch{background:linear-gradient(165deg,rgba(255,238,215,.09),rgba(255,238,215,.025) 45%,rgba(18,13,10,.2));box-shadow:none;border:1px solid rgba(255,235,210,.12);color:var(--tx)}
+.vx .besuch:hover{background:rgba(255,240,222,.1)}
+.vx .besuch.aktiv{background:linear-gradient(150deg,rgba(230,195,154,.22),rgba(168,115,74,.12));box-shadow:inset 0 0 0 1px rgba(230,195,154,.5)}
+.vx .besuch__l{background:#1a1410;color:var(--gold1);box-shadow:inset 0 0 0 3px #1a1410,inset 0 0 0 4px rgba(230,195,154,.4)}
+.vx .besuch.gold .besuch__l{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;box-shadow:none}
+.vx .besuch__z{color:var(--tx)}
+.vx .besuch.gold .besuch__z{color:var(--gold1)}
+.vx .besuch__m{display:block}
+.vx .tagzeile{color:var(--tx3)}
+.vx .detail{top:24px}
+.vx .besuchsblatt::before{border-color:rgba(230,195,154,.22)}
+.vx .besuchsblatt h2{font-size:34px}
+.vx .siegel{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.vx .angaben{border-color:var(--li)}
+.vx .angaben dd{color:var(--tx)}
+.vx .wegtitel{font-size:22px}
+.vx .weg li{border-bottom-color:var(--li)}
+.vx .weg li::before{background:var(--gold1);box-shadow:0 0 0 2px #1a1410,0 0 0 3px rgba(230,195,154,.5)}
+.vx .weg li::after{background:rgba(230,195,154,.4)}
+.vx .ereignis{background:rgba(255,240,222,.08);color:var(--tx)}
+.vx .ereignis.gold{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.vx .leer-hinweis{background:var(--feld);color:var(--tx2);border:1px solid var(--li)}
+.vx .leer-hinweis b{color:var(--tx)}
+.vx .weitere{margin:10px 4px}
+
+/* Filter der Besuche wie die Reiter */
+body.vx .wahl3.wahl3{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border-radius:30px;background:rgba(10,8,6,.45);border:1px solid var(--li);align-self:flex-start;margin:0}
+body.vx .wahl3.wahl3 button{height:auto;padding:10px 16px;border-radius:999px;font:400 14px/1.2 var(--sans);color:var(--tx2);background:none}
+body.vx .wahl3.wahl3 button:hover{color:var(--tx)}
+body.vx .wahl3.wahl3 button.an{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;font-weight:500}
+
+/* Seiten-Tabelle */
+.vx .tabelle{padding:10px 24px}
+.vx .zeile{border-bottom-color:var(--li);color:var(--tx)}
+.vx .zeile--kopf{color:var(--tx3)}
+.vx .zeile>span:nth-child(4),.vx .zeile>span:nth-child(5){color:var(--tx2)}
+
+/* Verlauf */
+.vx .vergleich .vz{border-bottom-color:var(--li)}
+.vx .vz b{color:var(--tx)}
+.vx .lv__l{stroke:var(--gold1)}
+.vx .lv__f{fill:rgba(230,195,154,.16)}
+
+/* Weg zur Tür */
+.vx .trichter li i{background:linear-gradient(90deg,var(--gold2),var(--gold1))!important}
+.vx .trichter li::after{background:rgba(255,240,222,.08)!important}
+.vx .trichter li::before{background:rgba(255,240,222,.04)}
+.vx .trichter span,.vx .trichter b{color:var(--tx)!important}
+.vx .trichter em{color:var(--tx3)!important}
+
+/* So wird gezählt */
+.vx .liste-txt li{color:var(--tx);font-size:15px}
+.vx .liste-txt li::before{background:var(--gold1)}
+.vx .liste-txt li b{color:var(--gold1);font-weight:500}
+.vx .liste-txt+.liste-txt,.vx .zwei+.liste-txt{margin-top:0}
+
+/* Hinweis Testdaten / Cloudflare */
+.vx .bsp-band{margin:0;padding:16px 22px 16px 60px;border-radius:999px;background:linear-gradient(150deg,rgba(230,195,154,.18),rgba(168,115,74,.1));color:var(--tx2);box-shadow:inset 0 0 0 1px rgba(230,195,154,.38);font-size:14px}
+.vx .bsp-band::before{left:18px;top:50%;margin-top:-13px;width:26px;height:26px;line-height:26px;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.vx .bsp-band b{color:var(--gold1);font-weight:500}
+
+/* Leere Ansicht: Foto mit Satz wie die Länderkarte der Vorlage */
+.vx .vleer .karte{height:300px}
+.vx .vleer p{font-size:15px;line-height:1.55;color:var(--tx2);max-width:70ch;margin-top:16px}
+.vx .vleer .wr{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.vx .wenig{margin:0;text-align:left;padding:0 4px;color:var(--tx2);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+
+/* Meldungen, Startfehler, Laden */
+.vx .meldung{bottom:110px}
+.vx .quit{background:linear-gradient(165deg,#2a211a,#17120e);color:var(--tx);box-shadow:inset 0 0 0 1px var(--li2),inset 3px 0 0 var(--gold1),0 26px 50px -22px rgba(0,0,0,.8)}
+.vx .quit span{color:var(--tx2)}
+.vx .quit.fehl{box-shadow:inset 0 0 0 1px var(--li2),inset 3px 0 0 var(--vrot),0 26px 50px -22px rgba(0,0,0,.8)}
+.vx .quit button{color:var(--tx3)}
+.vx .tuer-zu{padding:44px 48px}
+.vx .tuer-zu h1{font-size:56px;line-height:1}
+.vx .tuer-zu p{color:var(--tx2);margin-top:14px;font-size:17px}
+.vx .tuer-zu__kn{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.vx .lade-platz i{background:rgba(255,240,222,.06)}
+
+/* Fokus */
+.vx :focus-visible{outline:2px solid var(--gold1);outline-offset:3px;border-radius:12px}
+
+/* ---------- Schmal ---------- */
+@media (max-width:1300px){
+  .vx .wki h2{font-size:104px}.vx .wkopf.klein .wki h2{font-size:92px}
+  .vx .vq{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .vx .vq.n5,.vx .vq.n4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1180px){
+  .vx-lay{grid-template-columns:minmax(0,1fr);padding:18px 24px 32px}
+  .vx .dx-rail{display:none}
+  .vx-kopf{display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:1520px;margin:0 auto;padding:18px 24px 0}
+  .vx-kopf .marke{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none;min-width:0}
+  .vx-kopf .marke img{width:74px;height:auto;display:block}
+  .vx-kopf .marke .mono{font-size:13px;letter-spacing:.16em}
+  .vx-kopf .wk{height:42px;padding:0 16px}
+  .vx .v4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vx .vzaehl{grid-template-columns:minmax(0,1fr)}
+  .vx .ph2.n4,.vx .band{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .vx .r2{grid-template-columns:minmax(0,1fr)}
+  .vx .wkb,.vx .wkopf::after{width:100%;border-radius:22px;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 30%,transparent 62%);mask-image:linear-gradient(180deg,#000 0,#000 30%,transparent 62%);height:300px;bottom:auto}
+  .vx .wkopf::after{background:linear-gradient(180deg,rgba(14,11,9,0),rgba(14,11,9,.3))}
+  .vx .wki{padding:210px 24px 22px;max-width:none}
+  .vx .wki h2,.vx .wkopf.klein .wki h2{font-size:64px;margin:14px 0}
+  .vx .wki p{font-size:17px}
+  .vx .tabs{margin:0 14px 14px;border-radius:22px}
+  .vx .tab{padding:10px 14px}
+  .vx .vg{grid-template-columns:minmax(0,1fr)}
+  .vx .wleist{border-radius:26px;flex-wrap:wrap;gap:10px 16px;padding:14px 16px}
+  .vx .wleist .wr{margin-left:0;justify-content:flex-start;width:100%}
+  .vx .wleist .wsatz{display:none}
+}
+@media (max-width:620px){
+  .vx-lay{padding:14px 16px 24px;gap:14px}
+  .vx-kopf{padding:14px 16px 0}
+  .vx-kopf .marke .mono{display:none}
+  #ansicht,.vx-main{gap:14px}
+  .vx .wki{padding:190px 20px 20px}
+  .vx .wki h2,.vx .wkopf.klein .wki h2{font-size:54px}
+  .vx .wkb,.vx .wkopf::after{height:270px}
+  .vx .wkst{gap:10px}
+  .vx .wkst .seg{margin-left:0;width:100%}
+  .vx .wkst .seg button{flex:1}
+  .vx .tabs{margin:0 10px 12px;gap:4px;padding:5px}
+  .vx .tab{padding:9px 12px;font-size:14px}
+  .vx .stitel{gap:14px}.vx .stitel .snr{width:44px;height:44px}.vx .stitel h3{font-size:26px}
+  .vx .v4{grid-template-columns:minmax(0,1fr)}
+  .vx .saeulen{--h0:150px;padding-bottom:24px;background-size:100% calc(100% - 24px)}
+  .vx .saeulen::after{bottom:23px}
+  .vx .blatt.tafel .saeulen{--h0:128px}
+  .vx .v4k{min-height:180px}
+  .vx .v4t b{font-size:54px}
+  .vx .wdt,.vx .blatt{padding:20px 18px}
+  .vx .wdt h4,.vx .blatt h3{font-size:24px}
+  .vx .vkurve .kopf,.vx .wdt>.kopf{flex-direction:column;align-items:flex-start}
+  .vx .wdt>.kopf .seg{margin-left:0}
+  .vx .ph2,.vx .ph2.n4,.vx .band{grid-template-columns:minmax(0,1fr)}
+  .vx .ph2.n4 .phk,.vx .band>div{min-height:0;flex-direction:row;align-items:center}
+  .vx .vq,.vx .vq.n5,.vx .vq.n4,.vx .vq.n3,.vx .vq.n2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vx .vq>.qk:last-child:nth-child(odd){grid-column:1/-1}
+  .vx .karte{height:200px}.vx .karte span{font-size:24px}
+  .vx .vzt{flex-direction:column}
+  .vx .bsp-band{border-radius:22px}
+  .vx .wleist .wk{height:42px;padding:0 14px}
+  .vx .tuer-zu{padding:28px 22px}.vx .tuer-zu h1{font-size:40px}
+}
+/* Robert 28.11.2026 (Abnahme, Frage 1): am Handy zwei volle Reihen zu vier Reitern statt 4, 3 und 1. Spalten so breit wie ihr längster Reiter, Schrift 13 px */
+@media (max-width:620px) and (min-width:340px){
+  .vx .tabs{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;align-self:stretch}
+  .vx .tab{padding:9px 8px;font-size:13px;text-align:center}
+}
+@media (max-width:389px) and (min-width:340px){.vx .tabs{gap:2px}.vx .tab{padding:9px 4px}}
+
+/* Kachelreihen (vier Zahlen, Herkunft, Gerät): die Kachel steht, nur ihr Inhalt schwebt 40 px herein, wie bei den Besuchs-Kacheln (registre.css);
+   so kreuzt im Einflug nichts den Titel darunter (Prüfpunkt 21, 27.11.2026). Fotos stehen von Anfang an deckend. */
+.vx :is(.v4>.v4k,.vq>.qk,.vg>.gk)[data-r],.vx :is(.v4>.v4k,.vq>.qk,.vg>.gk)[data-r].rg-da{animation:none;translate:none;scale:none}
+.vx :is(.v4>.v4k,.vq>.qk,.vg>.gk)[data-r]:not(.rg-da)>:not(.v4b){opacity:0;translate:0 40px}
+.vx :is(.v4>.v4k,.vq>.qk,.vg>.gk)[data-r].rg-da>*{transition:opacity .6s ease,translate .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0) * 120ms)}
+.vx .v4>.v4k[data-r]:not(.rg-da)>.v4b{scale:1.08}
+.vx .v4>.v4k[data-r].rg-da>.v4b{transition:scale 1.7s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.vx :is(.v4>.v4k,.vq>.qk,.vg>.gk)[data-r]>*{opacity:1!important;translate:none!important;scale:none!important}}
+
+/* Robert 28.11.2026: «Last visits» in der Overview als eine volle Reihe von fünf Karten (vorher fünf breite Zeilen mit leerer Mitte); Bild des Ortes oben, darunter Ort, Zeit, Seiten */
+@media (min-width:1000px){
+  .vx .liste--start{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+  .vx .liste--start .besuch{grid-template-columns:minmax(0,1fr);gap:12px;align-items:start;align-content:start;padding:10px 10px 16px;height:100%}
+  .vx .liste--start .besuch__b,.vx .liste--start .besuch__b .sbild{width:100%;height:auto;aspect-ratio:4/3}
+  .vx .liste--start .besuch__b .besuch__l{right:8px;bottom:8px}
+  .vx .liste--start .besuch__n,.vx .liste--start .besuch__z{padding:0 6px}
+  .vx .liste--start .besuch__z{text-align:left}
+  .vx .liste--start .besuch__n small .besuch__w{display:block}.vx .liste--start .besuch__n small .besuch__t{display:none}
+}
+
+/* Kartenraster in Origin (Robert 28.11.2026): Länder und Orte als Bildkarten, Sprachen als Flaggenkarten; grosse Zahl, kräftiger Balken, Rangnummer */
+.vx .kkr{display:grid;grid-template-columns:repeat(var(--sp,5),minmax(0,1fr));gap:14px;margin-top:6px}
+.vx .kkr.n12,.vx .kkr.n8,.vx .kkr.n4{--sp:4}.vx .kkr.n10{--sp:5}.vx .kkr.n6,.vx .kkr.n3{--sp:3}.vx .kkr.n2{--sp:2}.vx .kkr.n1{--sp:1}
+.vx .kk{position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:232px;padding:16px 16px 18px;border-radius:18px;background:#15110e;border:1px solid var(--li);color:#f3ece2}
+.vx .kk__b{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:scale 1.2s cubic-bezier(.16,1,.3,1)}
+.vx .kk:hover .kk__b{scale:1.05}
+.vx .kk--land::before,.vx .kk--ort::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,9,7,0) 25%,rgba(12,9,7,.55) 55%,rgba(12,9,7,.93) 100%)}
+.vx .kk__ers{position:absolute;inset:0;z-index:-2;display:grid;place-items:center;color:var(--gold1);background:radial-gradient(120% 90% at 30% 20%,rgba(230,195,154,.16),transparent 60%)}
+.vx .kk__ers .ico{width:40px;height:40px;margin-bottom:60px}
+.vx .kk__nr{position:absolute;top:12px;left:14px;font-family:var(--mono);font-size:13px;letter-spacing:.16em;color:rgba(243,236,226,.86);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.vx .kk__t b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.12;overflow-wrap:anywhere}
+.vx .kk__t small{display:block;margin-top:3px;font-size:13px;color:rgba(243,236,226,.72)}
+.vx .kk__z{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:10px}
+.vx .kk__z strong{font-family:var(--serif);font-weight:400;font-size:44px;line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.vx .kk__z em{font-style:normal;font-family:var(--mono);font-size:15px;color:var(--gold1)}
+.vx .kk__bal{display:block;height:8px;margin-top:12px;border-radius:5px;background:rgba(255,240,222,.14);overflow:hidden}
+.vx .kk__bal i{display:block;height:100%;width:100%;border-radius:5px;background:linear-gradient(90deg,var(--gold2),var(--gold1));transform-origin:0 50%;transform:scaleX(var(--w));transition:transform 1.4s cubic-bezier(.3,1.1,.4,1) calc(var(--i,0) * 120ms + 200ms)}
+.vx [data-r]:not(.rg-los) .kk__bal i,.vx .kk[data-r]:not(.rg-los) .kk__bal i{transform:scaleX(0)}
+/* Sprachen: Flagge gross oben links, kein Foto */
+.vx .kk--sprache{min-height:0;justify-content:flex-start;padding:18px 16px;background:linear-gradient(165deg,rgba(255,238,215,.07),rgba(18,13,10,.35))}
+.vx .kk--sprache .kk__nr{top:18px;left:auto;right:16px;text-shadow:none;color:var(--tx3)}
+.vx .kk__fl{display:block;width:76px;height:51px;margin-bottom:22px;padding:3px;border-radius:10px;border:1px solid rgba(230,195,154,.3);background:rgba(255,240,222,.04)}
+.vx .kk__fl img{display:block;width:100%;height:100%;border-radius:6px;object-fit:cover}
+.vx .kk__fl--ers{display:grid;place-items:center;color:var(--gold1)}
+.vx .kk--sprache .kk__z strong{font-size:40px}
+.vx .kkmehr{margin-top:14px}
+.vx .kkmehr b{font-family:var(--mono);font-weight:400;color:var(--gold1)}
+@media (max-width:1180px){.vx .kkr.n10{--sp:5}.vx .kk{min-height:200px}.vx .kk__z strong{font-size:36px}.vx .kk__t b{font-size:20px}}
+@media (max-width:900px){.vx .kkr.n10,.vx .kkr.n12,.vx .kkr.n8,.vx .kkr.n6,.vx .kkr.n4,.vx .kkr.n2{--sp:2}.vx .kkr.n3{--sp:3}}
+@media (max-width:620px){.vx .kkr{gap:10px}.vx .kkr.n3,.vx .kkr.n1{--sp:1}.vx .kk{min-height:180px;padding:12px 12px 14px}.vx .kk__z strong{font-size:32px}.vx .kk__t b{font-size:18px}.vx .kk__fl{width:60px;height:40px;margin-bottom:16px}}
+
+/* Device (Robert 28.11.2026): drei Geräte mit Abschnitten der Startseite, darunter grosse Zahl und kräftiger Balken; alle drei Karten gleich gebaut */
+.vx .vg.vg--bild{gap:14px}
+.vx .gk.gk--bild{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:22px 22px 20px;min-height:0}
+.vx .gk__buehne{height:230px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:18px;padding:4px 0 0}
+.vx .gk__buehne img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.vx .gk--bild:hover .gk__buehne img{transform:translateY(-4px)}
+.vx .gk__t{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.vx .gk__t b{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1}
+.vx .gk__z{display:flex;align-items:baseline;gap:10px}
+.vx .gk__z strong{font-family:var(--serif);font-weight:400;font-size:44px;line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.vx .gk__z em{font-style:normal;font-family:var(--mono);font-size:15px;color:var(--gold1)}
+.vx .gk--bild .kk__bal{margin-top:14px}
+.vx .gk--bild[data-r]:not(.rg-los) .kk__bal i{transform:scaleX(0)}
+@media (max-width:900px){.vx .vg.vg--bild{grid-template-columns:repeat(3,minmax(0,1fr))}.vx .gk__buehne{height:160px}.vx .gk__z strong{font-size:34px}.vx .gk__t{flex-direction:column;gap:4px}}
+@media (max-width:620px){.vx .vg.vg--bild{grid-template-columns:minmax(0,1fr)}.vx .gk__buehne{height:200px}.vx .gk__t{flex-direction:row}}
+.vx .kkr{margin-top:16px}

@@ -1,0 +1,44 @@
+/* Neuer Look (26.11.2026) für die Anleitung und die Prüfseite von Guests: dunkles Glas wie das Control panel (_entwurf-dashboard/runde2/stil.css «t-glas»).
+   Wird als letztes geladen; die Seiten behalten Aufbau und Inhalt. */
+:root{--tx:#f3ece2;--tx2:rgba(243,236,226,.74);--tx3:rgba(243,236,226,.5);--gold1:#e6c39a;--gold2:#a8734a;--li:rgba(255,235,210,.12);
+  --glas:linear-gradient(165deg,rgba(255,238,215,.12),rgba(255,238,215,.035) 45%,rgba(18,13,10,.22));--glas-s:inset 0 1px 0 rgba(255,240,220,.2),inset 0 -1px 0 rgba(0,0,0,.3),0 0 0 1px rgba(255,235,210,.14);
+  --navy:#f3ece2;--tinte:#f3ece2;--taupe:#e6c39a;--weiss:#f3ece2;--papier:#0d0b09;color-scheme:dark}
+html{background:#0d0b09}
+body{color:var(--tx)!important;background:#0d0b09 url(neu/b14-weich.webp) center/cover fixed no-repeat!important;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%),linear-gradient(180deg,rgba(14,11,9,.7),rgba(14,11,9,.25) 18%,rgba(14,11,9,.45) 70%,rgba(14,11,9,.88))}
+.kopf{background:linear-gradient(180deg,rgba(13,11,9,.95),rgba(13,11,9,.8))!important;box-shadow:inset 0 -1px 0 rgba(230,195,154,.18)!important;color:var(--tx)!important}
+.kopf b{color:var(--gold1)!important}
+.kopf a.kn,.kopf .kn{color:var(--tx)!important;background:rgba(255,240,222,.06)!important;box-shadow:inset 0 0 0 1px rgba(255,235,210,.2)!important}
+.kopf a.gold,.kopf .kn:not(.kn--linie){background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important;box-shadow:none!important}
+.hero{border-bottom:1px solid rgba(230,195,154,.18)}
+.hero h1,.hero p{color:var(--tx)}
+.hero h1 em,.hero span.m{color:var(--gold1)}
+main h1,main h2,main h3,.k h2{color:var(--tx)!important}
+.k h2 em,main h2 em{color:var(--gold1)!important}
+.k{border-color:rgba(230,195,154,.22)!important}
+.k .m,figcaption,.hilfe b,.inhalt a b{color:var(--gold1)!important}
+.k p.s,.satz,main p{color:var(--tx2)}
+.inhalt a,.k ol li,.hilfe div,.blatt,.lex article{background:var(--glas)!important;box-shadow:var(--glas-s)!important;color:var(--tx)!important}
+.k ol li::before{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important}
+.k .gut{background:linear-gradient(165deg,rgba(230,195,154,.16),rgba(168,115,74,.06))!important;box-shadow:inset 0 0 0 1px rgba(230,195,154,.35)!important;color:var(--tx)!important}
+.k .gut b{color:var(--gold1)!important}
+figure img{box-shadow:0 0 0 1px rgba(230,195,154,.25),0 30px 50px -30px rgba(0,0,0,.9)!important}
+.gross{background:rgba(8,6,5,.92)!important}
+/* Prüfseite */
+.gr{background:rgba(255,240,222,.05)!important;color:var(--gold1)!important}
+.blatt *{border-color:var(--li)!important}
+.blatt b,.blatt strong,.lex article b,.lex article h3{color:var(--tx)!important}
+.blatt span,.blatt small,.blatt td,.blatt li,.lex article p,.lex article span{color:var(--tx2)}
+.blatt a,.lex a{color:var(--gold1)!important}
+.rep .kn{background:rgba(255,240,222,.06)!important;box-shadow:inset 0 0 0 1px rgba(255,235,210,.22)!important;color:var(--tx)!important}
+.rep .kn.scharf{background:#a8232a!important;color:#fff!important;box-shadow:none!important}
+.leer{color:var(--tx2)!important}
+/* Seitenleiste wie im Werkzeug und bei Edit website (Robert 27.11.2026): links, 280 px, fährt mit; am Handy und Tablet wie bisher ohne Leiste */
+:root{--li2:rgba(255,235,210,.18);--serif:'Gloock',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace}
+.nl-lay--seite{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:22px;align-items:start;padding:var(--nl-rand) var(--nl-rand) 48px}
+.nl-seite{min-width:0;border-radius:22px;overflow:visible;background:rgba(13,11,9,.35);box-shadow:inset 0 0 0 1px rgba(255,235,210,.12)}
+.nl-seite .kopf{border-radius:22px 22px 0 0}
+.nl-seite main{max-width:none}
+@media (max-width:1180px){.nl-lay--seite{display:block;padding:0}.nl-lay--seite .nl-rail{display:none}.nl-seite{border-radius:0;box-shadow:none;background:none;overflow:visible}.nl-seite .kopf{border-radius:0}}
+.nl-lay--seite{padding-bottom:28px}
+@media (max-width:1180px){.nl-lay--seite{padding-bottom:0}}

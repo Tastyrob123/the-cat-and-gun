@@ -1,0 +1,133 @@
+{
+"art": "instagram",
+"format": "insta",
+"vorlagen": [
+{
+"id": "instagram-001",
+"titel": "Post · Super Juices",
+"bereich": "Super Juices",
+"vorlage": "geteilt",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b36",
+"ueber": "Super Juices",
+"titel": "Available all day, everyday.",
+"text": "Because feeling good should taste this good.",
+"aktion": "@thecatandgun"
+}
+},
+{
+"id": "instagram-002",
+"titel": "Post · Eggs your way",
+"bereich": "Café and kitchen",
+"vorlage": "buehne",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b01",
+"ueber": "Brekky Specials · 7:00 – 10:30",
+"titel": "Eggs your way",
+"text": "Three eggs on homemade sourdough",
+"aktion": "7AM – 10PM DAILY"
+}
+},
+{
+"id": "instagram-003",
+"titel": "Post · Desserts",
+"bereich": "Café and kitchen",
+"vorlage": "deckel",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Homemade",
+"titel": "Save room for dessert. Always.",
+"unter": "Tiramisu · Mango Float · Cookie Cream Crunch",
+"fuss": "@thecatandgun"
+}
+},
+{
+"id": "instagram-004",
+"titel": "Post · Coconut",
+"bereich": "Super Juices",
+"vorlage": "deckel",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Hot day?",
+"titel": "Grab a coconut.",
+"text": "Stay cool, Siargao. Fresh coconut water at The Cat & Gun.",
+"fuss": "@thecatandgun"
+}
+},
+{
+"id": "instagram-005",
+"titel": "Post · Pool table",
+"bereich": "Pool table",
+"vorlage": "ansicht",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b09",
+"titel": "Then someone picked up a cue.",
+"unter": "@thecatandgun"
+},
+"format": "ig11"
+},
+{
+"id": "instagram-006",
+"titel": "Post · See you",
+"bereich": "Out front",
+"vorlage": "ansicht",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b08",
+"titel": "See you at The Cat & Gun!",
+"unter": "Catangnan · Siargao"
+}
+}
+]
+}

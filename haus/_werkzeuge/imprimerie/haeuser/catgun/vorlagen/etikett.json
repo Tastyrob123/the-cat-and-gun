@@ -1,0 +1,246 @@
+{
+"art": "etikett",
+"format": "et84",
+"vorlagen": [
+{
+"id": "etikett-001",
+"titel": "Label · Melonberry",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Melonberry",
+"text": "Strawberry, watermelon, lemon, mint and local honey",
+"unter": "Super Juices"
+}
+},
+{
+"id": "etikett-002",
+"titel": "Label · Mango Tango",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Mango Tango",
+"text": "Mango, orange, lemon, local honey and basil",
+"unter": "Super Juices"
+}
+},
+{
+"id": "etikett-003",
+"titel": "Label · Pineapple Punch",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Pineapple Punch",
+"text": "Pineapple, watermelon, strawberry and lemon",
+"unter": "Super Juices"
+}
+},
+{
+"id": "etikett-004",
+"titel": "Label · The Green Glow",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "creme",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "The Green Glow",
+"text": "Cucumber, parsley, lemon, ginger and local honey",
+"unter": "Super Juices"
+}
+},
+{
+"id": "etikett-005",
+"titel": "Label · Turbo Tonic",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Turbo Tonic",
+"text": "Lemon, orange, pineapple, carrots, ginger and turmeric",
+"unter": "Super Juices"
+}
+},
+{
+"id": "etikett-006",
+"titel": "Label · The Purple Potion",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "The Purple Potion",
+"text": "Beetroot, carrot, ginger, lemon and pineapple",
+"unter": "Super Juices"
+}
+},
+{
+"id": "etikett-007",
+"titel": "Label · Fresh Juice",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "creme",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Fresh Juice",
+"text": "Mango, watermelon, orange or pineapple",
+"unter": "Catangnan · Siargao"
+}
+},
+{
+"id": "etikett-008",
+"titel": "Label · Fresh Shake",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Fresh Shake",
+"text": "Mango, watermelon, orange or pineapple",
+"unter": "Catangnan · Siargao"
+}
+},
+{
+"id": "etikett-009",
+"titel": "Label · Fresh Lemonade",
+"bereich": "Super Juices",
+"vorlage": "etikett",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Fresh Lemonade",
+"text": "Freshly squeezed lemon, lightly sweetened over ice",
+"unter": "Catangnan · Siargao"
+}
+},
+{
+"id": "etikett-010",
+"titel": "Label · Hibiscus + Red Berries Kombucha",
+"bereich": "Bar and draught beer",
+"vorlage": "etikett",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Hibiscus + Red Berries Kombucha",
+"text": "",
+"unter": "Kombucha"
+}
+},
+{
+"id": "etikett-011",
+"titel": "Label · Guava Kombucha",
+"bereich": "Bar and draught beer",
+"vorlage": "etikett",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Guava Kombucha",
+"text": "",
+"unter": "Kombucha"
+}
+},
+{
+"id": "etikett-012",
+"titel": "Label · Tropical Mango Kombucha",
+"bereich": "Bar and draught beer",
+"vorlage": "etikett",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Tropical Mango Kombucha",
+"text": "",
+"unter": "Kombucha"
+}
+}
+]
+}

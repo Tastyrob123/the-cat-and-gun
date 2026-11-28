@@ -1,0 +1,247 @@
+{
+ "haus": "The Cat & Gun",
+ "namen": {
+  "zentrale": "Control panel",
+  "website": "Edit website",
+  "karten": "Menus & price lists",
+  "gaeste": "Inquiries & chat",
+  "marke": "Brand book",
+  "markeneditor": "Brand book editor",
+  "sticker": "Sticker editor",
+  "druck": "Print & feed",
+  "besuche": "Visitors"
+ },
+ "kennung": "42fe90ae1c17",
+ "stand": {
+  "fotos": 36,
+  "haus": 36,
+  "hochgeladen": 0,
+  "farben": 37,
+  "dateien": 20,
+  "datum": "2026-11-28"
+ },
+ "farben": [
+  {
+   "k": "schwarz",
+   "n": "Black",
+   "h": "#141210",
+   "welt": "druck"
+  },
+  {
+   "k": "papier",
+   "n": "Paper",
+   "h": "#f5f0e7",
+   "welt": "druck"
+  },
+  {
+   "k": "weiss",
+   "n": "White",
+   "h": "#ffffff",
+   "welt": "druck"
+  },
+  {
+   "k": "rot",
+   "n": "Pool table red",
+   "h": "#a8232a",
+   "welt": "druck"
+  },
+  {
+   "k": "rot-hell",
+   "n": "Light red",
+   "h": "#d0453e",
+   "welt": "druck"
+  },
+  {
+   "k": "gruen",
+   "n": "Palm green",
+   "h": "#24452f",
+   "welt": "druck"
+  },
+  {
+   "k": "holz",
+   "n": "Wood",
+   "h": "#9b5d33",
+   "welt": "druck"
+  },
+  {
+   "k": "rattan",
+   "n": "Rattan",
+   "h": "#d9b88a",
+   "welt": "druck"
+  },
+  {
+   "k": "grau",
+   "n": "Grey",
+   "h": "#6e675e",
+   "welt": "druck"
+  },
+  {
+   "k": "kreide",
+   "n": "Chalk",
+   "h": "#f1eee6",
+   "welt": "druck"
+  },
+  {
+   "k": "kreide-rot",
+   "n": "Red chalk",
+   "h": "#ee8a7c",
+   "welt": "druck"
+  },
+  {
+   "k": "gelb",
+   "n": "Yellow",
+   "h": "#f2c94c",
+   "welt": "druck"
+  },
+  {
+   "k": "kaffee",
+   "n": "Coffee",
+   "h": "#5a3826",
+   "welt": "druck"
+  },
+  {
+   "k": "kokos",
+   "n": "Coconut green",
+   "h": "#6f8f3a",
+   "welt": "druck"
+  },
+  {
+   "k": "matcha",
+   "n": "Matcha",
+   "h": "#8fae5a",
+   "welt": "druck"
+  },
+  {
+   "k": "saft-melonberry",
+   "n": "Melonberry",
+   "h": "#d8323f",
+   "welt": "saft"
+  },
+  {
+   "k": "saft-mango-tango",
+   "n": "Mango Tango",
+   "h": "#f0a12a",
+   "welt": "saft"
+  },
+  {
+   "k": "saft-pineapple-punch",
+   "n": "Pineapple Punch",
+   "h": "#f2c94c",
+   "welt": "saft"
+  },
+  {
+   "k": "saft-the-green-glow",
+   "n": "The Green Glow",
+   "h": "#8cbf3f",
+   "welt": "saft"
+  },
+  {
+   "k": "saft-turbo-tonic",
+   "n": "Turbo Tonic",
+   "h": "#e8762b",
+   "welt": "saft"
+  },
+  {
+   "k": "saft-the-purple-potion",
+   "n": "The Purple Potion",
+   "h": "#7d2552",
+   "welt": "saft"
+  },
+  {
+   "k": "web-tinte",
+   "n": "Ink",
+   "h": "#15120f",
+   "welt": "website"
+  },
+  {
+   "k": "web-tinte2",
+   "n": "Ink 2",
+   "h": "#211c18",
+   "welt": "website"
+  },
+  {
+   "k": "web-putz",
+   "n": "Plaster",
+   "h": "#f5f1ea",
+   "welt": "website"
+  },
+  {
+   "k": "web-putz2",
+   "n": "Plaster 2",
+   "h": "#ece5d9",
+   "welt": "website"
+  },
+  {
+   "k": "web-sand",
+   "n": "Sand",
+   "h": "#e9dfcf",
+   "welt": "website"
+  },
+  {
+   "k": "web-salbei",
+   "n": "Sage",
+   "h": "#e6e8dc",
+   "welt": "website"
+  },
+  {
+   "k": "web-holz",
+   "n": "Wood",
+   "h": "#8a5634",
+   "welt": "website"
+  },
+  {
+   "k": "web-holz-tief",
+   "n": "Dark wood",
+   "h": "#4a2f20",
+   "welt": "website"
+  },
+  {
+   "k": "web-holz-hell",
+   "n": "Light wood",
+   "h": "#c99d70",
+   "welt": "website"
+  },
+  {
+   "k": "web-filz",
+   "n": "Felt red",
+   "h": "#b5343a",
+   "welt": "website"
+  },
+  {
+   "k": "web-text",
+   "n": "Text",
+   "h": "#1d1915",
+   "welt": "website"
+  },
+  {
+   "k": "web-grau",
+   "n": "Grey",
+   "h": "#6c6157",
+   "welt": "website"
+  },
+  {
+   "k": "web-hell",
+   "n": "Light",
+   "h": "#f4efe7",
+   "welt": "website"
+  },
+  {
+   "k": "web-hell2",
+   "n": "Light 2",
+   "h": "#bdb2a5",
+   "welt": "website"
+  },
+  {
+   "k": "curry",
+   "n": "Curry",
+   "h": "#c27a2c",
+   "welt": "druck"
+  },
+  {
+   "k": "elfenbein",
+   "n": "Ivory",
+   "h": "#f7f1e3",
+   "welt": "druck"
+  }
+ ]
+}

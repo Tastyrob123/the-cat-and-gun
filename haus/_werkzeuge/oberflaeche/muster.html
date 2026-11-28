@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pattern page · Tools</title><meta name="robots" content="noindex, nofollow">
+<!-- Musterseite des Pakets: jeder Baustein einmal, im Kleid des Hauses. Im Haus unter /the-cat-and-gun/haus/_werkzeuge/oberflaeche/muster.html?haus=catgun (/the-cat-and-gun/haus/assets/oberflaeche/muster.html leitet dorthin).
+     So wird auch jedes Werkzeug eingebunden: 1. kleid/<haus>.js  2. grund.css  3. rahmen-<inseln|buehne>.css  4. kleid/<haus>.css  5. oberflaeche.js -->
+<script>var WOH = (new URLSearchParams(location.search).get('haus') || 'catgun').replace(/[^a-z]/g, ''); document.write('<script src="kleid/' + WOH + '.js?v=1795872050"><\/script>');</script>
+<script>document.write('<link rel="stylesheet" href="grund.css?v=1795872050"><link rel="stylesheet" href="rahmen-' + WO_HAUS.rahmen + '.css?v=1795872050"><link rel="stylesheet" href="kleid/' + WOH + '.css?v=1795872050"><script src="oberflaeche.js?v=1795872050"><\/script>');</script>
+</head>
+<body class="wo-app">
+<header class="wo-kopf" id="kopf"></header>
+<nav class="wo-rand" id="rand" aria-label="Sections"></nav>
+<main class="wo-raum" id="raum"></main>
+<footer class="wo-leiste" id="leiste"></footer>
+<script>
+(function () {
+  var H = WO.haus, f = H.foto, n = 0;
+  /* Jede Zeile ein eigenes Foto der Website (oberflaeche_pruefen.js Punkt 5), nie sechsmal dasselbe */
+  var fotos = ['b08', 'b11', 'b14', 'b17', 'b20', 'b26', 'b29', 'b32', 'b19', 'b24'].map(function (k) { return '/the-cat-and-gun/haus/assets/bild/' + k + '-800.webp'; });
+  var fo = function () { return fotos[n++ % fotos.length]; };
+  /* Musterseite: die Reihe im Kopf führt zum Saal des Werkzeugs im Control panel (dort steht sein Stand), damit kein Knopf ins Leere zeigt */
+  var cp = H.wege.zentrale; H.reihe.forEach(function (k) { var w = (H.wege[k] || '').replace(/\/$/, '').split('/').pop(); if (w) H.wege[k] = cp + '#' + w; });
+  document.getElementById('kopf').innerHTML = WO.kopf({ werkzeug: 'website', unter: 'Website', titel: 'Pattern page', stand: 'Every building block', pruefung: '#', anleitung: '#', website: '/' });
+  document.getElementById('rand').innerHTML = WO.rand([
+    { eintraege: [{ text: 'Overview', an: true, href: '#' }] },
+    { titel: 'Group', eintraege: [{ text: 'Entry', href: '#' }, { text: 'Entry with number', zahl: 3, href: '#' }, { text: 'Another entry', href: '#' }] },
+    { titel: 'For all pages', eintraege: [{ text: 'Details of the house', href: '#' }, { text: 'Hours & prices', href: '#' }] }
+  ], { website: '/', anleitung: '#', pruefung: '#' });
+  document.getElementById('leiste').innerHTML = WO.leiste({ titel: 'Draft: 1 change waiting', satz: 'Saved, not on the website yet.', entwurf: true,
+    knoepfe: WO.knopf('Before, after', 'auge', 'glas', { klein: true }) + WO.knopf('Save', 'haken', 'glas', { klein: true }) + WO.knopf('Publish', 'hoch', 'gold', { klein: true }) });
+  var kachel = function (t, s, z) { return '<a class="wo-ag" href="#"><span class="wo-ag__b"><img src="' + fo() + '" alt=""></span><span class="wo-ag__t"><i class="wo-ag__z">' + WO.ic(z) + '</i><b>' + t + '</b><span>' + s + '</span></span></a>'; };
+  var bereich = function (t, n, s) { return '<a class="wo-bk" href="#"><span class="wo-bk__b"><img src="' + fo() + '" alt=""></span><span class="wo-bk__t"><b>' + t + '</b><small>' + n + '</small><span>' + s + '</span></span><i class="wo-bk__p">' + WO.ic('pfeil') + '</i></a>'; };
+  var an = function (n, d, st, neu) { return '<a class="wo-an' + (neu ? ' wo-an--neu' : '') + '" href="#"><span class="wo-an__b"><img src="' + fo() + '" alt=""></span><span class="wo-an__t"><span class="wo-an__k"><i class="wo-sp">DE</i>Table · 2 people</span><b>' + n + '</b><small>' + d + '</small></span><span class="wo-an__st"><em>' + st + '</em><small>1 day ago</small></span></a>'; };
+  document.getElementById('raum').innerHTML =
+    WO.startbild({ werkzeug: 'website', h1: '<span data-wo-gruss>' + WO.gruss() + '</span> <em>What do we change today?</em>', satz: 'The welcome is the same in every tool of the house: greeting by time of day, one sentence on what the tool does, a «Guide» button, a photo of the house.',
+      knoepfe: WO.knopf('Guide', 'buch', 'gold', { href: '#' }) + WO.knopf('Second way', 'chat', 'glas', { href: '#' }) })
+    + '<div class="wo-lage"><div class="wo-lg"><i class="wo-lg__z">' + WO.ic('stift') + '</i><span class="wo-mk">Empty</span><b>Nothing open</b><p>What you save collects here.</p></div>'
+    + '<div class="wo-lg"><i class="wo-lg__z">' + WO.ic('welt') + '</i><span class="wo-mk">Status</span><b>As built</b><p>One sentence on the status.</p><a class="wo-lk" href="#">Go there</a></div>'
+    + '<div class="wo-lg"><i class="wo-lg__z">' + WO.ic('karte') + '</i><span class="wo-mk">Status</span><b>Three boxes</b><p>Always three, stacked on the phone.</p><a class="wo-lk" href="#">Go there</a></div></div>'
+    + '<h2 class="wo-zw">Tiles <em>with photo</em></h2><div class="wo-aufg">' + kachel('Change a text', 'Short sentence, what for.', 'stift') + kachel('Swap a photo', 'Short sentence, what for.', 'foto') + kachel('Note for guests', 'Short sentence, what for.', 'glocke') + kachel('Phone or email', 'Short sentence, what for.', 'tel') + '</div>'
+    + '<h2 class="wo-zw">Sections <em>as a list</em></h2><div class="wo-ber">' + bereich('Home page', '1 page', 'One sentence on what this section holds.') + bereich('Menu', '5 pages', 'One sentence on what this section holds.') + bereich('Legal', '1 page', 'One sentence on what this section holds.') + '</div>'
+    + '<h2 class="wo-zw">List, filter <em>and detail</em></h2><div class="wo-eing"><div class="wo-eing__leiste"><div class="wo-seg" role="group"><button type="button" aria-pressed="true">All <b>3</b></button><button type="button" aria-pressed="false">Open <b>2</b></button><button type="button" aria-pressed="false">Done <b>1</b></button></div>'
+    + '<label class="wo-such">' + WO.ic('suche') + '<input type="search" placeholder="Search"></label><span class="wo-hinw">Examples, marked as examples</span></div>'
+    + '<div class="wo-eing__liste">' + an('Example guest', '14 to 17 November', 'New', true) + an('Second guest', 'Saturday, 7.30 pm', 'Open') + an('Third guest', '3 and 4 March', 'Done') + '</div>'
+    + '<article class="wo-det"><header class="wo-det__kopf"><span class="wo-mk">Table · Example</span><h3>Example guest</h3><dl class="wo-det__daten"><div><dt>Dates</dt><dd>14 to 17 November</dd></div><div><dt>People</dt><dd>2</dd></div></dl></header>'
+    + '<div class="wo-det__brief"><div class="wo-brief"><div class="wo-brief__kopf">' + WO.zeichen() + '<b>' + H.voll + '</b><span>Letterhead of the house</span></div><div class="wo-brief__text"><p>Hello</p><p>A letter on paper, open spots <mark class="wo-lu">marked</mark>.</p></div></div>'
+    + '<div class="wo-det__kn">' + WO.knopf('Save as PDF', 'pdf', 'dunkel') + WO.knopf('Copy text', 'kopie', 'hell') + '</div></div></article></div>'
+    + '<h2 class="wo-zw">Fields <em>and choice</em></h2><div class="wo-fe"><div class="wo-fe__kopf"><span class="wo-mk">Change entry</span><b>Example</b></div><div class="wo-fe__reihe"><label class="wo-feld"><span>Name</span><input value="Example"></label><label class="wo-feld"><span>Extra</span><input value=""></label></div>'
+    + '<div class="wo-fe__reihe wo-fe__reihe--u"><div class="wo-feld"><span>Kind</span><div class="wo-wahl" role="group"><button type="button" aria-pressed="false">One</button><button type="button" aria-pressed="true">Two</button><button type="button" aria-pressed="false">Three</button></div></div><div class="wo-fe__kn">' + WO.knopf('Cancel', 'x', 'hell', { klein: true }) + WO.knopf('Apply', 'haken', 'dunkel', { klein: true }) + '</div></div></div>'
+    + '<div class="wo-quittung" role="status"><i>' + WO.ic('haken') + '</i><span><b>Saved</b>What changed, in one sentence.</span><a href="#">Before, after</a><a href="#">Undo</a><button type="button" aria-label="Close">' + WO.ic('x') + '</button></div>';
+  document.addEventListener('click', function (e) { var b = e.target.closest('.wo-seg button, .wo-wahl button'); if (b) b.parentNode.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); if (e.target.closest('a[href="#"]')) e.preventDefault(); });
+})();
+</script>
+</body></html>

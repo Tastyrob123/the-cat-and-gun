@@ -1,0 +1,132 @@
+{
+"art": "aushang",
+"format": "a4h",
+"vorlagen": [
+{
+"id": "aushang-001",
+"titel": "Notice · Opening hours",
+"bereich": "Out front",
+"vorlage": "aushang",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Open daily",
+"titel": "7AM – 10PM",
+"text": "We’re here for you every day of the week!",
+"aktion": "Catangnan · Siargao"
+}
+},
+{
+"id": "aushang-002",
+"titel": "Notice · Brekky Specials",
+"bereich": "Café and kitchen",
+"vorlage": "aushang",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Brekky Specials",
+"titel": "7:00 – 10:30",
+"text": "Any classic bagel and coffee (BLT, Bacon & Egg, Sausage & Egg, Tuna)",
+"aktion": "Bagel & Coffee Combo · 350 PHP"
+}
+},
+{
+"id": "aushang-003",
+"titel": "Notice · Playground",
+"bereich": "Playground",
+"vorlage": "aushang",
+"ton": "creme",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Playground in the backyard",
+"titel": "Good food for grown-ups, fun times for the little ones.",
+"text": "Our backyard is full of smiles and laughter",
+"aktion": ""
+}
+},
+{
+"id": "aushang-004",
+"titel": "Notice · Pool table",
+"bereich": "Pool table",
+"vorlage": "aushang",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Pool table",
+"titel": "Then someone picked up a cue.",
+"text": "Plans were probably just drinks and a bite.",
+"aktion": "7AM – 10PM DAILY"
+}
+},
+{
+"id": "aushang-005",
+"titel": "Notice · Coconut",
+"bereich": "Super Juices",
+"vorlage": "aushang",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Hot day?",
+"titel": "Grab a coconut.",
+"text": "Stay cool, Siargao. Fresh coconut water at The Cat & Gun.",
+"aktion": "7AM – 10PM DAILY"
+}
+},
+{
+"id": "aushang-006",
+"titel": "Notice · Food delivery",
+"bereich": "Out front",
+"vorlage": "aushang",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "The Cat & Gun",
+"titel": "Food Delivery",
+"text": "travelgo.ph/restaurant/the-cat-gun",
+"aktion": "7AM – 10PM DAILY"
+}
+}
+]
+}

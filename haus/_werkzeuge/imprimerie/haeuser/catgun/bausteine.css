@@ -1,0 +1,44 @@
+/* Print & feed · The Cat & Gun: Reiter «Brand kit» (Bausteine aus dem Markenfundus) und Zeichen/Elemente im Fach. Werkzeuge 2.0.
+   Gleiche Formen wie die Felder der Vorlage (Farbknöpfe .farben, Kacheln wie .vk im Reiter «Vorlagen»). */
+#bausteine h3{margin:22px 0 10px;font:400 18px/1.2 var(--serif);color:var(--wo-tinte,#1d1915)}
+#bausteine h3:first-child{margin-top:6px}
+.bs-welt{margin:0 0 12px}
+.bs-welt small{display:block;margin:0 0 6px;font:400 13px/1.3 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--wo-leise,#6c6157)}
+.bs-schriften{display:grid;gap:8px}
+.bs-schriften button{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:10px 14px;border:1px solid var(--wo-linie,rgba(29,25,21,.14));border-radius:12px;background:#fbf8f3;cursor:pointer;text-align:left;transition:border-color .3s,transform .3s}
+.bs-schriften button:hover{border-color:#8a5634;transform:translateX(2px)}
+.bs-schriften b{font-weight:400;font-size:19px;line-height:1.1;color:#1d1915}
+.bs-schriften small{font:400 13px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#6c6157}
+.bs-elemente{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.bs-elemente--marke{grid-template-columns:repeat(2,minmax(0,1fr))}   /* zwei Zeichen (Ampersand, Wordmark), THE CAT raus 23.11.2026 */
+.bs-elemente button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px 8px;border:1px solid var(--wo-linie,rgba(29,25,21,.14));border-radius:12px;background:#fbf8f3;cursor:pointer;transition:border-color .3s,transform .3s}
+.bs-elemente button:hover{border-color:#8a5634;transform:translateY(-2px)}
+.bs-elemente button>span{display:block;width:100%;height:58px}
+.bs-elemente button>span svg{width:100%;height:100%}
+/* Nachbesserung 4 (Prüfung 4 Punkt 5): Namen ganz, ohne «…» und ohne Bruch im Wort; Elemente darum zwei Spalten breit */
+.bs-elemente:not(.bs-elemente--marke){grid-template-columns:repeat(2,minmax(0,1fr))}
+.bs-elemente small{font:400 13px/1.25 var(--sans);color:#4a3f36;text-align:center;overflow-wrap:normal;word-break:normal;hyphens:manual;min-height:2.5em;max-width:100%}
+#bausteine .farben{display:flex;flex-wrap:wrap;gap:6px}
+#bausteine .farben button{width:28px;height:28px;border-radius:50%;border:1px solid rgba(29,25,21,.18);cursor:pointer}
+.lf__svg{display:block;width:100%;height:54px}
+.lf__svg svg{width:100%;height:100%}
+@media (max-width:640px){.bs-elemente{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Stücke des Hauses (Mac 23.11.2026): Vorschaubild mit durchsichtigen Ecken (runde Sticker, Untersetzer), der Schatten folgt der Form.
+   Seiten ohne eigenen Grund (Druck auf Shirt, Glas, Beutel) stehen auf einem Schachbrett, damit helle Schrift sichtbar bleibt. */
+#start .papier.hs-papier{background:transparent;box-shadow:none!important;overflow:visible}
+
+#start .papier.hs-papier::before,#start .papier.hs-papier::after{display:none}
+#start a.stueck--weg,#start a.stueck--weg:hover{text-decoration:none;color:inherit}
+/* Robert 24.11.2026 («sehr hässliche Schatten»): die Stücke des Hauses liegen in drei schwebenden Ebenen, ein Filterschatten wird dort in Safari eckig abgeschnitten; darum ohne Schatten */
+#start .papier.hs-papier img{display:block;width:100%;height:100%;object-fit:contain;filter:none}
+#start .papier.hs-papier--frei{background:repeating-conic-gradient(#d9d2c9 0 25%,#e8e2db 0 50%) 0 0/12px 12px}
+#start .papier.hs-papier--frei img{filter:none}
+#hsListe .hs-zeile{margin:38px 0 6px}
+#hsListe .hs-zeile:first-child{margin-top:8px}
+
+/* Seitenwahl mit vielen Seiten (Stücke des Hauses, Servietten 10 Seiten, 24.11.2026): nie breiter als der Platz, scrollt seitlich */
+.seitenwahl{max-width:100%;min-width:0;overflow-x:auto;scrollbar-width:none}
+.werkzeug .seitenwahl{flex:0 1 auto;max-width:48%}   /* die Werkzeug-Insel daneben behält ihren Platz */
+.werkzeug .insel{flex:1 1 0;min-width:0}
+.seitenwahl::-webkit-scrollbar{display:none}
+.seitenwahl button{flex:0 0 auto}

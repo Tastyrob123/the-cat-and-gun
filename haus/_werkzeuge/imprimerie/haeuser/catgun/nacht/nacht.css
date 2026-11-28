@@ -1,0 +1,462 @@
+/* Print & feed · neuer Look des Control panels (26.11.2026). Vorlage _entwurf-dashboard/print-bereich + runde2/stil.css + runde3/zusatz.css,
+   Seitenleiste wie im Panel (dx-rail dx-lack6). Liegt als letzte Schicht über allem; entfernen = vorheriger Stand. Nur Aussehen. */
+@font-face{font-family:"Gloock";src:url(../schriften/gloock-400.woff2) format("woff2");font-display:block}
+@font-face{font-family:"DM Mono";src:url(../schriften/dmmono-400.woff2) format("woff2");font-display:block}
+html.nacht{--nl-gold1:#e6c39a;--nl-gold2:#a8734a;--nl-gruen:#8cc29a;--nl-tx:#f3ece2;--nl-tx2:rgba(243,236,226,.78);--nl-tx3:rgba(243,236,226,.58);
+  --nl-li:rgba(255,235,210,.12);--nl-li2:rgba(255,235,210,.2);--nl-feld:rgba(0,0,0,.24);
+  --nl-glas:linear-gradient(165deg,rgba(255,238,215,.12),rgba(255,238,215,.035) 45%,rgba(18,13,10,.22));
+  --nl-glas-s:inset 0 1px 0 rgba(255,240,220,.2),inset 0 -1px 0 rgba(0,0,0,.3);
+  --nl-goldv:linear-gradient(150deg,#e6c39a,#a8734a);
+  --nl-raum:#110d0b}
+
+/* ================= Raum: dunkel, weiches Foto des Hauses wie das Panel ================= */
+html.nacht body{background:var(--nl-raum)}
+html.nacht #start.start.ms{background:var(--nl-raum)!important;color:var(--nl-tx);isolation:isolate;
+  grid-template-columns:268px minmax(0,1fr)!important;grid-template-rows:auto minmax(0,1fr)!important;column-gap:18px;padding:22px 22px 0 22px}
+html.nacht #start.start.ms::before{content:"";position:fixed;inset:0;z-index:-2;background:url(b19-weich.webp) center/cover no-repeat;opacity:.9}
+html.nacht #start.start.ms::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%),linear-gradient(180deg,rgba(14,11,9,.7),rgba(14,11,9,.15) 18%,rgba(14,11,9,.35) 70%,rgba(14,11,9,.85))}
+
+/* ================= Seitenleiste wie im Panel ================= */
+html.nacht #start.start.ms .ms-leiste{grid-column:1;grid-row:1/3;align-self:start;margin:0 0 22px;padding:8px;border-radius:30px;color:var(--nl-tx);
+  background:linear-gradient(170deg,#1d1814,#110e0b 60%,#0e0b09)!important;border:1px solid rgba(230,195,154,.35);box-shadow:0 40px 80px -50px rgba(0,0,0,.95)!important;
+  max-height:calc(100vh - 44px);overflow:auto;scrollbar-width:none;position:relative;top:0}
+html.nacht #start.start.ms .ms-leiste::-webkit-scrollbar{display:none}
+html.nacht .ms-leiste>*:not(.nl-rahmen){display:none!important}
+.nl-rahmen{display:flex;flex-direction:column;border:1px solid rgba(230,195,154,.22);border-radius:23px;padding:20px 8px 14px;min-height:100%}
+.nl-mono{font-family:var(--mono);font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--nl-tx3);display:flex;align-items:center;gap:9px}
+.nl-ico{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nl-marke{display:flex;flex-direction:column;align-items:center;gap:12px;padding:6px 0 20px;border-bottom:1px solid rgba(230,195,154,.16);text-decoration:none}
+.nl-marke img{width:118px;height:auto;display:block}
+.nl-marke .nl-mono{font-size:13px;letter-spacing:.22em;color:var(--nl-tx3)}
+.nl-rk{justify-content:space-between;padding:16px 12px 6px;color:rgba(230,195,154,.7)}
+.nl-rk span{letter-spacing:.08em;font-size:13px}
+.nl-rahmen a,.nl-rahmen .nl-rfuss button{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:15px;color:var(--nl-tx2);text-decoration:none;position:relative;
+  border:0;background:none;width:100%;text-align:left;font:inherit;cursor:pointer;transition:background .25s}
+.nl-rahmen a b,.nl-rahmen .nl-rfuss button b{display:block;font:500 15px/1.25 var(--sans);color:var(--nl-tx)}
+.nl-rahmen a i,.nl-rahmen .nl-rfuss button i{display:block;font-style:normal;font-size:13px;line-height:1.3;color:var(--nl-tx3);margin-top:1px}
+.nl-rahmen a .nl-ico,.nl-rahmen .nl-rfuss .nl-ico{color:var(--nl-gold1)}
+.nl-rahmen a:not(.nl-jetzt):not(.nl-marke):hover,.nl-rahmen .nl-rfuss button:hover{background:rgba(255,240,222,.06)}
+.nl-rahmen kbd{font-family:var(--mono);font-size:13px;width:24px;height:24px;border-radius:6px;border:1px solid rgba(230,195,154,.32);display:grid;place-items:center;color:var(--nl-tx3);flex:none}
+.nl-tools{display:flex;flex-direction:column;gap:2px}
+.nl-tools a.nl-jetzt{background:var(--nl-goldv)}
+.nl-tools a.nl-jetzt b{color:#1a120c}.nl-tools a.nl-jetzt i{color:rgba(26,18,12,.7)}
+.nl-tools a.nl-jetzt kbd{color:#1a120c;border-color:rgba(26,18,12,.35)}
+.nl-tools a.nl-jetzt .nl-ico{color:#1a120c}
+.nl-panel{margin:12px 0 0}
+.nl-rhaus{margin-top:14px;border-top:1px solid rgba(230,195,154,.16);padding:16px 12px 0;display:flex;flex-direction:column;gap:9px;font-size:13px;color:var(--nl-tx2)}
+.nl-rhaus:empty{display:none}
+.nl-rhaus span{display:flex;gap:9px;align-items:center}.nl-rhaus .nl-ico{width:14px;height:14px;color:var(--nl-gold1)}
+.nl-rfuss{margin-top:14px;border-top:1px solid rgba(230,195,154,.16);padding-top:10px;display:flex;flex-direction:column;gap:2px}
+.nl-rfuss .nl-gespeichert{display:block;padding:8px 12px 0;font-size:13px;line-height:1.4;color:var(--nl-tx3)}
+
+/* ================= Kopfzeile: schmale Glasleiste über der Arbeitsfläche ================= */
+html.nacht #start.start.ms .ms-kopf{grid-column:2;grid-row:1;height:auto;min-height:0;margin:0 0 18px;padding:10px 12px 10px 22px!important;border-radius:999px;
+  background:var(--nl-glas)!important;backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35);
+  border:1px solid rgba(255,235,210,.14)!important;box-shadow:var(--nl-glas-s)!important;color:var(--nl-tx)}
+html.nacht #start.start.ms .ms-kopf::after,html.nacht #start.start.ms .ms-kopf::before{display:none!important}
+html.nacht #start.start.ms .ms-kopf .wo-marke-w,html.nacht #start.start.ms .ms-kopf-zeichen,html.nacht #start.start.ms .ms-kopf-name{display:none!important}
+html.nacht #start.start.ms .ms-suche{flex:1;max-width:none;height:48px;margin:0 auto 0 0;border-radius:999px;background:var(--nl-feld)!important;border:1px solid var(--nl-li2);box-shadow:none!important;color:var(--nl-tx3)}
+html.nacht #start.start.ms .ms-suche svg{color:var(--nl-gold1)}
+html.nacht #start.start.ms .ms-suche input[type=search]{color:var(--nl-tx);font-size:15px}
+html.nacht #start.start.ms .ms-suche input::placeholder{color:var(--nl-tx3)}
+html.nacht #start.start.ms .ms-suche kbd{color:var(--nl-tx3);background:none;border:1px solid var(--nl-li2);font-family:var(--mono)}
+html.nacht #start .rund,html.nacht #start .ms-rund{width:46px;height:46px;border-radius:50%;background:rgba(255,240,222,.06)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-gold1)!important}
+html.nacht #start .rund:hover{background:rgba(255,240,222,.12)!important}
+html.nacht #start .rund svg{color:var(--nl-gold1);stroke:var(--nl-gold1)}
+html.nacht #start .ms-kopf .kn,html.nacht .nl-wk{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 8px 0 20px;border-radius:999px;border:1px solid var(--nl-li2)!important;
+  background:rgba(255,240,222,.06)!important;box-shadow:none!important;color:var(--nl-tx)!important;font:500 14.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;white-space:nowrap}
+html.nacht #start .ms-kopf .kn.ms-kn-neu,html.nacht .nl-wk.nl-gold{background:var(--nl-goldv)!important;color:#1a120c!important;border:0!important;box-shadow:0 10px 24px -14px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.35)!important}
+html.nacht #start .ms-kopf .kn i,html.nacht .nl-wk i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(26,18,12,.85)!important;color:var(--nl-gold1)!important;box-shadow:none!important}
+html.nacht #start .ms-kopf .kn i svg,html.nacht .nl-wk i svg{width:14px;height:14px;stroke:currentColor}
+html.nacht #start .ms-kopf .kn::before,html.nacht #start .ms-kopf .kn::after,html.nacht .nl-wk::before,html.nacht .nl-wk::after{display:none!important}
+html.nacht #start .ms-kopf .kn span,html.nacht .nl-wk span{color:inherit!important;font:inherit!important;letter-spacing:0!important;text-transform:none!important;background:none!important;-webkit-text-fill-color:currentColor}
+
+/* ================= Arbeitsfläche ================= */
+html.nacht #start.start.ms .start__in{grid-column:2;grid-row:2;margin:0!important;background:none!important;box-shadow:none!important;border-radius:0}
+html.nacht #start.start.ms .ms-haupt{padding:0 0 60px!important;scrollbar-color:rgba(230,195,154,.3) transparent}
+
+/* Kopfkachel jeder Ansicht (Vorlage .wkopf): Glas, Foto rechts im Bogen, Titel in Gloock */
+html.nacht #start :is(.ws-sb,.ms-bue){background:var(--nl-glas)!important;backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35);
+  border:1px solid rgba(255,235,210,.14);box-shadow:var(--nl-glas-s)!important;border-radius:22px;color:var(--nl-tx);overflow:hidden;
+  min-height:330px;padding:44px 48px 36px!important;margin:0 0 18px!important;justify-content:flex-start;align-items:flex-start}
+html.nacht #start :is(.ws-sb,.ms-bue)::before,html.nacht #start :is(.ws-sb,.ms-bue)::after{display:none!important}
+html.nacht #start :is(.ws-sb,.ms-bue)>*:not(.ms-bue__foto):not(.wo-sb__foto):not(.nl-tabs){position:relative;z-index:1;max-width:min(640px,56%)}
+html.nacht #start :is(.wo-sb__foto,.ms-bue__foto){position:absolute!important;top:0!important;right:0!important;bottom:0!important;left:auto!important;width:58%!important;height:auto!important;z-index:0;border-radius:0 22px 22px 0;overflow:hidden;
+  -webkit-mask-image:radial-gradient(130% 120% at 100% 50%,#000 58%,transparent 58.4%)!important;mask-image:radial-gradient(130% 120% at 100% 50%,#000 58%,transparent 58.4%)!important;opacity:1!important;transform:none!important}
+html.nacht #start :is(.wo-sb__foto,.ms-bue__foto)::before,html.nacht #start :is(.wo-sb__foto,.ms-bue__foto)::after{display:none!important}
+html.nacht #start :is(.wo-sb__foto,.ms-bue__foto) img{width:100%!important;height:100%!important;object-fit:cover;opacity:1!important;filter:none!important;transform:none!important}
+.nl-kick{color:var(--nl-tx3);margin:0 0 18px}
+.nl-mi{width:14px;height:14px;stroke:var(--nl-gold1);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+html.nacht #start :is(.ws-sb,.ms-bue) h1,html.nacht #start :is(.ws-sb,.ms-bue) .nl-titel{font:400 clamp(64px,6.4vw,100px)/.95 var(--serif)!important;letter-spacing:-.02em;color:var(--nl-tx)!important;text-shadow:none!important;margin:0 0 18px!important;text-align:left}
+html.nacht #start :is(.ws-sb,.ms-bue) .ms-leise,html.nacht #start :is(.ws-sb,.ms-bue) .start__satz,html.nacht #start :is(.ws-sb,.ms-bue) .nl-satz,html.nacht #start :is(.ws-sb,.ms-bue) p{font:400 19px/1.5 var(--sans)!important;color:var(--nl-tx2)!important;text-shadow:none!important;max-width:540px;text-align:left;letter-spacing:0;text-transform:none}
+html.nacht #start .ms-titel{display:block;min-width:0}
+
+/* Übersicht: Titel und Satz der Vorlage, Suchfeld, Stand und Knöpfe */
+html.nacht #start .nl-uebersicht{min-height:400px}
+html.nacht #start .nl-uebersicht .nl-titel{font-size:clamp(80px,8.4vw,124px)!important}
+html.nacht #start .nl-uebersicht #msGruss,html.nacht #start .nl-uebersicht #msSatz{display:none!important}
+.nl-wkst{display:flex;align-items:center;gap:12px;margin:22px 0 4px;flex-wrap:wrap}
+html.nacht #start .nl-wkst #msAlle{display:inline-flex!important;align-items:center;gap:10px;flex-basis:100%;margin:0 0 6px;padding:0;background:none!important;border:0;box-shadow:none;
+  font:400 14.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx)!important}
+html.nacht #start .nl-wkst #msAlle::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--nl-gruen);box-shadow:0 0 0 4px rgba(140,194,154,.2);flex:none}
+html.nacht #start .nl-wkst #msAlle svg{width:14px;height:14px;color:var(--nl-gold1);stroke:var(--nl-gold1)}
+html.nacht #start .nl-uebersicht .ms-feld{width:min(560px,100%);margin:22px 0 0;height:60px;padding:0 6px 0 18px;border-radius:999px;background:var(--nl-feld)!important;border:1px solid var(--nl-li2);box-shadow:none!important}
+html.nacht #start .nl-uebersicht .ms-feld::before,html.nacht #start .nl-uebersicht .ms-feld::after{display:none!important}
+html.nacht #start .ms-feld__ic,html.nacht #start .ms-feld__ic svg{color:var(--nl-gold1)!important;stroke:var(--nl-gold1)}
+html.nacht #start .ms-feld textarea{color:var(--nl-tx)!important;font:400 16px/1.4 var(--sans)!important;background:none!important}
+html.nacht #start .ms-feld textarea::placeholder{color:var(--nl-tx3)}
+html.nacht #start .ms-feld .kn{height:48px;padding:0 6px 0 20px;border-radius:999px;background:var(--nl-goldv)!important;color:#1a120c!important;border:0!important;box-shadow:none!important;font:500 14.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht #start .ms-feld .kn span{color:#1a120c!important;-webkit-text-fill-color:#1a120c;background:none!important;font:inherit!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht #start .ms-feld .kn i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(26,18,12,.85)!important;color:var(--nl-gold1)!important;box-shadow:none!important}
+html.nacht #start .ms-feld .kn::before,html.nacht #start .ms-feld .kn::after{display:none!important}
+
+/* Reiter unten in der Kopfkachel (Vorlage .tabs) */
+html.nacht #start .nl-tabs{position:relative;z-index:2;display:flex!important;flex-wrap:wrap;gap:6px;margin:28px 0 0!important;padding:6px!important;border-radius:28px;max-width:100%!important;width:max-content;
+  background:rgba(10,8,6,.5)!important;border:1px solid var(--nl-li);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:none!important;
+  flex-direction:row!important;height:auto!important;overflow:visible!important;transform:none!important;opacity:1!important;visibility:visible!important;inset:auto!important}
+html.nacht #start :is(.ws-sb,.ms-bue)>.nl-tabs{align-self:flex-start;margin-top:auto!important;max-width:100%!important}
+html.nacht #start :is(.ws-sb,.ms-bue){display:flex;flex-direction:column}
+html.nacht #start :is(.ws-sb,.ms-bue)>.nl-tabs{margin-top:28px!important}
+html.nacht #start .nl-tabs .ms-gleiter{display:none!important}
+html.nacht #start .nl-tabs .ms-trenn{flex-basis:100%;height:0;margin:0;border:0;background:none}
+html.nacht #start .nl-tabs button[hidden]{display:none!important}
+html.nacht #start .nl-tabs button:not([hidden]){display:inline-flex!important;align-items:center;gap:8px;width:auto!important;height:auto!important;padding:11px 18px!important;border-radius:999px!important;margin:0!important;
+  font:400 14px/1.2 var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx2)!important;background:none!important;border:0!important;box-shadow:none!important;white-space:nowrap;transition:background .25s,color .25s}
+html.nacht #start .nl-tabs button svg{display:none}
+html.nacht #start .nl-tabs button span{color:inherit!important;font:inherit!important}
+html.nacht #start .nl-tabs button em{font:400 13px var(--mono)!important;font-style:normal;color:var(--nl-tx3)!important;background:none!important;padding:0;min-width:0;margin:0}
+html.nacht #start .nl-tabs button em:empty{display:none}
+html.nacht #start .nl-tabs button:hover{background:rgba(255,240,222,.08)!important;color:var(--nl-tx)!important}
+html.nacht #start .nl-tabs button.an{background:var(--nl-goldv)!important;color:#1a120c!important;font-weight:500!important}
+html.nacht #start .nl-tabs button.an em{color:rgba(26,18,12,.7)!important}
+html.nacht #start .nl-tabs--frei{margin:0 0 18px!important}
+
+/* Startbilder der Hausschicht (ws-sb): Text links, Zierzeile als Monozeile der Vorlage */
+html.nacht #start .ws-sb{display:flex;flex-direction:column;align-items:stretch}
+html.nacht #start .ws-sb .wo-sb__text{max-width:min(640px,56%)!important;padding:0;margin:0;flex:1}
+html.nacht #start .ws-sb .wo-sb__zier{font:400 13px/1.4 var(--mono)!important;letter-spacing:.15em!important;color:var(--nl-tx3)!important;gap:9px;margin:0 0 18px}
+html.nacht #start .ws-sb .wo-sb__zier span{font:inherit!important;letter-spacing:inherit!important;color:inherit}
+html.nacht #start .ws-sb .wo-sb__zier .wo-zeichen{height:15px;color:var(--nl-gold1)}
+html.nacht #start .ws-sb .wo-sb__zier i{display:none}
+html.nacht #start .ws-sb .wo-sb__kn{margin:0;display:block}
+html.nacht #start .ws-sb h1.wo-sb__h{margin:0 0 18px!important}
+html.nacht #start .ws-sb .wo-sb__foto figcaption{display:none!important}
+html.nacht #start .ws-sb::after{display:none!important}
+
+/* Kopfzeile: «View website» als Glasknopf, «New» gold */
+html.nacht #start .ms-kopf .ws-web{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 8px 0 20px!important;border-radius:999px;border:1px solid var(--nl-li2)!important;
+  background:rgba(255,240,222,.06)!important;box-shadow:none!important;color:var(--nl-tx)!important;font:500 14.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht #start .ms-kopf .ws-web span{font:inherit!important;letter-spacing:0!important;text-transform:none!important;color:inherit!important}
+html.nacht #start .ms-kopf .ws-web i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important}
+html.nacht #start .ms-kopf .ws-web::before,html.nacht #start .ms-kopf .ws-web::after{display:none!important}
+html.nacht .nl-wkst .nl-wk{width:auto!important;flex:none}
+
+/* ================= Fenster und Hilfekarten: Lack mit Goldkante wie die Seitenleiste ================= */
+html.nacht .hs--dunkel{background:rgba(10,8,6,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+html.nacht .hk,html.nacht .dialog__karte,html.nacht .menue{color:var(--nl-tx)!important;background:linear-gradient(170deg,#1d1814,#110e0b 60%,#0e0b09)!important;
+  border:1px solid rgba(230,195,154,.35)!important;box-shadow:0 40px 80px -40px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,230,200,.06)!important}
+html.nacht .hk h2,html.nacht .hk h3,html.nacht .hk__drei b,html.nacht .dialog__karte h2,html.nacht .dialog__karte h3,html.nacht .menue b{color:var(--nl-tx)!important;font-family:var(--serif)!important;font-weight:400!important}
+html.nacht .hk p,html.nacht .hk__unter,html.nacht .hk__drei p,html.nacht .hk--tour p,html.nacht .dialog__karte p,html.nacht .menue small{color:var(--nl-tx2)!important}
+html.nacht .hk__zeichen{color:var(--nl-gold1)!important}
+html.nacht .hk--tour small,html.nacht .hk__leise{color:var(--nl-gold1)!important}
+html.nacht .hk__drei>div,html.nacht .hk .hk__vier>*,html.nacht .hk [class*="hk__schritt"]{background:rgba(255,240,222,.05)!important;box-shadow:inset 0 0 0 1px var(--nl-li)!important;color:var(--nl-tx)!important}
+html.nacht .hk__bild,html.nacht .hk__x,html.nacht .hk__video svg{background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important}
+html.nacht .hk__video{background:rgba(255,240,222,.06)!important;color:var(--nl-tx)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important}
+html.nacht .hk__fort{background:rgba(255,235,210,.14)}
+html.nacht .hk__fort span{background:var(--nl-goldv)}
+
+/* ================= Knöpfe im ganzen Werkzeug: Pillen der Vorlage (.wk / .wk.gold) ================= */
+html.nacht .knopf--voll,html.nacht .hk__nav .knopf,html.nacht .dialog__knoepfe .knopf--voll{background:var(--nl-goldv)!important;color:#1a120c!important;border:0!important;border-radius:999px!important;
+  box-shadow:0 10px 24px -14px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.35)!important;font:500 14.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;text-shadow:none!important}
+html.nacht .knopf--voll::before,html.nacht .knopf--voll::after{display:none!important}
+html.nacht .knopf--voll span{color:inherit!important;-webkit-text-fill-color:currentColor;background:none!important;font:inherit!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .knopf--voll i{background:rgba(26,18,12,.85)!important;color:var(--nl-gold1)!important;box-shadow:none!important;border-radius:50%}
+html.nacht .knopf--voll i svg{stroke:currentColor}
+
+/* ================= Inhalt der Übersicht: Schrift hell auf Glas ================= */
+html.nacht #start{--navy:#f3ece2;--tinte:#f3ece2;--taupe-tief:rgba(243,236,226,.62);--leise:rgba(243,236,226,.62);--taupe:#e6c39a;--linie:rgba(255,235,210,.14);color:var(--nl-tx)}
+/* Abschnittstitel (Vorlage .stitel) */
+html.nacht #start .ms-zeile{display:flex;align-items:center;gap:18px;margin:34px 2px 16px!important;padding:0!important;border:0!important}
+html.nacht #start .ms-zeile h2{font:400 32px/1 var(--serif)!important;color:var(--nl-tx)!important;letter-spacing:-.005em;margin:0!important;text-shadow:none!important}
+.nl-snr{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;flex:none;border:1px solid rgba(230,195,154,.35);background:rgba(230,195,154,.06)}
+.nl-snr svg{width:22px;height:22px;color:var(--nl-gold1);stroke:var(--nl-gold1);fill:none;stroke-width:1.5}
+html.nacht #start .ms-lnk{margin-left:auto;display:inline-flex;align-items:center;gap:10px;font:400 13px var(--mono)!important;letter-spacing:.15em!important;text-transform:uppercase;color:var(--nl-gold1)!important;background:none!important;border:0;box-shadow:none!important}
+html.nacht #start .ms-lnk svg{width:14px;height:14px;stroke:var(--nl-gold1)}
+html.nacht #start .ms-lnk--zurueck{margin-left:0}
+html.nacht #start .ms-leise,html.nacht #start .start__satz,html.nacht #start .pk-zuletzt-satz{color:var(--nl-tx2)!important}
+html.nacht #start h1,html.nacht #start h2,html.nacht #start h3{color:var(--nl-tx)}
+
+/* Dokumente und Vorlagen als Glaskarten (Vorlage .vk: Glas, innen dunkle Platte, Titel in Gloock) */
+html.nacht #start .stueck{padding:10px 10px 18px!important;border-radius:22px;background:var(--nl-glas);border:1px solid rgba(255,235,210,.14);box-shadow:var(--nl-glas-s);
+  backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35)}
+html.nacht #start .stueck__buehne{border-radius:14px;background:radial-gradient(60% 60% at 50% 42%,rgba(255,235,210,.09),transparent 72%),rgba(0,0,0,.22);border:1px solid var(--nl-li)}
+html.nacht #start .stueck__name,html.nacht #start .zl__name{font:400 21px/1.2 var(--serif)!important;color:var(--nl-tx)!important;margin-top:14px}
+html.nacht #start .stueck__format{color:var(--nl-tx3)!important}
+html.nacht #start .stueck:hover{border-color:rgba(230,195,154,.35)}
+
+/* Wahlknöpfe (Gruppen, Themen der Fotos): Reiter der Vorlage */
+html.nacht #start :is(.start__gruppen,.fo-reihe,.ms-chips){display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+html.nacht #start :is(.start__gruppen,.fo-reihe,.ms-chips) button{padding:10px 16px!important;border-radius:999px!important;border:1px solid var(--nl-li2)!important;background:rgba(255,240,222,.05)!important;box-shadow:none!important;
+  font:400 14px/1.2 var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx2)!important;height:auto!important}
+html.nacht #start :is(.start__gruppen,.fo-reihe,.ms-chips) button:hover{background:rgba(255,240,222,.1)!important;color:var(--nl-tx)!important}
+html.nacht #start :is(.start__gruppen,.fo-reihe,.ms-chips) button.an{background:var(--nl-goldv)!important;color:#1a120c!important;border-color:transparent!important;font-weight:500!important}
+html.nacht #start .fo-reihe__t{font:400 13px var(--mono)!important;letter-spacing:.15em;text-transform:uppercase;color:var(--nl-tx3)!important;margin-right:6px}
+/* Suchfeld in Kopfkacheln (Kinds and templates) wie das der Übersicht */
+html.nacht #start .start__direkt{width:min(560px,100%);height:60px;padding:0 6px 0 18px;border-radius:999px;background:var(--nl-feld)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important}
+html.nacht #start .start__direkt::before,html.nacht #start .start__direkt::after{display:none!important}
+html.nacht #start .start__direkt-ic,html.nacht #start .start__direkt-ic svg{color:var(--nl-gold1)!important;stroke:var(--nl-gold1)}
+html.nacht #start .start__direkt textarea{color:var(--nl-tx)!important;font:400 16px/1.4 var(--sans)!important;background:none!important}
+html.nacht #start .start__direkt textarea::placeholder{color:var(--nl-tx3)}
+/* Zweitknöpfe (kn, kn--mehr, «Design with it»): Glaspille */
+html.nacht #start .kn:not(.knopf--voll):not(.ms-kn-neu):not(.nl-gold){background:rgba(18,13,10,.55)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-tx)!important;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:500 14px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;border-radius:999px!important}
+html.nacht #start .kn:not(.knopf--voll):not(.ms-kn-neu):not(.nl-gold)::before,html.nacht #start .kn:not(.knopf--voll):not(.ms-kn-neu):not(.nl-gold)::after{display:none!important}
+html.nacht #start .kn:not(.knopf--voll):not(.ms-kn-neu):not(.nl-gold) span{color:inherit!important;-webkit-text-fill-color:currentColor;background:none!important;font:inherit!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht #start .kn:not(.knopf--voll):not(.ms-kn-neu):not(.nl-gold) i{background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important;border-radius:50%}
+html.nacht #start .kn i svg{stroke:currentColor}
+
+/* Colours & fonts: Tafeln als Glas (Vorlage .wdt) */
+html.nacht #start .mb__p{background:var(--nl-glas)!important;border:1px solid rgba(255,235,210,.14);box-shadow:var(--nl-glas-s)!important;color:var(--nl-tx);
+  backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35)}
+html.nacht #start .mb__p h3{font:400 27px/1.1 var(--serif)!important;color:var(--nl-tx)!important}
+html.nacht #start .mb__p :is(p,li,dd,small,span,i){color:var(--nl-tx2)}
+html.nacht #start .mb__p :is(b,dt,strong){color:var(--nl-tx)}
+html.nacht #start .mb__p dt{color:var(--nl-tx3)!important}
+html.nacht #start .mb__p--zeichen{background:radial-gradient(60% 60% at 50% 42%,rgba(255,235,210,.09),transparent 72%),rgba(0,0,0,.28)!important}
+html.nacht #start .mb__tw-flaeche{box-shadow:inset 0 0 0 1px var(--nl-li)!important}
+html.nacht #start .mb__p p,html.nacht #start .mb__p figcaption{color:var(--nl-tx2)!important}
+
+/* ===================================================================================================
+   EDITOR (Vorlage B «Eine Vorlage geöffnet»): Raum dunkel, schmale Leiste, Kopf als Glasleiste, Platten aus Glas
+   =================================================================================================== */
+html.nacht body::before{content:"";position:fixed;inset:0;z-index:-2;background:url(b19-weich.webp) center/cover no-repeat;opacity:.9;pointer-events:none}
+html.nacht body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%),linear-gradient(180deg,rgba(14,11,9,.7),rgba(14,11,9,.15) 18%,rgba(14,11,9,.35) 70%,rgba(14,11,9,.85))}
+html.nacht body{isolation:isolate}
+/* schmale Leiste */
+.nl-schmal{position:fixed;z-index:21;left:14px;top:14px;bottom:14px;width:72px;display:flex;flex-direction:column;align-items:center;padding:16px 0 12px;border-radius:26px;
+  background:linear-gradient(170deg,#1d1814,#110e0b 60%,#0e0b09);border:1px solid rgba(230,195,154,.35);box-shadow:0 40px 80px -50px rgba(0,0,0,.95)}
+html.nacht body.startoffen .nl-schmal{display:none}
+.nl-schmal .nl-et{display:block;width:34px;margin:2px 0 16px}.nl-schmal .nl-et img{width:100%;display:block}
+.nl-schmal nav{display:flex;flex-direction:column;gap:6px;border-top:1px solid rgba(230,195,154,.16);padding-top:14px}
+.nl-schmal nav a,.nl-schmal .nl-unten{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;color:var(--nl-gold1);transition:background .25s}
+.nl-schmal nav a:hover,.nl-schmal .nl-unten:hover{background:rgba(255,240,222,.07)}
+.nl-schmal nav a.nl-jetzt{background:var(--nl-goldv);color:#1a120c}
+.nl-schmal .nl-unten{margin-top:auto}
+/* Kopf: Glasleiste */
+html.nacht .kopf{inset:14px 14px auto 100px!important;height:64px!important;border-radius:999px;padding:0 10px 0 18px!important;
+  background:var(--nl-glas)!important;backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35);
+  border:1px solid rgba(255,235,210,.14)!important;box-shadow:var(--nl-glas-s),0 30px 60px -40px rgba(0,0,0,.8)!important}
+html.nacht .kopf::after,html.nacht .kopf::before{display:none!important}
+html.nacht .kopf .wo-marke-w b{font:400 21px/1.1 var(--serif)!important;color:var(--nl-tx)!important}
+html.nacht .kopf .wo-marke-w small{font:400 13px/1.4 var(--mono)!important;letter-spacing:.15em!important;color:var(--nl-tx3)!important}
+html.nacht .kopf .kopf__name{font:400 23px/1.15 var(--serif)!important;color:var(--nl-tx)!important}
+html.nacht .kopf .kopf__gespeichert{color:var(--nl-gold1)}
+html.nacht .kopf .rund{width:44px;height:44px;border-radius:50%;background:rgba(255,240,222,.06)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-gold1)!important}
+html.nacht .kopf .rund svg{stroke:var(--nl-gold1)}
+html.nacht .kopf .rund:hover{background:rgba(255,240,222,.12)!important}
+html.nacht .kopf .rund:disabled{opacity:.4}
+html.nacht .kopf .kopf__trenn{background:var(--nl-li2)!important}
+html.nacht .kopf .kn{height:46px!important;border-radius:999px!important;border:1px solid var(--nl-li2)!important;background:rgba(255,240,222,.06)!important;box-shadow:none!important;
+  color:var(--nl-tx)!important;font:500 14.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;text-shadow:none!important}
+html.nacht .kopf .kn::before,html.nacht .kopf .kn::after{display:none!important}
+html.nacht .kopf .kn span{color:inherit!important;-webkit-text-fill-color:currentColor;background:none!important;font:inherit!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .kopf .kn svg{stroke:var(--nl-gold1)}
+html.nacht .kopf #btnSpeichern{background:var(--nl-goldv)!important;color:#1a120c!important;border:0!important;padding:0 7px 0 20px!important;box-shadow:0 10px 24px -14px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.35)!important}
+html.nacht .kopf #btnSpeichern i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(26,18,12,.85)!important;color:var(--nl-gold1)!important;box-shadow:none!important}
+html.nacht .kopf #btnSpeichern i svg{stroke:var(--nl-gold1)}
+html.nacht .kopf .pruef__zahl{background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important}
+/* Ausgabe-Menü */
+html.nacht .menue button{color:var(--nl-tx)!important;background:none!important;border-radius:14px}
+html.nacht .menue button:hover{background:rgba(255,240,222,.07)!important}
+html.nacht .menue button i{background:rgba(230,195,154,.1)!important;border:1px solid rgba(230,195,154,.24);color:var(--nl-gold1)!important;box-shadow:none!important}
+html.nacht .menue button i svg{stroke:var(--nl-gold1)}
+/* Arbeitsbereich */
+html.nacht .studio{inset:92px 14px 14px 100px!important;padding:0!important;gap:18px!important}
+html.nacht :is(.links,.rechts,.lf){--navy:#f3ece2;--tinte:#f3ece2;--taupe-tief:rgba(243,236,226,.62);--leise:rgba(243,236,226,.62);--taupe:#e6c39a;--linie:rgba(255,235,210,.14);
+  --kuhle:rgba(0,0,0,.24);--kuhle-s:inset 0 0 0 1px rgba(255,235,210,.12);
+  color:var(--nl-tx)!important;background:var(--nl-glas)!important;border:1px solid rgba(255,235,210,.14)!important;border-radius:22px!important;box-shadow:var(--nl-glas-s)!important;
+  backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35)}
+html.nacht :is(.links,.rechts,.lf) :is(h2,h3,h4){color:var(--nl-tx)!important;font-family:var(--serif);font-weight:400}
+html.nacht :is(.links,.rechts,.lf) :is(.leise,p,small,label){color:var(--nl-tx2)}
+/* Reiter links: Segment der Vorlage (Design | Brand kit) */
+html.nacht .reiter{background:var(--nl-feld)!important;border:1px solid var(--nl-li2);box-shadow:none!important;border-radius:999px!important;padding:4px!important}
+html.nacht .reiter button{font:400 14px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx2)!important}
+html.nacht .reiter button.an{color:#1a120c!important;font-weight:500!important}
+html.nacht .reiter__gleiter{background:var(--nl-goldv)!important;box-shadow:none!important;border-radius:999px!important}
+/* Werkzeuginsel: Pillen mit Zeichen (Vorlage .tw) */
+html.nacht .mitte .werkzeug .insel{background:var(--nl-glas)!important;border:1px solid rgba(255,235,210,.14);box-shadow:var(--nl-glas-s)!important;border-radius:22px;padding:8px!important;gap:6px!important;flex-wrap:wrap;color:var(--nl-tx)!important;
+  backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35)}
+html.nacht .mitte .werkzeug .insel button{height:38px!important;padding:0 12px!important;border-radius:999px!important;border:1px solid var(--nl-li2)!important;flex-direction:row!important;gap:7px!important;
+  font:400 13px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx)!important}
+html.nacht .mitte .werkzeug .insel button svg{width:15px!important;height:15px!important;color:var(--nl-gold1)!important;stroke:var(--nl-gold1)}
+html.nacht .mitte .werkzeug .insel button span{font:inherit!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .mitte .werkzeug .insel__trenn{display:none!important}
+html.nacht .mitte .werkzeug .insel button:hover{background:rgba(255,240,222,.08)!important}
+html.nacht .insel__zeichen{color:var(--nl-gold1)!important}
+/* Vorder- und Rückseite */
+html.nacht .seitenwahl{background:var(--nl-feld)!important;border:1px solid var(--nl-li2);box-shadow:none!important}
+html.nacht .seitenwahl button{font:400 13.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx2)!important}
+html.nacht .seitenwahl button.an{background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important}
+/* Bühne: dunkle Platte (Vorlage .art); dunkle Dokumente auf hellerem Glas */
+html.nacht .flaeche{background:radial-gradient(70% 60% at 50% 45%,rgba(255,235,210,.07),transparent 70%),rgba(8,6,5,.42)!important;border:1px solid var(--nl-li);
+  box-shadow:inset 0 2px 10px rgba(0,0,0,.35)!important;border-radius:22px!important}
+html.nacht .flaeche.flaeche--hell{background:radial-gradient(70% 60% at 50% 45%,rgba(255,240,222,.2),transparent 75%),rgba(255,240,222,.13)!important;border-color:var(--nl-li2)}
+/* Fussleiste */
+html.nacht .fussleiste .insel{background:var(--nl-glas)!important;border:1px solid rgba(255,235,210,.14);box-shadow:var(--nl-glas-s)!important;color:var(--nl-tx)!important;
+  backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35);font:400 13px var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .fussleiste .insel *{letter-spacing:0!important;text-transform:none!important}
+html.nacht .fussleiste .insel__trenn{background:var(--nl-li2)!important}
+html.nacht .fussleiste .rund{background:rgba(255,240,222,.06)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-gold1)!important}
+/* Kopf: Marke nur als Zeichen (Name steht in der Leiste), so passen Name des Entwurfs und alle Knöpfe */
+html.nacht .kopf .kopf__marke>span:not(.ws-alt):not(.wo-zeichen){display:none!important}
+html.nacht .kopf .wo-marke-w>span:not(.wo-zeichen):not(.ws-alt){display:none!important}
+html.nacht .kopf .kopf__mitte{min-width:0;flex:1}
+html.nacht .kopf .kopf__name{width:100%!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* Platten links/rechts: Karten, Felder, Segmente */
+html.nacht :is(.links,.rechts,.dialog__karte) .ab{background:rgba(255,240,222,.05)!important;box-shadow:inset 0 0 0 1px var(--nl-li)!important}
+html.nacht :is(.links,.rechts,.dialog__karte) .ab b{color:var(--nl-tx)!important}
+html.nacht :is(.links,.rechts,.dialog__karte) .ab small{color:var(--nl-tx3)!important}
+html.nacht .leicht{background:rgba(255,240,222,.06)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-tx)!important;font:500 14px var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .leicht:hover{background:rgba(255,240,222,.12)!important}
+html.nacht .segment{background:var(--nl-feld)!important;border:1px solid var(--nl-li2);box-shadow:none!important;border-radius:999px!important}
+html.nacht .segment button{border-radius:999px!important;font:400 13.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx2)!important}
+html.nacht .segment button.an{background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important}
+html.nacht .filter button{background:rgba(255,240,222,.05)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-tx2)!important;font:400 13.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .filter button.an{background:var(--nl-goldv)!important;color:#1a120c!important;border-color:transparent!important}
+html.nacht .bs-schriften button{background:rgba(255,240,222,.05)!important;box-shadow:inset 0 0 0 1px var(--nl-li)!important;color:var(--nl-tx)!important;border:0!important}
+html.nacht .bs-schriften button:hover{background:rgba(255,240,222,.1)!important}
+html.nacht .bs-schriften button :is(small,i,span:last-child){color:var(--nl-tx3)!important}
+html.nacht .foto{background:rgba(0,0,0,.3)!important}
+html.nacht :is(.links,.rechts,.lf,.dialog__karte) :is(input[type=search],input[type=text],input[type=number],textarea,select){background:var(--nl-feld)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-tx)!important}
+html.nacht :is(.links,.rechts,.lf,.dialog__karte) ::placeholder{color:var(--nl-tx3)}
+html.nacht .hochladen{background:rgba(255,240,222,.05)!important;border:1px dashed rgba(230,195,154,.4)!important;box-shadow:none!important;color:var(--nl-tx)!important}
+html.nacht .hochladen__ic{background:var(--nl-goldv)!important;color:#1a120c!important;box-shadow:none!important}
+html.nacht .kopf .kopf__mitte{flex:1 1 0!important;min-width:120px!important;width:auto!important}
+html.nacht .kopf .kopf__werk{flex:none!important;margin-left:auto}
+html.nacht .segment{border-radius:18px!important;flex-wrap:wrap}
+html.nacht .schalter span{font:400 13px var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--nl-tx)!important}
+html.nacht .schalter b{background:var(--nl-feld)!important;box-shadow:inset 0 0 0 1px var(--nl-li2)!important}
+html.nacht .schalter input:checked+b{background:var(--nl-goldv)!important}
+html.nacht .kopf{position:fixed!important;z-index:20}
+
+/* ================= Handy und schmale Fenster (bis 900 px): eine Spalte, Leiste als Fach (Knopf «Sections») ================= */
+@media (max-width:900px){
+  html.nacht #start.start.ms{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto minmax(0,1fr)!important;padding:12px 12px 0;column-gap:0;inset:0!important}
+  html.nacht #start.start.ms .ms-kopf{grid-column:1;grid-row:1;margin:0 0 12px;padding:6px 6px 6px 8px!important;gap:6px}
+  html.nacht #start.start.ms .ms-leiste{display:none}
+  html.nacht #start.start.ms.leiste-auf .ms-leiste{display:block!important;position:fixed;z-index:40;top:76px;left:10px;bottom:10px;width:min(300px,calc(100vw - 20px));max-height:none;margin:0}
+  html.nacht #start.start.ms .start__in{grid-column:1;grid-row:2}
+  html.nacht #start .ms-kopf .ms-suche{height:44px;min-width:0;flex:1 1 auto}
+  html.nacht #start .ms-kopf .ms-suche kbd{display:none}
+  html.nacht #start .ms-kopf .rund{width:42px;height:42px;flex:none}
+  html.nacht #start .ms-kopf .kn.ms-kn-neu span,html.nacht #start .ms-kopf .ws-web span{display:none}
+  html.nacht #start .ms-kopf .kn.ms-kn-neu,html.nacht #start .ms-kopf .ws-web{padding:0 5px!important;height:42px}
+  html.nacht #start .ms-kopf .zur-maison:not(.zur-website),html.nacht #start .ms-kopf [data-ansicht="livre"]{display:none!important}
+  /* Kopfkachel: Foto oben im Bogen, Text darunter in voller Breite */
+  html.nacht #start :is(.ws-sb,.ms-bue){padding:0 0 20px!important;min-height:0!important;margin:0 0 14px!important}
+  html.nacht #start :is(.wo-sb__foto,.ms-bue__foto){position:relative!important;width:100%!important;height:200px!important;inset:auto!important;border-radius:22px 22px 0 0!important;
+    -webkit-mask-image:radial-gradient(120% 130% at 50% 0%,#000 60%,transparent 60.5%)!important;mask-image:radial-gradient(120% 130% at 50% 0%,#000 60%,transparent 60.5%)!important}
+  html.nacht #start :is(.ws-sb,.ms-bue)>*:not(.ms-bue__foto):not(.wo-sb__foto):not(.nl-tabs),html.nacht #start .ws-sb .wo-sb__text{max-width:none!important;padding:0 20px!important}
+  html.nacht #start .ws-sb .wo-sb__text{margin-top:-6px!important}
+  html.nacht #start :is(.ws-sb,.ms-bue) h1,html.nacht #start :is(.ws-sb,.ms-bue) .nl-titel{font-size:46px!important}
+  html.nacht #start .nl-uebersicht .nl-titel{font-size:60px!important}
+  html.nacht #start :is(.ws-sb,.ms-bue) :is(p,.ms-leise,.nl-satz,.start__satz){font-size:16px!important}
+  html.nacht #start .nl-uebersicht .ms-feld,html.nacht #start .start__direkt{height:auto;min-height:56px;flex-wrap:wrap;border-radius:24px;padding:8px 8px 8px 14px}
+  html.nacht #start .ms-feld textarea,html.nacht #start .start__direkt textarea{flex:1 1 160px;min-width:0}
+  html.nacht #start .ms-feld .kn,html.nacht #start .start__direkt .kn{width:100%;justify-content:space-between}
+  html.nacht #start :is(.ws-sb,.ms-bue)>.nl-tabs{margin:20px 12px 0!important;width:auto;max-width:calc(100% - 24px)!important}
+  html.nacht #start .nl-tabs button:not([hidden]){padding:9px 12px!important;font-size:13.5px!important}
+  html.nacht #start .nl-tabs .ms-trenn{display:none}
+  html.nacht #start .ms-zeile{gap:12px;margin:24px 0 12px!important;flex-wrap:wrap}
+  html.nacht #start .ms-zeile h2{font-size:26px!important}
+  .nl-snr{width:42px;height:42px}
+}
+@media (max-width:900px){
+  .nl-schmal{display:none}
+  html.nacht .kopf{inset:8px 8px auto 8px!important;height:56px!important;padding:0 6px 0 8px!important}
+  html.nacht .studio{inset:72px 0 0 0!important}
+}
+@media (max-width:900px){html.nacht #start .ms-zeile{justify-content:flex-start;text-align:left}html.nacht #start .ms-zeile .ms-lnk{margin-left:0}}
+@media (max-width:900px){
+  html.nacht .studio{padding:76px 10px 10px!important}
+  html.nacht .kopf .kopf__mitte{min-width:0!important;flex:1 1 0!important}
+  html.nacht .kopf .rund{width:40px;height:40px}
+  html.nacht .kopf .kopf__werk{gap:5px!important}
+  html.nacht .kopf #btnSpeichern{height:42px!important;padding:0 5px 0 14px!important}
+}
+html.nacht #start .ws-sb{min-width:0;width:100%;box-sizing:border-box}
+html.nacht #start .nl-tabs{width:fit-content!important;box-sizing:border-box}
+html.nacht #start :is(.start__direkt,.ms-feld){box-sizing:border-box;max-width:100%}
+@media (max-width:900px){html.nacht .kopf .kopf__werk{gap:3px!important}html.nacht .kopf{padding:0 4px 0 6px!important}html.nacht .kopf .rund{width:38px;height:38px}}
+@media (max-width:900px){html.nacht #start :is(.ws-sb,.ms-bue)>.start__direkt{width:auto!important;margin:18px 20px 0!important;padding:8px 8px 8px 14px!important}}
+html.nacht .bs-schriften button>*:first-child,html.nacht .bs-schriften button b{color:var(--nl-tx)!important}
+html.nacht .reiter{background:rgba(20,15,12,.94)!important}
+html.nacht .lf{background:linear-gradient(170deg,rgba(32,26,21,.97),rgba(17,14,11,.97))!important}
+html.nacht .lf__farbe{background:rgba(255,240,222,.05)!important;box-shadow:inset 0 0 0 1px var(--nl-li)!important;color:var(--nl-tx)!important}
+html.nacht .lf__chips button{background:rgba(255,240,222,.05)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-tx2)!important;font:400 13.5px var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+html.nacht .lf__chips button.an{background:var(--nl-goldv)!important;color:#1a120c!important}
+html.nacht .lf__foto{background:rgba(0,0,0,.3)!important}
+html.nacht .lf__z{color:var(--nl-gold1)!important}
+html.nacht .lf__kopf small,html.nacht .lf__kopf i{color:var(--nl-tx3)!important}
+html.nacht .lf__kopie{color:var(--nl-gold1)!important}
+
+/* ================= Seitenleiste exakt wie Edit website (Robert 27.11.2026: gleich breit, gleiche Masse, fährt mit) =================
+   Werte gemessen an aside.wo-rand.dx-rail.dx-lack6 (bureau, 1440×900): 280 px, links/oben 35 px, Grundschrift 15/1.55 */
+html.nacht{--nl-rand:22px}
+@media (min-width:1200px){html.nacht{--nl-rand:35px}}
+html.nacht #start.start.ms{grid-template-columns:280px minmax(0,1fr)!important;padding-left:var(--nl-rand);padding-top:var(--nl-rand)}
+html.nacht #start.start.ms .ms-leiste{width:280px;border-radius:30px;font-size:15px;line-height:1.55;padding:8px;
+  --tx:#f3ece2;--tx2:rgba(243,236,226,.7);--tx3:rgba(243,236,226,.46);--li:rgba(230,195,154,.16);--li2:rgba(230,195,154,.32)}
+@media (min-width:1200px){
+  html.nacht #start.start.ms .ms-leiste{position:fixed!important;left:var(--nl-rand)!important;top:var(--nl-rand);width:280px!important;max-height:none!important;overflow:visible!important;margin:0!important;z-index:30}
+}
+html.nacht #start .nl-rahmen{border-radius:23px;padding:20px 8px 14px;min-height:0}
+html.nacht #start .nl-rahmen *{line-height:inherit}
+html.nacht #start .nl-marke{padding:6px 0 22px;border-radius:0;color:var(--tx);gap:12px;border-bottom:1px solid var(--li)}
+html.nacht #start .nl-marke a{display:block;padding:0;background:none!important}
+html.nacht #start .nl-marke img{width:118px}
+html.nacht #start .nl-marke .nl-mono{font-size:13px;letter-spacing:.22em;line-height:1.55;color:var(--tx3)}
+html.nacht #start .nl-rk{padding:18px 10px 8px;font-size:13px;letter-spacing:.15em;line-height:1.55;color:rgba(230,195,154,.7)}
+html.nacht #start .nl-rk span{font-size:13px;letter-spacing:.08em}
+html.nacht #start .nl-tools{gap:0}
+html.nacht #start .nl-tools a{padding:12px 12px;border-radius:15px;color:var(--tx2)}
+html.nacht #start .nl-tools a b{font-size:15px;line-height:1.55}
+html.nacht #start .nl-tools a i,html.nacht #start .nl-rfuss :is(a,button) i{font-size:13px;line-height:1.55;color:var(--tx3)}
+html.nacht #start .nl-tools a.nl-jetzt i{color:rgba(26,18,12,.7)}
+html.nacht #start .nl-rahmen kbd{font-size:13px;width:24px;height:24px;line-height:1.55;color:var(--tx3);border-color:var(--li2)}
+html.nacht #start .nl-tools a.nl-jetzt kbd{color:#1a120c}
+html.nacht #start .nl-rhaus{margin-top:14px;padding:16px 10px 2px;font-size:13px;line-height:1.55;color:var(--tx2);border-top:1px solid var(--li)}
+html.nacht #start .nl-rfuss{margin-top:8px;padding-top:10px;gap:0;border-top:1px solid var(--li)}
+html.nacht #start .nl-rfuss :is(a,button){padding:10px;border-radius:13px;color:var(--tx2)}
+html.nacht #start .nl-rfuss :is(a,button) b{font-size:14px;line-height:1.55}
+html.nacht #start.start.ms .ms-leiste{border-radius:30px!important}
+html.nacht #start .nl-rahmen .nl-marke a{display:block!important;width:auto!important;padding:0!important;gap:0}
+html.nacht #start .nl-rahmen .nl-marke img{display:block;height:auto}
+html.nacht #start .nl-marke{color:#f3ece2}
+
+/* ===================================================================================================
+   Abnahme 28.11.2026: Felder der Vorlagen-Galerie, die der neue Look ausgelassen hatte
+   =================================================================================================== */
+/* «Size», «Kind», «Area of the house» und «Search the templates»: helle Schrift stand auf dem hellen Feld des alten Looks (nicht lesbar). Felder wie die übrigen des Looks. */
+html.nacht #start .start__format .hwahl-knopf,html.nacht #start .start__format select,html.nacht #start .start__suche input{background:var(--nl-feld)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important;color:var(--nl-tx)!important}
+html.nacht #start .start__suche input::placeholder{color:var(--nl-tx3)!important}
+html.nacht #start .start__suche svg{color:var(--nl-gold1)!important}
+/* Grund-Knöpfe der Galerie (Black, Paper, White, Red, Green): dunkle Schrift auf dunklem Raum (nicht lesbar). Farben wie die Wahlknöpfe des Looks, Form bleibt. */
+html.nacht #start .vb__toene button{color:var(--nl-tx2)!important;background:rgba(255,240,222,.05)!important;border:1px solid var(--nl-li2)!important;box-shadow:none!important}
+html.nacht #start .vb__toene button:hover{color:var(--nl-tx)!important;background:rgba(255,240,222,.1)!important}
+html.nacht #start .vb__toene button.an{background:var(--nl-goldv)!important;color:#1a120c!important;border-color:transparent!important}
+/* Satz unter jeder Art («Round Ø 107 mm, front and back»): dunkle Schrift des alten Looks auf dunklem Raum */
+html.nacht #start .stueck__satztext:not(.stueck__nimm){color:var(--nl-tx3)!important}
+html.nacht #start .stueck:hover .stueck__satztext:not(.stueck__nimm){color:var(--nl-tx2)!important}
+/* Suchfeld einer Art: der Beispielsatz («For example: Chalkboard with the ten beers on draught») lief bei 8 von 15 Arten in eine zweite, abgeschnittene Zeile */
+@media (min-width:901px){html.nacht #start .start__direkt--weg{width:min(700px,100%)}}
+/* Handy (bis 900 px): die Spalte der Seitenleiste (280 px, 27.11.2026) galt auch hier, die Seite nutzte nur 280 von 390 px und rechts blieb ein leerer Streifen.
+   Wieder eine Spalte über die ganze Breite, Rand wie vor dem 27.11. */
+@media (max-width:900px){html.nacht #start.start.ms{grid-template-columns:minmax(0,1fr)!important;padding-left:12px;padding-top:12px}}
+/* Kopf «With this photo» (Übergabe aus dem Brand book, «Design with it»): helle Schrift lag auf der hellen Pille des alten Looks. Pille als Glas wie die Zweitknöpfe. */
+html.nacht #start .mit-foto{background:rgba(18,13,10,.55)!important;border:1px solid var(--nl-li2);box-shadow:none!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+html.nacht #start .mit-foto small{color:var(--nl-tx3)!important}
+html.nacht #start .mit-foto b{color:var(--nl-tx)!important}
+

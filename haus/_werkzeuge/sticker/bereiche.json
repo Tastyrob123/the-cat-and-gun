@@ -1,0 +1,483 @@
+{
+ "quelle": "bau.py aus drucksachen/_bau/stuecke.json und drucksachen/sticker/img/",
+ "bereiche": [
+  {
+   "id": "haus",
+   "gruppe": "sticker",
+   "name": "Sticker from the house",
+   "format": "round Ø 60 and 54 mm · square 46 × 46 mm · strip 120 × 30 mm",
+   "satz": "The wordmark on black, the ampersand on the red of the pool table, Catangnan and Siargao around the wordmark on palm green, and «Your neighbourhood hangout» as a strip.",
+   "wozu": "For laptops, surfboards, bottles and the counter. The print file carries the cut line around every shape.",
+   "pdf": "pdf/the-cat-and-gun-sticker-druckerei.pdf",
+   "sticker": [
+    {
+     "element": "sticker-wortmarke",
+     "bild": "img/sticker-wortmarke.webp"
+    },
+    {
+     "element": "sticker-et",
+     "bild": "img/sticker-et.webp"
+    },
+    {
+     "element": "sticker-catangnan",
+     "bild": "img/sticker-catangnan.webp"
+    },
+    {
+     "element": "sticker-hangout",
+     "bild": "img/sticker-hangout.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker"
+  },
+  {
+   "id": "pool",
+   "gruppe": "sticker2",
+   "name": "Pool table, juices and opening hours",
+   "format": "rectangle 78 × 48 mm · oval 72 × 46 mm · round Ø 44 mm · bubble 72 × 42 mm",
+   "satz": "The pool table with the house’s own line about the cue, the Super Juices in their six colours, the opening hours with «Good mornings start here» and «See you at The Cat & Gun!».",
+   "wozu": "All sentences are the house’s own, from its Instagram posts. The print file carries the cut line around every shape.",
+   "pdf": "pdf/the-cat-and-gun-sticker2-druckerei.pdf",
+   "sticker": [
+    {
+     "element": "sticker-pool",
+     "bild": "img/sticker2-pool.webp"
+    },
+    {
+     "element": "sticker-juices",
+     "bild": "img/sticker2-juices.webp"
+    },
+    {
+     "element": "sticker-zeiten",
+     "bild": "img/sticker2-zeiten.webp"
+    },
+    {
+     "element": "sticker-see-you",
+     "bild": "img/sticker2-see-you.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker2"
+  },
+  {
+   "id": "karte",
+   "gruppe": "sticker3",
+   "name": "Stickers from the menu",
+   "format": "round Ø 40 to 52 mm · oval 70 × 40 mm · square 46 mm · strip 112 × 26 mm",
+   "satz": "Eggs your way, homemade bagels, «MMMATCHA» and «Hot day? Grab a coconut.» from the house’s own posts, «Save room for dessert. Always.» and the ampersand as a pool ball.",
+   "wozu": "All words are from the menu and from the house’s Instagram. The print file carries the cut line around every shape.",
+   "pdf": "pdf/the-cat-and-gun-sticker3-druckerei.pdf",
+   "sticker": [
+    {
+     "element": "sticker-eggs",
+     "bild": "img/sticker3-eggs.webp"
+    },
+    {
+     "element": "sticker-bagels",
+     "bild": "img/sticker3-bagels.webp"
+    },
+    {
+     "element": "sticker-matcha",
+     "bild": "img/sticker3-matcha.webp"
+    },
+    {
+     "element": "sticker-kokos",
+     "bild": "img/sticker3-kokos.webp"
+    },
+    {
+     "element": "sticker-dessert",
+     "bild": "img/sticker3-dessert.webp"
+    },
+    {
+     "element": "ball",
+     "bild": "img/sticker3-ball.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker3"
+  },
+  {
+   "id": "juices",
+   "gruppe": "sticker4",
+   "name": "One sticker for each Super Juice",
+   "format": "round Ø 34 mm · six colours",
+   "satz": "Melonberry, Mango Tango, Pineapple Punch, The Green Glow, Turbo Tonic and The Purple Potion, each in its own colour.",
+   "wozu": "For cups, bottles and bags to go. Names come straight from the menu file. The print file carries the cut line.",
+   "pdf": "pdf/the-cat-and-gun-sticker4-druckerei.pdf",
+   "sticker": [
+    {
+     "element": "sticker-saft-melonberry",
+     "bild": "img/sticker4-melonberry.webp"
+    },
+    {
+     "element": "sticker-saft-mango-tango",
+     "bild": "img/sticker4-mango-tango.webp"
+    },
+    {
+     "element": "sticker-saft-pineapple-punch",
+     "bild": "img/sticker4-pineapple-punch.webp"
+    },
+    {
+     "element": "sticker-saft-the-green-glow",
+     "bild": "img/sticker4-the-green-glow.webp"
+    },
+    {
+     "element": "sticker-saft-turbo-tonic",
+     "bild": "img/sticker4-turbo-tonic.webp"
+    },
+    {
+     "element": "sticker-saft-the-purple-potion",
+     "bild": "img/sticker4-the-purple-potion.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker4"
+  },
+  {
+   "id": "rund",
+   "gruppe": "sticker5",
+   "name": "Stickers from around the house",
+   "format": "round Ø 46 and 50 mm · strips 92 to 124 mm",
+   "satz": "The playground line, the Sunday Community Market, «3 years of good times», ten on draught, «Stay cool, Siargao.» and the name in one line.",
+   "wozu": "Every line is the house’s own, from its posts and graphics. The print file carries the cut line around every shape.",
+   "pdf": "pdf/the-cat-and-gun-sticker5-druckerei.pdf",
+   "sticker": [
+    {
+     "element": "sticker-spielplatz",
+     "bild": "img/sticker5-spielplatz.webp"
+    },
+    {
+     "element": "sticker-markt",
+     "bild": "img/sticker5-markt.webp"
+    },
+    {
+     "element": "sticker-drei-jahre",
+     "bild": "img/sticker5-drei-jahre.webp"
+    },
+    {
+     "element": "sticker-fass",
+     "bild": "img/sticker5-fass.webp"
+    },
+    {
+     "element": "sticker-stay-cool",
+     "bild": "img/sticker5-stay-cool.webp"
+    },
+    {
+     "element": "sticker-zeile",
+     "bild": "img/sticker5-zeile.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker5"
+  },
+  {
+   "id": "kueche",
+   "gruppe": "sticker6",
+   "name": "Stickers from the kitchen",
+   "format": "round Ø 46 mm · five stickers",
+   "satz": "Curry House, Homemade Burgers, All Day Sliders, Pub Grub and Bar Bites: the sections of the menu, each in a colour of the house.",
+   "wozu": "For boxes and bags to go, so every order shows where it comes from. The names are the sections of the menu file.",
+   "pdf": "pdf/the-cat-and-gun-sticker6-druckerei.pdf",
+   "sticker": [
+    {
+     "element": "sticker-curry-house",
+     "bild": "img/sticker6-curry-house.webp"
+    },
+    {
+     "element": "sticker-homemade-burgers",
+     "bild": "img/sticker6-homemade-burgers.webp"
+    },
+    {
+     "element": "sticker-all-day-sliders",
+     "bild": "img/sticker6-all-day-sliders.webp"
+    },
+    {
+     "element": "sticker-pub-grub",
+     "bild": "img/sticker6-pub-grub.webp"
+    },
+    {
+     "element": "sticker-bar-bites",
+     "bild": "img/sticker6-bar-bites.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker6"
+  },
+  {
+   "id": "fotos",
+   "gruppe": "sticker7",
+   "name": "Photo stickers",
+   "format": "round Ø 50 mm · five photos of the house",
+   "satz": "Five of the house’s own photos as round stickers: the latte art, the pool table, the Super Juices, the backyard and the surfboard taps.",
+   "wozu": "For laptops, surfboards and water bottles. Photos are the house’s own; the print file carries the cut line.",
+   "pdf": "pdf/the-cat-and-gun-sticker7-druckerei.pdf",
+   "sticker": [
+    {
+     "svg": "haus/sticker7-latte.svg",
+     "id": "foto-latte",
+     "name": "Photo sticker · Coffee",
+     "bild": "img/sticker7-latte.webp"
+    },
+    {
+     "svg": "haus/sticker7-pool.svg",
+     "id": "foto-pool",
+     "name": "Photo sticker · Pool Table",
+     "bild": "img/sticker7-pool.webp"
+    },
+    {
+     "svg": "haus/sticker7-saefte.svg",
+     "id": "foto-saefte",
+     "name": "Photo sticker · Super Juices",
+     "bild": "img/sticker7-saefte.webp"
+    },
+    {
+     "svg": "haus/sticker7-garten.svg",
+     "id": "foto-garten",
+     "name": "Photo sticker · Backyard",
+     "bild": "img/sticker7-garten.webp"
+    },
+    {
+     "svg": "haus/sticker7-zapf.svg",
+     "id": "foto-zapf",
+     "name": "Photo sticker · On Draught",
+     "bild": "img/sticker7-zapf.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker7"
+  },
+  {
+   "id": "bier",
+   "gruppe": "sticker8",
+   "name": "Bottle caps for the beers on tap",
+   "format": "crown cap Ø 42 mm · eight stickers",
+   "satz": "Eight stickers in the shape of a crown cap, one for each of eight beers on draught, with its name and strength from the menu.",
+   "wozu": "For the tap wall, the fridge and the beer mats. The print file carries the cut line around the teeth of every cap.",
+   "pdf": "pdf/the-cat-and-gun-sticker8-druckerei.pdf",
+   "sticker": [
+    {
+     "svg": "haus/sticker8-cloud-9-light.svg",
+     "id": "sticker8-cloud-9-light",
+     "name": "ON TAP Cloud 9 Light 5.4%",
+     "bild": "img/sticker8-cloud-9-light.webp"
+    },
+    {
+     "svg": "haus/sticker8-pipeline-pale-ale.svg",
+     "id": "sticker8-pipeline-pale-ale",
+     "name": "ON TAP Pipeline Pale Ale 6.3%",
+     "bild": "img/sticker8-pipeline-pale-ale.webp"
+    },
+    {
+     "svg": "haus/sticker8-bells-beach-wheat.svg",
+     "id": "sticker8-bells-beach-wheat",
+     "name": "ON TAP Bells Beach Wheat 6.3%",
+     "bild": "img/sticker8-bells-beach-wheat.webp"
+    },
+    {
+     "svg": "haus/sticker8-german-lager.svg",
+     "id": "sticker8-german-lager",
+     "name": "ON TAP German Lager 4.7%",
+     "bild": "img/sticker8-german-lager.webp"
+    },
+    {
+     "svg": "haus/sticker8-pilsner.svg",
+     "id": "sticker8-pilsner",
+     "name": "ON TAP Pilsner 5%",
+     "bild": "img/sticker8-pilsner.webp"
+    },
+    {
+     "svg": "haus/sticker8-white-lager.svg",
+     "id": "sticker8-white-lager",
+     "name": "ON TAP White Lager 5.3%",
+     "bild": "img/sticker8-white-lager.webp"
+    },
+    {
+     "svg": "haus/sticker8-indian-pale-lager.svg",
+     "id": "sticker8-indian-pale-lager",
+     "name": "ON TAP Indian Pale Lager 6%",
+     "bild": "img/sticker8-indian-pale-lager.webp"
+    },
+    {
+     "svg": "haus/sticker8-bulacan-lager.svg",
+     "id": "sticker8-bulacan-lager",
+     "name": "ON TAP Bulacan Lager 5%",
+     "bild": "img/sticker8-bulacan-lager.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker8"
+  },
+  {
+   "id": "kaffee",
+   "gruppe": "sticker9",
+   "name": "Stickers for the coffees",
+   "format": "round Ø 44 mm · eight stickers",
+   "satz": "Eight coffees from the menu, each on its own round sticker with «hot or iced» along the edge, as the menu says for every coffee.",
+   "wozu": "For cups to go and the coffee sleeves. Names come straight from the menu file.",
+   "pdf": "pdf/the-cat-and-gun-sticker9-druckerei.pdf",
+   "sticker": [
+    {
+     "svg": "haus/sticker9-espresso.svg",
+     "id": "sticker9-espresso",
+     "name": "Espresso",
+     "bild": "img/sticker9-espresso.webp"
+    },
+    {
+     "svg": "haus/sticker9-long-black.svg",
+     "id": "sticker9-long-black",
+     "name": "Long Black",
+     "bild": "img/sticker9-long-black.webp"
+    },
+    {
+     "svg": "haus/sticker9-flat-white.svg",
+     "id": "sticker9-flat-white",
+     "name": "Flat White",
+     "bild": "img/sticker9-flat-white.webp"
+    },
+    {
+     "svg": "haus/sticker9-cappuccino.svg",
+     "id": "sticker9-cappuccino",
+     "name": "Cappuccino",
+     "bild": "img/sticker9-cappuccino.webp"
+    },
+    {
+     "svg": "haus/sticker9-mocha.svg",
+     "id": "sticker9-mocha",
+     "name": "Mocha",
+     "bild": "img/sticker9-mocha.webp"
+    },
+    {
+     "svg": "haus/sticker9-chai-latte.svg",
+     "id": "sticker9-chai-latte",
+     "name": "Chai Latte",
+     "bild": "img/sticker9-chai-latte.webp"
+    },
+    {
+     "svg": "haus/sticker9-spanish-latte.svg",
+     "id": "sticker9-spanish-latte",
+     "name": "Spanish Latte",
+     "bild": "img/sticker9-spanish-latte.webp"
+    },
+    {
+     "svg": "haus/sticker9-dirty-matcha.svg",
+     "id": "sticker9-dirty-matcha",
+     "name": "Dirty Matcha",
+     "bild": "img/sticker9-dirty-matcha.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker9"
+  },
+  {
+   "id": "flaschen",
+   "gruppe": "sticker10",
+   "name": "Stickers for bottles and jars",
+   "format": "rounded 58 × 34 mm · eight stickers",
+   "satz": "The three kombuchas, Fresh Juice, Fresh Shake and Fresh Lemonade, the Double Chocolate Cookie and the Signature Lemon, each with its section of the menu above the name.",
+   "wozu": "For bottles, jars and cookie bags. Names come straight from the menu file.",
+   "pdf": "pdf/the-cat-and-gun-sticker10-druckerei.pdf",
+   "sticker": [
+    {
+     "svg": "haus/sticker10-hibiscus--red-berries.svg",
+     "id": "sticker10-hibiscus--red-berries",
+     "name": "KOMBUCHA Hibiscus + Red Berries",
+     "bild": "img/sticker10-hibiscus--red-berries.webp"
+    },
+    {
+     "svg": "haus/sticker10-guava.svg",
+     "id": "sticker10-guava",
+     "name": "KOMBUCHA Guava",
+     "bild": "img/sticker10-guava.webp"
+    },
+    {
+     "svg": "haus/sticker10-tropical-mango.svg",
+     "id": "sticker10-tropical-mango",
+     "name": "KOMBUCHA Tropical Mango",
+     "bild": "img/sticker10-tropical-mango.webp"
+    },
+    {
+     "svg": "haus/sticker10-fresh-juice.svg",
+     "id": "sticker10-fresh-juice",
+     "name": "SUPER JUICES Fresh Juice",
+     "bild": "img/sticker10-fresh-juice.webp"
+    },
+    {
+     "svg": "haus/sticker10-fresh-shake.svg",
+     "id": "sticker10-fresh-shake",
+     "name": "SUPER JUICES Fresh Shake",
+     "bild": "img/sticker10-fresh-shake.webp"
+    },
+    {
+     "svg": "haus/sticker10-fresh-lemonade.svg",
+     "id": "sticker10-fresh-lemonade",
+     "name": "SUPER JUICES Fresh Lemonade",
+     "bild": "img/sticker10-fresh-lemonade.webp"
+    },
+    {
+     "svg": "haus/sticker10-double-chocolate-cookie.svg",
+     "id": "sticker10-double-chocolate-cookie",
+     "name": "COOKIES Double Chocolate Cookie",
+     "bild": "img/sticker10-double-chocolate-cookie.webp"
+    },
+    {
+     "svg": "haus/sticker10-signature-lemon.svg",
+     "id": "sticker10-signature-lemon",
+     "name": "LEMON DUO Signature Lemon",
+     "bild": "img/sticker10-signature-lemon.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker10"
+  },
+  {
+   "id": "saetze",
+   "gruppe": "sticker11",
+   "name": "Stickers with the house’s lines",
+   "format": "strips 84 to 104 mm · ovals 56 to 66 mm · eight stickers",
+   "satz": "The house’s own lines from its posts, «Our little corner of Siargao, made better by you.», «Your Catangnan neighbourhood spot, then and now.», «We’re here for you every day of the week!», «Because feeling good should taste this good.» and the Sunday line, with the chips, three homemade desserts and the Lemon Duo from the menu.",
+   "wozu": "Every line is the house’s own, from its posts or its menu. The print file carries the cut line around every shape.",
+   "pdf": "pdf/the-cat-and-gun-sticker11-druckerei.pdf",
+   "sticker": [
+    {
+     "svg": "haus/sticker11-ecke.svg",
+     "id": "sticker11-ecke",
+     "name": "Our little corner of Siargao, made better by you.",
+     "bild": "img/sticker11-ecke.webp"
+    },
+    {
+     "svg": "haus/sticker11-damals.svg",
+     "id": "sticker11-damals",
+     "name": "Your Catangnan neighbourhood spot, then and now.",
+     "bild": "img/sticker11-damals.webp"
+    },
+    {
+     "svg": "haus/sticker11-jeden-tag.svg",
+     "id": "sticker11-jeden-tag",
+     "name": "We’re here for you every day of the week!",
+     "bild": "img/sticker11-jeden-tag.webp"
+    },
+    {
+     "svg": "haus/sticker11-gut.svg",
+     "id": "sticker11-gut",
+     "name": "Because feeling good should taste this good.",
+     "bild": "img/sticker11-gut.webp"
+    },
+    {
+     "svg": "haus/sticker11-sonntag.svg",
+     "id": "sticker11-sonntag",
+     "name": "Sundays are better when the whole neighbourhood comes togeth",
+     "bild": "img/sticker11-sonntag.webp"
+    },
+    {
+     "svg": "haus/sticker11-chips.svg",
+     "id": "sticker11-chips",
+     "name": "Hand cut chunky chips, twice fried.",
+     "bild": "img/sticker11-chips.webp"
+    },
+    {
+     "svg": "haus/sticker11-desserts.svg",
+     "id": "sticker11-desserts",
+     "name": "Tiramisu Mango Float Cookie Cream Crunch",
+     "bild": "img/sticker11-desserts.webp"
+    },
+    {
+     "svg": "haus/sticker11-lemon.svg",
+     "id": "sticker11-lemon",
+     "name": "Signature Lemon Peach Lemon Devil Lemon",
+     "bild": "img/sticker11-lemon.webp"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.json · sticker11"
+  }
+ ]
+}

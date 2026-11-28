@@ -1,0 +1,293 @@
+{
+ "_hinweis": "Bildschirme der Werkzeuge für die Geräte in den Sälen (Robert 23.11.2026: Mockups je Abschnitt). Je Eintrag: g = Gerät (lap 1440 × 930, ipad 1180 × 885, tel 390 × 848, je @2x), u = Adresse des laufenden Werkzeugs (Ports 9730–9738, CLAUDE.md), s = Schritte vor der Aufnahme ([klick, Text, genau, Bereich], [css, Wahl], [roll, px]). Aufnahme: node _werkzeuge/maison/geraete.js [name …] → roh/<name>.png, danach python3 bau.py.",
+ "bureau-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/bureau/",
+  "s": [
+   [
+    "klick",
+    "Home",
+    true
+   ]
+  ]
+ },
+ "bureau-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/index.html"
+ },
+ "carte-ipad": {
+  "g": "ipad",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/carte/",
+  "s": [
+   [
+    "klick",
+    "Kitchen"
+   ]
+  ]
+ },
+ "carte-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/menu.html",
+  "s": [
+   [
+    "roll",
+    900
+   ]
+  ]
+ },
+ "reception-chat": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/reception/chat/probe.html",
+  "s": [
+   [
+    "css",
+    ".cc-knopf"
+   ]
+  ]
+ },
+ "reception-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/reception/",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Inbox",
+    true
+   ]
+  ]
+ },
+ "livre-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/livre/",
+  "s": [
+   [
+    "klick",
+    "Photos",
+    false,
+    "aside"
+   ]
+  ]
+ },
+ "livre-ipad": {
+  "g": "ipad",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/livre/",
+  "s": [
+   [
+    "klick",
+    "Logo & files"
+   ]
+  ]
+ },
+ "editor-ipad": {
+  "g": "ipad",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/",
+  "s": [
+   [
+    "klick",
+    "Colours"
+   ]
+  ]
+ },
+ "editor-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Fonts"
+   ]
+  ]
+ },
+ "editor-tel2": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Photos"
+   ]
+  ]
+ },
+ "sticker-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/sticker/",
+  "s": [
+   [
+    "klick",
+    "All stickers"
+   ]
+  ]
+ },
+ "imprimerie-ipad": {
+  "g": "ipad",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/imprimerie/",
+  "s": [
+   [
+    "klick",
+    "Start right away"
+   ],
+   [
+    "klick",
+    "Instagram feed"
+   ]
+  ]
+ },
+ "registre-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/registre/?beispiel=1",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "On the way",
+    true
+   ]
+  ]
+ },
+ "registre-tel2": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/registre/?beispiel=1",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Pages",
+    true
+   ]
+  ]
+ },
+ "registre-tel3": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/registre/?beispiel=1",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Trend",
+    true
+   ]
+  ]
+ },
+ "bureau-ipad": {
+  "g": "ipad",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/bureau/",
+  "s": [
+   [
+    "klick",
+    "Draft & compare"
+   ]
+  ]
+ },
+ "bureau-tel2": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/juices.html"
+ },
+ "reception-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/reception/",
+  "s": [
+   [
+    "klick",
+    "Your answers"
+   ]
+  ]
+ },
+ "reception-tel2": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/reception/",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Questions"
+   ]
+  ]
+ },
+ "livre-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/livre/",
+  "s": [
+   [
+    "klick",
+    "Sections"
+   ],
+   [
+    "klick",
+    "Colour check"
+   ]
+  ]
+ },
+ "livre-tel2": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/livre/buch.html"
+ },
+ "editor-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/",
+  "s": [
+   [
+    "klick",
+    "Lines"
+   ]
+  ]
+ },
+ "sticker-tel": {
+  "g": "tel",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/sticker/",
+  "s": [
+   [
+    "roll",
+    640
+   ]
+  ]
+ },
+ "imprimerie-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/imprimerie/",
+  "s": [
+   [
+    "klick",
+    "Start right away"
+   ],
+   [
+    "klick",
+    "Notices in the house"
+   ]
+  ]
+ },
+ "registre-lap": {
+  "g": "lap",
+  "u": "/the-cat-and-gun/haus/_werkzeuge/registre/?beispiel=1",
+  "s": [
+   [
+    "klick",
+    "Origin",
+    true
+   ]
+  ]
+ }
+}

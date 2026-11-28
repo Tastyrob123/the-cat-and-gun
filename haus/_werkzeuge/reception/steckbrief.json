@@ -1,0 +1,1019 @@
+{
+ "stand": "2026-11-22",
+ "quellen": "Website (website/*.html, sichtbarer Text) und _quelle/MATERIAL.md",
+ "kontakt": {
+  "telefon": "+63 962 040 3853",
+  "instagram": "@thecatandgun"
+ },
+ "bereiche": [
+  {
+   "bereich": "Opening hours",
+   "gruppen": [
+    {
+     "gruppe": "Every day",
+     "zeilen": [
+      {
+       "fid": "zeiten",
+       "was": "Opening hours",
+       "angabe": "Open daily from 7AM to 10PM.",
+       "beleg": "Open daily from 7AM to 10PM.",
+       "mehr": [],
+       "quelle": "Website visit.html",
+       "woerter": [
+        "open",
+        "opening",
+        "hours",
+        "close",
+        "closing",
+        "closed",
+        "time",
+        "today",
+        "tonight",
+        "late",
+        "early",
+        "morning",
+        "daily",
+        "every",
+        "day",
+        "until",
+        "till"
+       ]
+      },
+      {
+       "fid": "brekky-zeit",
+       "was": "Breakfast times",
+       "angabe": "Brekky Specials, 7:00 – 10:30",
+       "beleg": "Brekky Specials, 7:00 – 10:30",
+       "mehr": [],
+       "quelle": "Website visit.html",
+       "woerter": [
+        "breakfast",
+        "brekky",
+        "brekkie"
+       ],
+       "braucht": [
+        "breakfast",
+        "brekky",
+        "brekkie"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Finding us",
+   "gruppen": [
+    {
+     "gruppe": "Where",
+     "zeilen": [
+      {
+       "fid": "adresse",
+       "was": "Address",
+       "angabe": "Catangnan, General Luna, Siargao, Philippines",
+       "beleg": "Catangnan, General Luna, Siargao, Philippines",
+       "mehr": [],
+       "quelle": "Website visit.html",
+       "woerter": [
+        "where",
+        "address",
+        "location",
+        "located",
+        "find",
+        "directions",
+        "map",
+        "maps",
+        "get",
+        "there",
+        "cloud",
+        "general",
+        "luna",
+        "catangnan",
+        "near"
+       ],
+       "link": {
+        "text": "Google Maps",
+        "href": "https://maps.app.goo.gl/ESn3kxHXUTmpzSBj8"
+       },
+       "braucht": [
+        "where",
+        "address",
+        "location",
+        "directions",
+        "map",
+        "near",
+        "cloud",
+        "catangnan",
+        "luna",
+        "general"
+       ]
+      },
+      {
+       "fid": "telefon",
+       "was": "Phone",
+       "angabe": "Call ahead on +63 962 040 3853.",
+       "beleg": "Call ahead on +63 962 040 3853.",
+       "mehr": [],
+       "quelle": "Website visit.html",
+       "woerter": [
+        "phone",
+        "call",
+        "number",
+        "contact",
+        "reach",
+        "reserve",
+        "reservation",
+        "book",
+        "booking",
+        "table",
+        "text"
+       ]
+      },
+      {
+       "fid": "instagram",
+       "was": "Instagram",
+       "angabe": "New dates are posted on Instagram. @thecatandgun",
+       "beleg": "New dates are posted on Instagram.",
+       "mehr": [
+        "@thecatandgun"
+       ],
+       "quelle": "Website index.html, Website visit.html",
+       "woerter": [
+        "instagram",
+        "insta",
+        "ig",
+        "social",
+        "follow",
+        "news",
+        "post",
+        "posts"
+       ],
+       "link": {
+        "text": "@thecatandgun",
+        "href": "https://www.instagram.com/thecatandgun/"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Breakfast",
+   "gruppen": [
+    {
+     "gruppe": "Brekky Specials",
+     "zeilen": [
+      {
+       "fid": "brekky-combo",
+       "was": "Bagel & Coffee Combo",
+       "angabe": "Bagel & Coffee Combo 350 PHP · Any classic bagel and coffee: BLT, bacon & egg, sausage & egg or tuna.",
+       "beleg": "Bagel & Coffee Combo 350 PHP",
+       "mehr": [
+        "Any classic bagel and coffee: BLT, bacon & egg, sausage & egg or tuna."
+       ],
+       "quelle": "Website index.html",
+       "woerter": [
+        "bagel",
+        "combo",
+        "coffee",
+        "breakfast",
+        "brekky",
+        "deal",
+        "special",
+        "specials",
+        "price"
+       ]
+      },
+      {
+       "fid": "eier",
+       "was": "Eggs your way",
+       "angabe": "Build your own brekky: three eggs on homemade sourdough.",
+       "beleg": "Build your own brekky: three eggs on homemade sourdough.",
+       "mehr": [],
+       "quelle": "Website index.html",
+       "woerter": [
+        "eggs",
+        "egg",
+        "sourdough",
+        "breakfast",
+        "brekky"
+       ]
+      }
+     ]
+    },
+    {
+     "gruppe": "Breakfast",
+     "zeilen": [
+      {
+       "fid": "karte-breakfast",
+       "was": "Breakfast",
+       "angabe": "On the menu:\n- Sweet Berry Pancakes: 260 PHP\n- Balls Out Brekkie: 500 PHP\n- Eggs Your Way: 220 PHP",
+       "beleg": "Rubrik «Breakfast» der Karte, 3 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "breakfast",
+        "brekky",
+        "pancakes",
+        "eggs"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#breakfast"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Food",
+   "gruppen": [
+    {
+     "gruppe": "The kitchen",
+     "zeilen": [
+      {
+       "fid": "kueche",
+       "was": "The kitchen",
+       "angabe": "Homemade bagels, pita pockets, curries and homemade desserts.",
+       "beleg": "Homemade bagels, pita pockets, curries and homemade desserts.",
+       "mehr": [],
+       "quelle": "Website index.html",
+       "woerter": [
+        "food",
+        "eat",
+        "kitchen",
+        "menu",
+        "dishes",
+        "lunch",
+        "dinner",
+        "hungry",
+        "homemade",
+        "serve"
+       ]
+      },
+      {
+       "fid": "karte",
+       "was": "The menu",
+       "angabe": "Bagels, breakfast, smoothie bowls, pita pockets, burgers, pub grub and curries.",
+       "beleg": "Bagels, breakfast, smoothie bowls, pita pockets, burgers, pub grub and curries.",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "menu",
+        "food",
+        "eat",
+        "dishes"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html"
+       }
+      }
+     ]
+    },
+    {
+     "gruppe": "From the menu",
+     "zeilen": [
+      {
+       "fid": "karte-bagels",
+       "was": "Bagels",
+       "angabe": "On the menu:\n- Bacon & Egg: 260 PHP\n- Sausage & Egg: 280 PHP\n- BLT: 260 PHP\n- Tuna Mayo: 260 PHP\n- Sweet & Spice: 260 PHP\n- The McBagel: 290 PHP\n- The OG: 340 PHP\n- Chicken Parmigiana (Bagel / Focaccia): 280 / 380 PHP\n- BBQ Pulled Pork (Bagel / Focaccia): 280 / 380 PHP\n- Honey Beef Brisket (Bagel / Focaccia): 340 / 480 PHP",
+       "beleg": "Rubrik «Bagels» der Karte, 10 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "bagel",
+        "bagels",
+        "focaccia"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#bagels"
+       }
+      },
+      {
+       "fid": "karte-bowls",
+       "was": "Smoothie Bowls",
+       "angabe": "On the menu:\n- Spinach & Matcha: 320 PHP\n- Mango & Pineapple: 320 PHP\n- Mixed Berries: 380 PHP",
+       "beleg": "Rubrik «Smoothie Bowls» der Karte, 3 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "smoothie",
+        "bowl",
+        "bowls"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#smoothie-bowls"
+       }
+      },
+      {
+       "fid": "karte-pita",
+       "was": "Pita Pockets",
+       "angabe": "On the menu:\n- Beer Battered Catch of the Day: 360 PHP\n- Tempura Prawn: 360 PHP\n- Chicken Gyros: 260 PHP\n- Falafel: 260 PHP",
+       "beleg": "Rubrik «Pita Pockets» der Karte, 4 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "pita",
+        "pocket",
+        "pockets",
+        "gyros",
+        "falafel"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#pita-pockets"
+       }
+      },
+      {
+       "fid": "karte-burger",
+       "was": "Burgers",
+       "angabe": "On the menu:\n- Chicken: 350 PHP\n- Fish: 500 PHP\n- Beef: 520 PHP",
+       "beleg": "Rubrik «Burgers» der Karte, 3 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "burger",
+        "burgers",
+        "beef",
+        "patty"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#burgers"
+       }
+      },
+      {
+       "fid": "karte-pubgrub",
+       "was": "Pub Grub",
+       "angabe": "On the menu:\n- Fish & Chips: 520 PHP\n- Chicken Parmigiana: 520 PHP\n- Slow Cooked Pork Rib: 520 PHP",
+       "beleg": "Rubrik «Pub Grub» der Karte, 3 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "pub",
+        "grub",
+        "fish",
+        "chips"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#pub-grub"
+       }
+      },
+      {
+       "fid": "karte-curry",
+       "was": "Curry",
+       "angabe": "On the menu:\n- Tofu Tikka Masala: 450 PHP\n- Chicken Tikka Masala: 480 PHP\n- Beef Rogan Josh: 520 PHP\n- Coconut, Lime & Fish: 520 PHP",
+       "beleg": "Rubrik «Curry» der Karte, 4 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "curry",
+        "curries",
+        "tikka",
+        "masala"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#curry"
+       }
+      },
+      {
+       "fid": "karte-barbites",
+       "was": "Bar Bites",
+       "angabe": "On the menu:\n- Salt & Pepper Chicken: 240 PHP\n- Chicken Satay Skewers: 240 PHP\n- Honey Garlic Tofu: 250 PHP\n- Breaded Fish Sticks: 260 PHP",
+       "beleg": "Rubrik «Bar Bites» der Karte, 4 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "bites",
+        "snack",
+        "snacks",
+        "share"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#bar-bites"
+       },
+       "braucht": [
+        "bites",
+        "snack",
+        "snacks",
+        "share",
+        "food",
+        "eat",
+        "menu",
+        "hungry",
+        "nibbles"
+       ]
+      },
+      {
+       "fid": "karte-sides",
+       "was": "Sides",
+       "angabe": "On the menu:\n- Chips: 140 PHP\n- Cheesy Chips: 240 PHP\n- Onion Rings: 150 PHP\n- Side Salad: 120 PHP\n- Rice: 40 PHP\n- Garlic Rice: 60 PHP",
+       "beleg": "Rubrik «Sides» der Karte, 6 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "side",
+        "sides",
+        "salad",
+        "rice",
+        "chips"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#sides"
+       }
+      },
+      {
+       "fid": "karte-kids",
+       "was": "Kids Menu",
+       "angabe": "On the menu:\n- Chicken Nuggets: 260 PHP\n- Mini Fish Fingers: 280 PHP\n- Grilled Cheesy Chicken: 260 PHP\n- Pizza Pita Bread: 260 PHP",
+       "beleg": "Rubrik «Kids Menu» der Karte, 4 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "kids",
+        "kid",
+        "children",
+        "child",
+        "nuggets",
+        "family"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#kids-menu"
+       }
+      },
+      {
+       "fid": "karte-desserts",
+       "was": "Homemade Desserts",
+       "angabe": "On the menu:\n- Tiramisu: 265 PHP\n- Mango Float: 265 PHP\n- Cookie Cream Crunch: 265 PHP\n- Pick & Mix Mini Cheesecakes: 265 PHP",
+       "beleg": "Rubrik «Homemade Desserts» der Karte, 4 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "dessert",
+        "desserts",
+        "sweet",
+        "cake",
+        "cheesecake",
+        "tiramisu",
+        "mango"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#homemade-desserts"
+       }
+      },
+      {
+       "fid": "karte-cookies",
+       "was": "Cookies",
+       "angabe": "On the menu:\n- Chocolate Cookie: 145 PHP\n- Double Chocolate Cookie: 145 PHP",
+       "beleg": "Rubrik «Cookies» der Karte, 2 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "cookie",
+        "cookies",
+        "sweet",
+        "snack"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#cookies"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Drinks",
+   "gruppen": [
+    {
+     "gruppe": "Coffee & juices",
+     "zeilen": [
+      {
+       "fid": "kaffee",
+       "was": "Coffee, hot or iced",
+       "angabe": "Every coffee is available hot or iced.",
+       "beleg": "Every coffee is available hot or iced.",
+       "mehr": [],
+       "quelle": "Website juices.html",
+       "woerter": [
+        "coffee",
+        "iced",
+        "hot",
+        "latte",
+        "espresso",
+        "cappuccino",
+        "americano",
+        "flat",
+        "white",
+        "matcha",
+        "mocha",
+        "chai"
+       ],
+       "braucht": [
+        "coffee",
+        "coffees",
+        "latte",
+        "espresso",
+        "cappuccino",
+        "americano",
+        "flatwhite",
+        "matcha",
+        "mocha",
+        "chai",
+        "barista"
+       ]
+      },
+      {
+       "fid": "karte-coffee",
+       "was": "Coffee",
+       "angabe": "On the menu:\n- Espresso: 120 PHP\n- Americano: 120 PHP\n- Long Black: 120 PHP\n- Flat White: 150 PHP\n- Cappuccino: 150 PHP\n- Latte: 150 PHP\n- Mocha: 180 PHP\n- Matcha: 180 PHP\n- Chai Latte: 180 PHP\n- Espresso Fizz: 180 PHP\n- Dirty Matcha: 200 PHP\n- Spanish Latte: 200 PHP",
+       "beleg": "Rubrik «Coffee» der Karte, 12 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "coffee",
+        "latte",
+        "espresso",
+        "cappuccino",
+        "matcha",
+        "price"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#coffee"
+       }
+      },
+      {
+       "fid": "saefte",
+       "was": "Super Juices all day",
+       "angabe": "Super Juices available all day, everyday.",
+       "beleg": "Super Juices available all day, everyday.",
+       "mehr": [],
+       "quelle": "Website index.html",
+       "woerter": [
+        "juice",
+        "juices",
+        "super",
+        "fresh",
+        "smoothie",
+        "shake"
+       ],
+       "braucht": [
+        "juice",
+        "juices",
+        "smoothie",
+        "smoothies",
+        "shake",
+        "shakes"
+       ]
+      },
+      {
+       "fid": "karte-juices",
+       "was": "Super Juices",
+       "angabe": "On the menu:\n- Melon Berry: 260 PHP\n- Mango Tango: 260 PHP\n- Pineapple Punch: 260 PHP\n- Green Glow: 260 PHP\n- Turbo Tonic: 260 PHP\n- Purple Potion: 260 PHP\n- Fresh Juice / Shake: 240 / 260 PHP\n- Fresh Lemonade: 150 PHP",
+       "beleg": "Rubrik «Super Juices» der Karte, 8 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "juice",
+        "juices",
+        "shake",
+        "lemonade",
+        "price"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#super-juices"
+       },
+       "braucht": [
+        "juice",
+        "juices",
+        "smoothie",
+        "smoothies",
+        "shake",
+        "shakes",
+        "lemonade"
+       ]
+      },
+      {
+       "fid": "kokos",
+       "was": "Coconut",
+       "angabe": "Stay cool, Siargao. Fresh coconut water at The Cat & Gun.",
+       "beleg": "Stay cool, Siargao. Fresh coconut water at The Cat & Gun.",
+       "mehr": [],
+       "quelle": "Website juices.html",
+       "woerter": [
+        "coconut",
+        "buko",
+        "water"
+       ]
+      },
+      {
+       "fid": "karte-kombucha",
+       "was": "Kombucha",
+       "angabe": "On the menu:\n- Hibiscus + Red Berries: 200 PHP\n- Tropical Mango: 200 PHP\n- Guava: 200 PHP",
+       "beleg": "Rubrik «Kombucha» der Karte, 3 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "kombucha",
+        "fermented"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#kombucha"
+       }
+      }
+     ]
+    },
+    {
+     "gruppe": "Beer & bar",
+     "zeilen": [
+      {
+       "fid": "fass",
+       "was": "Draught beer",
+       "angabe": "Ten beers on draught. Partner breweries: Siargao Island Brewery and Bauhinia Brewery.",
+       "beleg": "Ten beers on draught.",
+       "mehr": [
+        "Partner breweries: Siargao Island Brewery and Bauhinia Brewery."
+       ],
+       "quelle": "Website index.html, Website pool.html",
+       "woerter": [
+        "beer",
+        "beers",
+        "draught",
+        "draft",
+        "tap",
+        "craft",
+        "brewery",
+        "lager",
+        "ipa",
+        "ale",
+        "pilsner",
+        "local"
+       ]
+      },
+      {
+       "fid": "karte-sib",
+       "was": "Siargao Island Brewery",
+       "angabe": "On the menu:\n- Cloud 9 Light (5.4%): 250 PHP\n- Pipe Line Pale Ale (6.3%): 300 PHP\n- Bells Beach Wheat (6.3%): 300 PHP",
+       "beleg": "Rubrik «Siargao Island Brewery» der Karte, 3 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "beer",
+        "siargao",
+        "island",
+        "brewery",
+        "cloud"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#siargao-island-brewery"
+       },
+       "braucht": [
+        "beer",
+        "brewery"
+       ]
+      },
+      {
+       "fid": "karte-engkanto",
+       "was": "Engkanto",
+       "angabe": "On the menu:\n- Lager (4.8%): 200 PHP\n- Pale Ale (5%): 200 PHP\n- Honey Ale (5.1%): 200 PHP\n- Mango IPA (5.7%): 230 PHP\n- Imperial Pilsner (7.2%): 250 PHP\n- Double IPA (8%): 280 PHP\n- Non-Alcoholic: 200 PHP",
+       "beleg": "Rubrik «Engkanto» der Karte, 7 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "engkanto",
+        "beer",
+        "craft"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#engkanto"
+       }
+      },
+      {
+       "fid": "bar",
+       "was": "The bar",
+       "angabe": "Espresso martini at the bar. Open daily until 10PM.",
+       "beleg": "Espresso martini at the bar.",
+       "mehr": [
+        "Open daily until 10PM."
+       ],
+       "quelle": "Website pool.html",
+       "woerter": [
+        "bar",
+        "cocktail",
+        "cocktails",
+        "martini",
+        "drinks",
+        "alcohol",
+        "night",
+        "late"
+       ],
+       "braucht": [
+        "bar",
+        "cocktail",
+        "martini",
+        "drink",
+        "drinks",
+        "alcohol"
+       ]
+      },
+      {
+       "fid": "karte-cocktails",
+       "was": "Cocktails",
+       "angabe": "On the menu:\n- Rum & Coke: 100 PHP\n- Gin & Tonic: 200 PHP\n- Vodka Tonic: 200 PHP\n- Vodka Cranberry: 220 PHP\n- Mojito: 220 PHP\n- Tequila Sunrise: 250 PHP\n- Amaretto Sour: 250 PHP\n- Whiskey Sour: 250 PHP\n- Espresso Martini: 250 PHP\n- Piña Colada: 250 PHP\n- Aperol Spritz: 320 PHP\n- Jack & Coke: 280 PHP\n- Old Fashioned: 280 PHP\n- The Godfather: 280 PHP",
+       "beleg": "Rubrik «Cocktails» der Karte, 14 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "cocktail",
+        "cocktails",
+        "mojito",
+        "gin",
+        "rum",
+        "vodka"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#cocktails"
+       }
+      },
+      {
+       "fid": "karte-wine",
+       "was": "Wine",
+       "angabe": "On the menu:\n- Cape Heights: 1300 PHP (Merlot)\n- 19 Crimes: 1450 PHP (Cabernet Sauvignon)\n- Camas Syrah: 1600 PHP (Rose)\n- Crystalline: 1600 PHP (Chardonay)\n- Mantua Valley: 1450 PHP (Sauvignon Blanc)\n- Ciwzano: 1600 PHP (Prosecco)\n- House Wine: 220 PHP / glass (Red & White)",
+       "beleg": "Rubrik «Wine» der Karte, 7 Posten",
+       "mehr": [],
+       "quelle": "Website menu.html",
+       "woerter": [
+        "wine",
+        "glass",
+        "bottle",
+        "red",
+        "white"
+       ],
+       "link": {
+        "text": "Full menu",
+        "href": "/the-cat-and-gun/haus/menu.html#wine"
+       },
+       "braucht": [
+        "wine",
+        "wines",
+        "red",
+        "white",
+        "rose",
+        "prosecco",
+        "merlot",
+        "chardonnay",
+        "chardonay",
+        "sauvignon",
+        "cabernet",
+        "syrah"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Pool & playground",
+   "gruppen": [
+    {
+     "gruppe": "Inside and out",
+     "zeilen": [
+      {
+       "fid": "pool",
+       "was": "Pool table",
+       "angabe": "A pool table with red cloth, by Apollo. Open daily from 7AM to 10PM.",
+       "beleg": "A pool table with red cloth, by Apollo. Open daily from 7AM to 10PM.",
+       "mehr": [],
+       "quelle": "Website pool.html",
+       "woerter": [
+        "pool",
+        "billiard",
+        "billiards",
+        "snooker",
+        "cue",
+        "play"
+       ]
+      },
+      {
+       "fid": "spielplatz",
+       "was": "Playground",
+       "angabe": "Behind the café: a garden with palms, benches, a climbing wall and a slide. Open daily from 7AM to 10PM.",
+       "beleg": "Behind the café: a garden with palms, benches, a climbing wall and a slide. Open daily from 7AM to 10PM.",
+       "mehr": [],
+       "quelle": "Website playground.html",
+       "woerter": [
+        "playground",
+        "kids",
+        "kid",
+        "children",
+        "child",
+        "family",
+        "slide",
+        "climbing",
+        "garden",
+        "outside",
+        "outdoor",
+        "seating",
+        "benches",
+        "play",
+        "baby"
+       ]
+      },
+      {
+       "fid": "familie",
+       "was": "Families",
+       "angabe": "Good food for grown-ups, fun times for the little ones.",
+       "beleg": "Good food for grown-ups, fun times for the little ones.",
+       "mehr": [],
+       "quelle": "Website playground.html",
+       "woerter": [
+        "family",
+        "families",
+        "kids",
+        "children",
+        "friendly",
+        "little"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Events",
+   "gruppen": [
+    {
+     "gruppe": "At The Cat & Gun",
+     "zeilen": [
+      {
+       "fid": "termine",
+       "was": "Next dates",
+       "angabe": "New dates are posted on Instagram.",
+       "beleg": "New dates are posted on Instagram.",
+       "mehr": [],
+       "quelle": "Website index.html",
+       "woerter": [
+        "event",
+        "events",
+        "next",
+        "upcoming",
+        "whats",
+        "on",
+        "happening",
+        "week"
+       ],
+       "link": {
+        "text": "@thecatandgun",
+        "href": "https://www.instagram.com/thecatandgun/"
+       }
+      },
+      {
+       "fid": "markt",
+       "was": "Sunday Community Market",
+       "angabe": "Last market · Sunday, 15 November 2026 · Coffee & Thrift with local vendors, from 8AM.",
+       "beleg": "Last market · Sunday, 15 November 2026",
+       "mehr": [
+        "Coffee & Thrift with local vendors, from 8AM."
+       ],
+       "quelle": "Website index.html",
+       "woerter": [
+        "market",
+        "sunday",
+        "thrift",
+        "vendors",
+        "community"
+       ],
+       "braucht": [
+        "market",
+        "markets",
+        "thrift"
+       ]
+      },
+      {
+       "fid": "screening",
+       "was": "Live screenings",
+       "angabe": "The whole contest at Cloud 9 was screened live at The Cat & Gun.",
+       "beleg": "The whole contest at Cloud 9 was screened live at The Cat & Gun.",
+       "mehr": [],
+       "quelle": "Website index.html",
+       "woerter": [
+        "screening",
+        "screenings",
+        "surf",
+        "wsl",
+        "contest",
+        "watch",
+        "live"
+       ],
+       "braucht": [
+        "watch",
+        "screen",
+        "screening",
+        "screenings",
+        "show",
+        "wsl",
+        "tv",
+        "stream"
+       ]
+      },
+      {
+       "fid": "jubilaeum",
+       "was": "3rd Anniversary",
+       "angabe": "Celebrated on Sunday, 16 August 2026 · Three years in Catangnan, with Happy Hour all day.",
+       "beleg": "Celebrated on Sunday, 16 August 2026",
+       "mehr": [
+        "Three years in Catangnan, with Happy Hour all day."
+       ],
+       "quelle": "Website index.html",
+       "woerter": [
+        "anniversary",
+        "years",
+        "old",
+        "since"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "The Cat & Gun",
+   "gruppen": [
+    {
+     "gruppe": "About",
+     "zeilen": [
+      {
+       "fid": "haus",
+       "was": "The Cat & Gun",
+       "angabe": "Your neighbourhood hangout.",
+       "beleg": "Your neighbourhood hangout.",
+       "mehr": [],
+       "quelle": "Website index.html",
+       "woerter": [
+        "about",
+        "cafe",
+        "café",
+        "what",
+        "who",
+        "place",
+        "concept",
+        "hangout"
+       ]
+      },
+      {
+       "fid": "google",
+       "was": "Google reviews",
+       "angabe": "4.6 from 318 reviews",
+       "beleg": "4.6 from 318 reviews",
+       "mehr": [],
+       "quelle": "Website visit.html",
+       "woerter": [
+        "reviews",
+        "review",
+        "rating",
+        "google",
+        "stars"
+       ]
+      },
+      {
+       "fid": "lieferung",
+       "was": "Food delivery",
+       "angabe": "TravelGO",
+       "beleg": "TravelGO",
+       "mehr": [],
+       "quelle": "Website visit.html",
+       "woerter": [
+        "delivery",
+        "deliver",
+        "order",
+        "online",
+        "travelgo"
+       ],
+       "link": {
+        "text": "TravelGO",
+        "href": "https://travelgo.ph/restaurant/the-cat-gun"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "kennung": "catgun",
+ "name": "The Cat & Gun",
+ "welt": "bar",
+ "quelle": "../../..",
+ "hinweis": "Café und Bar in Catangnan, Siargao. Nur Englisch. Angelegt 22.11.2026 mit _werkzeuge/bureau/beschreibung.py. quelle ist relativ zu stamm/ (= «The Cat & Gun Siargao/»). Die Quelle wird nur gelesen, nie beschrieben."
+}

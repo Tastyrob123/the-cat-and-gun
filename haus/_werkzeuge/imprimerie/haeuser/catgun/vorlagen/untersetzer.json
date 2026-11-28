@@ -1,0 +1,272 @@
+{
+"art": "untersetzer",
+"format": "r95",
+"vorlagen": [
+{
+"id": "untersetzer-001",
+"titel": "Coaster · Brekky",
+"bereich": "Café and kitchen",
+"vorlage": "rund",
+"ton": "hell",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Good mornings start here.",
+"unter": "7:00 – 10:30"
+},
+"rueck": {
+"vorlage": "rundliste",
+"inhalt": {
+"ueber": "Brekky Specials",
+"titel": "Bagel & Coffee Combo",
+"liste": [
+{
+"name": "Eggs your way",
+"detail": "three eggs on homemade sourdough",
+"preis": ""
+}
+],
+"unter": "350 PHP"
+},
+"ton": "creme"
+}
+},
+{
+"id": "untersetzer-002",
+"titel": "Coaster · Coffee",
+"bereich": "Café and kitchen",
+"vorlage": "deckel",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Coffee",
+"titel": "Coffee, hot or iced.",
+"unter": "7AM – 10PM DAILY",
+"fuss": ""
+},
+"format": "q93",
+"rueck": {
+"vorlage": "karte",
+"inhalt": {
+"ueber": "Coffee · hot or iced",
+"titel": "Coffee",
+"liste": [
+{
+"name": "Espresso",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Americano",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Long Black",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Flat White",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Latte",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Cappuccino",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Mocha",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Matcha",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Chai Latte",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Dirty Matcha",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Spanish Latte",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Espresso Fizz",
+"detail": "",
+"preis": ""
+}
+],
+"fuss": ""
+},
+"ton": "hell"
+}
+},
+{
+"id": "untersetzer-003",
+"titel": "Coaster · Desserts",
+"bereich": "Café and kitchen",
+"vorlage": "rund",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Save room for dessert.",
+"unter": "ALWAYS."
+},
+"rueck": {
+"vorlage": "rundliste",
+"inhalt": {
+"ueber": "Homemade desserts",
+"liste": [
+{
+"name": "Tiramisu",
+"detail": "Italian blend of coffee, cocoa and mascarpone.",
+"preis": ""
+},
+{
+"name": "Mango Float",
+"detail": "Sweet mangoes, silky cream and crunchy biscuit.",
+"preis": ""
+},
+{
+"name": "Cookie Cream Crunch",
+"detail": "Crunchy, creamy and chocolatey.",
+"preis": ""
+},
+{
+"name": "Pick & Mix Mini Cheesecakes",
+"detail": "Ask staff for flavours of the day.",
+"preis": ""
+}
+]
+},
+"ton": "hell"
+}
+},
+{
+"id": "untersetzer-004",
+"titel": "Coaster · Super Juices",
+"bereich": "Super Juices",
+"vorlage": "rund",
+"ton": "gruen",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Super Juices",
+"titel": "Because feeling good should taste this good."
+},
+"rueck": {
+"vorlage": "rundliste",
+"inhalt": {
+"ueber": "Super Juices",
+"liste": [
+{
+"name": "Melonberry",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Mango Tango",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Pineapple Punch",
+"detail": "",
+"preis": ""
+},
+{
+"name": "The Green Glow",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Turbo Tonic",
+"detail": "",
+"preis": ""
+},
+{
+"name": "The Purple Potion",
+"detail": "",
+"preis": ""
+}
+],
+"unter": "Available all day, everyday"
+},
+"ton": "hell"
+}
+},
+{
+"id": "untersetzer-005",
+"titel": "Coaster · Pool table",
+"bereich": "Pool table",
+"vorlage": "deckel",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Pool table",
+"titel": "Then someone picked up a cue.",
+"fuss": ""
+},
+"format": "q93",
+"rueck": {
+"vorlage": "deckel",
+"inhalt": {
+"ueber": "Catangnan · Siargao",
+"titel": "The Cat & Gun",
+"unter": "7AM – 10PM DAILY",
+"fuss": ""
+},
+"ton": "hell"
+}
+}
+]
+}

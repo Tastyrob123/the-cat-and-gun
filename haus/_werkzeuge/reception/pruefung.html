@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-wo-titel="Check · {name} · The Cat & Gun">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check · Inquiries &amp; chat · The Cat &amp; Gun</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/reception/_ob/kleid/catgun-zeichen.svg?v=433cbe3983">
+<!-- Prüfseite von Inquiries & chat (Master R23, E20; Kopie der Prüfseite von La Réception des Culinarium). Läuft ohne das Werkzeug:
+     prüft Browser, Server-Teil, Ablage, Antworten und Antwortdatei, zeigt die mitgeschriebenen Browserfehler und erklärt jedes Stichwort (See · Why · Do). -->
+<style>
+@font-face{font-family:'Gloock';font-style:normal;font-weight:100 900;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+:root{--navy:#26211c;--nacht:#171411;--papier:#e7e2db;--weiss:#f6f3ef;--gold:#e2c6a3;--messing:#bb864d;--taupe:#8b5735;--tinte:#171411;--gut:#46652e;--gelb:#a4673e;--rot:#8d5835;
+  --serif:'Gloock',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:15px/1.6 var(--sans);color:var(--tinte);background:linear-gradient(rgba(231,226,219,.86),rgba(231,226,219,.86)),var(--papier)}
+.kopf{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px clamp(16px,4vw,56px);color:var(--weiss);background:linear-gradient(rgba(38,33,28,.5),rgba(38,33,28,.5)),var(--navy);box-shadow:0 0 0 1px rgba(226,198,163,.35)}
+.kopf img{width:58px;height:auto}
+.kopf b{display:block;font:400 22px/1.1 var(--serif)}
+.kopf small{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.kopf .re{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+.kn{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 18px;border:0;border-radius:999px;font:500 13px var(--sans);text-decoration:none;cursor:pointer;color:var(--nacht);background:linear-gradient(180deg,#e5ccad,#bb864d);box-shadow:0 8px 18px -10px rgba(23,20,17,.6)}
+.kn--linie{color:var(--weiss);background:transparent;box-shadow:inset 0 0 0 1px rgba(226,198,163,.5)}
+main{max-width:1080px;margin:0 auto;padding:28px clamp(16px,4vw,40px) 64px}
+h1{font:400 clamp(30px,4vw,44px)/1.1 var(--serif);color:var(--navy);margin:0 0 6px}
+h2{font:400 26px/1.2 var(--serif);color:var(--navy);margin:38px 0 12px}
+.satz{max-width:70ch;color:#322b24;margin:0 0 18px}
+.blatt{background:var(--weiss);border-radius:14px;box-shadow:0 0 0 1px rgba(139,87,53,.25),0 16px 30px -22px rgba(23,20,17,.5);overflow:hidden}
+.z{display:grid;grid-template-columns:14px minmax(0,1.1fr) minmax(0,2fr) auto;gap:14px;align-items:center;padding:12px 18px;border-top:1px solid rgba(139,87,53,.18)}
+.z:first-child{border-top:0}
+.z i{width:12px;height:12px;border-radius:50%;background:var(--gut)}
+.z.gelb i{background:var(--gelb)}.z.rot i{background:var(--rot)}
+.z b{font-weight:500}
+.z span{color:#423932;overflow-wrap:anywhere}
+.z a{font-size:13px;color:var(--taupe)}
+.gr{font:600 13px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);padding:14px 18px 4px;background:rgba(223,215,200,.35)}
+.lex{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.lex article{padding:16px 18px;background:var(--weiss);border-radius:14px;box-shadow:0 0 0 1px rgba(139,87,53,.25);scroll-margin-top:20px}
+.lex article:target{box-shadow:0 0 0 2px var(--messing),0 16px 30px -18px rgba(23,20,17,.5)}
+.lex h3{margin:0 0 6px;font:600 13px var(--sans);letter-spacing:.16em;color:var(--navy)}
+.lex p{margin:4px 0;font-size:14px}.lex p b{font-weight:600;color:var(--taupe)}
+.fl{margin:0;padding:0;list-style:none}
+.fl li{padding:10px 18px;border-top:1px solid rgba(139,87,53,.18);font-size:13px;overflow-wrap:anywhere}
+.fl li:first-child{border-top:0}
+.fl time{color:var(--taupe);margin-right:10px}
+.rep{display:flex;gap:10px;flex-wrap:wrap}
+.rep .kn{background:var(--weiss);box-shadow:inset 0 0 0 1px rgba(139,87,53,.45)}
+.rep .kn.scharf{color:var(--weiss);background:var(--rot);box-shadow:none}
+.leer{padding:14px 18px;color:#50463d}
+@media (max-width:640px){.z{grid-template-columns:12px minmax(0,1fr);row-gap:2px}.z span,.z a{grid-column:2}.kopf .re{margin-left:0}}
+/* Auftritt wie im Werkzeug («re-auf»): Blöcke unterhalb des ersten Bildschirms schweben beim Hereinscrollen an ihren Platz (Oberflächen-Prüfung Punkt 11) */
+.re-auf{animation:re-auf .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0) * 55ms + 60ms)}
+@keyframes re-auf{from{transform:translate3d(0,18px,0)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.re-auf{animation:none}}
+</style>
+<script src="/the-cat-and-gun/haus/_werkzeuge/reception/_ob/kleid/catgun.js?v=1795872050"></script>
+<script src="/the-cat-and-gun/haus/_werkzeuge/reception/_ob/oberflaeche.js?v=1795872050" defer></script>
+<script src="studio/namen.js?v=1795872050" defer></script>
+<link rel="stylesheet" href="neuer-look.css?v=1795872050">
+<link rel="stylesheet" href="neuer-look-seiten.css?v=1795872050">
+<script src="neu/leiste.js?v=1795872050" defer></script>
+</head>
+<body class="nl-seiten">
+<div class="nl-lay nl-lay--seite">
+<aside class="nl-rail" id="rand" aria-label="Tools" data-nl-selbst></aside>
+<div class="nl-seite">
+<header class="kopf">
+  <img src="zeichen-haus.svg?v=606218de84" width="176" height="148" alt="" style="width:34px;height:auto">
+  <div><b>Check</b><small><span data-wo-name="gaeste">Inquiries &amp; chat</span> · The Cat &amp; Gun</small></div>
+  <div class="re"><a class="kn kn--linie" href="./">To the tool</a><button class="kn" type="button" id="neu">Check again</button></div>
+</header>
+<main>
+  <h1>Is everything all right?</h1>
+  <p class="satz" id="satz">This page checks the browser, the server part, the storage, the answers and the answers file. It also works when the tool itself does not start.</p>
+  <div class="blatt" id="punkte"><p class="leer">Checking …</p></div>
+
+  <h2>Errors the browser noted</h2>
+  <div class="blatt"><ul class="fl" id="fehler"><li>Loading …</li></ul></div>
+
+  <h2>Repairs</h2>
+  <p class="satz">Each repair only after a second click. None of them touches the data of the house (inquiries, replies, answers). «Download all data» gives inquiries with your replies, questions and all answers as one file.</p>
+  <div class="rep">
+    <button class="kn" type="button" data-rep="fehler">Clear the error list</button>
+    <button class="kn" type="button" data-rep="geraet">Reset the view in this browser</button>
+    <a class="kn" href="api/export" download>Download all data</a>
+  </div>
+
+  <h2>Keywords</h2>
+  <p class="satz">Each message of the tool has a keyword. «What to do?» in the message leads here.</p>
+  <div class="lex" id="lex"></div>
+</main>
+</div>
+</div>
+<script src="pruefung.js?v=1795872050"></script>
+</body>
+</html>

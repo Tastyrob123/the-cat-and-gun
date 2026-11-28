@@ -1,0 +1,26 @@
+{
+"art": "huelse",
+"format": "huelse",
+"vorlagen": [
+{
+"id": "huelse-001",
+"titel": "Cup sleeve · Coffee to go",
+"bereich": "Café and kitchen",
+"vorlage": "etikett",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"titel": "Coffee, hot or iced.",
+"text": "Good mornings start here.",
+"unter": "OPEN 7AM – 10PM DAILY · CATANGNAN"
+}
+}
+]
+}

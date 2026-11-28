@@ -1,0 +1,49 @@
+{
+"art": "banner",
+"format": "banner",
+"vorlagen": [
+{
+"id": "banner-001",
+"titel": "Banner · Neighbourhood hangout",
+"bereich": "Out front",
+"vorlage": "geteilt",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"bild": "b24",
+"ueber": "Catangnan · Siargao",
+"titel": "Your neighbourhood hangout",
+"text": "",
+"aktion": "OPEN 7AM – 10PM DAILY"
+}
+},
+{
+"id": "banner-002",
+"titel": "Banner · Name of the house",
+"bereich": "Out front",
+"vorlage": "deckel",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "einfach",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Catangnan · Siargao",
+"titel": "The Cat & Gun",
+"unter": "7AM – 10PM DAILY",
+"fuss": ""
+}
+}
+]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{NAME}} · The Cat & Gun</title>
+<!-- Seite des lokalen Servers von Visitors, wenn ein anderes Werkzeug auf diesem Rechner (noch) nicht antwortet (Mac-Prüfung 23.11.2026, Punkt 19):
+     der Knopf führt nie ins Leere. Online liegen alle Werkzeuge im selben Cloudflare-Projekt, dort gibt es diese Seite nicht. -->
+<style>
+@font-face{font-family:'Gloock';font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Catgun Sans';font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'Catgun Mono';font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2') format('woff2')}
+:root{--tx:#f3ece2;--tx2:rgba(243,236,226,.7);--gold1:#e6c39a;--gold2:#a8734a}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{display:grid;place-items:center;padding:24px 16px;background:#110d0b;color:var(--tx);font:400 17px/1.55 'Catgun Sans',system-ui,sans-serif;position:relative;isolation:isolate}
+body::before{content:'';position:fixed;inset:-60px;z-index:-2;background:url(/the-cat-and-gun/haus/_werkzeuge/registre/look/b19-weich.webp) center/cover;filter:blur(22px) saturate(1.1) brightness(.5)}
+body::after{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%)}
+main{width:100%;max-width:600px;padding:40px 40px 36px;border-radius:22px;background:linear-gradient(165deg,rgba(255,238,215,.12),rgba(255,238,215,.035) 45%,rgba(18,13,10,.22));backdrop-filter:blur(30px) saturate(1.35);-webkit-backdrop-filter:blur(30px) saturate(1.35);border:1px solid rgba(255,235,210,.14);box-shadow:inset 0 1px 0 rgba(255,240,220,.2)}
+small{display:block;font:400 13px/1.4 'Catgun Mono',ui-monospace,monospace;letter-spacing:.17em;text-transform:uppercase;color:rgba(243,236,226,.56)}
+h1{margin-top:14px;font:400 clamp(32px,6vw,46px)/1.12 'Gloock',Georgia,serif;letter-spacing:-.01em}
+p{margin-top:14px;color:var(--tx2)}
+a{display:inline-flex;align-items:center;gap:10px;height:46px;margin-top:26px;padding:0 22px;border-radius:999px;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;text-decoration:none;font:500 14.5px/1 'Catgun Sans',system-ui,sans-serif}
+a:hover{filter:brightness(1.06)}
+@media (max-width:480px){main{padding:30px 22px}}
+</style>
+</head>
+<body>
+<main>
+  <small>{{NAME}} · The Cat & Gun</small>
+  <h1>{{NAME}} is not open on this computer.</h1>
+  <p>{{SATZ}}</p>
+  <a href="/the-cat-and-gun/haus/_werkzeuge/registre/">Back to Visitors</a>
+</main>
+</body>
+</html>

@@ -1,0 +1,592 @@
+/* Neuer Look wie das Control panel (26.11.2026).
+   Vorlage: _entwurf-dashboard/guests-bereich (guests.css) mit runde2/stil.css und runde3/zusatz.css; Seitenleiste «lack6» wie maison/dash.css.
+   Wird als letztes geladen. Teil 1: Bausteine des Entwurfs (Klassen «nl-»). Teil 2: die bisherigen Teile des Werkzeugs im dunklen Glas. */
+
+/* ================= Teil 1 · Grund ================= */
+body.bu.re.nl{
+  --serif:"Gloock",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace;
+  --gold1:#e6c39a;--gold2:#a8734a;--rot:#e0645c;--gruen:#8cc29a;
+  --tx:#f3ece2;--tx2:rgba(243,236,226,.72);--tx3:rgba(243,236,226,.5);--li:rgba(255,235,210,.1);--li2:rgba(255,235,210,.18);--akz:var(--gold1);--feld:rgba(0,0,0,.22);
+  --glas:linear-gradient(165deg,rgba(255,238,215,.12),rgba(255,238,215,.035) 45%,rgba(18,13,10,.22));
+  --glas-s:inset 0 1px 0 rgba(255,240,220,.2),inset 0 -1px 0 rgba(0,0,0,.3);
+  /* Werte der bisherigen Teile auf Dunkel */
+  --raum:#0d0b09;--navy:#f3ece2;--tinte:#f3ece2;--leise:rgba(243,236,226,.66);--taupe-tief:#e6c39a;--taupe:rgba(230,195,154,.75);--messing:#e6c39a;--gold:#e6c39a;--goldhell:#e6c39a;
+  --platte:var(--glas);--platte-s:var(--glas-s),0 0 0 1px rgba(255,235,210,.14);--kuhle:rgba(0,0,0,.24);--kuhle-s:inset 0 0 0 1px rgba(255,235,210,.16);--papier:#1a1512;
+  --kante:rgba(255,235,210,.14);--licht:rgba(255,240,222,.06);--insel:var(--glas);--insel-s:var(--platte-s);--kopf:0px;--leiste:0px;
+  --wo-tinte:#f3ece2;--wo-leise:rgba(243,236,226,.66);--wo-linie:rgba(255,235,210,.14);--wo-papier:#1a1512;--wo-papier2:#14110e;--wo-blatt:#1a1512;
+  background:#0d0b09;color:var(--tx);font-family:var(--sans);-webkit-font-smoothing:antialiased;
+  display:block;min-height:100vh;padding:0;margin:0;overflow-x:hidden}
+body.nl .nl-bg{position:fixed;inset:0;z-index:-2;background:#0d0b09 url(neu/b14-weich.webp) center/cover no-repeat}
+body.nl .nl-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(110% 70% at 50% 0%,rgba(14,11,9,.1),rgba(14,11,9,.62) 75%),linear-gradient(180deg,rgba(14,11,9,.7),rgba(14,11,9,.15) 18%,rgba(14,11,9,.35) 70%,rgba(14,11,9,.85))}
+body.nl ::selection{background:rgba(230,195,154,.35);color:#fff}
+.nl-lay{max-width:1440px;margin:0 auto;padding:44px 44px 48px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:22px;align-items:start}
+.nl-main{display:flex;flex-direction:column;gap:18px;min-width:0;padding:0!important;margin:0!important;background:none!important}
+#ansicht{display:flex;flex-direction:column;gap:18px;min-width:0}
+#ansicht>*{margin-top:0!important;margin-bottom:0!important}
+.nl-p{position:relative;border-radius:22px;background:var(--glas);border:1px solid rgba(255,235,210,.14);box-shadow:var(--glas-s)}
+.nl-mono{font-family:var(--mono);font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.nl-ico{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nl-mi{width:14px;height:14px;stroke:var(--akz);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nl-ck{width:15px;height:15px;stroke:var(--gruen);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nl-pf{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;box-shadow:0 6px 14px -8px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.4)}
+.nl-pf .nl-ico{width:13px;height:13px;stroke-width:2}
+.nl-leise{font-size:14px;line-height:1.5;color:var(--tx2)}
+body.nl h1,body.nl h2,body.nl h3,body.nl h4{font-family:var(--serif);font-weight:400;letter-spacing:-.005em;color:var(--tx)}
+body.nl h2 em,body.nl h3 em,body.nl h1 em{font-style:normal;color:var(--gold1)}
+body.nl :focus-visible{outline:2px solid var(--gold1);outline-offset:3px}
+
+/* Knöpfe des Entwurfs */
+.nl-wk{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px;border-radius:999px;border:1px solid var(--li2);background:rgba(255,240,222,.06);font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--tx);cursor:pointer;white-space:nowrap;transition:background .3s,border-color .3s}
+.nl-wk .nl-ico{width:17px;height:17px;color:var(--gold1)}
+.nl-wk:hover{background:rgba(255,240,222,.12);border-color:rgba(230,195,154,.4)}
+.nl-wk--gold{background:linear-gradient(150deg,var(--gold1),var(--gold2));border-color:transparent;color:#1a120c}
+.nl-wk--gold .nl-ico{color:#1a120c}
+.nl-wk--gold:hover{background:linear-gradient(150deg,#f0d2ae,#b98256)}
+.nl-wk:disabled{opacity:.45;cursor:default;background:rgba(255,240,222,.04)}
+.nl-wk:disabled:hover{border-color:var(--li2)}
+.nl-knopf{display:inline-flex;align-items:center;gap:12px;padding:5px 5px 5px 16px;border-radius:999px;border:1px solid var(--li2);background:rgba(255,240,222,.05);font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx);white-space:nowrap;cursor:pointer}
+.nl-knopf--gold{background:linear-gradient(150deg,var(--gold1),var(--gold2));border-color:transparent;color:#1a120c}
+.nl-knopf--gold .nl-pf{background:#1a120c;color:var(--gold1)}
+.nl-link{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx);background:none;border:0;padding:0;cursor:pointer;white-space:nowrap}
+.nl-link .nl-pf{width:24px;height:24px}.nl-link .nl-pf .nl-ico{width:11px;height:11px}
+.nl-pill{display:inline-flex;align-items:center;gap:9px;height:42px;padding:0 16px;border-radius:999px;font-size:13.5px;color:#f3ece2;background:rgba(18,13,10,.6);border:1px solid rgba(255,235,210,.2);text-decoration:none;cursor:pointer}
+.nl-pill .nl-ico{width:16px;height:16px;color:var(--gold1)}
+
+/* ================= Seitenleiste «lack6» (Control panel) ================= */
+.nl-rail{position:sticky;top:24px;max-height:calc(100vh - 48px);overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(230,195,154,.35) transparent;display:flex;flex-direction:column;padding:8px;border-radius:30px;background:linear-gradient(170deg,#1d1814,#110e0b 60%,#0e0b09);border:1px solid rgba(230,195,154,.35);box-shadow:0 40px 80px -50px rgba(0,0,0,.95);
+  --li:rgba(230,195,154,.16);--li2:rgba(230,195,154,.32);color:var(--tx)}
+.nl-s6{flex:1;display:flex;flex-direction:column;border:1px solid rgba(230,195,154,.22);border-radius:23px;padding:20px 8px 12px}
+.nl-marke{display:flex;flex-direction:column;align-items:center;gap:12px;padding:6px 0 20px;border-bottom:1px solid var(--li);text-decoration:none}
+.nl-marke img{width:118px;height:auto}
+.nl-marke .nl-mono{font-size:13px;letter-spacing:.22em;color:var(--tx3)}
+.nl-rail .nl-rk{justify-content:space-between;padding:16px 10px 8px;color:rgba(230,195,154,.7);flex-wrap:nowrap}
+.nl-rail .nl-rk span{letter-spacing:.08em}
+.nl-rail nav{display:flex;flex-direction:column;gap:2px}
+.nl-rail nav a,.nl-rfuss a,.nl-rfuss button,.nl-zp{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:15px;color:var(--tx2);text-decoration:none;position:relative;background:none;border:0;text-align:left;width:100%;cursor:pointer}
+.nl-rail nav a:hover,.nl-rfuss a:hover,.nl-rfuss button:hover,.nl-zp:hover{background:rgba(255,240,222,.06)}
+.nl-rail nav a b,.nl-rfuss b,.nl-zp b{display:block;font-weight:500;font-size:15px;color:var(--tx);line-height:1.25}
+.nl-rail nav a i,.nl-rfuss i,.nl-zp i{display:block;font-style:normal;font-size:13px;color:var(--tx2);margin-top:1px;line-height:1.3}
+.nl-rail nav a .nl-ico,.nl-rfuss .nl-ico,.nl-zp .nl-ico{color:var(--gold1)}
+.nl-rail kbd{font-family:var(--mono);font-size:13px;width:24px;height:24px;border-radius:6px;border:1px solid var(--li2);display:grid;place-items:center;color:var(--tx3);flex:none}
+.nl-rail nav a.nl-jetzt{background:linear-gradient(150deg,var(--gold1),var(--gold2))}
+.nl-rail nav a.nl-jetzt b{color:#1a120c}.nl-rail nav a.nl-jetzt i{color:rgba(26,18,12,.72)}
+.nl-rail nav a.nl-jetzt kbd{color:#1a120c;border-color:rgba(26,18,12,.35)}
+.nl-rail nav a.nl-jetzt .nl-ico{color:#1a120c}
+.nl-rail em{margin-left:auto;font-style:normal;font-family:var(--mono);font-size:13px;min-width:22px;height:22px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;padding:0 6px}
+.nl-rail nav a.nl-jetzt em{background:#1a120c;color:var(--gold1)}
+.nl-rail a.wo-fehlt{opacity:.45;cursor:default}
+.nl-zp{margin-top:10px}
+.nl-rhaus{margin-top:14px;border-top:1px solid var(--li);padding:16px 10px 4px;display:flex;flex-direction:column;gap:9px;font-size:13px;color:var(--tx2)}
+.nl-rhaus span{display:flex;gap:9px;align-items:center}.nl-rhaus .nl-ico{width:14px;height:14px;color:var(--gold1)}
+.nl-rhaus[hidden]{display:none}
+.nl-rfuss{margin-top:12px;border-top:1px solid var(--li);padding-top:10px;display:flex;flex-direction:column;gap:2px}
+.nl-rfuss .rdg-wieder{font-size:13px}
+
+/* Kopf am Handy und Tablet */
+.nl-kopf{display:none}
+
+/* ================= Hero (gheld) ================= */
+.nl-held{min-height:610px;display:flex;overflow:hidden;isolation:isolate}
+.nl-held__b{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:inherit;filter:brightness(.75) saturate(1.1);z-index:0}
+.nl-held::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:1;background:linear-gradient(95deg,rgba(14,11,9,.94) 0%,rgba(14,11,9,.78) 34%,rgba(14,11,9,.15) 62%,rgba(14,11,9,0) 80%),linear-gradient(0deg,rgba(14,11,9,.8),transparent 35%)}
+.nl-held__i{position:relative;z-index:2;padding:48px 52px 30px;display:flex;flex-direction:column;max-width:880px;min-width:0}
+.nl-held .nl-mono{color:rgba(243,236,226,.62)}
+.nl-held__i{container-type:inline-size}
+.nl-h{font-size:min(150px,27cqi);line-height:1;margin:16px 0 18px;letter-spacing:-.025em;color:#f3ece2}
+.nl-held__s{font-family:var(--serif);font-size:34px;line-height:1.15;color:#f3ece2;max-width:560px}
+.nl-held__s b{font-weight:400;color:var(--gold1)}
+.nl-wkst{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.nl-tabs{display:flex;flex-wrap:wrap;gap:4px;margin-top:34px;align-self:flex-start;padding:5px;border-radius:999px;background:rgba(14,11,9,.55);border:1px solid rgba(255,235,210,.16)}
+.nl-tab{display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 14px;border-radius:999px;border:0;background:none;font-size:14.5px;color:rgba(243,236,226,.82);cursor:pointer;white-space:nowrap}
+.nl-tab:hover{color:#fff;background:rgba(255,240,222,.08)}
+.nl-tab.nl-an{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.nl-tab em,.nl-tab i{font-style:normal;font-family:var(--mono);font-size:13px;padding:1px 8px;border-radius:999px;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.nl-tab.nl-an em,.nl-tab.nl-an i{background:#1a120c;color:var(--gold1)}
+.nl-held--klein{min-height:420px}
+.nl-held--klein .nl-held__b{left:30%;width:70%;border-radius:0 22px 22px 0}
+.nl-held--klein::before{background:linear-gradient(90deg,rgba(18,14,11,.97) 0%,rgba(18,14,11,.95) 38%,rgba(18,14,11,.4) 55%,rgba(18,14,11,0) 72%)}
+.nl-held--klein .nl-h{font-size:min(130px,22cqi)}
+.nl-held--klein .nl-h--lang{font-size:min(104px,14cqi)}
+.nl-held--klein .nl-h--lang2{font-size:min(88px,11.5cqi);line-height:1}
+.nl-held--klein .nl-held__s{font-family:var(--sans);font-size:19px;line-height:1.5;max-width:600px;color:rgba(243,236,226,.86)}
+/* Übersicht: links Text, rechts das Handy; die sechs Reiter darunter über die ganze Breite */
+.nl-held--start{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start}
+.nl-held--start .nl-held__i{max-width:none;padding-bottom:0}
+.nl-held--start .nl-held__s{max-width:600px}
+.nl-held--start .nl-tabr{grid-column:1/-1;position:relative;z-index:2;padding:0 52px 30px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.nl-held--start .nl-tabs{margin-top:0}
+/* Handy im Kopf der Übersicht */
+.nl-ghphone{position:relative;z-index:3;margin:36px 52px 18px 0;display:flex;flex-direction:column;align-items:center;gap:12px}
+.nl-hdy{position:relative;height:600px;aspect-ratio:640/1122;filter:drop-shadow(0 40px 40px rgba(0,0,0,.55))}
+/* Safari (Abnahme 28.11.2026): die Breite des Handys ausgeschrieben (600 px × 640/1122). Ohne sie rechnet Safari die Spalte mit den 640 px des Bildes,
+   die Textspalte der Übersicht fiel auf 262 px zusammen (Titel klein, Satz in acht Zeilen, Knöpfe untereinander). In Chrome ändert sich nichts. */
+.nl-hdy{width:calc(600px * 640 / 1122)}
+.nl-hdy__s{position:absolute;left:16.769%;top:9.372%;width:66.067%;height:81.282%;overflow:hidden;border-radius:7%/3.6%}
+.nl-hdy__g{position:relative;width:100%;height:100%;display:block;pointer-events:none}
+.nl-cph{background:#f5f0e7;display:flex;flex-direction:column;gap:8px;padding:44px 10px 12px;font-size:12px;line-height:1.35;color:#1a1512}
+.nl-cphk{display:flex;align-items:center;gap:9px;padding:0 2px 10px;border-bottom:1px solid rgba(26,21,18,.12)}
+.nl-cphk img{width:22px;height:22px;padding:4px;border-radius:7px;background:#1a1512}
+.nl-cphk b{font-family:var(--serif);font-weight:400;font-size:14px}
+.nl-bub{max-width:84%;padding:7px 10px;border-radius:14px;overflow-wrap:anywhere}
+.nl-bub--g{align-self:flex-end;background:#1a1512;color:#f5f0e7;border-bottom-right-radius:4px}
+.nl-bub--h{align-self:flex-start;background:#fff;border:1px solid rgba(26,21,18,.1);border-bottom-left-radius:4px}
+.nl-bub--offen span{display:block;margin-top:8px;padding:6px 8px;border-radius:999px;text-align:center;background:#a8232a;color:#fff}
+.nl-cphf{margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.nl-cphf span{padding:7px 9px;border-radius:10px;border:1px solid rgba(26,21,18,.14);color:rgba(26,21,18,.6);background:#fff}
+.nl-ghlabel{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3ece2;padding:9px 14px;border-radius:999px;background:rgba(18,13,10,.6);border:1px solid rgba(255,235,210,.2);text-decoration:none}
+
+/* Abschnittstitel */
+.nl-stitel{display:flex;align-items:center;gap:18px;margin:22px 2px 0!important}
+.nl-snr{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(230,195,154,.35);background:rgba(230,195,154,.06);flex:none}
+.nl-snr .nl-ico{width:22px;height:22px;color:var(--gold1)}
+.nl-stitel h2{font-size:32px;line-height:1}
+.nl-stitel .nl-mono{margin-top:6px}
+
+/* Waiting for you */
+.nl-gw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.nl-gw--untereinander{grid-template-columns:minmax(0,1fr)}
+.nl-gwk{overflow:hidden;display:grid;grid-template-columns:170px minmax(0,1fr)}
+.nl-gwf{position:relative;min-height:100%;overflow:hidden}
+.nl-gwf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nl-aufsym{position:absolute;top:18px;left:18px;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(18,13,10,.6);border:1px solid rgba(255,235,210,.25);color:var(--gold1)}
+.nl-aufsym .nl-ico{width:22px;height:22px}
+.nl-gwi{padding:26px 26px 24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.nl-gwi h3{font-size:34px;line-height:1.05}
+.nl-gwi>p{font-size:14.5px;line-height:1.5;color:var(--tx2);margin-bottom:6px}
+.nl-gwi .nl-knopf{align-self:flex-start;margin-top:10px}
+.nl-wz2{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:rgba(255,240,222,.04);border:1px solid var(--li);text-align:left;cursor:pointer;width:100%;min-width:0}
+.nl-wz2:hover{border-color:rgba(230,195,154,.35)}
+.nl-av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none;background:rgba(230,195,154,.12);border:1px solid rgba(230,195,154,.3);color:var(--gold1)}
+.nl-av .nl-ico{width:17px;height:17px}
+.nl-av--gr{width:48px;height:48px}
+.nl-lzt{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.nl-lzt b{font-weight:500;font-size:15px;line-height:1.3;color:var(--tx);overflow-wrap:break-word}
+.nl-lzt small{font-size:13px;line-height:1.4;color:var(--tx2);overflow-wrap:break-word}
+.nl-neu{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;color:var(--gold1);border:1px solid rgba(230,195,154,.35);white-space:nowrap;flex:none}
+
+/* How a question travels */
+.nl-gweg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:30px 26px 28px}
+.nl-wline{position:absolute;left:12%;right:12%;top:96px;height:2px;background:linear-gradient(90deg,var(--gold2),var(--gold1),var(--gold2))}
+.nl-ws{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.nl-wsf{width:132px;height:132px;border-radius:50%;background-size:cover;background-position:center;border:3px solid var(--gold1);position:relative;box-shadow:0 0 0 8px rgba(230,195,154,.08)}
+.nl-wsn{position:absolute;right:-4px;top:-4px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:18px;background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c}
+.nl-wsi{margin-top:-20px;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#1a140f;border:1px solid rgba(230,195,154,.4);color:var(--gold1);position:relative}
+.nl-ws b{font-family:var(--serif);font-weight:400;font-size:23px;margin-top:6px;color:var(--tx)}
+.nl-ws i{font-style:normal;font-size:13.5px;color:var(--tx2);max-width:200px;line-height:1.4}
+
+/* What the chat knows */
+.nl-gwis{display:grid;gap:14px}
+.nl-gwis--4{grid-template-columns:repeat(4,minmax(0,1fr))}.nl-gwis--3{grid-template-columns:repeat(3,minmax(0,1fr))}.nl-gwis--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nl-wk2{overflow:hidden;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;color:#f3ece2;text-align:left;cursor:pointer;padding:0}
+.nl-wk2b{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.nl-wk2:hover .nl-wk2b{transform:scale(1.04)}
+.nl-wk2::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,9,7,.15),rgba(12,9,7,.35) 40%,rgba(12,9,7,.95))}
+.nl-ski{position:absolute;z-index:2;top:16px;left:16px;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(18,13,10,.55);border:1px solid rgba(255,235,210,.22);color:#f3ece2}
+.nl-wk2t{position:relative;z-index:2;padding:16px 18px;display:block}
+.nl-wk2t b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1}
+.nl-wk2t i{display:block;font-style:normal;font-size:13.5px;color:rgba(243,236,226,.85);margin-top:3px;line-height:1.35}
+
+/* drei Wege unten */
+.nl-gunten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.nl-wve{padding:24px 24px 22px;display:flex;flex-direction:column}
+.nl-wve h4{font-size:25px;line-height:1.1;margin:12px 0 8px}
+.nl-wve p{font-size:14px;line-height:1.5;color:var(--tx2);margin-bottom:16px}
+.nl-wve .nl-link{margin-top:auto}
+
+/* Leiste unten */
+.nl-leiste{position:sticky;bottom:16px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 12px 12px 24px;border-radius:999px;
+  background:linear-gradient(165deg,rgba(40,32,26,.96),rgba(22,17,13,.97))!important;box-shadow:inset 0 1px 0 rgba(255,240,220,.16),0 24px 40px -20px rgba(0,0,0,.8)!important;margin:0!important}
+.nl-stp{display:flex;align-items:center;gap:12px;min-width:0}
+.nl-stp b{display:block;font-weight:500;font-size:15px;color:var(--tx)}
+.nl-stp small{display:block;font-size:13px;line-height:1.4;color:var(--tx2)}
+.nl-pt{width:9px;height:9px;border-radius:50%;flex:none;background:var(--gold1);box-shadow:0 0 0 4px rgba(230,195,154,.2)}
+.nl-wr{display:flex;gap:8px;flex:none}
+.nl-wr .nl-wk{height:44px;padding:0 18px;font-size:14px}
+
+/* ================= Posteingang ================= */
+.re-eingang{display:flex!important;flex-direction:column;gap:18px;grid-template-columns:none!important}
+.nl-filter{display:flex;flex-wrap:wrap;gap:4px;align-self:flex-start;padding:5px;border-radius:999px;background:rgba(14,11,9,.55);border:1px solid rgba(255,235,210,.16)}
+body.nl .nl-filter.re-filter{background:rgba(14,11,9,.55)!important;box-shadow:none!important;margin:0!important}
+body.nl .nl-filter.re-filter button.nl-tab{flex:none;padding:0 16px;letter-spacing:0;color:rgba(243,236,226,.82);background:none;box-shadow:none}
+body.nl .nl-filter.re-filter button.nl-tab[aria-pressed="true"]{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;box-shadow:none}
+body.nl .nl-filter.re-filter i{opacity:1}
+.nl-envs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.nl-envs>:last-child:nth-child(3n+1){grid-column:span 3}
+.nl-envs>:last-child:nth-child(3n+2){grid-column:span 2}
+.nl-env{display:flex!important;align-items:center;gap:14px;padding:18px 16px!important;text-align:left;cursor:pointer;width:100%;min-width:0;margin:0!important;color:var(--tx)}
+.nl-env:hover{border-color:rgba(230,195,154,.35)}
+.nl-env.aktiv{background:linear-gradient(150deg,rgba(230,195,154,.2),rgba(168,115,74,.08))!important;border-color:rgba(230,195,154,.5)!important}
+.nl-env.erledigt{opacity:.72}
+.nl-env__k{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold1);display:flex;flex-wrap:wrap;column-gap:0}
+.nl-env__k,.nl-glr{margin-left:-1.6em;clip-path:inset(-4px -4px -4px 1.6em)}
+.nl-env__k .re-gl::before,.nl-glr .re-gl::before{color:var(--tx3)}
+/* Ein Glied, das breiter ist als die Karte (Handy, «Other questions» neben «Reply ready»), bricht um statt am Rand abgeschnitten zu werden (Abnahme 28.11.2026) */
+.nl-env__k .re-gl{white-space:normal;max-width:100%;padding-left:1.6em;text-indent:-1.6em}   /* zweite Zeile eines Glieds beginnt hinter dem Platz des Punkts, der am Zeilenanfang weggeschnitten wird */
+.nl-env__k .re-gl::before{text-indent:0}
+.nl-env.neu .nl-neu{background:linear-gradient(150deg,var(--gold1),var(--gold2));color:#1a120c;border-color:transparent}
+.nl-env .nl-lzt small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.re-detail{min-height:0!important;position:static!important;top:auto!important}
+.nl-gsp{padding:26px 28px 28px}
+.nl-gspk{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.nl-gspk h2{font-size:34px;line-height:1.1;margin-top:10px;overflow-wrap:anywhere}
+.nl-wr2{display:flex;gap:8px;flex-wrap:wrap}
+.nl-wr2 .nl-wk{height:44px;padding:0 18px;font-size:14px}
+.nl-gspg{display:grid;grid-template-columns:minmax(0,1fr) 60px minmax(0,1fr);gap:10px;align-items:start;margin-top:22px}
+.nl-links{padding-top:20px;min-width:0}
+.nl-gbub{display:flex;gap:14px;align-items:flex-end}
+.nl-gbt{flex:1;min-width:0;margin:0;padding:22px;border-radius:24px 24px 24px 6px;background:rgba(255,240,222,.08);border:1px solid rgba(255,235,210,.16);font-family:var(--serif);font-size:24px;line-height:1.3;color:var(--tx);overflow-wrap:anywhere;quotes:none}
+.nl-gbt::before,.nl-gbt::after{content:none!important}
+.nl-gbt span{display:block}
+.nl-mchips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0 62px}
+.nl-mchip{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:18px;border:1px solid var(--li2);font-size:13.5px;line-height:1.35;color:var(--tx);min-width:0;max-width:100%;flex-wrap:wrap}
+.nl-mchip .nl-ico{width:15px;height:15px;color:var(--gold1)}
+.nl-mchip i{font-style:normal;color:var(--tx3)}
+.nl-mchip>span{min-width:0;overflow-wrap:anywhere}
+.nl-mchip small{color:var(--tx3);font-size:13px}
+.nl-mchip .re-mail{user-select:all}
+.nl-alle{margin:18px 0 0 62px;padding:18px 20px;border-radius:18px;background:rgba(0,0,0,.2);border:1px solid var(--li);display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.nl-alle b{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.2;color:var(--tx)}
+.nl-alle p{font-size:14px;line-height:1.5;color:var(--tx2)}
+.nl-alle .nl-knopf,.nl-alle .nl-link{margin-top:6px}
+.nl-abf{display:flex;align-items:center;gap:10px;margin:18px 0 0 62px;font-size:13.5px;color:var(--tx2)}
+.nl-pfeilm{display:grid;place-items:center;color:var(--gold1);padding-top:110px}
+.nl-pfeilm .nl-ico{width:34px;height:34px}
+.nl-rechts{min-width:0}
+.nl-blatt3{padding:24px 26px 18px!important;border-radius:6px!important;background:#f5f0e7!important;color:#1a1512;transform:rotate(-1.2deg);filter:drop-shadow(0 26px 28px rgba(0,0,0,.5));box-shadow:none!important;border:0!important;margin:0!important;max-width:none!important}
+.nl-blatt3 .brief__marke{width:92px!important;height:auto!important;display:block;margin:0!important}
+.nl-an{margin:14px 0 0;font-size:13.5px;color:rgba(26,21,18,.7)}
+.nl-an div{display:flex;gap:10px;flex-wrap:wrap}.nl-an dt{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#8a5634}
+.nl-an dd{margin:0;overflow-wrap:anywhere}.nl-an small{color:rgba(26,21,18,.6);font-size:13px}
+.nl-schreib{margin:14px 0 14px}
+body.nl .nl-blatt3::before,body.nl .nl-blatt3::after{content:none!important;display:none!important}
+body.nl .nl-schreib textarea{display:block;width:100%;min-height:200px;resize:vertical;padding:14px;border-radius:8px;border:1px dashed rgba(26,21,18,.3)!important;background:transparent!important;font:15px/1.55 var(--sans);color:#1a1512!important;box-shadow:none!important}
+.nl-schreib textarea::placeholder{color:rgba(26,21,18,.5)}
+body.nl .nl-schreib textarea:focus{outline:none;border-color:#8a5634!important;border-style:solid!important}
+.nl-blf{display:flex;gap:10px;flex-wrap:wrap}
+.nl-blf .nl-wk{height:42px;padding:0 16px;font-size:14px;color:#1a1512;border-color:rgba(26,21,18,.22);background:transparent}
+.nl-blf .nl-wk .nl-ico{color:#a8734a}
+.nl-blf .nl-wk:hover{background:rgba(26,21,18,.05)}
+.nl-estand{margin-top:10px!important;font-size:13px!important;color:rgba(26,21,18,.62)!important}
+.nl-kanal{display:flex;align-items:center;gap:10px;margin-top:26px;flex-wrap:wrap}
+.nl-kanal .nl-mono{width:100%}
+.nl-kanal>span:not(.nl-mono){display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid var(--li2);font-size:13.5px;color:var(--tx)}
+.nl-kanal .nl-ico{width:15px;height:15px;color:var(--gold1)}
+.nl-kanal p{width:100%;font-size:13.5px;line-height:1.5;color:var(--tx2)}
+.nl-ohne{padding:22px;border-radius:18px;border:1px dashed var(--li2);display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.nl-ohne p{font-size:15px;line-height:1.5;color:var(--tx2)}
+.nl-leer{padding:44px 30px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.nl-envs .nl-leer{grid-column:1/-1}
+.nl-leer img{width:40px;height:auto;opacity:.8}
+.nl-leer b{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--tx)}
+.nl-leer p{font-size:15px;color:var(--tx2);max-width:460px;line-height:1.5}
+
+/* ================= Teil 2 · bisherige Teile im dunklen Glas ================= */
+body.nl .platte,body.nl .re-f,body.nl .re-n,body.nl .gr.re-gr,body.nl .sb-idx,body.nl .sb-t,body.nl .wi-neu,body.nl .wi-probe,body.nl .sb-verlauf,body.nl .so-chat,body.nl .re-zahlen,body.nl .re-leer,body.nl .sb-fehlt{
+  background:var(--glas)!important;border:1px solid rgba(255,235,210,.14)!important;box-shadow:var(--glas-s)!important;color:var(--tx);border-radius:22px}
+body.nl .re-zahlen b,body.nl .re-zahlen span{color:var(--tx)}
+body.nl .re-zahlen span{color:var(--tx3)}
+body.nl .mono,body.nl .wo-mk{color:var(--tx3)}
+body.nl p,body.nl small{color:inherit}
+body.nl .leise{color:var(--tx2)!important}
+/* Knöpfe */
+body.nl .kn{background:rgba(255,240,222,.06)!important;border:1px solid var(--li2)!important;color:var(--tx)!important;box-shadow:none!important;border-radius:999px}
+body.nl .kn i{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important}
+body.nl .kn i svg{stroke:#1a120c}
+body.nl .kn--gold{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;border-color:transparent!important;color:#1a120c!important}
+body.nl .kn--gold i{background:#1a120c!important;color:var(--gold1)!important}
+body.nl .kn--gold i svg{stroke:var(--gold1)}
+body.nl .kn--gefahr{background:#a8232a!important;border-color:transparent!important;color:#fff!important}
+body.nl .kn--gefahr i{background:rgba(255,255,255,.2)!important;color:#fff!important}
+body.nl .kn--gefahr i svg{stroke:#fff}
+body.nl .kn:disabled{opacity:.45}
+body.nl .link{color:var(--tx)!important;border-color:rgba(230,195,154,.45)!important}
+body.nl .link.rot{color:#f08a83!important}
+body.nl .rund{background:rgba(255,240,222,.06)!important;border:1px solid var(--li2)!important;color:var(--gold1)!important;box-shadow:none!important}
+body.nl .rund svg{stroke:var(--gold1)}
+body.nl .wahl2{background:rgba(14,11,9,.55)!important;border:1px solid rgba(255,235,210,.16)!important;box-shadow:none!important}
+body.nl .wahl2 button{color:rgba(243,236,226,.82)!important;background:none!important;box-shadow:none!important}
+body.nl .wahl2 button[aria-pressed="true"]{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important}
+/* Felder */
+body.nl .feld span,body.nl .feld>span{color:var(--tx2)!important}
+body.nl .feld small{color:var(--tx3)!important}
+body.nl input:not([type=checkbox]):not([type=radio]):not([type=file]),body.nl textarea,body.nl select,body.nl .sel{background:rgba(0,0,0,.28)!important;border:1px solid rgba(255,235,210,.18)!important;color:var(--tx)!important;box-shadow:none!important}
+body.nl input::placeholder,body.nl textarea::placeholder{color:rgba(243,236,226,.45)!important}
+body.nl input:focus,body.nl textarea:focus,body.nl select:focus{border-color:rgba(230,195,154,.6)!important;outline:none}
+body.nl input[type=date]{color-scheme:dark}
+body.nl input[type=checkbox]{accent-color:#c99d70}
+body.nl .suche{background:rgba(0,0,0,.28)!important;border:1px solid rgba(255,235,210,.18)!important;color:var(--tx)!important;box-shadow:none!important}
+body.nl .suche input{background:none!important;border:0!important}
+body.nl .suche svg{stroke:var(--gold1);color:var(--gold1)}
+/* Questions */
+body.nl .gr.re-gr summary{color:var(--tx)}
+body.nl .gr.re-gr summary b{color:var(--tx);font-family:var(--serif);font-weight:400}
+body.nl .gr.re-gr summary small{color:var(--tx3)}
+body.nl .gr.re-gr summary::after,body.nl .gr.re-gr summary::before{filter:invert(1) sepia(.4)}
+body.nl .re-f{border-radius:18px!important;background:rgba(255,240,222,.04)!important;box-shadow:none!important;border-color:var(--li)!important}
+body.nl .re-f__q{color:var(--tx)!important}
+body.nl .re-f__k em{color:var(--gold1)!important;border-color:rgba(230,195,154,.35)!important;background:none!important}
+body.nl .re-f.luecke .re-f__k em{color:#1a120c!important;background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;border-color:transparent!important}
+body.nl .re-f__antw summary{color:var(--gold1)}
+body.nl .re-chat-antwort{background:rgba(0,0,0,.22)!important;color:var(--tx)!important;border-color:var(--li)!important}
+body.nl .re-chat-antwort img{filter:invert(1)}
+/* Your answers */
+body.nl .re-n{color:var(--tx)}
+body.nl .re-n__q,body.nl .re-n__a{color:var(--tx)!important}
+body.nl .re-n__l,body.nl .re-n__kopf span{color:var(--tx3)!important}
+body.nl .re-n__zier i{background:var(--li2)!important}
+body.nl .re-n__zier img{filter:invert(1);opacity:.6}
+body.nl .re-n__kn{border-color:var(--li)!important}
+body.nl .re-n__k{color:var(--tx)!important;background:none!important;border-color:var(--li2)!important}
+body.nl .re-n__k svg{stroke:var(--gold1)}
+body.nl .re-n__k--weg{color:#f08a83!important}
+body.nl .re-n__k--weg svg{stroke:#f08a83}
+body.nl .re-n--beispiel .re-n__a{color:var(--tx3)!important}
+/* What the chat knows */
+body.nl .sb-i{color:var(--tx)!important;background:none!important;border-color:var(--li)!important}
+body.nl .sb-i b{color:var(--tx)!important}
+body.nl .sb-i small{color:var(--tx3)!important}
+body.nl .sb-i[aria-current="true"]{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;box-shadow:none!important}
+body.nl .sb-i[aria-current="true"] b,body.nl .sb-i[aria-current="true"] small{color:#1a120c!important}
+body.nl .sb-t__k h2{color:var(--tx)!important}
+body.nl .sb-t__k small,body.nl .sb-g__n{color:var(--tx3)!important}
+body.nl .sb-z{color:var(--tx)!important;background:rgba(255,240,222,.04)!important;border-color:var(--li)!important;box-shadow:none!important}
+body.nl .sb-z:hover{border-color:rgba(230,195,154,.35)!important}
+body.nl .sb-z__was{color:var(--tx)!important}
+body.nl .sb-z__angabe{color:var(--tx2)!important}
+body.nl .sb-z__angabe small{color:var(--tx3)!important}
+body.nl .sb-z em{color:var(--gold1)!important;border-color:rgba(230,195,154,.35)!important;background:none!important}
+body.nl .sb-z.aus{opacity:.6}
+body.nl .wi-neu h2,body.nl .wi-probe h2,body.nl .sb-fehlt h2{color:var(--tx)!important}
+body.nl .wi-neu p,body.nl .wi-probe p,body.nl .sb-fehlt p,body.nl .wi-neu__hinweis{color:var(--tx2)!important}
+body.nl .wi-neu__feld{background:rgba(0,0,0,.22)!important;border-color:rgba(255,235,210,.16)!important;box-shadow:none!important}
+body.nl .wi-neu__feld input,body.nl .wi-neu__feld textarea{background:none!important;border:0!important}
+body.nl .wi-neu__leiste{border-color:var(--li)!important}
+body.nl .wi-antwort{background:rgba(0,0,0,.22)!important;color:var(--tx)!important;border-color:var(--li)!important}
+body.nl .wi-antwort *{color:inherit}
+body.nl .wi-d{background:rgba(255,240,222,.06)!important;color:var(--tx)!important}
+body.nl .sb-verlauf li{border-color:var(--li)!important}
+body.nl .sb-verlauf b{color:var(--tx)!important}
+body.nl .sb-verlauf p{color:var(--tx2)!important}
+body.nl .sb-fehlt__w{background:rgba(0,0,0,.2)!important;border-color:var(--li)!important}
+body.nl .sb-fehlt__w b{color:var(--tx)!important}
+/* How the chat works */
+body.nl .so-chat li{border-color:var(--li)!important}
+body.nl .so-chat b{color:var(--tx)!important;font-family:var(--serif);font-weight:400}
+body.nl .so-chat p{color:var(--tx2)!important}
+body.nl .so-chat__n{color:#1a120c!important;background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;border-color:transparent!important}
+/* Fenster (Dialoge) und Meldungen */
+body.nl .fenster{background:rgba(8,6,5,.72)!important;backdrop-filter:none!important}
+body.nl .fenster>*{background:linear-gradient(170deg,#241d18,#16120f 60%,#120f0c)!important;color:var(--tx)!important;border:1px solid rgba(230,195,154,.3)!important;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)!important}
+body.nl .fenster h2{color:var(--tx)!important}
+body.nl .fenster p{color:var(--tx2)}
+body.nl .fenster .vl,body.nl .fenster .ae{background:rgba(255,240,222,.04)!important;border-color:var(--li)!important;color:var(--tx)}
+body.nl .fenster .vl b{color:var(--tx)!important}
+body.nl .fenster .vl span,body.nl .fenster .ae small{color:var(--tx3)!important}
+body.nl .fenster .ae .vor{color:var(--tx2)!important}
+body.nl .fenster .ae .nach{color:var(--tx)!important}
+body.nl .fenster .schalter-z,body.nl .fenster .re-beide{color:var(--tx2)!important}
+body.nl .meldung>*{background:linear-gradient(165deg,#2a221c,#16120f)!important;color:var(--tx)!important;border:1px solid rgba(230,195,154,.3)!important;box-shadow:0 30px 60px -24px rgba(0,0,0,.9)!important}
+body.nl .meldung b{color:var(--tx)!important}
+body.nl .meldung p,body.nl .meldung small{color:var(--tx2)!important}
+body.nl .start-tuer{color:var(--tx)}
+
+/* ================= kleinere Bildschirme ================= */
+@media (max-width:1180px){
+  .nl-lay{grid-template-columns:minmax(0,1fr);padding:16px 20px 32px}
+  .nl-kopf{display:flex;position:sticky;top:0;z-index:40;align-items:center;justify-content:space-between;gap:10px;padding:12px 20px;background:linear-gradient(180deg,rgba(13,11,9,.94),rgba(13,11,9,.7))}
+  .nl-kopf__t{display:flex;flex-direction:column;align-items:center;min-width:0;text-align:center}
+  .nl-kopf__t b{font-family:var(--serif);font-weight:400;font-size:19px;color:#f3ece2}
+  .nl-kopf__t i{font-style:normal;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+  .nl-rail{position:fixed;top:70px;left:12px;z-index:60;width:300px;max-width:calc(100vw - 24px);max-height:calc(100vh - 84px);visibility:hidden;opacity:0;transform:translateY(-10px);transition:opacity .3s,transform .4s cubic-bezier(.16,1,.3,1),visibility 0s .4s}
+  html.nl-rand-auf .nl-rail{visibility:visible;opacity:1;transform:none;transition:opacity .3s,transform .4s cubic-bezier(.16,1,.3,1)}
+  .nl-ghphone{display:none}
+  .nl-gweg{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .nl-wsf{width:96px;height:96px}.nl-wline{top:78px}
+  .nl-gspg{grid-template-columns:minmax(0,1fr)}
+  .nl-pfeilm{display:none}
+  .nl-mchips,.nl-alle,.nl-abf{margin-left:0}
+  .nl-rechts{margin-top:10px}
+  .nl-blatt3{transform:none}
+}
+@media (max-width:1000px){
+  .nl-gw{grid-template-columns:minmax(0,1fr)}
+  .nl-gwis--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nl-gunten{grid-template-columns:minmax(0,1fr)}
+  .nl-envs{grid-template-columns:minmax(0,1fr)}
+  .nl-envs>:last-child:nth-child(n){grid-column:auto}
+  .nl-gweg{grid-template-columns:minmax(0,1fr);gap:18px;padding:24px}
+  .nl-wline{display:none}
+  .nl-ws{flex-direction:row;text-align:left;align-items:center;gap:16px;flex-wrap:wrap}
+  .nl-wsf{width:72px;height:72px;flex:none}.nl-wsn{width:26px;height:26px;font-size:14px}
+  .nl-wsi{display:none}
+  .nl-ws b{margin:0;font-size:21px;flex:1;min-width:0}
+  .nl-ws i{flex-basis:100%;max-width:none;padding-left:88px;margin-top:-10px}
+}
+@media (max-width:700px){
+  .nl-lay{padding:12px 16px 28px}
+  .nl-kopf{padding:10px 16px}
+  .nl-pill{height:40px;padding:0 13px}
+  .nl-held,.nl-held--klein{min-height:0}
+  .nl-held__i{padding:28px 22px 22px}
+  .nl-h,.nl-held--klein .nl-h{font-size:72px}
+  .nl-held--klein .nl-h--lang{font-size:56px}
+  .nl-held--klein .nl-h--lang2{font-size:46px}
+  .nl-held__s{font-size:24px}
+  .nl-held--klein .nl-held__s{font-size:16px}
+  .nl-held::before,.nl-held--klein::before{background:linear-gradient(180deg,rgba(14,11,9,.55),rgba(14,11,9,.88) 45%,rgba(14,11,9,.96))}
+  .nl-held--klein .nl-held__b{left:0;width:100%;border-radius:inherit}
+  .nl-tabs{border-radius:20px;flex-wrap:wrap}
+  .nl-tab{height:38px;padding:0 13px;font-size:14px}
+  .nl-wkst .nl-wk{height:44px;padding:0 16px}
+  .nl-gwk{grid-template-columns:minmax(0,1fr)}
+  .nl-gwf{min-height:180px}
+  .nl-gwi{padding:22px 18px}
+  .nl-gwi h3{font-size:28px}
+  .nl-gwis--4,.nl-gwis--3,.nl-gwis--2{grid-template-columns:minmax(0,1fr)}
+  .nl-wk2{min-height:170px}
+  .nl-stitel h2{font-size:26px}
+  .nl-leiste{flex-direction:column;align-items:stretch;border-radius:22px;padding:14px;bottom:10px}
+  .nl-wr{flex-wrap:wrap}
+  .nl-wr .nl-wk{flex:1 1 auto;justify-content:center;padding:0 12px}
+  .nl-gsp{padding:22px 18px}
+  .nl-gspk h2{font-size:28px}
+  .nl-gbt{font-size:20px;padding:18px}
+  .nl-gbub .nl-av{display:none}
+  .nl-blatt3{padding:20px 18px 16px!important}
+}
+@media (prefers-reduced-motion:reduce){.nl-rail,.nl-wk2b{transition:none}}
+
+/* ================= Nachtrag: volle Breite, Auswahl, Felder (26.11.2026) ================= */
+#ansicht>*,body.nl .re-gr,body.nl .re-zahlen,body.nl .sb,body.nl .wi-oben,body.nl .wi-such,body.nl .sb-verlauf,body.nl .re-nliste,body.nl .so-chat,body.nl .so-chat__kn,body.nl .filter{margin-left:0!important;margin-right:0!important;max-width:none!important}
+body.nl .re-gr{width:auto!important}
+body.nl .wi-such{width:100%!important}
+body.nl .re-f__k em{border-radius:999px!important;padding:4px 10px!important;font-style:normal}
+body.nl .suche input:not([type=checkbox]):not([type=radio]):not([type=file]),body.nl .wi-neu__feld input:not([type=checkbox]):not([type=radio]):not([type=file]),body.nl .wi-neu__feld textarea{background:none!important;border:0!important;box-shadow:none!important}
+body.nl .wi-neu__titel{border-bottom:1px solid var(--li)!important}
+body.nl .nl-schreib textarea::placeholder{color:rgba(26,21,18,.5)!important}
+body.nl .ws-wahl{background:rgba(0,0,0,.28)!important;border:1px solid rgba(255,235,210,.18)!important;color:var(--tx)!important;box-shadow:none!important}
+body.nl .ws-wahl span{color:var(--tx)!important}
+body.nl .ws-wahl i{border-color:var(--gold1)!important}
+body.nl .ws-wahl__l{background:#1d1814!important;box-shadow:0 0 0 1px rgba(230,195,154,.3),0 24px 40px -18px rgba(0,0,0,.9)!important}
+body.nl .ws-wahl__l>button{color:var(--tx)!important}
+body.nl .ws-wahl__l>button:hover{background:rgba(255,240,222,.08)!important}
+body.nl .ws-wahl__l>button[aria-selected="true"]{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important}
+body.nl .ws-kal{background:#1d1814!important;color:var(--tx)!important;box-shadow:0 0 0 1px rgba(230,195,154,.3),0 24px 40px -18px rgba(0,0,0,.9)!important}
+body.nl .ws-kal button{color:var(--tx)!important}
+body.nl .ws-kal__k,body.nl .ws-kal__k *{color:var(--tx)!important}
+body.nl .ws-kal [aria-selected="true"],body.nl .ws-kal [aria-pressed="true"]{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important}
+.nl-rfuss .rdg-wieder{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:15px;font-size:15px;font-weight:500;color:var(--tx)!important;background:none;border:0;width:100%;text-align:left;cursor:pointer}
+.nl-rfuss .rdg-wieder:hover{background:rgba(255,240,222,.06)}
+@media (min-width:1181px){.nl-tabs{flex-wrap:nowrap}.nl-held--klein .nl-held__i{max-width:none}}
+.nl-cph{font-size:13px}
+/* Kopf klein: Foto erst rechts der Schrift */
+@media (min-width:701px){
+  .nl-held--klein .nl-held__b{left:42%;width:58%}
+  .nl-held--klein::before{background:linear-gradient(90deg,rgba(18,14,11,.97) 0%,rgba(18,14,11,.95) 50%,rgba(18,14,11,.45) 64%,rgba(18,14,11,0) 80%)}
+  .nl-held--klein .nl-held__s{max-width:560px}
+}
+.nl-pill{white-space:nowrap;flex:none}
+@media (max-width:700px){
+  .nl-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-radius:22px;align-self:stretch;margin-top:26px}
+  .nl-held--start .nl-tabr{padding:0 22px 22px}
+  .nl-tab{justify-content:center;white-space:normal;text-align:center;line-height:1.2;min-height:40px;height:auto;padding:6px 10px}
+  body.nl .nl-filter.re-filter{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch;border-radius:22px}
+  body.nl .nl-filter.re-filter button.nl-tab{padding:0 6px;gap:5px}
+  .nl-kopf__t i{max-width:34vw}
+}
+/* Try the chat: links dunkel wie die Fenster, rechts das Handy so, wie Gäste den Chat sehen */
+
+body.nl .probe__k{background:linear-gradient(170deg,#241d18,#16120f 60%,#120f0c)!important;border:1px solid rgba(230,195,154,.3)!important;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)!important}
+body.nl .probe__links{background:none!important;border-color:var(--li)!important;color:var(--tx)}
+body.nl .probe__links h2{color:var(--tx)!important}
+body.nl .probe__links p{color:var(--tx2)!important}
+body.nl .probe__fragen button{background:rgba(255,240,222,.05)!important;border:1px solid var(--li2)!important;color:var(--tx)!important;box-shadow:none!important}
+body.nl .probe__fragen button span{color:var(--tx)!important}
+body.nl .probe__fragen button i{background:rgba(230,195,154,.14)!important;color:var(--gold1)!important}
+body.nl .probe__fragen button i svg{stroke:var(--gold1)}
+body.nl .probe__rechts{background:radial-gradient(70% 60% at 50% 45%,rgba(255,235,210,.08),transparent 70%)!important}
+body.nl .ws-handy input:not([type=checkbox]):not([type=radio]):not([type=file]),body.nl .ws-handy textarea{background:#f3eee7!important;border:1px solid rgba(23,19,16,.12)!important;color:#171310!important}
+body.nl .ws-handy textarea::placeholder,body.nl .ws-handy input::placeholder{color:rgba(23,19,16,.5)!important}
+body.nl .ws-handy__feld textarea{border:0!important}
+body.nl .ws-handy .ws-weiter b,body.nl .ws-handy .ws-weiter span{color:#171310!important}
+body.nl .ws-handy .ws-weiter em{color:rgba(23,19,16,.55)!important}
+body.nl .ws-handy .rund{background:#584c41!important;color:#fff!important;border:0!important}
+body.nl .ws-handy .rund svg{stroke:#fff}
+body.nl .ws-handy p,body.nl .ws-handy li,body.nl .ws-bl{color:#171310}
+body.nl .ws-handy__kopf b,body.nl .ws-handy__kopf small{color:inherit}
+body.nl .probe__zu{z-index:2}
+.nl-gwf img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover}
+@media (max-width:1340px){.nl-gw{grid-template-columns:minmax(0,1fr)}.nl-gwk{grid-template-columns:240px minmax(0,1fr)}}
+@media (max-width:700px){.nl-gwk{grid-template-columns:minmax(0,1fr)}}
+.nl-held--start .nl-held__i{align-self:stretch}
+.nl-held--start .nl-wkst{margin-top:auto;padding-top:30px}
+@media (max-width:700px){
+  .nl-tabs{width:100%;box-sizing:border-box}
+  .nl-kopf__t i{white-space:normal;overflow:visible;text-overflow:clip;max-width:none;text-align:center;line-height:1.25}
+  .nl-kopf__t{flex:1}
+}
+.nl-held--klein .nl-held__i{flex:1 1 auto;width:100%}
+@media (max-width:700px){.nl-h,.nl-held--klein .nl-h{font-size:min(72px,20cqi)}.nl-held--klein .nl-h--lang{font-size:min(56px,15cqi)}.nl-held--klein .nl-h--lang2{font-size:min(46px,13cqi)}}
+
+/* Kalender und Meldungen */
+body.nl .ws-kal__k b{color:var(--tx)!important}
+body.nl .ws-kal__k button{background:rgba(255,240,222,.08)!important;color:var(--tx)!important}
+body.nl .ws-kal__g i{color:var(--tx3)!important}
+body.nl .ws-kal__g button{color:var(--tx)!important;background:none!important}
+body.nl .ws-kal__g button:hover{background:rgba(255,240,222,.1)!important}
+body.nl .ws-kal__g button[aria-selected="true"]{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important}
+body.nl .ws-kal__g button:disabled{opacity:.35}
+/* Kalender (Abnahme 28.11.2026): Monate mit sechs Wochen ganz zeigen (vorher war «No end date» abgeschnitten), «No end date» lesbar im dunklen Look (war hell auf hell), ein Rahmen statt zwei */
+.ws-wahl__l--kal{max-height:none!important;overflow:visible!important}
+body.nl .ws-wahl__l--kal .ws-kal{width:auto;min-width:252px;background:none!important;box-shadow:none!important}
+body.nl .ws-kal__leer{background:rgba(255,240,222,.08)!important;color:var(--tx)!important}
+body.nl .ws-kal__leer:hover{background:rgba(255,240,222,.14)!important}
+body.nl .quit{background:linear-gradient(165deg,#2a221c,#16120f)!important;border:1px solid rgba(230,195,154,.3);box-shadow:0 30px 60px -24px rgba(0,0,0,.9)!important;color:var(--tx)}
+body.nl .quit b{color:var(--tx)!important}
+body.nl .quit span{color:var(--tx2)!important}
+body.nl .quit.fehl{border-color:rgba(224,100,92,.6)}
+body.nl .quit.fehl b{color:#f2a49e!important}
+body.nl .quit button{background:linear-gradient(150deg,var(--gold1),var(--gold2))!important;color:#1a120c!important;box-shadow:none!important}
+body.nl .quit button:last-child{background:rgba(255,240,222,.08)!important;color:var(--gold1)!important;box-shadow:inset 0 0 0 1px rgba(230,195,154,.3)!important}
+body.nl .meldung{left:max(16px,calc((100vw - 1440px)/2 + 346px));bottom:110px;right:auto}
+@media (max-width:1180px){body.nl .meldung{left:16px;right:16px;bottom:120px}}
+@media (max-width:700px){body.nl .meldung{bottom:190px}}
+.nl-tab,.nl-wz2,.nl-env,.nl-wk2,.nl-rfuss button,.nl-pill{font-family:var(--sans)}
+/* Leiste wie im Entwurf am Ende der Ansicht (mitlaufend verdeckte sie am ersten Bildschirm die Knöpfe und Reiter) */
+.nl-leiste{position:relative!important;bottom:auto!important}
+.nl-tab{margin:0!important}
+@media (max-width:1400px){.nl-tab{padding:0 11px;font-size:14px}}
+@media (max-width:1340px){.nl-envs{grid-template-columns:minmax(0,1fr)}.nl-envs>:last-child:nth-child(n){grid-column:auto}}
+@media (min-width:1181px) and (max-width:1300px){.nl-held__i{padding-left:40px;padding-right:40px}}
+
+/* ================= Seitenleiste wie Edit website (Robert 27.11.2026) =================
+   Masse aus bureau dash.css / dash-eigen.css («dx-rail dx-lack6»), gemessen bei 1440 × 900: 280 px breit, 35 px vom Rand, Schrift 15 px mit Zeilenhöhe 1.55.
+   Beim Scrollen fährt sie mit (neu/leiste.js «mitfahren»), darum ohne eigene Scrollleiste. */
+:root{--nl-rand:35px}
+.nl-lay{padding:var(--nl-rand) var(--nl-rand) 48px}
+.nl-rail{position:sticky;top:var(--nl-rand);align-self:start;max-height:none;overflow:visible;font-size:15px;line-height:1.55;font-family:var(--sans)}
+.nl-s6{padding:20px 8px 14px}
+.nl-marke{padding:6px 0 22px}
+.nl-marke a{display:block}.nl-marke img{display:block}
+.nl-rail .nl-rk{padding:18px 10px 8px}
+.nl-rail nav{gap:0}
+.nl-rail nav a{padding:12px}
+.nl-rail nav a b,.nl-rfuss b{line-height:1.55}
+.nl-rail nav a b{font-size:15px}
+.nl-rail nav a i,.nl-rfuss i{font-size:13px;line-height:1.55;color:var(--tx3);margin-top:0}
+.nl-rail nav a.nl-jetzt i{color:rgba(26,18,12,.7)}
+.nl-rhaus{padding:16px 10px 2px}
+.nl-rfuss{margin-top:8px;gap:0;padding-top:10px}
+.nl-rfuss a,.nl-rfuss button{padding:10px;border-radius:13px;font-size:15px}
+.nl-rfuss b{font-size:14px}
+.nl-rfuss a.rdg-wieder{font-size:15px;font-weight:400;color:var(--tx2)!important}
+.nl-rfuss a[aria-current="page"]{background:rgba(255,240,222,.07)}
+@media (max-width:1180px){.nl-rail{position:fixed;top:70px}}
+@media (max-width:700px){.nl-lay{padding:12px 16px 28px}}
+.nl-rail{--tx2:rgba(243,236,226,.7);--tx3:rgba(243,236,226,.46)}.nl-rail nav a i,.nl-rfuss i{margin-top:1px}
+
+/* Seitenende wie Edit website: unter der Leiste 28 px (Robert 27.11.2026) */
+.nl-lay{padding-bottom:28px}
+@media (max-width:700px){.nl-lay{padding-bottom:28px}}
+/* Questions am Handy (Abnahme 28.11.2026): die Knopfreihe bekommt die ganze Kartenbreite, sonst war «Answer for every guest» rechts abgeschnitten (Pfeil fehlte) */
+@media (max-width:600px){body.nl .re-f .re-f__kn{grid-column:1/-1}}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · %%NAME%% · The Cat &amp; Gun</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15120f">
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/_ob/kleid/catgun-zeichen.svg" type="image/svg+xml">
+<script src="/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/_ob/kleid/catgun.js?v=1795872050"></script>
+<link rel="preload" href="/the-cat-and-gun/haus/assets/schrift/Gloock.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Gloock;font-style:normal;font-weight:400;font-display:block;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2') format('woff2')}
+:root{--nacht:#15120f;--navy:#15120f;--blau:#211c18;--papier:#f5f1ea;--weiss:#f4efe7;--gold:#c99d70;--taupe:#8a5634;--filz:#b5343a;--tinte:#1d1915;--blatt:#fbf8f3;--linie:rgba(29,25,21,.14);--leise:#6c6157;
+  --serif:Gloock,Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,figure{margin:0;padding:0}ol,ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,.thema a span{font-family:var(--serif);font-weight:400;letter-spacing:-.006em}
+:focus-visible{outline:1.5px solid var(--taupe);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.kn{position:relative;display:inline-flex;align-items:center;gap:12px;height:48px;padding:0 6px 0 22px;border-radius:999px;font:11px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,#2c2520,#15120f 46%,#0b0908);box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -3px 0 rgba(0,0,0,.55),0 14px 22px -14px rgba(21,18,15,.55);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#f4efe7,#e3c9a8);color:var(--tinte);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -2px 0 rgba(0,0,0,.22)}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.3}
+.kn--hell{background:linear-gradient(180deg,#fbf8f3,#ece5d9 50%,#ece5d9);color:var(--tinte);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(29,25,21,.3),0 14px 22px -14px rgba(0,0,0,.5)}
+.kn--hell i{background:linear-gradient(180deg,#2c2520,#15120f);color:var(--weiss)}
+/* Kopf */
+.kopf{position:relative;isolation:isolate;color:var(--weiss);background-color:var(--navy);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f4efe7%22%20stroke-opacity%3D%220.055%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M0%2011.5L11.5%200L23%2011.5L34.5%200L46%2011.5M0%2034.5L11.5%2023L23%2034.5L34.5%2023L46%2034.5%22%2F%3E%3Cpath%20d%3D%22M5.75%205.75l5.75%205.75M28.75%205.75l5.75%205.75M17.25%205.75l-5.75%205.75M40.25%205.75l-5.75%205.75M5.75%2028.75l5.75%205.75M28.75%2028.75l5.75%205.75M17.25%2028.75l-5.75%205.75M40.25%2028.75l-5.75%205.75%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:46px 46px;border-bottom:2px solid var(--filz);background-position:0 0;border-radius:0 0 34px 34px;overflow:hidden}
+.kopf::after{content:'';position:absolute;inset:auto 0 0 0;height:60%;z-index:-1;background:linear-gradient(0deg,rgba(21,18,15,.8),transparent)}
+.kopf__in{max-width:1180px;margin:0 auto;padding:36px 28px 74px}
+.kopf nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px;font:10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.kopf nav a:hover{color:#fff}
+.kopf h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.02;max-width:14ch}.kopf h1 em{font-style:normal;color:var(--gold)}
+.kopf p{margin-top:22px;max-width:56ch;font-size:1.08rem;color:rgba(244,239,231,.84)}
+/* Tor 3 (31.10.2026): Knöpfe als Gruppe, beim Umbruch bündig links und mit normalem Abstand */
+.kopf__kn{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+/* Inhalt */
+main{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+.inhalt{margin:58px 0 70px}
+.inhalt h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;margin:8px 0 8px}.inhalt h2 em{font-style:normal;color:var(--taupe)}
+.inhalt>p{max-width:60ch;color:var(--leise)}
+.themen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}.themen>.thema:last-child:nth-child(odd){grid-column:1/-1}
+.thema{background:var(--blatt);border-radius:22px;box-shadow:inset 0 0 0 1px var(--linie);padding:22px 24px}
+.thema h3{font-size:1.35rem;line-height:1.15;display:grid;gap:3px}.thema h3 small{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}.thema h3 em{font:11px var(--mono);font-style:normal;color:var(--leise)}
+.thema ol{margin-top:12px;display:grid;gap:2px}
+.thema a{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 6px;border-radius:12px;transition:background-color .3s}
+.thema a:hover{background:rgba(255,255,255,.7)}.thema a b{font:12px var(--mono);color:var(--taupe)}.thema a span{font-family:var(--serif)}.thema a i{font:10px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Kapitel */
+.kap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,60px);align-items:start;padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}
+.kap:nth-of-type(even) .kap__t{order:2}
+.kap h2{font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.08;margin:12px 0 14px;text-wrap:balance}
+.einl{color:rgba(21,18,15,.78);max-width:54ch}
+.schritte{display:grid;gap:12px;margin:22px 0}
+.schritte li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.schritte li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold);font:12px var(--mono)}
+.schritte p{padding-top:3px}
+.wissen{padding:16px 18px;border-radius:16px;background:rgba(201,157,112,.26);font-size:14.5px;color:var(--tinte)}.wissen b{display:block;margin-bottom:3px;font:10.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte)}
+.kap__b{position:sticky;top:20px}
+.bild{display:block;width:100%;border-radius:20px;overflow:hidden;background:var(--navy);box-shadow:0 30px 50px -28px rgba(21,18,15,.6),inset 0 0 0 1px rgba(201,157,112,.3);cursor:zoom-in;transition:transform .6s var(--e2)}
+.bild:hover{transform:translateY(-3px)}.bild img{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Bild gross */
+.gross{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vmin;background:rgba(21,18,15,.88);cursor:zoom-out;animation:auf .35s var(--e1) both}
+.gross[hidden]{display:none}.gross img{width:auto;height:auto;max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 40px 80px -30px #000}.gross small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+@keyframes auf{from{opacity:0}}
+.fuss{margin-top:20px;padding:34px 0 0;border-top:1px solid var(--linie);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--leise);font-size:14px}
+@media (max-width:900px){.themen{grid-template-columns:1fr}.kap{grid-template-columns:1fr;padding:40px 0}.kap:nth-of-type(even) .kap__t{order:0}.kap__b{position:static}.kopf__in{padding:26px 18px 54px}.kopf nav{margin-bottom:36px}main{padding:0 18px 80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.zurueck{border-bottom:1px solid currentColor}
+/* Help (Brand book editor): ein Absatz je Meldung, Ziel von «What to do?» */
+.hilfe{padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}.hilfe h2{font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.08;margin:12px 0 10px}.hilfe h2 em{font-style:normal;color:var(--taupe)}.hilfe>p{color:var(--leise);max-width:60ch}
+.lexe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}.lex{padding:18px 20px;border-radius:16px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie);scroll-margin-top:20px}.lex b{display:block;font:400 1.2rem/1.2 var(--serif);margin-bottom:6px}.lex p{font-size:15px;color:rgba(29,25,21,.8)}.lex:target{box-shadow:inset 0 0 0 2px var(--filz)}
+@media (max-width:900px){.lexe{grid-template-columns:1fr}}
+/* Messlauf 29.10.2026 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+/* Mac-Prüfung 23.11.2026 (oberflaeche_pruefen.js): Schrift ab 13 px, Luft zwischen den Zeilen, Themen untereinander (Tafeln mit ungleich vielen Kapiteln nie nebeneinander) */
+.mono,.kn,.kopf nav,.thema h3 small,.thema h3 em,.thema a b,.thema a i,.wissen b,figcaption,.gross small,.schritte li span{font-size:13px}
+.mono,.kopf nav,.thema h3 small,.thema a i,.wissen b,figcaption{letter-spacing:.1em}
+.thema h3{line-height:1.25;gap:6px}.thema h3 small,.thema h3 em{display:block;line-height:1.5}
+.thema a span{line-height:1.3}.kopf h1{line-height:1.08}.kap h2,.hilfe h2,.inhalt h2{line-height:1.14}
+.themen{grid-template-columns:minmax(0,1fr)}
+/* Neuer Look wie das Control panel (26.11.2026): dunkler Raum, Rauchglas-Tafeln, Gold (Bausteine aus _entwurf-dashboard, wie der Editor) */
+:root{--papier:#110d0b;--tinte:#f3ece2;--blatt:rgba(255,238,215,.06);--linie:rgba(255,235,210,.14);--leise:rgba(243,236,226,.62);--taupe:#e6c39a;--gold:#e6c39a}
+body{background:radial-gradient(110% 60% at 50% 0%,rgba(168,115,74,.14),transparent 60%),#110d0b}
+.kopf{box-shadow:none!important;border-bottom:1px solid rgba(230,195,154,.22)}
+.einl{color:rgba(243,236,226,.78)}
+.thema,.lex{background:linear-gradient(165deg,rgba(255,238,215,.1),rgba(255,238,215,.03) 45%,rgba(18,13,10,.22));box-shadow:inset 0 0 0 1px rgba(255,235,210,.14),inset 0 1px 0 rgba(255,240,220,.16)}
+.thema a:hover{background:rgba(255,240,222,.07)}
+.wissen{background:rgba(230,195,154,.12);box-shadow:inset 0 0 0 1px rgba(230,195,154,.28)}
+.schritte li span{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c}
+.kn{background:rgba(255,240,222,.06);color:#f3ece2;box-shadow:inset 0 0 0 1px rgba(255,235,210,.2)}
+.kn i{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c;box-shadow:none}
+.kn--hell{background:linear-gradient(150deg,#e6c39a,#a8734a);color:#1a120c;box-shadow:none}
+.kn--hell i{background:#1a120c;color:#e6c39a}
+.bild{box-shadow:0 30px 50px -28px #000,inset 0 0 0 1px rgba(230,195,154,.3)}
+</style>
+</head>
+<body>
+<!-- Guide · Brand book editor · The Cat & Gun: gebaut von anleitung_bau.py aus dieser Vorlage (Aufbau wie die Anleitung von Le Livre der Vorlage) -->
+<header class="kopf"><div class="kopf__in">
+  <nav><span>Guide · The Cat &amp; Gun</span><a href="./">Open the %%NAME%%</a></nav>
+  <h1>Colours, fonts <em>and photos.</em></h1>
+  <p>%%ANZAHL%% short chapters. How you change a colour, swap a font or a photo, and how a change reaches the Sticker editor, Print &amp; feed and the Brand book.</p>
+  <div class="kopf__kn"><a class="kn" href="./">Open the editor<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a><a class="kn kn--hell" href="#inhalt">To the chapters<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></i></a></div>
+</div></header>
+<main>
+  <section class="inhalt" id="inhalt"><span class="mono">00 · Contents</span><h2>%%ANZAHL%% chapters, <em>five topics.</em></h2><p>Each chapter shows the section and names the steps. A tap makes the picture large, a second tap or Esc brings it back.</p>
+    <div class="themen">%%INHALT%%</div></section>
+%%KAPITEL%%
+  <section class="hilfe" id="hilfe"><span class="mono">Help</span><h2>When a note <em>appears.</em></h2><p>Each note in the editor has «What to do?». It leads here.</p><div class="lexe">%%HILFE%%</div></section>
+  <div class="fuss"><span>%%NAME%% · The Cat &amp; Gun, Catangnan</span><a class="zurueck" href="./">Back</a></div>
+</main>
+<div class="gross" id="gross" hidden role="dialog" aria-modal="true" aria-label="Picture large"><img alt="" width="1200" height="714"><small>Tap or Esc to close</small></div>
+<script src="anleitung.js?v=1795872050"></script>
+</body>
+</html>

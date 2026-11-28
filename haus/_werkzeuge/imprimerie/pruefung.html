@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Check · Print & feed · The Cat & Gun</title>
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/imprimerie/_ob/kleid/catgun-zeichen.svg">
+<!-- Eigene Prüfseite von Print & feed (Werkzeug-Master R23, Prüfung 16.10.2026). Läuft ohne das Werkzeug: prüft Browser, Dateien des Hauses,
+     die Ablage im Browser, zeigt die mitgeschriebenen Skriptfehler, erklärt jede Meldung (Lexikon) und bietet Reparaturen mit Doppelklick. -->
+<style>
+@font-face{font-family:"LB";src:url(haeuser/catgun/schriften/gloock-400.ttf)}
+:root{--marine:#211c18;--nacht:#15120f;--papier:#f5f1ea;--creme:#e9e1d4;--gold:#c99d70;--gold2:#8a5634;--tinte:#15120f;--rot:#8a5634;--gruen:#1e4a3b}
+*{box-sizing:border-box}body{margin:0;background:var(--papier);color:var(--tinte);font:15px/1.55 "Instrument Sans",system-ui,-apple-system,sans-serif}
+header{background:linear-gradient(rgba(21,18,15,.5),rgba(21,18,15,.5)),url(haeuser/catgun/tapete-dunkel.svg) 50% 0/224px auto,var(--nacht);color:var(--papier);padding:36px 24px 30px}
+header .in,main{max-width:980px;margin:0 auto}header small{letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-size:13px}
+h1{font:400 34px/1.15 "LB",Georgia,serif;margin:8px 0 6px}h1 em{color:var(--gold);font-style:normal}header p{margin:0;opacity:.85;max-width:620px}
+header a{color:var(--gold)}main{padding:24px 16px 60px}h2{font:400 21px "LB",Georgia,serif;margin:34px 0 10px}
+.platte{background:#fbf8f3;border-radius:14px;box-shadow:0 1px 0 rgba(21,18,15,.06),0 10px 30px -18px rgba(21,18,15,.35);padding:6px 18px}
+.z{display:grid;grid-template-columns:22px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid rgba(21,18,15,.08);align-items:start}.z:last-child{border:0}
+.z i{width:12px;height:12px;border-radius:50%;margin-top:5px;background:#c99d70}.z.ok i{background:var(--gruen)}.z.gelb i{background:#c99d70}.z.rot i{background:var(--rot)}
+.z b{font-weight:500}.z span{color:#6b5d50;font-size:13.5px}.z code{font:13px "DM Mono",ui-monospace,monospace;background:var(--creme);padding:1px 5px;border-radius:4px}
+.lex dt{font-weight:500;margin-top:14px}.lex dd{margin:4px 0 0;color:#4a3f36}.lex dd b{color:var(--tinte);font-weight:500}
+button{font:inherit;border:0;border-radius:999px;padding:9px 16px;background:var(--marine);color:var(--papier);cursor:pointer}button.scharf{background:var(--rot)}
+.fehler{font:13px/1.5 "DM Mono",ui-monospace,monospace;white-space:pre-wrap;word-break:break-word;margin:10px 0}
+.rep{display:flex;flex-wrap:wrap;gap:10px;padding:14px 0}.leise{color:#6b5d50;font-size:13.5px}
+@media (max-width:600px){h1{font-size:27px}.z{grid-template-columns:18px 1fr}.z>:last-child{grid-column:2}}
+/* Nachbesserung 23.11.2026 (Prüfung Punkt 4): Auftritte beim Scrollen wie in den übrigen Seiten des Hauses */
+@media (prefers-reduced-motion:no-preference){.auftritt{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.19,1,.22,1),transform 1.1s cubic-bezier(.19,1,.22,1)}
+.auftritt.da{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="in"><small>The Cat & Gun · Print & feed</small><h1>Is everything <em>all right?</em></h1>
+<p>This page checks Print & feed without opening it. It only reads, unless you start a repair below with a double-click. <a href="./">Go to Print & feed</a></p></div></header>
+<main>
+<h2>Checks</h2><div class="platte" id="liste"><div class="z"><i></i><div><b>Checking …</b></div></div></div>
+<h2>Logged errors</h2><div class="platte"><div id="fehler" class="fehler leise">None.</div></div>
+<h2>Repairs</h2><div class="platte"><div class="rep">
+  <button data-rep="sichern">Save all designs as a file</button>
+  <button data-rep="fehler" class="scharf">Clear the error list</button>
+  <button data-rep="begruessung">Show welcome and tour again</button>
+</div><p class="leise" id="repText">Repairs need a double-click. «Save» puts a file with all designs from this browser on your computer. In Print & feed, «Saved → Open work file» reads them all back in (in another browser too).</p></div>
+<h2>What the messages mean</h2><div class="platte"><dl class="lex" id="lexikon"></dl></div>
+</main>
+<script>
+(function () {
+  const HAUS = 'catgun', B = 'haeuser/' + HAUS + '/', $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const zeilen = [];
+  const zeig = () => { $('#liste').innerHTML = zeilen.map(z => `<div class="z ${z.s}"><i></i><div><b>${esc(z.t)}</b><br><span>${esc(z.d)}</span></div><span>${esc(z.w || '')}</span></div>`).join(''); };
+  const z = (t, s, d, w) => { zeilen.push({ t, s, d, w }); zeig(); };
+  const hol = async (u, art = 'json') => { const r = await fetch(u, { cache: 'no-store' }); if (!r.ok) throw new Error(r.status + ' ' + u); return art === 'json' ? r.json() : art === 'kopf' ? r : r.text(); };
+  const kb = n => n > 1e6 ? (n / 1e6).toFixed(1) + ' MB' : Math.round(n / 1024) + ' KB';
+  (async () => {
+    // Browser
+    try { localStorage.setItem('ds-probe', '1'); localStorage.removeItem('ds-probe'); z('Browser storage', 'ok', 'Designs can be saved.'); }
+    catch (e) { z('Browser storage', 'rot', 'The browser does not allow saving (private window or blocked site data). Designs are lost when you close it.'); }
+    try { await new Promise((ok, nein) => { const r = indexedDB.open('ds-' + HAUS + '-fotos', 1); r.onupgradeneeded = () => r.result.createObjectStore('fotos', { keyPath: 'key' }); r.onsuccess = () => { const n = r.result.transaction('fotos').objectStore('fotos').count(); n.onsuccess = () => { z('Your own photos', 'ok', n.result + ' of your own photos in this browser.'); r.result.close(); ok(); }; n.onerror = nein; }; r.onerror = () => nein(r.error); }); }
+    catch (e) { z('Your own photos', 'gelb', 'This browser cannot store your own photos: ' + (e && e.message || e)); }
+    const cv = document.createElement('canvas'); cv.width = cv.height = 4; z('Making images (PDF, PNG)', cv.getContext('2d') && cv.toBlob ? 'ok' : 'rot', cv.toBlob ? 'The browser can render photos and pattern for the PDF.' : 'The browser cannot render images, so PDF and PNG do not work.');
+    // Ablage
+    try { const roh = localStorage.getItem('ds-' + HAUS + '-docs') || '{}', d = JSON.parse(roh), n = Object.keys(d).length, gr = roh.length * 2;
+      z('My designs', gr > 4e6 ? 'gelb' : 'ok', `${n} designs, ${kb(gr)} of about 5 MB a browser stores per website.`, gr > 4e6 ? 'Delete or save older ones' : ''); }
+    catch (e) { z('My designs', 'rot', 'The saved designs are damaged and cannot be read. «Save all designs as a file» keeps the raw text.'); }
+    // Dateien des Hauses
+    let M = null;
+    try { M = await hol(B + 'marke.json'); z('Colours & fonts', 'ok', `${M.name}: ${M.bilder.length} photos, ${Object.keys(M.farben || {}).length} colours, mark ${M.zeichen ? 'present' : 'missing'}.`); }
+    catch (e) { z('Colours & fonts', 'rot', 'marke.json is missing (' + e.message + '). Print & feed does not start without it.'); }
+    try { const idx = await hol(B + 'vorlagen/index.json'), n = idx.reduce((s, x) => s + x.zahl, 0); z('Templates', n > 0 ? 'ok' : 'gelb', `${n} templates in ${idx.length} kinds.`);   /* Abnahme 28.11.2026: Schwelle 60 stammte aus einem früheren Stand; das Haus hat 55 Vorlagen, der Punkt stand grundlos auf Gelb */ }
+    catch (e) { z('Templates', 'rot', 'The list of templates is missing (' + e.message + ').'); }
+    if (M) {
+      const tt = [...new Set(Object.values(M.schriften || {}).map(s => s && s.datei).filter(Boolean))];
+      let fehlt = [];
+      for (const f of tt) { try { await hol(B + (f.includes('/') ? f : 'schriften/' + f), 'kopf'); } catch (e) { fehlt.push(f); } }
+      z('Fonts for the PDF', fehlt.length ? 'rot' : 'ok', fehlt.length ? 'Missing: ' + fehlt.join(', ') : (tt.length ? tt.length + ' font files found. They are embedded in the PDF.' : 'Fonts are listed in marke.json.'));
+    }
+    try { const dr = await hol(B + 'druck.json'), k = Object.keys(dr); let ok = 0; for (const x of k.slice(0, 3)) { try { await hol(B + 'druck/' + x + '.jpg', 'kopf'); ok++; } catch (e) { } }
+      z('Print versions of the photos', ok === Math.min(3, k.length) ? 'ok' : 'gelb', !k.length ? 'Each photo prints in its largest version; the print check shows the resolution for each format.' : ok ? `${k.length} photos have a 300 dpi version.` : 'The print versions cannot be reached. PDFs use the website photos, and the print check then shows the lower resolution.'); }
+    catch (e) { z('Print versions of the photos', 'gelb', 'druck.json is missing: PDFs use the website photos.'); }
+    try { const F0 = await hol('../fundus/stand.json'); z('Brand book photos', 'ok', `Photos come from the brand book (published state): ${(F0.fotos || []).filter(f => !f.aus).length} photos.`); }
+    catch (e) { z('Brand book photos', 'gelb', 'The published brand book does not answer (' + e.message + '). Print & feed then uses its own copy of the photos.'); }
+    try { const F = await hol('../fundus/fundus.json'); z('Brand kit', 'ok', `Brand book data: ${(F.farben || []).length} colours, ${(F.schriften || []).length} fonts, ${(F.elemente || []).length} elements, ${(F.fotos || []).length} photos.`); }
+    catch (e) { z('Brand kit', 'gelb', 'The brand book data does not load (' + e.message + '). The «Brand kit» tab stays empty; templates, editor and PDF still work.'); }
+    // Fehler
+    let f = []; try { f = JSON.parse(localStorage.getItem('cg-imprimerie-fehler') || '[]'); } catch (e) { }
+    $('#fehler').textContent = f.length ? f.map(x => new Date(x.z).toLocaleString('en-GB') + '  ' + x.t).join('\n') : 'None.';
+    z('Script errors', f.length ? 'gelb' : 'ok', f.length ? f.length + ' logged, listed below.' : 'None logged.');
+  })();
+  // Lexikon: Sehen · Grund · Tun
+  const LEX = [
+    ['The browser storage is full.', 'A browser stores about 5 MB per website. Large designs with many pages fill it.', 'Delete older designs in My designs, or use «Save all designs as a file» above.'],
+    ['This design was changed in another window.', 'The same design was open in two windows, and the other one saved first.', 'Nothing is lost: your version is a copy «(second window)» in My designs. Keep the one you want and delete the other.'],
+    ['This file is not a Print & feed work file.', 'Another file was chosen under «Open work file», or the file is damaged.', 'Choose the .json file that «Save for print → Work file» made.'],
+    ['Upload did not work: the browser cannot read this image format.', 'The file is not an image, or its format is unknown to the browser.', 'Save it as JPG or PNG and upload it again.'],
+    ['These characters are missing from the house font and were left out.', 'The house fonts have no emoji or special characters.', 'Replace or remove them in the text. The PDF does not show them.'],
+    ['Print check: placeholder in [brackets].', 'The template leaves gaps the house fills in each time (name, date, code).', 'Double-click the text and fill it in.'],
+    ['Print check: photo with low resolution (dpi).', 'The photo is too small for its size on the page.', 'Make it smaller, choose a larger photo or use a smaller format.'],
+    ['Print check: text too close to the edge or outside.', 'The printer can cut up to 3 mm off at the edge.', 'Move the text at least 4 mm away from the edge, or shorten it.'],
+    ['Print & feed does not start.', 'The files of the house did not arrive (no internet, or the site was just updated).', 'Reload. If it stays, open this check page and pass the red dots on to whoever looks after the tools.'],
+  ];
+  $('#lexikon').innerHTML = LEX.map(([s, g, t]) => `<dt>${esc(s)}</dt><dd><b>Why:</b> ${esc(g)}<br><b>What to do:</b> ${esc(t)}</dd>`).join('');
+  // Reparaturen (Doppelklick)
+  document.addEventListener('dblclick', e => {
+    const b = e.target.closest('[data-rep]'); if (!b) return; const r = b.dataset.rep, txt = $('#repText');
+    if (r === 'fehler') { try { localStorage.removeItem('cg-imprimerie-fehler'); } catch (x) { } $('#fehler').textContent = 'None.'; txt.textContent = 'Error list cleared.'; }
+    if (r === 'begruessung') { try { localStorage.removeItem('ds-' + HAUS + '-willkommen'); localStorage.removeItem('ds-' + HAUS + '-rundgang'); } catch (x) { } txt.textContent = 'Next time it opens, Print & feed shows the welcome and the tour.'; }
+    if (r === 'sichern') { const roh = localStorage.getItem('ds-' + HAUS + '-docs') || '{}'; const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([roh], { type: 'application/json' })); a.download = 'print-and-feed-all-designs-' + new Date().toISOString().slice(0, 10) + '.json'; a.click(); txt.textContent = 'File saved.'; }
+  });
+  document.addEventListener('click', e => { if (e.target.closest('[data-rep]')) $('#repText').textContent = 'Double-click to run it.'; });
+})();
+</script>
+<script>/* Auftritte: Blöcke unterhalb des ersten Bildschirms schweben herein, sobald sie ins Bild kommen.
+   Erst nach dem Laden gesetzt, weil die Liste der Prüfungen beim Laden wächst. */
+addEventListener('load', () => setTimeout(() => {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const b = [...document.querySelectorAll('main>h2,main>.platte')].filter(e => e.getBoundingClientRect().top > innerHeight);
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('da'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  b.forEach(e => { e.classList.add('auftritt'); io.observe(e); });
+}, 300));</script>
+</body>
+</html>

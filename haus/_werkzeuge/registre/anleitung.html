@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · Visitors · The Cat &amp; Gun</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15120F">
+<script src="/the-cat-and-gun/haus/_werkzeuge/registre/_ob/kleid/catgun.js?v=1795872050"></script>
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/registre/_ob/kleid/catgun-zeichen.svg" type="image/svg+xml">
+<link rel="preload" href="/the-cat-and-gun/haus/assets/schrift/Gloock.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Gloock';font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/the-cat-and-gun/haus/assets/schrift/DMMono-normal-400.woff2') format('woff2')}
+/* Töne aus dem Kleid von The Cat & Gun (kleid/catgun.css), hier als Werte, weil die Anleitung ohne die Oberfläche lädt */
+:root{--nacht:#38322C;--karte:#211C18;--stahl:#A8232A;--papier:#F5F1EA;--weiss:#FBF7F0;--hellgold:#F0A39C;--gold:#A8232A;--tinte:#1D1915;--blatt:#F4EFE7;--linie:rgba(29,25,21,.13);--leise:#6C6157;
+  --titel:'Gloock',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,figure{margin:0;padding:0}ol,ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3{font-family:var(--titel);font-weight:400;letter-spacing:-.012em}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.kn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:12px;height:50px;padding:0 5px 0 22px;border-radius:10px;font:500 13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte);background:linear-gradient(#FBF7F0,#F5F1EA 55%,#ECE5D9);box-shadow:inset 0 1px 0 #ffffff,inset 0 -2px 0 #E0645C,0 12px 22px -12px rgba(0,0,0,.75);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(#A8232A,#38322C);color:var(--papier);box-shadow:inset 0 1px 0 #6C6157,inset 0 -2px 0 #15120F}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5}
+.kn--gold{background:linear-gradient(180deg,#F5F1EA,#ECE5D9 30%,#F0A39C 60%,#E0645C);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -2px 0 rgba(0,0,0,.28),0 10px 20px -12px rgba(0,0,0,.8)}
+/* Kopf: Nacht der Bar mit der dunklen Tapete der Website */
+.kopf{position:relative;color:var(--weiss);background:url('/the-cat-and-gun/haus/_werkzeuge/registre/_ob/kleid/catgun-tapete.svg') 0 0/150px 150px,#15120F;border-radius:0 0 34px 34px;overflow:hidden;box-shadow:inset 0 -1px 0 rgba(240,163,156,.3)}
+.kopf__in{max-width:1180px;margin:0 auto;padding:36px 28px 74px}
+.kopf nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px;font:13px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--hellgold)}
+.kopf nav span{display:inline-flex;align-items:center;gap:12px}.kopf nav svg{width:22px;height:23px;fill:var(--hellgold)}
+.kopf nav a:hover{color:#fff}
+.kopf__tafel{display:inline-block;max-width:760px;padding:30px 34px 34px;border-radius:24px;background:var(--nacht);box-shadow:inset 0 0 0 1px rgba(240,163,156,.35),inset 0 0 0 6px var(--nacht),inset 0 0 0 7px rgba(240,163,156,.18)}
+.kopf h1{font-size:clamp(2.4rem,5.4vw,4.6rem);line-height:1.04;max-width:14ch}.kopf h1 em{font-style:normal;color:var(--hellgold)}
+.kopf p{margin-top:20px;max-width:56ch;font-size:1.06rem;color:rgba(244,239,231,.84)}
+.kopf .kn{margin-top:28px}
+.kopf .kn+.kn{margin-left:10px}
+/* Inhalt */
+main{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+.inhalt{margin:58px 0 70px}
+.inhalt h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.16;margin:8px 0 8px}.inhalt h2 em{font-style:normal;color:var(--gold)}
+.inhalt>p{max-width:60ch;color:var(--leise)}
+.themen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}
+.thema{background:var(--blatt);border-radius:22px;box-shadow:inset 0 0 0 1px var(--linie);padding:22px 24px;display:flex;flex-direction:column}
+/* Mac-Prüfung 23.11.2026: Themen mit weniger Kapiteln verteilen ihre Zeilen über die Höhe des Nachbarn (Punkt 10), Titelzeilen mit Luft (Punkt 21) */
+.thema h3{font-size:1.35rem;line-height:1.3;display:grid;gap:6px}.thema h3 small{font:13px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.thema h3 em{font:13px var(--mono);font-style:normal;color:var(--leise)}
+.thema ol{margin-top:12px;display:grid;gap:2px;flex:1;align-content:space-evenly}
+.thema a{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 6px;border-radius:12px;transition:background-color .3s}
+.thema a:hover{background:rgba(255,255,255,.75)}.thema a b{font:13px var(--mono);color:var(--gold)}.thema a span{font-family:var(--titel);font-weight:500}.thema a i{font:13px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Kapitel */
+.kap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,60px);align-items:start;padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}
+.kap:nth-of-type(even) .kap__t{order:2}
+.kap h2{font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.16;margin:12px 0 14px;text-wrap:balance}
+.einl{color:rgba(29,25,21,.78);max-width:54ch}
+.schritte{display:grid;gap:12px;margin:22px 0}
+.schritte li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.schritte li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--nacht);color:var(--hellgold);font:13px var(--mono);box-shadow:inset 0 0 0 3px var(--nacht),inset 0 0 0 4px rgba(240,163,156,.4)}
+.schritte p{padding-top:3px}
+.wissen{padding:16px 18px;border-radius:16px;background:rgba(240,163,156,.18);box-shadow:inset 0 0 0 1px rgba(240,163,156,.32);font-size:14.5px;color:#38322C}.wissen b{display:block;margin-bottom:3px;font:13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte)}
+.kap__b{position:sticky;top:20px}
+.bild{position:relative;display:block;width:100%;border-radius:20px;overflow:hidden;background:var(--nacht);box-shadow:0 30px 50px -28px rgba(21,18,15,.6),inset 0 0 0 1px rgba(240,163,156,.35);cursor:zoom-in;transition:transform .6s var(--e2)}
+.bild:hover{transform:translateY(-3px)}.bild img{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Bild gross */
+.gross{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vmin;background:rgba(21,18,15,.9);cursor:zoom-out;animation:auf .35s var(--e1) both}
+.gross[hidden]{display:none}.gross img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 40px 80px -30px #000}.gross small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--hellgold)}
+@keyframes auf{from{opacity:0}}
+.fuss{margin-top:20px;padding:34px 0 0;border-top:1px solid var(--linie);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--leise);font-size:14px}
+@media (max-width:900px){.themen{grid-template-columns:1fr}.kap{grid-template-columns:1fr;padding:40px 0}.kap:nth-of-type(even) .kap__t{order:0}.kap__b{position:static}.kopf__in{padding:26px 16px 44px}.kopf nav{margin-bottom:30px}.kopf__tafel{padding:22px 20px 26px}.kopf .kn+.kn{margin-left:0}.kopf .kn{display:flex;width:fit-content}main{padding:0 16px 80px}.thema a{grid-template-columns:30px minmax(0,1fr)}.thema a i{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* Messlauf 29.10.2026 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+/* Abnahme-Tor 30.10.2026 */
+.nw{white-space:nowrap}
+figcaption{flex-wrap:wrap;row-gap:4px}figcaption>span{white-space:nowrap}
+.kopf__ort{font-style:normal}.kopf__ort i{font-style:normal}
+.kopf nav a{white-space:nowrap}
+@media (max-width:600px){.kopf nav{flex-direction:column;align-items:flex-start;gap:12px}.kopf__ort i{display:none}}
+/* Hero breit wie in den Werkzeugen: die Tafel füllt die Spalte, kein Loch rechts daneben */
+@media (min-width:901px){.kopf__tafel{display:block;max-width:none;padding:40px 48px 44px}.kopf h1{max-width:none;font-size:clamp(4.4rem,7.3vw,6.6rem);line-height:1}.kopf p{max-width:62ch;font-size:20px;line-height:1.55}}
+/* Hero-Titel gross (Robert 27.10.2026: am Rechner um 100 px, Satz um 20 px), damit die breite Tafel gefüllt ist */
+</style>
+<style>/* Themen schweben als Ganzes über bewegung.js; data-a hält nur auftritte.js von ihrem Inhalt fern, keine eigene Überblendung */html.wb-takt .thema[data-a]{transition:none}</style>
+<link rel="stylesheet" href="auftritte.css?v=1795872050">
+<link rel="stylesheet" href="leiste.css?v=1795872050">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="zeichen"></g></defs></svg>
+<!-- Seitenleiste wie im Werkzeug und bei Edit website (leiste.js, Robert 27.11.2026) -->
+<div class="anl-lay"><aside class="dx-rail dx-lack6" id="rand" data-leiste="anleitung" aria-label="Tools"></aside><div class="anl-spalte">
+<header class="kopf"><div class="kopf__in">
+  <nav><span><svg viewBox="452 198 176 148" aria-hidden="true"><use href="#zeichen"/></svg><em class="kopf__ort">Guide · The Cat &amp; Gun<i> · Catangnan, Siargao</i></em></span><a href="./">Open Visitors</a></nav>
+  <div class="kopf__tafel"><h1>Who visited, <em>and what they looked at.</em></h1>
+  <p>10 short chapters. How to read the overview, where your guests come from, when they drop by, which pages they look at and what Cloudflare counts.</p>
+  <a class="kn kn--gold" href="./">Open Visitors<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a><a class="kn" href="#inhalt">To the chapters<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></i></a></div>
+</div></header>
+<main>
+  <section class="inhalt" id="inhalt"><span class="mono">00 · Contents</span><h2>10 chapters, <em>four topics.</em></h2><p>Each chapter shows the section and names the steps. One click makes the picture large, a second one or Esc brings it back.</p>
+    <div class="themen"><section class="thema" data-a><h3><small>Basics</small>How Visitors works<em>2 chapters</em></h3><ol><li><a href="#k01"><b>01</b><span>How Visitors <span class="nw">is built.</span></span><i>Overview</i></a></li><li><a href="#k02"><b>02</b><span>Reading <span class="nw">the overview.</span></span><i>Overview</i></a></li></ol></section><section class="thema" data-a><h3><small>The guests</small>Visits, origin and time<em>4 chapters</em></h3><ol><li><a href="#k03"><b>03</b><span>Reading <span class="nw">a visit.</span></span><i>Visits</i></a></li><li><a href="#k04"><b>04</b><span>Who was on <span class="nw">the way.</span></span><i>Visits</i></a></li><li><a href="#k05"><b>05</b><span>Where guests <span class="nw">come from.</span></span><i>Origin</i></a></li><li><a href="#k06"><b>06</b><span>When guests <span class="nw">drop by.</span></span><i>Time</i></a></li></ol></section><section class="thema" data-a><h3><small>The website</small>Pages, trend and on the way<em>3 chapters</em></h3><ol><li><a href="#k07"><b>07</b><span>What is <span class="nw">viewed most.</span></span><i>Pages</i></a></li><li><a href="#k08"><b>08</b><span>How <span class="nw">visits develop.</span></span><i>Trend</i></a></li><li><a href="#k09"><b>09</b><span>How often guests call or look up <span class="nw">the way.</span></span><i>On the way</i></a></li></ol></section><section class="thema" data-a><h3><small>Good to know</small>The counting<em>1 chapter</em></h3><ol><li><a href="#k10"><b>10</b><span>What is counted and <span class="nw">what not.</span></span><i>Good to know</i></a></li></ol></section></div></section>
+<article class="kap" id="k01">
+  <div class="kap__t"><span class="mono">01 · Overview</span><h2>How Visitors <span class="nw">is built.</span></h2><p class="einl">Visitors shows who visits your website: from which country and which website guests come, on which device, and what they look at. Here you only read. Nothing can be changed.</p>
+    <ol class="schritte"><li><span>1</span><p>The card at the top of each view holds the eight views in one row: «Overview», «Visits», «Origin», «Time», «Pages», «Trend», «On the way» and «How we count». One click switches the view.</p></li><li><span>2</span><p>In the same card you pick the period: 7, 30 or 90 days. All numbers of the view count for this period.</p></li><li><span>3</span><p>On the left the tools of the house, below them the way to all tools (Control panel), this guide and the «Short tour». «View website» is in the card at the top. The bar at the end of the page holds «Save as table»: it saves the visits of the period as a file for Excel, Numbers or Google Sheets.</p></li><li><span>4</span><p>When Visitors opens, a small sign at the bottom right offers a «Short tour» for ten seconds. You can start the tour at any time with «Short tour» in the card at the top or on the left.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The pictures in this guide show test data. It is made up and marked as test data in the picture. Your real visits come from Cloudflare Web Analytics.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: How Visitors is built."><img src="anleitung/k01.jpg" width="1200" height="714" decoding="async" alt="Visitors, Overview: How Visitors is built. (test data)"></button>
+    <figcaption><span>visitors · overview</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k02">
+  <div class="kap__t"><span class="mono">02 · Overview</span><h2>Reading <span class="nw">the overview.</span></h2><p class="einl">At the top four numbers: visits (next to the period before), pages viewed, minutes per visit and how many guests were on the way, so called or opened the directions. Cloudflare counts the first two. For the other two the real view shows «–» and «not counted by Cloudflare». Below, the visits per day as columns.</p>
+    <ol class="schritte"><li><span>1</span><p>Move the mouse over a column: day and number of visits appear.</p></li><li><span>2</span><p>«Where guests come from» and «Viewed most» show the first places. The link next to them opens the whole list.</p></li><li><span>3</span><p>In the test data the last five visits follow below, one click opens the visit. The real view has no list of single visits, so this part is not there.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Cloudflare counts a visit when a page is opened and the guest did not come from another page of this website. Every further page of the same visit counts as a page viewed.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Reading the overview."><img src="anleitung/k02.jpg" width="1200" height="714" decoding="async" alt="Visitors, Overview: Reading the overview. (test data)"></button>
+    <figcaption><span>visitors · overview</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k03">
+  <div class="kap__t"><span class="mono">03 · Visits</span><h2>Reading <span class="nw">a visit.</span></h2><p class="einl">«Visits» lists every single visit: on the left the list by day, on the right the chosen visit.</p>
+    <ol class="schritte"><li><span>1</span><p>Click a visit on the left. The picture shows the town the guest came from, the country sits small on it; next to it place, time, number of pages and length. The page stays where it is, only the card on the right changes.</p></li><li><span>2</span><p>At the top right six details: when the guest arrived, how long they stayed, how many pages, which device, which language and which website brought them to you.</p></li><li><span>3</span><p>Below, «The path through the website»: page by page in the order of the visit, with the time on each page. Under a page you see what the guest did there, like calling or opening the directions.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>A name never shows. The list of single visits is only in the test data: Cloudflare, where the real numbers come from, does not link the pages of one guest, so the real view shows the number of visits.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Reading a visit."><img src="anleitung/k03.jpg" width="1200" height="714" decoding="async" alt="Visitors, Visits: Reading a visit. (test data)"></button>
+    <figcaption><span>visitors · visits</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k04">
+  <div class="kap__t"><span class="mono">04 · Visits</span><h2>Who was on <span class="nw">the way.</span></h2><p class="einl">Only in the test data: above the list of visits you narrow it down to all visits, only those on the way, only those with Instagram or TravelGO, only those who called, or only those on mobile. The real view has no list of single visits and Cloudflare does not count taps, so these filters are not there.</p>
+    <ol class="schritte"><li><span>1</span><p>In the test data, click «On the way». The list now shows only visits where the guest called or opened the directions. Their circle lights up.</p></li><li><span>2</span><p>Open one of these visits and read the path: which pages did the guest look at before, for how long, and did they call or open the map?</p></li><li><span>3</span><p>«Instagram or TravelGO» shows who opened the Instagram of the house or the delivery on TravelGO. «Called» shows who tapped the phone number, «On mobile» the visits from a mobile phone.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>In the real view, «On the way» shows how often the Visit page with the map was opened.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Who was on the way."><img src="anleitung/k04.jpg" width="1200" height="714" decoding="async" alt="Visitors, Visits: Who was on the way. (test data)"></button>
+    <figcaption><span>visitors · visits</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k05">
+  <div class="kap__t"><span class="mono">05 · Origin</span><h2>Where guests <span class="nw">come from.</span></h2><p class="einl">«Origin» shows how many come from the Philippines and from abroad, the countries, the website that brought the guest and the device. The test data also show places, how many come from Siargao and the browser language.</p>
+    <ol class="schritte"><li><span>1</span><p>«Countries» come from the connection of the guest. Cloudflare tells the country. Town and browser language are not counted. In the test data «Places» show the place of the internet connection, which can be some kilometres off.</p></li><li><span>2</span><p>«Came from» shows which website brought the guest to you: Instagram, Google, Google Maps, Facebook or TravelGO. «Typed in directly» means: address typed in, a bookmark or a link from a message.</p></li><li><span>3</span><p>«Device» tells mobile, tablet and computer apart. «Browser language» is only in the test data: the language the guest set in the browser (the website is in English).</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Guests who plan their trip to Siargao from abroad show up under «From abroad» and «Countries».</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: Where guests come from."><img src="anleitung/k05.jpg" width="1200" height="714" decoding="async" alt="Visitors, Origin: Where guests come from. (test data)"></button>
+    <figcaption><span>visitors · origin</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k06">
+  <div class="kap__t"><span class="mono">06 · Time</span><h2>When guests <span class="nw">drop by.</span></h2><p class="einl">«Time» shows at which hour and on which weekday the visits start. Siargao time.</p>
+    <ol class="schritte"><li><span>1</span><p>At the top four peaks: when most guests come, the busiest day, how many from 6PM and how many on weekends.</p></li><li><span>2</span><p>«At what time» shows 24 columns, one per hour. Move the mouse over one and the number appears.</p></li><li><span>3</span><p>«Weekday and hour» puts both together: the brighter a field, the more visits.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>So you see at which hours a post about a screening, the market or the menu reaches the most guests on the website.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: When guests drop by."><img src="anleitung/k06.jpg" width="1200" height="714" decoding="async" alt="Visitors, Time: When guests drop by. (test data)"></button>
+    <figcaption><span>visitors · time</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k07">
+  <div class="kap__t"><span class="mono">07 · Pages</span><h2>What is <span class="nw">viewed most.</span></h2><p class="einl">«Pages» lists every page of the website with its views. In the test data you also see the time on each page and how often it lay on the path of a guest who then called or opened the directions; Cloudflare does not count these two.</p>
+    <ol class="schritte"><li><span>1</span><p>The list is sorted by views, the most visited page on top, each with its picture.</p></li><li><span>2</span><p>In the test data, «Average time» only counts while the page is in front. If it sits in a tab in the background, the time does not run.</p></li><li><span>3</span><p>In the test data, «On the way» tells how often the page was seen in a visit that then led to a call or the directions.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Many views and little time on a page usually mean guests only skim it. Few views and a lot of time mean guests read it once they find it.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: What is viewed most."><img src="anleitung/k07.jpg" width="1200" height="714" decoding="async" alt="Visitors, Pages: What is viewed most. (test data)"></button>
+    <figcaption><span>visitors · pages</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k08">
+  <div class="kap__t"><span class="mono">08 · Trend</span><h2>How <span class="nw">visits develop.</span></h2><p class="einl">«Trend» puts the chosen period next to the period before: is it going up or down?</p>
+    <ol class="schritte"><li><span>1</span><p>The columns show the visits per day, light behind them the same day in the period before.</p></li><li><span>2</span><p>«Next to the period before» compares visits, pages viewed and pages per visit, with the difference in percent. The test data also compare time per visit, «On the way», Instagram and TravelGO, calls and directions.</p></li><li><span>3</span><p>«Week by week» sums up Monday to Sunday, below the main countries as small lines.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>Compare whole weeks, above all after a new post or an event like a screening. Single days go up and down a lot.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: How visits develop."><img src="anleitung/k08.jpg" width="1200" height="714" decoding="async" alt="Visitors, Trend: How visits develop. (test data)"></button>
+    <figcaption><span>visitors · trend</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k09">
+  <div class="kap__t"><span class="mono">09 · On the way</span><h2>How often guests call or look up <span class="nw">the way.</span></h2><p class="einl">A guest is on the way when they tap Call or open the directions in Google Maps. Cloudflare does not count these taps. The real view says «Taps are not counted.» and shows how often the Visit page with the map was opened.</p>
+    <ol class="schritte"><li><span>1</span><p>«See the pages» opens «Pages» with the views of every page, Visit among them.</p></li><li><span>2</span><p>Only in the test data: nine values show how often a visit ends in a call or the directions, from Home, from the Menu, by phone, the Visit page without a next step, from Playground or Pool &amp; Bar, from Super Juices, call or Instagram, TravelGO and the directions. Each is a share in percent, below it the counted numbers.</p></li><li><span>3</span><p>Also only in the test data: «Pages before the next step» and «From visit to call or directions», from the visit to the Visit page to the call or the directions.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>In the test data only the tap on Call or Directions is counted. No phone number and no name is stored.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: How often guests call or look up the way."><img src="anleitung/k09.jpg" width="1200" height="714" decoding="async" alt="Visitors, On the way: How often guests call or look up the way. (test data)"></button>
+    <figcaption><span>visitors · on the way</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+<article class="kap" id="k10">
+  <div class="kap__t"><span class="mono">10 · Good to know</span><h2>What is counted and <span class="nw">what not.</span></h2><p class="einl">The view «How we count» lists what is counted and what is never counted.</p>
+    <ol class="schritte"><li><span>1</span><p>Cloudflare Web Analytics counts the page, the time, the country, the device and where the guest came from (only the name of the website).</p></li><li><span>2</span><p>Never counted: names, emails and anything a guest types. No cookies are set. The address of the connection is not used to follow a guest.</p></li><li><span>3</span><p>Cloudflare does not link the pages of one guest. Town, language, time on a page and taps on Call, Directions, Instagram and TravelGO are therefore only in the test data.</p></li></ol>
+    <p class="wissen"><b>Good to know</b>The privacy note of the website should name Cloudflare Web Analytics before it is switched on.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="See the picture large: What is counted and what not."><img src="anleitung/k10.jpg" width="1200" height="714" decoding="async" alt="Visitors, Good to know: What is counted and what not. (test data)"></button>
+    <figcaption><span>visitors · good to know</span><span>Test data · See larger</span></figcaption></figure>
+</article>
+  <div class="fuss"><span>Visitors · The Cat &amp; Gun · Test data in <span class="nw">all pictures</span></span><a href="./" style="border-bottom:1px solid currentColor">Back: Visitors</a></div>
+</main>
+</div></div>
+<div class="gross" id="gross" hidden role="dialog" aria-modal="true" aria-label="Large picture"><img alt=""><small>Click or Esc to close</small></div>
+<script src="leiste.js?v=1795872050"></script>
+<script src="anleitung.js?v=1795872050"></script>
+<script src="auftritte.js?v=1795872050" data-alles></script>
+</body>
+</html>

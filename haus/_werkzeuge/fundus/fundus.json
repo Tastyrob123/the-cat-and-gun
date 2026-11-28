@@ -1,0 +1,1966 @@
+{
+ "format": 1,
+ "haus": "The Cat & Gun",
+ "ort": "Catangnan, Siargao",
+ "farben": [
+  {
+   "id": "schwarz",
+   "name": "Black",
+   "wert": "#141210",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · SCHWARZ",
+   "notiz": "Black of the wordmark",
+   "aus": false
+  },
+  {
+   "id": "papier",
+   "name": "Paper",
+   "wert": "#f5f0e7",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · PAPIER",
+   "notiz": "Paper white of the print pieces",
+   "aus": false
+  },
+  {
+   "id": "weiss",
+   "name": "White",
+   "wert": "#ffffff",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · WEISS",
+   "notiz": "Pure white",
+   "aus": false
+  },
+  {
+   "id": "rot",
+   "name": "Pool table red",
+   "wert": "#a8232a",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · ROT",
+   "notiz": "Cloth of the pool table (photos 09, 13)",
+   "aus": false
+  },
+  {
+   "id": "rot-hell",
+   "name": "Light red",
+   "wert": "#d0453e",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · ROT_HELL",
+   "notiz": "Lighter red of the pool table",
+   "aus": false
+  },
+  {
+   "id": "gruen",
+   "name": "Palm green",
+   "wert": "#24452f",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · GRUEN",
+   "notiz": "Palms and garden (photo 19)",
+   "aus": false
+  },
+  {
+   "id": "holz",
+   "name": "Wood",
+   "wert": "#9b5d33",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · HOLZ",
+   "notiz": "Warm wood of counters and tables (photos 08, 16)",
+   "aus": false
+  },
+  {
+   "id": "rattan",
+   "name": "Rattan",
+   "wert": "#d9b88a",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · RATTAN",
+   "notiz": "Rattan chairs",
+   "aus": false
+  },
+  {
+   "id": "grau",
+   "name": "Grey",
+   "wert": "#6e675e",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · GRAU",
+   "notiz": "Grey for small print",
+   "aus": false
+  },
+  {
+   "id": "kreide",
+   "name": "Chalk",
+   "wert": "#f1eee6",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · KREIDE",
+   "notiz": "Chalk on the chalkboard",
+   "aus": false
+  },
+  {
+   "id": "kreide-rot",
+   "name": "Red chalk",
+   "wert": "#ee8a7c",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/marke.py · KREIDE_ROT",
+   "notiz": "Red chalk on the chalkboard",
+   "aus": false
+  },
+  {
+   "id": "gelb",
+   "name": "Yellow",
+   "wert": "#f2c94c",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/mehr.py · GELB",
+   "notiz": "Yolk yellow (eggs sticker, beer mat)",
+   "aus": false
+  },
+  {
+   "id": "kaffee",
+   "name": "Coffee",
+   "wert": "#5a3826",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/mehr.py · KAFFEE",
+   "notiz": "Coffee brown",
+   "aus": false
+  },
+  {
+   "id": "kokos",
+   "name": "Coconut green",
+   "wert": "#6f8f3a",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/mehr.py · KOKOS",
+   "notiz": "Coconut sticker",
+   "aus": false
+  },
+  {
+   "id": "matcha",
+   "name": "Matcha",
+   "wert": "#8fae5a",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/mehr.py · MATCHA",
+   "notiz": "Matcha sticker",
+   "aus": false
+  },
+  {
+   "id": "saft-melonberry",
+   "name": "Melonberry",
+   "wert": "#d8323f",
+   "welt": "saft",
+   "quelle": "drucksachen/_bau/marke.py · SAFT[melonberry]",
+   "notiz": "Super Juice, colour from photos 13 and 36",
+   "aus": false
+  },
+  {
+   "id": "saft-mango-tango",
+   "name": "Mango Tango",
+   "wert": "#f0a12a",
+   "welt": "saft",
+   "quelle": "drucksachen/_bau/marke.py · SAFT[mango-tango]",
+   "notiz": "Super Juice, colour from photos 13 and 36",
+   "aus": false
+  },
+  {
+   "id": "saft-pineapple-punch",
+   "name": "Pineapple Punch",
+   "wert": "#f2c94c",
+   "welt": "saft",
+   "quelle": "drucksachen/_bau/marke.py · SAFT[pineapple-punch]",
+   "notiz": "Super Juice, colour from photos 13 and 36",
+   "aus": false
+  },
+  {
+   "id": "saft-the-green-glow",
+   "name": "The Green Glow",
+   "wert": "#8cbf3f",
+   "welt": "saft",
+   "quelle": "drucksachen/_bau/marke.py · SAFT[the-green-glow]",
+   "notiz": "Super Juice, colour from photos 13 and 36",
+   "aus": false
+  },
+  {
+   "id": "saft-turbo-tonic",
+   "name": "Turbo Tonic",
+   "wert": "#e8762b",
+   "welt": "saft",
+   "quelle": "drucksachen/_bau/marke.py · SAFT[turbo-tonic]",
+   "notiz": "Super Juice, colour from photos 13 and 36",
+   "aus": false
+  },
+  {
+   "id": "saft-the-purple-potion",
+   "name": "The Purple Potion",
+   "wert": "#7d2552",
+   "welt": "saft",
+   "quelle": "drucksachen/_bau/marke.py · SAFT[the-purple-potion]",
+   "notiz": "Super Juice, colour from photos 13 and 36",
+   "aus": false
+  },
+  {
+   "id": "web-tinte",
+   "name": "Ink",
+   "wert": "#15120f",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --tinte",
+   "notiz": "Dark ground, black of the wordmark",
+   "aus": false
+  },
+  {
+   "id": "web-tinte2",
+   "name": "Ink 2",
+   "wert": "#211c18",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --tinte2",
+   "notiz": "Second dark ground",
+   "aus": false
+  },
+  {
+   "id": "web-putz",
+   "name": "Plaster",
+   "wert": "#f5f1ea",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --putz",
+   "notiz": "White plaster of the arches, page ground",
+   "aus": false
+  },
+  {
+   "id": "web-putz2",
+   "name": "Plaster 2",
+   "wert": "#ece5d9",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --putz2",
+   "notiz": "Shaded plaster",
+   "aus": false
+  },
+  {
+   "id": "web-sand",
+   "name": "Sand",
+   "wert": "#e9dfcf",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --sand",
+   "notiz": "Sand-coloured sections",
+   "aus": false
+  },
+  {
+   "id": "web-salbei",
+   "name": "Sage",
+   "wert": "#e6e8dc",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --salbei",
+   "notiz": "Sage-coloured sections",
+   "aus": false
+  },
+  {
+   "id": "web-holz",
+   "name": "Wood",
+   "wert": "#8a5634",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --holz",
+   "notiz": "Wood of the bar counter",
+   "aus": false
+  },
+  {
+   "id": "web-holz-tief",
+   "name": "Dark wood",
+   "wert": "#4a2f20",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --holz-tief",
+   "notiz": "Dark wood",
+   "aus": false
+  },
+  {
+   "id": "web-holz-hell",
+   "name": "Light wood",
+   "wert": "#c99d70",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --holz-hell",
+   "notiz": "Light wood",
+   "aus": false
+  },
+  {
+   "id": "web-filz",
+   "name": "Felt red",
+   "wert": "#b5343a",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --filz",
+   "notiz": "Felt of the pool table, only as a line",
+   "aus": false
+  },
+  {
+   "id": "web-text",
+   "name": "Text",
+   "wert": "#1d1915",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --text",
+   "notiz": "Running text",
+   "aus": false
+  },
+  {
+   "id": "web-grau",
+   "name": "Grey",
+   "wert": "#6c6157",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --grau",
+   "notiz": "Quiet text",
+   "aus": false
+  },
+  {
+   "id": "web-hell",
+   "name": "Light",
+   "wert": "#f4efe7",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --hell",
+   "notiz": "Text on dark ground",
+   "aus": false
+  },
+  {
+   "id": "web-hell2",
+   "name": "Light 2",
+   "wert": "#bdb2a5",
+   "welt": "website",
+   "quelle": "website/assets/cg.css · --hell2",
+   "notiz": "Quiet text on dark ground",
+   "aus": false
+  },
+  {
+   "id": "curry",
+   "name": "Curry",
+   "wert": "#c27a2c",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/noch_mehr.py · CURRYF",
+   "notiz": "Curry House sticker",
+   "aus": false
+  },
+  {
+   "id": "elfenbein",
+   "name": "Ivory",
+   "wert": "#f7f1e3",
+   "welt": "druck",
+   "quelle": "drucksachen/_bau/extras.py · ELFENBEIN",
+   "notiz": "Pool balls and the key ring",
+   "aus": false
+  }
+ ],
+ "welten": [
+  {
+   "id": "druck",
+   "name": "Print",
+   "satz": "The colours of the stickers, coasters, signs and labels.",
+   "farben": [
+    "schwarz",
+    "papier",
+    "weiss",
+    "rot",
+    "rot-hell",
+    "gruen",
+    "holz",
+    "rattan",
+    "grau",
+    "kreide",
+    "kreide-rot",
+    "gelb",
+    "kaffee",
+    "kokos",
+    "matcha",
+    "curry",
+    "elfenbein"
+   ],
+   "quelle": "drucksachen/_bau/marke.py, mehr.py",
+   "aus": false
+  },
+  {
+   "id": "saft",
+   "name": "Super Juices",
+   "satz": "One colour for each of the six Super Juices.",
+   "farben": [
+    "saft-melonberry",
+    "saft-mango-tango",
+    "saft-pineapple-punch",
+    "saft-the-green-glow",
+    "saft-turbo-tonic",
+    "saft-the-purple-potion"
+   ],
+   "quelle": "drucksachen/_bau/marke.py · SAFT",
+   "aus": false
+  },
+  {
+   "id": "website",
+   "name": "Website",
+   "satz": "The colours of the website: plaster, wood, ink and the felt of the pool table.",
+   "farben": [
+    "web-tinte",
+    "web-tinte2",
+    "web-putz",
+    "web-putz2",
+    "web-sand",
+    "web-salbei",
+    "web-holz",
+    "web-holz-tief",
+    "web-holz-hell",
+    "web-filz",
+    "web-text",
+    "web-grau",
+    "web-hell",
+    "web-hell2"
+   ],
+   "quelle": "website/assets/cg.css",
+   "aus": false
+  }
+ ],
+ "schriften": [
+  {
+   "id": "gloock",
+   "name": "Gloock",
+   "datei": "schrift/Gloock.woff2",
+   "familie": "Gloock",
+   "schnitte": [
+    400
+   ],
+   "erlaubt": [
+    400
+   ],
+   "rolle": "titel",
+   "probe": "Your neighbourhood hangout",
+   "wo": "Titles on the website",
+   "quelle": "website/assets/schrift/Gloock.woff2",
+   "aus": false
+  },
+  {
+   "id": "instrument",
+   "name": "Instrument Sans",
+   "datei": "schrift/InstrumentSans-400_600.woff2",
+   "familie": "Instrument Sans",
+   "schnitte": [
+    400,
+    500,
+    600
+   ],
+   "erlaubt": [
+    400,
+    500,
+    600
+   ],
+   "rolle": "lauf",
+   "probe": "Good mornings start here. Open 7AM–10PM daily.",
+   "wo": "Running text on the website and small print",
+   "quelle": "website/assets/schrift/InstrumentSans-normal-400_600.woff2",
+   "aus": false
+  },
+  {
+   "id": "dmmono",
+   "name": "DM Mono",
+   "datei": "schrift/DMMono-400.woff2",
+   "familie": "DM Mono",
+   "schnitte": [
+    400
+   ],
+   "erlaubt": [
+    400
+   ],
+   "rolle": "zahl",
+   "probe": "7AM–10PM · CATANGNAN",
+   "wo": "Numbers, times and labels on the website",
+   "quelle": "website/assets/schrift/DMMono-normal-400.woff2",
+   "aus": false
+  },
+  {
+   "id": "dmserif",
+   "name": "DM Serif Display",
+   "datei": "schrift/DMSerifDisplay-400.woff2",
+   "familie": "DM Serif Display",
+   "schnitte": [
+    400
+   ],
+   "erlaubt": [
+    400
+   ],
+   "rolle": "druck",
+   "probe": "See you at The Cat & Gun!",
+   "wo": "Titles on stickers, coasters and signs",
+   "quelle": "_kette/02-spaeher/assets/fonts/DMSerifDisplay.woff2",
+   "aus": false
+  }
+ ],
+ "rollen": [
+  {
+   "id": "titel",
+   "name": "Titles",
+   "schrift": "gloock"
+  },
+  {
+   "id": "lauf",
+   "name": "Running text",
+   "schrift": "instrument"
+  },
+  {
+   "id": "zahl",
+   "name": "Numbers and labels",
+   "schrift": "dmmono"
+  },
+  {
+   "id": "druck",
+   "name": "Titles in print",
+   "schrift": "dmserif"
+  }
+ ],
+ "elemente": [
+  {
+   "id": "wortmarke",
+   "name": "Wordmark",
+   "art": "zeichen",
+   "datei": "elemente/wortmarke.svg",
+   "b": 621.0,
+   "h": 534.0,
+   "einheit": "",
+   "satz": "THE / CAT & / GUN in three lines.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/zeichen/wortmarke-farbe.svg (aus _quelle/logo/wortmarke.svg)",
+   "aus": false
+  },
+  {
+   "id": "et",
+   "name": "Ampersand",
+   "art": "zeichen",
+   "datei": "elemente/et.svg",
+   "b": 176.0,
+   "h": 148.0,
+   "einheit": "",
+   "satz": "The ampersand of the wordmark on its own.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/zeichen/et-farbe.svg (aus _quelle/logo/wortmarke.svg)",
+   "aus": false
+  },
+  {
+   "id": "sticker-wortmarke",
+   "name": "Wordmark on black",
+   "art": "sticker",
+   "datei": "elemente/sticker-wortmarke.svg",
+   "b": 60.0,
+   "h": 60.0,
+   "einheit": "mm",
+   "satz": "Round sticker, Ø 60 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_wortmarke()",
+   "aus": false
+  },
+  {
+   "id": "sticker-et",
+   "name": "Ampersand on pool table red",
+   "art": "sticker",
+   "datei": "elemente/sticker-et.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Square sticker, 46 mm.",
+   "teile": [
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_et()",
+   "aus": false
+  },
+  {
+   "id": "sticker-catangnan",
+   "name": "Catangnan · Siargao",
+   "art": "sticker",
+   "datei": "elemente/sticker-catangnan.svg",
+   "b": 54.0,
+   "h": 54.0,
+   "einheit": "mm",
+   "satz": "Round sticker on palm green, Ø 54 mm.",
+   "teile": [
+    {
+     "id": "gruen",
+     "name": "Palm green",
+     "farbe": "gruen"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_catangnan()",
+   "aus": false
+  },
+  {
+   "id": "sticker-hangout",
+   "name": "Your neighbourhood hangout",
+   "art": "sticker",
+   "datei": "elemente/sticker-hangout.svg",
+   "b": 120.0,
+   "h": 30.0,
+   "einheit": "mm",
+   "satz": "Strip, 120 × 30 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "rot-hell",
+     "name": "Light red",
+     "farbe": "rot-hell"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_hangout()",
+   "aus": false
+  },
+  {
+   "id": "sticker-pool",
+   "name": "Then someone picked up a cue",
+   "art": "sticker",
+   "datei": "elemente/sticker-pool.svg",
+   "b": 78.0,
+   "h": 48.0,
+   "einheit": "mm",
+   "satz": "The pool table line, 78 × 48 mm.",
+   "teile": [
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "weiss",
+     "name": "White",
+     "farbe": "weiss"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_pool()",
+   "aus": false
+  },
+  {
+   "id": "sticker-juices",
+   "name": "Super Juices oval",
+   "art": "sticker",
+   "datei": "elemente/sticker-juices.svg",
+   "b": 72.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Oval with the six juice colours as dots, 72 × 46 mm.",
+   "teile": [
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "grau",
+     "name": "Grey",
+     "farbe": "grau"
+    },
+    {
+     "id": "saft-melonberry",
+     "name": "Melonberry",
+     "farbe": "saft-melonberry"
+    },
+    {
+     "id": "saft-mango-tango",
+     "name": "Mango Tango",
+     "farbe": "saft-mango-tango"
+    },
+    {
+     "id": "saft-pineapple-punch",
+     "name": "Pineapple Punch",
+     "farbe": "saft-pineapple-punch"
+    },
+    {
+     "id": "saft-the-green-glow",
+     "name": "The Green Glow",
+     "farbe": "saft-the-green-glow"
+    },
+    {
+     "id": "saft-turbo-tonic",
+     "name": "Turbo Tonic",
+     "farbe": "saft-turbo-tonic"
+    },
+    {
+     "id": "saft-the-purple-potion",
+     "name": "The Purple Potion",
+     "farbe": "saft-the-purple-potion"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_juices()",
+   "aus": false
+  },
+  {
+   "id": "sticker-zeiten",
+   "name": "Good mornings start here",
+   "art": "sticker",
+   "datei": "elemente/sticker-zeiten.svg",
+   "b": 44.0,
+   "h": 44.0,
+   "einheit": "mm",
+   "satz": "Opening hours, Ø 44 mm.",
+   "teile": [
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_zeiten()",
+   "aus": false
+  },
+  {
+   "id": "sticker-see-you",
+   "name": "See you at The Cat & Gun!",
+   "art": "sticker",
+   "datei": "elemente/sticker-see-you.svg",
+   "b": 72.0,
+   "h": 42.0,
+   "einheit": "mm",
+   "satz": "Speech bubble, 72 × 42 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/stuecke.py · st_seeyou()",
+   "aus": false
+  },
+  {
+   "id": "sticker-eggs",
+   "name": "Eggs your way",
+   "art": "sticker",
+   "datei": "elemente/sticker-eggs.svg",
+   "b": 48.0,
+   "h": 48.0,
+   "einheit": "mm",
+   "satz": "Round, Ø 48 mm.",
+   "teile": [
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "gelb",
+     "name": "Yellow",
+     "farbe": "gelb"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_eggs()",
+   "aus": false
+  },
+  {
+   "id": "sticker-bagels",
+   "name": "Homemade bagels",
+   "art": "sticker",
+   "datei": "elemente/sticker-bagels.svg",
+   "b": 70.0,
+   "h": 40.0,
+   "einheit": "mm",
+   "satz": "Oval, 70 × 40 mm.",
+   "teile": [
+    {
+     "id": "holz",
+     "name": "Wood",
+     "farbe": "holz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_bagels()",
+   "aus": false
+  },
+  {
+   "id": "sticker-matcha",
+   "name": "MMMATCHA",
+   "art": "sticker",
+   "datei": "elemente/sticker-matcha.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Square, 46 mm.",
+   "teile": [
+    {
+     "id": "matcha",
+     "name": "Matcha",
+     "farbe": "matcha"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_matcha()",
+   "aus": false
+  },
+  {
+   "id": "sticker-kokos",
+   "name": "Hot day? Grab a coconut.",
+   "art": "sticker",
+   "datei": "elemente/sticker-kokos.svg",
+   "b": 52.0,
+   "h": 52.0,
+   "einheit": "mm",
+   "satz": "Round, Ø 52 mm.",
+   "teile": [
+    {
+     "id": "kokos",
+     "name": "Coconut green",
+     "farbe": "kokos"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_kokos()",
+   "aus": false
+  },
+  {
+   "id": "sticker-dessert",
+   "name": "Save room for dessert. Always.",
+   "art": "sticker",
+   "datei": "elemente/sticker-dessert.svg",
+   "b": 112.0,
+   "h": 26.0,
+   "einheit": "mm",
+   "satz": "Strip, 112 × 26 mm.",
+   "teile": [
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_dessert()",
+   "aus": false
+  },
+  {
+   "id": "ball",
+   "name": "Pool ball with the ampersand",
+   "art": "sticker",
+   "datei": "elemente/ball.svg",
+   "b": 40.0,
+   "h": 40.0,
+   "einheit": "mm",
+   "satz": "The ampersand in the middle of a black pool ball, Ø 40 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "weiss",
+     "name": "White",
+     "farbe": "weiss"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_achtball()",
+   "aus": false
+  },
+  {
+   "id": "sticker-spielplatz",
+   "name": "Good food for grown-ups",
+   "art": "sticker",
+   "datei": "elemente/sticker-spielplatz.svg",
+   "b": 124.0,
+   "h": 32.0,
+   "einheit": "mm",
+   "satz": "Playground strip, 124 × 32 mm.",
+   "teile": [
+    {
+     "id": "gruen",
+     "name": "Palm green",
+     "farbe": "gruen"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_spielplatz()",
+   "aus": false
+  },
+  {
+   "id": "sticker-markt",
+   "name": "Sunday Community Market",
+   "art": "sticker",
+   "datei": "elemente/sticker-markt.svg",
+   "b": 50.0,
+   "h": 50.0,
+   "einheit": "mm",
+   "satz": "Round, Ø 50 mm.",
+   "teile": [
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "gruen",
+     "name": "Palm green",
+     "farbe": "gruen"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_markt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-drei-jahre",
+   "name": "3 years of good times",
+   "art": "sticker",
+   "datei": "elemente/sticker-drei-jahre.svg",
+   "b": 50.0,
+   "h": 50.0,
+   "einheit": "mm",
+   "satz": "Round, Ø 50 mm.",
+   "teile": [
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_drei()",
+   "aus": false
+  },
+  {
+   "id": "sticker-fass",
+   "name": "Ten on draught",
+   "art": "sticker",
+   "datei": "elemente/sticker-fass.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Round, Ø 46 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "gelb",
+     "name": "Yellow",
+     "farbe": "gelb"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_fass()",
+   "aus": false
+  },
+  {
+   "id": "sticker-stay-cool",
+   "name": "Stay cool, Siargao.",
+   "art": "sticker",
+   "datei": "elemente/sticker-stay-cool.svg",
+   "b": 92.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Strip, 92 × 34 mm.",
+   "teile": [
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    },
+    {
+     "id": "kokos",
+     "name": "Coconut green",
+     "farbe": "kokos"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_kokos2()",
+   "aus": false
+  },
+  {
+   "id": "sticker-zeile",
+   "name": "The name in one line",
+   "art": "sticker",
+   "datei": "elemente/sticker-zeile.svg",
+   "b": 120.0,
+   "h": 22.0,
+   "einheit": "mm",
+   "satz": "Strip, 120 × 22 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_zeile()",
+   "aus": false
+  },
+  {
+   "id": "sticker-saft-melonberry",
+   "name": "Melonberry",
+   "art": "sticker",
+   "datei": "elemente/sticker-saft-melonberry.svg",
+   "b": 34.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Super Juice sticker, Ø 34 mm.",
+   "teile": [
+    {
+     "id": "saft-melonberry",
+     "name": "Melonberry",
+     "farbe": "saft-melonberry"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_saftpunkt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-saft-mango-tango",
+   "name": "Mango Tango",
+   "art": "sticker",
+   "datei": "elemente/sticker-saft-mango-tango.svg",
+   "b": 34.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Super Juice sticker, Ø 34 mm.",
+   "teile": [
+    {
+     "id": "saft-mango-tango",
+     "name": "Mango Tango",
+     "farbe": "saft-mango-tango"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_saftpunkt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-saft-pineapple-punch",
+   "name": "Pineapple Punch",
+   "art": "sticker",
+   "datei": "elemente/sticker-saft-pineapple-punch.svg",
+   "b": 34.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Super Juice sticker, Ø 34 mm.",
+   "teile": [
+    {
+     "id": "saft-pineapple-punch",
+     "name": "Pineapple Punch",
+     "farbe": "saft-pineapple-punch"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_saftpunkt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-saft-the-green-glow",
+   "name": "The Green Glow",
+   "art": "sticker",
+   "datei": "elemente/sticker-saft-the-green-glow.svg",
+   "b": 34.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Super Juice sticker, Ø 34 mm.",
+   "teile": [
+    {
+     "id": "saft-the-green-glow",
+     "name": "The Green Glow",
+     "farbe": "saft-the-green-glow"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_saftpunkt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-saft-turbo-tonic",
+   "name": "Turbo Tonic",
+   "art": "sticker",
+   "datei": "elemente/sticker-saft-turbo-tonic.svg",
+   "b": 34.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Super Juice sticker, Ø 34 mm.",
+   "teile": [
+    {
+     "id": "saft-turbo-tonic",
+     "name": "Turbo Tonic",
+     "farbe": "saft-turbo-tonic"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_saftpunkt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-saft-the-purple-potion",
+   "name": "The Purple Potion",
+   "art": "sticker",
+   "datei": "elemente/sticker-saft-the-purple-potion.svg",
+   "b": 34.0,
+   "h": 34.0,
+   "einheit": "mm",
+   "satz": "Super Juice sticker, Ø 34 mm.",
+   "teile": [
+    {
+     "id": "saft-the-purple-potion",
+     "name": "The Purple Potion",
+     "farbe": "saft-the-purple-potion"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/mehr.py · st_saftpunkt()",
+   "aus": false
+  },
+  {
+   "id": "sticker-curry-house",
+   "name": "Curry House",
+   "art": "sticker",
+   "datei": "elemente/sticker-curry-house.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Kitchen sticker, Ø 46 mm.",
+   "teile": [
+    {
+     "id": "curry",
+     "name": "Curry",
+     "farbe": "curry"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/sticker6.html · curry-house",
+   "aus": false
+  },
+  {
+   "id": "sticker-homemade-burgers",
+   "name": "Homemade Burgers",
+   "art": "sticker",
+   "datei": "elemente/sticker-homemade-burgers.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Kitchen sticker, Ø 46 mm.",
+   "teile": [
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/sticker6.html · homemade-burgers",
+   "aus": false
+  },
+  {
+   "id": "sticker-all-day-sliders",
+   "name": "All Day Sliders",
+   "art": "sticker",
+   "datei": "elemente/sticker-all-day-sliders.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Kitchen sticker, Ø 46 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/sticker6.html · all-day-sliders",
+   "aus": false
+  },
+  {
+   "id": "sticker-pub-grub",
+   "name": "Pub Grub",
+   "art": "sticker",
+   "datei": "elemente/sticker-pub-grub.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Kitchen sticker, Ø 46 mm.",
+   "teile": [
+    {
+     "id": "gruen",
+     "name": "Palm green",
+     "farbe": "gruen"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/sticker6.html · pub-grub",
+   "aus": false
+  },
+  {
+   "id": "sticker-bar-bites",
+   "name": "Bar Bites",
+   "art": "sticker",
+   "datei": "elemente/sticker-bar-bites.svg",
+   "b": 46.0,
+   "h": 46.0,
+   "einheit": "mm",
+   "satz": "Kitchen sticker, Ø 46 mm.",
+   "teile": [
+    {
+     "id": "gelb",
+     "name": "Yellow",
+     "farbe": "gelb"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/sticker6.html · bar-bites",
+   "aus": false
+  },
+  {
+   "id": "kugel-spielball",
+   "name": "Cue ball with the wordmark",
+   "art": "sticker",
+   "datei": "elemente/kugel-spielball.svg",
+   "b": 25.0,
+   "h": 25.0,
+   "einheit": "mm",
+   "satz": "Printed disc for the cue ball, Ø 25 mm.",
+   "teile": [
+    {
+     "id": "elfenbein",
+     "name": "Ivory",
+     "farbe": "elfenbein"
+    },
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/kugeln.html · spielball",
+   "aus": false
+  },
+  {
+   "id": "pin-et",
+   "name": "Enamel pin with the ampersand",
+   "art": "sticker",
+   "datei": "elemente/pin-et.svg",
+   "b": 30.0,
+   "h": 30.0,
+   "einheit": "mm",
+   "satz": "Pin, Ø 30 mm.",
+   "teile": [
+    {
+     "id": "rot",
+     "name": "Pool table red",
+     "farbe": "rot"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/pins.html · et-druck",
+   "aus": false
+  },
+  {
+   "id": "pin-acht",
+   "name": "Enamel pin with the eight",
+   "art": "sticker",
+   "datei": "elemente/pin-acht.svg",
+   "b": 30.0,
+   "h": 30.0,
+   "einheit": "mm",
+   "satz": "Pin, Ø 30 mm.",
+   "teile": [
+    {
+     "id": "schwarz",
+     "name": "Black",
+     "farbe": "schwarz"
+    },
+    {
+     "id": "papier",
+     "name": "Paper",
+     "farbe": "papier"
+    }
+   ],
+   "quelle": "drucksachen/_bau/satz/pins.html · acht-druck",
+   "aus": false
+  }
+ ],
+ "fotos": [
+  {
+   "id": "b01",
+   "titel": "Eggs on homemade sourdough",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b01-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b01-1800.webp",
+   "w": 3072,
+   "h": 4095,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Df6OPa8kYJE/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b02",
+   "titel": "The Sunday Community Market inside the café",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b02-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b02-480.webp",
+   "w": 720,
+   "h": 934,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DfzAbV2yyKJ/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b03",
+   "titel": "Poster of the Sunday Community Market",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b03-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b03-800.webp",
+   "w": 1088,
+   "h": 1344,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dfjh4YiSgr6/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b04",
+   "titel": "A surfer with a flower lei speaking in the garden at night",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b04-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b04-480.webp",
+   "w": 720,
+   "h": 922,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DfN3PkQBZ9s/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b05",
+   "titel": "A wooden tower at the shore with WSL banners",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b05-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b05-480.webp",
+   "w": 720,
+   "h": 1280,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DfGzL6HSBLC/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b06",
+   "titel": "Poster of the WSL live screening in front of the café",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b06-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b06-480.webp",
+   "w": 720,
+   "h": 1280,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DfBmqlkR0xP/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b07",
+   "titel": "Pilsner from the tap",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b07-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b07-1200.webp",
+   "w": 1215,
+   "h": 2160,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/Dd066Nsh0X6/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b08",
+   "titel": "Two guests with coffee at the wooden window counter",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b08-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b08-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dda4I7GEb0u/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b09",
+   "titel": "A guest racking the balls on the red pool table",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b09-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b09-1200.webp",
+   "w": 1216,
+   "h": 2160,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DdYmMR8hN6X/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b10",
+   "titel": "Espresso martinis raised at the bar",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b10-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b10-1200.webp",
+   "w": 1215,
+   "h": 2160,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DdTcjFiBFTT/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b11",
+   "titel": "A guest with a fresh coconut",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b11-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b11-800.webp",
+   "w": 1080,
+   "h": 1134,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DdQcOSlkZHF/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b12",
+   "titel": "Two boys on the climbing wall",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b12-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b12-800.webp",
+   "w": 828,
+   "h": 1472,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DdI6qX4xzvt/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b13",
+   "titel": "Super Juices on the red cloth of the pool table",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b13-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b13-800.webp",
+   "w": 1080,
+   "h": 810,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dc41to0kad2/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b14",
+   "titel": "Two guests toasting with a red and a green drink",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b14-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b14-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dc2pDuUEZn-/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b15",
+   "titel": "Iced matcha",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b15-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b15-800.webp",
+   "w": 1080,
+   "h": 932,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dc0G6qokWrg/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b16",
+   "titel": "Bagels and coffee on a wooden table",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b16-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b16-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DcxUeMIkZsR/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b17",
+   "titel": "Poster of the Brekky Specials with a filled bagel",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b17-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b17-800.webp",
+   "w": 1080,
+   "h": 1350,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DcvZgMPkmlx/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b18",
+   "titel": "The dessert menu on the table stand",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b18-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b18-800.webp",
+   "w": 864,
+   "h": 1536,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/Dcnf4vbR3zL/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b19",
+   "titel": "The garden with palms, benches and the slide",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b19-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b19-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dcce8yiiZ92/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b20",
+   "titel": "A guest drinking a red juice",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b20-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b20-800.webp",
+   "w": 1080,
+   "h": 1350,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Dcacib3EZlf/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b21",
+   "titel": "Billiard balls and an espresso martini on the red cloth",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b21-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b21-800.webp",
+   "w": 1080,
+   "h": 883,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/DcLBueThfn6/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b22",
+   "titel": "Two espresso martinis on the wooden bar",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b22-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b22-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Db4wXEwRT7z/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b23",
+   "titel": "Breakfast plate with bacon, patty, egg and salmon",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b23-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b23-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DcFVxixERvx/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b24",
+   "titel": "The bar under the white arches with the chalkboards",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b24-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b24-1800.webp",
+   "w": 2730,
+   "h": 1820,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DcCxEICkTNT/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b25",
+   "titel": "A girl laughing on the slide",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b25-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b25-1800.webp",
+   "w": 3447,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbpgP9NR4nr/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b26",
+   "titel": "Latte art with bagels on the table",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b26-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b26-1200.webp",
+   "w": 1216,
+   "h": 2160,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/Db_3kwlhQwz/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b27",
+   "titel": "Surfboard tap handles of Siargao Island Brewery",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b27-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b27-1800.webp",
+   "w": 2730,
+   "h": 1820,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbsBV7PEZcY/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b28",
+   "titel": "Curry with grilled flatbread and rice",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b28-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b28-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Db7CrdGESh_/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b29",
+   "titel": "Guests arriving with a dog at the entrance",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b29-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b29-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Db4kq-Kkcck/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b30",
+   "titel": "The café front on the 3rd anniversary",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b30-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b30-800.webp",
+   "w": 1080,
+   "h": 1920,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/reel/Db2b9hFhBp2/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b31",
+   "titel": "A guest with an espresso martini at the bar",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b31-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b31-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/Db2NpshETqx/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b32",
+   "titel": "A mug of Bauhinia beer",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b32-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b32-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbnSDa_x9lQ/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b33",
+   "titel": "Chicken gyros with an Engkanto pale ale",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b33-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b33-1800.webp",
+   "w": 3072,
+   "h": 4095,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbxK6v0kZd-/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b34",
+   "titel": "A girl on the climbing wall",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b34-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b34-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbnMmlbxtyz/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b35",
+   "titel": "The team in front of the cat mural",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b35-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b35-1800.webp",
+   "w": 2730,
+   "h": 1820,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbrzmIIEeYK/",
+   "herkunft": "haus",
+   "aus": false
+  },
+  {
+   "id": "b36",
+   "titel": "Three Super Juices raised to a toast",
+   "klein": "/the-cat-and-gun/haus/assets/bild/b36-480.webp",
+   "gross": "/the-cat-and-gun/haus/assets/bild/b36-1800.webp",
+   "w": 3072,
+   "h": 4096,
+   "quelle": "Instagram @thecatandgun · https://www.instagram.com/thecatandgun/p/DbpH8r5kVnK/",
+   "herkunft": "haus",
+   "aus": false
+  }
+ ],
+ "texte": [
+  {
+   "id": "name",
+   "titel": "Name",
+   "text": "The Cat & Gun",
+   "quelle": "_quelle/MATERIAL.md · Fakten mit Quelle (Instagram @thecatandgun)",
+   "aus": false
+  },
+  {
+   "id": "ort",
+   "titel": "Place",
+   "text": "Catangnan, Siargao",
+   "quelle": "_quelle/MATERIAL.md · Ort (Instagram-Bio)",
+   "aus": false
+  },
+  {
+   "id": "zeiten",
+   "titel": "Opening hours",
+   "text": "7AM–10PM Daily",
+   "quelle": "drucksachen/_bau/marke.py · ZEITEN",
+   "aus": false
+  },
+  {
+   "id": "satz-1",
+   "titel": "Instagram bio",
+   "text": "Your neighbourhood hangout",
+   "quelle": "_quelle/MATERIAL.md · Instagram Bio",
+   "aus": false
+  },
+  {
+   "id": "satz-2",
+   "titel": "Line of the house",
+   "text": "Your Catangnan neighbourhood spot, then and now.",
+   "quelle": "_quelle/MATERIAL.md · Instagram Db2b9hFhBp2",
+   "aus": false
+  },
+  {
+   "id": "satz-3-1",
+   "titel": "Line of the house",
+   "text": "3 years of tables shared, stories told, and people who became part of the place.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DcLBueThfn6",
+   "aus": false
+  },
+  {
+   "id": "satz-3-2",
+   "titel": "Line of the house",
+   "text": "Our little corner of Siargao, made better by you.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DcLBueThfn6",
+   "aus": false
+  },
+  {
+   "id": "satz-4-1",
+   "titel": "Line of the house",
+   "text": "Good mornings start here.",
+   "quelle": "_quelle/MATERIAL.md · Instagram Db_3kwlhQwz",
+   "aus": false
+  },
+  {
+   "id": "satz-4-2",
+   "titel": "Line of the house",
+   "text": "we’re ready from the early hours.",
+   "quelle": "_quelle/MATERIAL.md · Instagram Db_3kwlhQwz",
+   "aus": false
+  },
+  {
+   "id": "satz-5",
+   "titel": "Line of the house",
+   "text": "Good food for grown-ups, fun times for the little ones.",
+   "quelle": "_quelle/MATERIAL.md · Instagram Dcce8yiiZ92",
+   "aus": false
+  },
+  {
+   "id": "satz-6",
+   "titel": "Line of the house",
+   "text": "Sundays are better when the whole neighbourhood comes together.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DfzAbV2yyKJ",
+   "aus": false
+  },
+  {
+   "id": "satz-7",
+   "titel": "Line of the house",
+   "text": "Save room for dessert. Always.",
+   "quelle": "_quelle/MATERIAL.md · Instagram Dcnf4vbR3zL",
+   "aus": false
+  },
+  {
+   "id": "satz-8-1",
+   "titel": "Line of the house",
+   "text": "Because feeling good should taste this good.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DbpH8r5kVnK",
+   "aus": false
+  },
+  {
+   "id": "satz-8-2",
+   "titel": "Line of the house",
+   "text": "Super Juices available all day, everyday.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DbpH8r5kVnK",
+   "aus": false
+  },
+  {
+   "id": "satz-9",
+   "titel": "Line of the house",
+   "text": "Stay cool, Siargao. Fresh coconut water at The Cat & Gun.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DdQcOSlkZHF",
+   "aus": false
+  },
+  {
+   "id": "satz-10",
+   "titel": "Line of the house",
+   "text": "We’re here for you every day of the week!",
+   "quelle": "_quelle/MATERIAL.md · Instagram Dd066Nsh0X6",
+   "aus": false
+  },
+  {
+   "id": "satz-11",
+   "titel": "Line of the house",
+   "text": "Plans were probably just drinks and a bite. Then someone picked up a cue.",
+   "quelle": "_quelle/MATERIAL.md · Instagram DdYmMR8hN6X",
+   "aus": false
+  },
+  {
+   "id": "satz-12",
+   "titel": "Line of the house",
+   "text": "See you at The Cat & Gun!",
+   "quelle": "_quelle/MATERIAL.md · Instagram Abschluss vieler Beiträge",
+   "aus": false
+  }
+ ],
+ "kennung": "42fe90ae1c17",
+ "gebaut": "2026-11-28"
+}

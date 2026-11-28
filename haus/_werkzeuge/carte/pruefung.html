@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menus &amp; price lists · Check · The Cat &amp; Gun</title>
+<script src="/the-cat-and-gun/haus/_werkzeuge/carte/_ob/kleid/catgun.js?v=1795872050"></script>
+<script src="/the-cat-and-gun/haus/_werkzeuge/carte/namen.js?v=1795872050" defer></script>
+
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/carte/_ob/kleid/catgun-zeichen.svg" type="image/svg+xml">
+<script src="/the-cat-and-gun/haus/_werkzeuge/carte/fehlermelder.js?v=1795872050"></script>
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/carte/carte.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/carte/tafel.css?v=1795872050">
+<style>
+body.anl{padding:0}
+.anl main{max-width:900px;margin:0 auto;padding:54px 24px 90px}
+.anl h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.05;color:var(--navy)}
+.anl h1 em{font-style:normal;color:var(--taupe)}
+.anl h2{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--navy);margin:40px 0 4px;padding-top:18px;border-top:1px solid rgba(33,28,24,.35)}
+.anl p{max-width:66ch;color:rgba(29,25,21,.8)}
+.anl .zuruck{display:inline-flex;margin-bottom:26px}
+.anl .gesund div span{min-width:0;overflow-wrap:anywhere}
+.anl .gesund div b{flex:0 1 auto;max-width:60%;text-align:right;overflow-wrap:anywhere;white-space:normal;text-transform:none;letter-spacing:.04em}   /* The Cat & Gun: lange Werte brechen um (vorher 84 px seitlich bei 390, auch in der Vorlage) */
+.rep{display:grid;gap:10px;margin-top:16px}
+.rep div{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-radius:16px;background:var(--platte);box-shadow:var(--platte-s)}
+.rep p{margin:0;font-size:14px}
+.rep .kn[data-scharf]{--o:#b8473d;--m:#B3261E;--u:#6e130d}
+.pr-quit{margin-top:12px;font-size:14px;min-height:1.4em}
+@media (max-width:560px){.rep div{flex-direction:column;align-items:stretch}.anl .gesund div{flex-direction:column}.anl .gesund div b{max-width:none;text-align:left}}
+</style>
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/carte/auftritte.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/carte/look/leiste-vorlage.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/carte/look/leiste.css?v=1795872050">
+<link rel="stylesheet" href="/the-cat-and-gun/haus/_werkzeuge/carte/look/seite-look.css?v=1795872050">
+</head>
+<body class="lc anl cgl">
+<aside class="rail lack6 wo-rand" id="rand" aria-label="Tools of The Cat &amp; Gun"></aside>
+<main>
+<a class="kn kn--klein kn--hell zuruck" href="/the-cat-and-gun/haus/_werkzeuge/carte/">Back: <span data-wo-name="karten">Menus &amp; price lists</span></a>
+<h1>Check <em>of the tool.</em></h1>
+<p style="margin-top:16px">This page runs even when the tool itself does not start. It shows whether browser, server, menus, printing and backups are fine, and has the repairs ready. What a message means is in the <a href="/the-cat-and-gun/haus/_werkzeuge/carte/anleitung.html#was-tun">guide</a>.</p>
+<h2>Browser</h2><div class="gesund" id="p-browser"></div>
+<h2>Server</h2><div class="gesund" id="p-server"><div><span>Server answer</span><b>reading …</b></div></div>
+<h2>Menus</h2><div class="gesund" id="p-karten"></div>
+<h2>Printing and checking the PDF</h2><div class="gesund" id="p-druck"></div>
+<h2>Backups</h2><div class="gesund" id="p-sich"></div>
+<h2>Errors</h2><p>The latest errors the tool logged in the server and in the browsers (newest first).</p><div class="gesund" id="p-fehler"></div>
+<h2>All data</h2><p>All menus with published version, draft, original and every earlier version, plus settings and log, as one file for your own computer.</p>
+<div class="rep"><div><p><b>Download all data.</b> One file (JSON), readable with any text editor.</p><a class="kn kn--klein" href="/the-cat-and-gun/haus/_werkzeuge/carte/api/export" download>Download</a></div></div>
+<h2>Repairs</h2><p>No repair changes a menu. Each needs the manager role and two clicks: the first arms the button, the second runs it.</p>
+<div class="rep" id="p-rep">
+  <div><p><b>Make a backup now.</b> Published versions, drafts, history and log as an archive of today (otherwise once a day by itself).</p><button class="kn kn--klein" type="button" data-rep="sicherung">Make backup</button></div>
+  <div><p><b>Remove test PDFs.</b> Delete printed tests. The published PDFs stay.</p><button class="kn kn--klein" type="button" data-rep="probe">Remove tests</button></div>
+  <div><p><b>Clear error lists.</b> Put server and browser errors aside so new ones stand out (the old ones stay as a file next to them).</p><button class="kn kn--klein" type="button" data-rep="fehler">Clear errors</button></div>
+</div>
+<p class="pr-quit" id="p-quit" aria-live="polite"></p>
+</main>
+<script src="/the-cat-and-gun/haus/_werkzeuge/carte/pruefung.js?v=1795872050"></script>
+<script src="/the-cat-and-gun/haus/_werkzeuge/carte/auftritte.js?v=1795872050" data-alles></script>
+<script src="/the-cat-and-gun/haus/_werkzeuge/carte/look/leiste.js?v=1795872050"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+ "_hinweis": "Ausschnitte aus den Werkzeugen als eigene Stücke in den Sälen (Robert 24.11.2026: «mockups ausschnitten blender pc mockups alles son bisschen gemischt»). Je Eintrag: u = Adresse des laufenden Werkzeugs, w = Breite des Fensters, s = Klicks vor der Aufnahme (Text, genau), el = [CSS des Blocks, Text darin], h = höchstens so hoch (px, oben beginnend). Aufnahme: node _werkzeuge/maison/ausschnitte.js [name …] → roh/aus-<name>.png (nur GET, nichts wird geschrieben), danach python3 bau.py. Ausschnitte aus den Geräte-Aufnahmen stehen in bau.py (AUS).",
+ "editor-farben": {"u": "/the-cat-and-gun/haus/_werkzeuge/markenbuch-editor/", "w": 1440, "s": [["Colours", true]], "el": [".mb-welt", "Print"], "h": 330},
+ "registre-kurve": {"u": "/the-cat-and-gun/haus/_werkzeuge/registre/?beispiel=1", "w": 1440, "s": [["Trend", true]], "el": ["section.blatt", "Visits per day"]},
+ "registre-laender": {"u": "/the-cat-and-gun/haus/_werkzeuge/registre/?beispiel=1", "w": 1440, "s": [["Origin", true]], "el": ["section.blatt", "Countries"]}
+}

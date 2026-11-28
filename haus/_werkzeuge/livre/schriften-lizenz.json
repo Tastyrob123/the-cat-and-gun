@@ -1,0 +1,26 @@
+{
+ "DMMono-400.woff2": {
+  "familie": "DM Mono",
+  "copyright": "Copyright 2020 The DM Mono Project Authors (https://www.github.com/googlefonts/dm-mono)",
+  "lizenz": "",
+  "lizenz_adresse": "http://scripts.sil.org/OFL"
+ },
+ "DMSerifDisplay-400.woff2": {
+  "familie": "DM Serif Display",
+  "copyright": "Copyright 2014 - 2017 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. Copyright 2019 Google LLC.",
+  "lizenz": "",
+  "lizenz_adresse": "http://scripts.sil.org/OFL"
+ },
+ "Gloock.woff2": {
+  "familie": "Gloock",
+  "copyright": "Copyright 2022 The Gloock Project Authors (https://github.com/duartp/gloock)",
+  "lizenz": "",
+  "lizenz_adresse": "https://scripts.sil.org/OFL"
+ },
+ "InstrumentSans-400_600.woff2": {
+  "familie": "Instrument Sans",
+  "copyright": "Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)",
+  "lizenz": "",
+  "lizenz_adresse": "https://scripts.sil.org/OFL"
+ }
+}

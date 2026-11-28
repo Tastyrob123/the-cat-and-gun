@@ -1,0 +1,37 @@
+/* probe.css · Musterseite des Markenfundus, Werte wie das Kleid catgun (website/assets/cg.css) */
+@font-face{font-family:'CG Gloock';font-weight:400;font-display:swap;src:url('schrift/Gloock.woff2') format('woff2')}
+@font-face{font-family:'CG Sans';font-weight:400 600;font-display:swap;src:url('schrift/InstrumentSans-400_600.woff2') format('woff2')}
+@font-face{font-family:'CG Mono';font-weight:400;font-display:swap;src:url('schrift/DMMono-400.woff2') format('woff2')}
+:root{--nacht:#15120f;--papier:#f5f1ea;--blatt:#fbf8f3;--tinte:#1d1915;--leise:#6c6157;--holz:#8a5634;--gold:#c99d70;--filz:#b5343a;--linie:rgba(29,25,21,.14)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.55 'CG Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-family:'CG Gloock',Georgia,serif;font-weight:400;letter-spacing:-.006em}
+p,ul,dl,dd,figure{margin:0;padding:0}ul{list-style:none}
+.mono{font:11px/1.4 'CG Mono',ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.kopf{padding:40px clamp(16px,4vw,56px) 44px;background:var(--nacht);color:#f4efe7;border-bottom:2px solid var(--filz)}
+.kopf h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.04;margin:14px 0 14px;max-width:18ch}.kopf h1 em{font-style:normal;color:var(--gold)}
+.kopf p{max-width:60ch;color:rgba(244,239,231,.84)}.kopf p.mono{margin-top:14px}
+main{max-width:1240px;margin:0 auto;padding:10px clamp(16px,4vw,56px) 80px}
+section{padding:38px 0 0}section>h2{font-size:1.9rem;margin-bottom:16px}
+.welt{margin-bottom:22px}.welt h3{font-size:1.2rem;margin-bottom:10px;color:var(--holz)}
+.welt ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.welt li{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px;align-items:center;padding:10px;border-radius:12px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie)}
+.welt li i{grid-row:1/3;width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.welt li b{font-weight:500;font-size:.92rem;overflow-wrap:anywhere}.welt li span{font:11px 'CG Mono',monospace;color:var(--leise)}
+.schriften{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.schrift{padding:16px 18px;border-radius:14px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie)}.schrift p{font-size:1.5rem;line-height:1.2;margin-top:8px;overflow-wrap:anywhere}
+.elemente{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.elemente figure{padding:12px;border-radius:14px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie)}
+.elemente .bild{position:relative;aspect-ratio:1}.elemente .bild>svg{position:absolute;inset:0;width:100%;height:100%}
+.elemente figcaption{margin-top:8px;font-size:.84rem;color:var(--leise)}
+.texte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.texte>div{padding:14px 16px;border-radius:14px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie)}
+.texte dt{font:11px 'CG Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--holz)}.texte dd{margin-top:4px;overflow-wrap:anywhere;white-space:pre-line}
+@media (max-width:700px){.schriften,.texte{grid-template-columns:1fr}}
+
+/* Mac-Prüfung 23.11.2026 (oberflaeche_pruefen.js): Schrift ab 13 px, volle Reihen (probe.js setzt --sp und die Spannen), Auftritte beim Scrollen */
+.mono,.welt li span,.texte dt{font-size:13px;letter-spacing:.08em}
+.welt ul.voll,.elemente.voll{grid-template-columns:repeat(var(--sp,1),minmax(0,1fr))}
+.auf{transform:translate3d(0,36px,0)}
+.auf.da{transform:none;transition:transform .9s cubic-bezier(.19,1,.22,1)}
+@media (prefers-reduced-motion:reduce){.auf{transform:none}}

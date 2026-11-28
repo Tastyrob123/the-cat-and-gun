@@ -1,0 +1,269 @@
+/* Sticker editor · Ergänzungen zu studio.css/ms-bureau.css der Vorlage, nur wo der Auftrag Neues verlangt (Leiste R08 mit Speichern/Veröffentlichen,
+   Sticker als SVG, Farbwahl mit Pipette, einfacher/erweiterter Modus, Galerie mit Favorit). Farben nur aus dem Kleid (catgun.css). */
+:root{--sk-leiste:64px;
+  /* Kleid: Tapete mit festem Weg (in catgun.css relativ, im Werkzeug-Ordner sonst 404; gemeldet unter «Für das Kleid») */
+  --wo-tapete:#15120f url('/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/tapete-dunkel.svg') 0 0/46px 46px;--wo-tapete-hell:#f5f1ea url('/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/tapete-hell.svg') 0 0/46px 46px;--wo-tapete-fein:var(--wo-tapete)}
+@font-face{font-family:'DM Serif Display Ganz';src:url('schriften/DMSerifDisplay-ganz.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+/* Sticker-SVG: die Werkzeug-Regel svg{fill:none;stroke:currentColor} der Vorlage gilt nicht für Sticker (sonst Linien um jede Form) */
+svg[data-sticker],svg[data-sticker] svg,.sk-mini--el svg,.sk-element__bild svg,.sk-element__bild svg svg,.sk-mini--el svg svg,.sk-vn svg svg{fill:#000;stroke:none;stroke-width:1}
+body{padding-bottom:0}
+.studio{height:calc(100vh - 72px - var(--sk-leiste))}
+#start{bottom:var(--sk-leiste)!important}
+
+/* ---------- Leiste unten (R08) ---------- */
+.sk-leiste{position:fixed;left:0;right:0;bottom:0;z-index:30;height:var(--sk-leiste);display:flex;align-items:center;gap:10px;padding:0 18px;
+  background:var(--wo-tief) url('/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/tapete-dunkel.svg') 0 0/46px 46px;box-shadow:0 -1px 0 rgba(201,157,112,.35),0 -12px 30px -18px rgba(0,0,0,.6);color:var(--wo-g1)}
+.sk-leiste__text{flex:1;min-width:0;font:400 14px/1.3 var(--wo-sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sk-leiste[data-z="gelb"] .sk-leiste__text{color:#e9c77a}
+.sk-leiste[data-z="entwurf"] .sk-leiste__text{color:var(--wo-gold)}
+.sk-l-kn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 18px;border:0;border-radius:999px;font:400 10px/1 var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .4s var(--wo-e2),background .3s,color .3s}
+.sk-l-kn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;display:none}
+.sk-l-kn:hover:not(:disabled){transform:translateY(-1px)}
+.sk-l-kn:disabled{opacity:.42;cursor:default}
+.sk-l-kn--leicht{background:rgba(244,239,231,.08);color:var(--wo-g1);box-shadow:inset 0 0 0 1px rgba(201,157,112,.38)}
+#start .sk-l-kn--leicht,.sk-druck .sk-l-kn--leicht{background:var(--wo-blatt);color:var(--wo-tinte);box-shadow:inset 0 0 0 1px rgba(138,86,52,.35)}
+.sk-l-kn--speichern[data-z="grau"]{background:rgba(244,239,231,.14);color:rgba(244,239,231,.7)}
+.sk-l-kn--speichern[data-z="gelb"]{background:#e9c77a;color:var(--wo-tief);box-shadow:0 0 0 3px rgba(233,199,122,.25)}
+.sk-l-kn--speichern[data-z="gruen"]{background:#7d9a62;color:#fff}
+.sk-l-kn--speichern[data-z="gruen"] svg{display:block}
+.sk-l-kn--haupt{background:linear-gradient(180deg,#e9dfcf,#c99d70);color:var(--wo-tief);box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.sk-l-kn .sk-ic{display:none}
+/* Handy: «Earlier versions» und «Before, after» bleiben da, als runde Knöpfe mit Zeichen (R08, R14) */
+@media (max-width:900px){.sk-leiste{gap:6px;padding:0 8px}.sk-l-kn{padding:0 11px;font-size:9px;letter-spacing:.08em}.sk-leiste__text{font-size:12px;white-space:normal;line-height:1.2}
+  .sk-l-kn--ic{width:40px;padding:0;flex:none}.sk-l-kn--ic>span{display:none}.sk-l-kn--ic .sk-ic{display:block;width:18px;height:18px}}
+/* Handy: Arbeitsfläche samt Format- und Zoomleiste endet über der Leiste unten (Fehlerbuch 10a) */
+@media (max-width:820px){.mitte{height:calc(78vh - var(--sk-leiste))}}
+/* Handy, «More tools»: Werkzeugleiste in einer Zeile über die ganze Breite, nur Symbole; «Simple» darunter (Fehlerbuch 21.10.2026) */
+@media (max-width:820px){
+  body.sk-erweitert .werkzeug{flex-wrap:wrap;gap:8px}
+  body.sk-erweitert .werkzeug .insel{flex:1 1 100%;max-width:100%;overflow:visible;justify-content:space-between}
+  body.sk-erweitert .werkzeug .insel button{flex:1 1 0;min-width:0;padding:0}
+  body.sk-erweitert .werkzeug .insel__trenn{flex:none;margin:0 1px}
+}
+/* Am Handy: «Back to the sticker» im Fach statt im Kopf */
+.sk-zum-sticker[hidden]{display:none!important}
+@media (min-width:901px){.sk-zum-sticker{display:none!important}}
+@media (max-width:900px){#start #startZu{display:none!important}}
+
+/* ---------- Quittung (R11) ---------- */
+.meldung{display:flex;align-items:center;gap:10px;flex-wrap:wrap;width:max-content;max-width:min(640px,calc(100vw - 32px));box-sizing:border-box;bottom:calc(var(--sk-leiste) + 16px)!important}
+.meldung .sk-q__t{flex:1 1 auto;min-width:0}   /* eine Zeile, solange der Satz passt, in Chrome, Safari und Firefox (Prüfung 22.11.2026, Punkt 5) */
+.meldung .sk-q__k{border:0;background:none;color:var(--wo-gold);font:400 13px var(--wo-mono);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:4px}
+.meldung .sk-q__zu{border:0;background:none;color:inherit;font-size:20px;line-height:1;cursor:pointer;padding:0 4px;opacity:.7}
+.meldung.sk-q--fehler{box-shadow:0 0 0 1px var(--wo-filz),0 20px 40px -20px rgba(0,0,0,.8)}
+/* Fehler tragen ein Ausrufezeichen statt des Häkchens von «Saved» */
+.meldung.sk-q--fehler::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f1ea' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 6.5v7M12 17.5v.01'/%3E%3C/svg%3E") center/16px no-repeat,linear-gradient(180deg,#c4474c,#b5343a 60%,#8f2429);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 0 0 1px rgba(181,52,58,.45)}
+
+/* ---------- Blatt (SVG) ---------- */
+.wirt{overflow:visible!important;background:none!important;box-shadow:none!important}
+/* Sticker liegen ohne Schatten (Fehlerbuch 10a, 19.11.2026), im Editor und in jeder Karte */
+.sk-blatt{filter:none}
+.sk-blatt>svg{display:block;overflow:visible}
+.sk-blatt [data-ebene]{cursor:move}
+.ohneHilfen .sk-schnitt{display:none}
+.sk-dreh{background:linear-gradient(180deg,#c99d70,#8a5634)!important;cursor:grab}
+.sk-dreh-stiel{position:absolute;width:1px;height:14px;background:#c99d70;pointer-events:none}
+.griff[data-griff="nw"],.griff[data-griff="se"]{cursor:nwse-resize}.griff[data-griff="ne"],.griff[data-griff="sw"]{cursor:nesw-resize}
+body.sk-pipette-an .sk-blatt,body.sk-pipette-an .sk-blatt *,body.sk-pipette-an img[data-pipette-bild]{cursor:crosshair!important}
+body.sk-pipette-an .sk-blatt{outline:2px dashed var(--wo-gold);outline-offset:6px}
+
+/* Einfache und erweiterte Fassung */
+body:not(.sk-erweitert) .sk-erw,body:not(.sk-erweitert) .sk-erw-g{display:none!important}
+.sk-modus{height:38px;padding:0 18px;border:0;border-radius:999px;font:400 10px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;color:var(--wo-g1);background:linear-gradient(180deg,#4a2f20,#15120f);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 0 1px rgba(201,157,112,.45)}
+.sk-modus[aria-pressed="true"]{background:linear-gradient(180deg,#e9dfcf,#c99d70);color:var(--wo-tief)}
+
+/* ---------- Kleine Sticker in Karten und Listen ---------- */
+.sk-mini{position:relative;display:inline-block;flex:none;filter:none}
+.sk-karte .stueck__satz::before,#start .stueck__satz::before{display:none}
+.sk-mini>svg{display:block;width:100%;height:100%;overflow:visible}
+.sk-mini--el{width:110px;height:110px;display:grid;place-items:center}
+.sk-mini--el>img{width:110px;height:110px;object-fit:contain;display:block}
+.sk-karte .stueck__satz{display:flex;align-items:center;justify-content:center}
+.sk-karte{position:relative}
+.sk-karte.sk-hinten{opacity:.62}
+.sk-stern{position:absolute;right:10px;top:8px;width:22px;height:22px;color:#e9c77a}
+.sk-stern svg{width:100%;height:100%;fill:currentColor;stroke:var(--wo-tief);stroke-width:1}
+.sk-aktionen{position:absolute;left:0;right:0;top:6px;z-index:6;display:flex;justify-content:center;gap:6px;opacity:0;transition:opacity .3s;pointer-events:none}
+.sk-karte:hover .sk-aktionen button,.sk-karte:focus-within .sk-aktionen button{pointer-events:auto}   /* über dem Sticker-Bild, sonst öffnet ein Klick auf «to the back» den Editor (Prüfung 22.11.2026, Punkt 1) */
+.sk-karte:hover .sk-aktionen,.sk-karte:focus-within .sk-aktionen{opacity:1}
+@media (hover:none){.sk-aktionen{opacity:1;position:static;margin-top:8px}.sk-aktionen,.sk-aktionen button{pointer-events:auto}}
+.sk-aktionen button{width:32px;height:32px;border:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:var(--wo-blatt);color:var(--wo-tinte);box-shadow:0 0 0 1px rgba(138,86,52,.3),0 6px 10px -6px rgba(0,0,0,.5)}
+.sk-aktionen button svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.8;fill:none}
+.sk-aktionen button.an{background:var(--wo-tief);color:#e9c77a}
+.sk-aktionen button[data-akt="fav"].an svg{fill:currentColor}
+.sk-stand{font-style:normal}.sk-stand--changed{color:var(--wo-akzent)}.sk-stand--not-published{color:var(--wo-leise)}
+.sk-plus{width:96px;height:96px;border-radius:50%!important;background:linear-gradient(180deg,#fbf8f3,#f5f1ea)}
+.sk-wo__sticker{position:absolute;left:14px;bottom:12px;display:flex;gap:6px;align-items:flex-end;z-index:2}
+.sk-format{margin:-6px 0 22px}
+.sk-leerhinweis{max-width:70ch;margin:8px 0 18px}
+
+/* ---------- Druckdateien ---------- */
+.sk-druckliste{display:grid;gap:10px;margin-bottom:32px}
+.sk-druck{display:flex;align-items:center;gap:16px;padding:12px 16px;border-radius:16px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.18),0 10px 20px -16px rgba(0,0,0,.5)}
+.sk-druck>span:not(.sk-mini){flex:1;min-width:0}
+.sk-druck b{display:block;font:400 18px/1.2 var(--wo-titel);color:var(--wo-tinte)}
+.sk-druck small{display:block;font:400 12.5px/1.4 var(--wo-sans);color:var(--wo-leise)}
+.sk-druck em{color:var(--wo-akzent);font-style:normal}
+.sk-druck .sk-mini{width:64px;height:64px;display:grid;place-items:center}
+@media (max-width:700px){.sk-druck{flex-wrap:wrap}.sk-druck .sk-l-kn{width:100%}}
+
+/* ---------- Farben & Schriften ---------- */
+.sk-welt{margin-bottom:30px}
+.sk-welt h3{font:400 22px/1.2 var(--wo-titel);margin:0 0 8px;color:var(--wo-tinte)}
+.sk-farbfelder{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.links .sk-farbfelder{grid-template-columns:repeat(2,1fr)}
+.sk-farbfeld{display:grid;grid-template-columns:34px 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;text-align:left;padding:8px 10px;border:0;border-radius:12px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.18);cursor:pointer}
+.sk-farbfeld span{grid-row:1/3;width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.sk-farbfeld b{font:500 13px/1.2 var(--wo-sans);color:var(--wo-tinte);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sk-farbfeld small{font:400 10px var(--wo-mono);letter-spacing:.08em;color:var(--wo-leise)}
+.sk-schriftproben{display:grid;gap:12px;margin-bottom:12px}
+.sk-probe{padding:14px 16px;border-radius:14px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.18)}
+.sk-probe span{display:block;font-size:28px;line-height:1.15;color:var(--wo-tinte);overflow-wrap:anywhere}
+.sk-probe small{display:block;margin-top:6px;font:400 10px var(--wo-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--wo-leise)}
+
+/* ---------- Linke Platte ---------- */
+.sk-feld{display:block;margin:0 0 12px;font:400 10px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-leise)}
+.sk-feld textarea,.sk-feld input{display:block;width:100%;margin-top:6px;resize:vertical;min-height:42px;font:400 16px/1.35 var(--wo-sans);letter-spacing:0;text-transform:none;color:var(--wo-tinte)}
+.sk-schnellfarbe{margin:0 0 8px}
+.sk-schnellfarbe summary{display:flex;align-items:center;gap:10px;font:500 14px var(--wo-sans)}
+.sk-schnellfarbe>div{padding:10px 2px 6px}
+.sk-motiv{margin:16px 0;padding:12px 14px;border-radius:14px;background:rgba(201,157,112,.14);box-shadow:inset 0 0 0 1px rgba(138,86,52,.3)}
+.sk-motiv b{display:block;font:400 10px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-akzent);margin-bottom:6px}
+.sk-motiv p{margin:4px 0;font:400 13px/1.45 var(--wo-sans);color:var(--wo-tinte)}
+.sk-motiv a{color:var(--wo-akzent)}
+.sk-vorbild{display:block;max-width:160px;margin-top:6px;border-radius:8px}
+.sk-vorlagen{display:grid;gap:8px}
+.sk-vorlage{display:flex;align-items:center;gap:12px;padding:8px 10px;border:0;border-radius:14px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.18);cursor:pointer;text-align:left}
+.sk-vorlage:hover{box-shadow:0 0 0 1.5px var(--wo-akzent)}
+.sk-vorlage .sk-mini{width:70px;height:70px;display:grid;place-items:center}
+.sk-vorlage .sk-mini>svg{width:auto;height:auto;max-width:70px;max-height:70px}
+.sk-vorlage b{display:block;font:500 14px/1.25 var(--wo-sans);color:var(--wo-tinte)}
+.sk-vorlage small{display:block;font:400 12px var(--wo-sans);color:var(--wo-leise)}
+/* Robert 24.11.2026 («ich will links auch nicht diesen raum haben wo ich mich drin bewegen kann»): zwei Karten passen genau in die Leiste,
+   Bild oben, Name darunter; nichts lässt sich seitlich verschieben. Bleibt eine Karte allein, liegt sie über beide Spalten (keine halbe Reihe). */
+.vorlagen.sk-vorlagen{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sk-vorlagen .sk-vorlage{min-width:0;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:8px;padding:14px 10px 12px}
+.sk-vorlagen .sk-vorlage>span{min-width:0;max-width:100%}
+.sk-vorlagen .sk-vorlage>.sk-mini{flex:none;width:70px!important;height:70px!important;display:grid;place-items:center}
+.sk-vorlagen .sk-vorlage>.sk-mini>svg{width:100%;height:100%}
+.sk-vorlagen .sk-vorlage b,.sk-vorlagen .sk-vorlage small{overflow-wrap:anywhere;hyphens:auto}
+.sk-vorlagen .sk-vorlage:last-child:nth-child(odd){grid-column:1/-1;flex-direction:row;justify-content:center;text-align:left;gap:14px}
+.sk-elemente{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.sk-element{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 8px;border:0;border-radius:14px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.18);cursor:pointer}
+.sk-element:hover{box-shadow:0 0 0 1.5px var(--wo-akzent)}
+.sk-element__bild{height:64px;display:grid;place-items:center}
+.sk-element__bild{width:100px}.sk-element__bild>img{width:100px;height:64px;object-fit:contain;display:block}
+.sk-element b{font:500 12.5px/1.2 var(--wo-sans);color:var(--wo-tinte);text-align:center}
+.sk-element small{font:400 11px var(--wo-sans);color:var(--wo-leise)}
+.sk-fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sk-foto{padding:0;border:0;border-radius:10px;overflow:hidden;aspect-ratio:1;cursor:pointer;background:var(--wo-papier2)}
+.sk-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.sk-profil{display:flex;gap:12px;align-items:flex-start;margin:12px 0 16px;padding:10px;border-radius:14px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.18)}
+.sk-profil img{width:84px;height:84px;object-fit:cover;border-radius:10px;flex:none}
+.sk-profil b{display:block;font:500 13px var(--wo-sans);margin-bottom:8px}
+.hochladen.ueber{box-shadow:0 0 0 2px var(--wo-akzent)}
+
+/* ---------- Farbwahl ---------- */
+.sk-farbwahl .farben{gap:8px}
+.sk-farbwahl .farben button{width:26px;height:26px}
+.sk-wert{display:flex;align-items:center;gap:8px;margin-top:10px}
+.sk-wert__probe{flex:none;width:26px;height:26px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.sk-wert input{flex:1;min-width:0;height:36px;padding:0 10px;font:400 13px var(--wo-mono);letter-spacing:.08em;text-transform:uppercase}
+.sk-pip{flex:none;width:36px;height:36px;border:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--wo-g1);background:linear-gradient(180deg,#4a2f20,#15120f);box-shadow:0 0 0 1px rgba(201,157,112,.45)}
+.sk-pip svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.7;fill:none}
+.sk-farbname{display:block;margin-top:6px;font:400 10px var(--wo-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--wo-leise)}
+.sk-pip-hinweis{margin-top:6px!important;font-size:11.5px!important}
+.sk-teil{margin-bottom:14px}
+.sk-teil .unter{display:block;margin-bottom:6px}
+.sk-ebenenname{margin-top:-6px!important}
+.sk-schriften{flex-wrap:wrap}
+.sk-schriften button{flex:1 1 45%;font-size:15px!important;letter-spacing:0!important;text-transform:none!important}
+.sk-formwahl{flex-wrap:wrap}.sk-formwahl button{flex:1 1 30%}
+.sk-ebenen{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.sk-ebenen li{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:10px;background:var(--wo-blatt);box-shadow:0 0 0 1px rgba(138,86,52,.14);cursor:pointer}
+.sk-ebenen li.aus{opacity:.5}
+.sk-ebenen li b{flex:1;min-width:0;font:400 13px var(--wo-sans);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sk-ebenen__mini{width:20px;text-align:center;font:400 12px var(--wo-mono);color:var(--wo-akzent)}
+.sk-ebenen button{border:0;background:none;cursor:pointer;color:var(--wo-akzent);font-size:15px}
+
+/* ---------- Dialoge ---------- */
+.sk-liste,.sk-pruefliste,.sk-verlauf{list-style:none;margin:12px 0;padding:0;display:grid;gap:6px;max-height:46vh;overflow:auto}
+.sk-liste li,.sk-pruefliste li{font:400 14px/1.4 var(--wo-sans)}
+.sk-liste b,.sk-pruefliste b{display:inline-block;min-width:70px;font:400 10px var(--wo-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--wo-akzent)}
+.sk-pruefliste li.fehler b{color:var(--wo-filz)}
+.sk-verlauf li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--wo-papier);box-shadow:0 0 0 1px rgba(138,86,52,.16)}
+.sk-verlauf li>span{flex:1;min-width:0}
+.sk-verlauf b{display:block;font:500 14px var(--wo-sans)}
+.sk-verlauf small{display:block;font:400 12px var(--wo-sans);color:var(--wo-leise)}
+.sk-verlauf__ur{box-shadow:0 0 0 1px var(--wo-akzent)!important}
+.sk-schritte{margin:14px 0;padding-left:22px;font:400 15px/1.8 var(--wo-sans);color:var(--wo-leise)}
+.sk-schritte li.fertig{color:var(--wo-tinte)}.sk-schritte li.fertig::marker{content:'✓  '}
+.sk-schritte li.jetzt{color:var(--wo-akzent);font-weight:600}
+.sk-vn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0}
+.sk-vn figure{margin:0;padding:12px;border-radius:14px;background:var(--wo-papier2);display:grid;place-items:center;gap:8px}
+.sk-vn figcaption{font:400 10px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-leise)}
+.sk-vn figure>svg{width:100%;max-height:200px}
+.sk-vn-liste{max-height:58vh;overflow:auto}
+.dialog__karte{max-height:calc(100vh - 120px);overflow:auto}
+.sk-chips-titel{align-self:center;margin-right:6px;font:400 10px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-leise)}
+.sk-startknoepfe{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Handy (R07): Bereiche-Knopf öffnet die Leiste als Fach und schliesst sie nach der Wahl */
+@media (max-width:900px){
+  .studio{height:auto;min-height:calc(100vh - 64px - var(--sk-leiste));padding-bottom:calc(var(--sk-leiste) + 12px)}
+  .sk-vn{grid-template-columns:1fr}
+}
+
+.sk-nur-handy{display:none!important}
+@media (max-width:820px){.sk-nur-handy{display:flex!important}}
+
+/* Rundgang (R18) */
+.sk-rundgang{position:fixed;inset:0;z-index:90}
+.sk-rundgang__kegel{position:fixed;border-radius:18px;box-shadow:0 0 0 9999px rgba(13,11,9,.62),0 0 0 2px var(--wo-gold);transition:all .5s var(--wo-e1);pointer-events:none}
+.sk-rundgang__karte{position:fixed;width:min(320px,calc(100vw - 32px));padding:18px 20px;border-radius:18px;background:var(--wo-blatt);color:var(--wo-tinte);box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.sk-rundgang__karte small{font:400 13px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-akzent)}
+.sk-rundgang__karte b{display:block;margin:6px 0 4px;font:400 22px/1.2 var(--wo-titel);color:#26211c!important}   /* G2 28.11.2026: der neue Look färbt Titel hell, auf der hellen Karte bleibt er dunkel */
+.sk-rundgang__karte p{margin:0 0 14px;font:400 14px/1.5 var(--wo-sans)}
+.sk-rundgang__karte div{display:flex;justify-content:flex-end;gap:8px}
+.sk-rundgang__karte button{height:38px;padding:0 16px;border:0;border-radius:999px;font:400 13px var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;background:var(--wo-papier2);color:var(--wo-tinte)}
+.sk-rundgang__karte button.an{background:var(--wo-tief);color:var(--wo-g1)}
+/* Quittung: mehrzeilig als Platte mit runden Ecken statt Pille (am Handy sonst ein Klumpen) */
+.meldung{border-radius:18px!important}
+@media (max-width:700px){.meldung{left:16px!important;right:16px;width:auto;transform:none!important;max-width:none;padding:10px 14px}}
+/* Suchfeld: WebKit hält rechts Platz für seinen Löschknopf frei und schneidet «Search» ab; das Feld leert man mit der Löschtaste */
+#startSuche::-webkit-search-cancel-button,#startSuche::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
+@media (max-width:600px){#formatInfo .sk-fi-rest,#formatInfo .sk-fi-art{display:none}#formatInfo{text-overflow:clip;flex:none;overflow:visible;width:max-content}#formatInfo,#zoomWert{letter-spacing:.01em!important}}   /* am Handy nur die Masse (13 px Schrift) */
+
+/* Reihen gleichmässig, letzte Reihe mittig (reihen.js; Fehlerbuch 10a 20.10.2026) */
+.sk-vert{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch}
+.sk-vert>*{box-sizing:border-box;flex:0 0 calc((100% - (var(--sk-sp,4) - 1) * var(--sk-gap,0px)) / var(--sk-sp,4))!important;width:auto!important;min-width:0!important;max-width:none!important}
+.sk-vert>p,.sk-vert>.sk-leerhinweis{flex-basis:100%!important}
+.sk-vert>.sk-fueller-weg{display:none!important}
+.sk-vert>.sk-kurz-a{margin-left:calc((100% + var(--sk-gap,0px)) / var(--sk-sp,4) / 2 - .5px)!important}
+.sk-vert>.sk-kurz-z{margin-right:calc((100% + var(--sk-gap,0px)) / var(--sk-sp,4) / 2 - .5px)!important}
+/* Übersicht: Abstand zwischen den Bereich-Karten und dem nächsten Titel wie zwischen den Abschnitten der Vorlage (.ms-wochen 62 px) */
+#startBereiche{margin-bottom:62px!important}
+/* Farbnamen ganz (kein «The Purple Poti…»), notfalls in zwei Zeilen */
+.sk-farbfeld b{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+/* Quittung im Editor über der Format- und Zoomleiste, nicht halb darauf (Vorlage: .meldung über ihrer Fussleiste) */
+@media (min-width:821px){body:not(.startoffen) .meldung{bottom:calc(var(--sk-leiste) + 66px)!important}}
+
+/* Mindestschrift 13 px (Robert 09.11.2026, Prüfskript Punkt 17, 23.11.2026). Die kleinen Etiketten der Vorlage (8,5–12 px) auf 13 px,
+   gesperrte Mono-Etiketten mit engerem Abstand, damit Knöpfe und Inseln nicht aus der Zeile laufen. */
+.sk-l-kn,.sk-l-kn span,#leisteText,.ms-kn-gold span,.ms-nav em,.ms-wege a,#startOrt,.wo-marke-w small,.ms-suche kbd,#startZu span,.ws-web span,
+.wo-sb__zier span,.sk-startknoepfe .kn span,#msAlle span,.ms-zeile .ms-lnk span,.wo__n small,.stueck__format,.stueck__format .sk-stand,#galerieFilter button,
+#neuBereich button,.sk-chips-titel,.links .reiter button,.sk-farbname,.sk-motiv b,.sk-motiv small,.sk-modus span,.ausgabe .nb,.ausgabe .nk,#formatInfo,
+#formatInfo span,#zoomWert,.insel button span,.insel .schalter span,.kopf__werk .kn span,.sk-druck a,.sk-farbfeld small,.sk-probe small,#btnFertig span,
+.sk-feld,.kopf__marke small{font-size:13px!important}
+.sk-l-kn span,.ms-kn-gold span,#startZu span,.ws-web span,.wo-sb__zier span,.sk-startknoepfe .kn span,#msAlle span,.ms-zeile .ms-lnk span,.stueck__format,
+#galerieFilter button,#neuBereich button,.sk-chips-titel,.links .reiter button,.sk-motiv b,.sk-modus span,.ausgabe .nb,.ausgabe .nk,#formatInfo,#formatInfo span,
+#zoomWert,.insel button span,.insel .schalter span,.kopf__werk .kn span,.sk-druck a,.sk-probe small,#btnFertig span,.sk-feld,.wo-marke-w small,.kopf__marke small{letter-spacing:.05em!important}
+#start .ms-fuss .ms-wege{gap:4px;padding-right:0}
+#start .ms-fuss .ms-wege a{font-size:13px!important;padding:0 8px}
+/* Mindestschrift 13 px auch in den Platten, Fenstern und Listen des Editors */
+.regler output,.zeile2 label,.rechts .gruppe label,.rechts__kopf small,.dialog__knoepfe button,.sk-pruefliste b,.sk-verlauf button,.groesse span,.sk-element small,
+.dialog__karte button>span>small,.hochladen small,.sk-vorlage small,.sk-verlauf small,.sk-ebenen__mini,.gruppe .segment button,.gruppe .knoepfe button,.masse label,
+.links .gruppe label,.menue button small{font-size:13px!important}
+.regler output,.zeile2 label,.rechts .gruppe label,.rechts__kopf small,.dialog__knoepfe button,.sk-pruefliste b,.sk-verlauf button,.groesse span,.gruppe .segment button,
+.gruppe .knoepfe button,.masse label,.links .gruppe label{letter-spacing:.04em!important}
+.gruppe .segment button{padding-left:4px!important;padding-right:4px!important;min-width:0}

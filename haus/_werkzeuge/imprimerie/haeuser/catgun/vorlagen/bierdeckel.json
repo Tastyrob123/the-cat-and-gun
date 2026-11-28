@@ -1,0 +1,112 @@
+{
+"art": "bierdeckel",
+"format": "r107",
+"vorlagen": [
+{
+"id": "bierdeckel-001",
+"titel": "Beer mat · Ten on draught",
+"bereich": "Bar and draught beer",
+"vorlage": "rund",
+"ton": "dunkel",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "On tap",
+"titel": "Ten on draught",
+"unter": "7AM – 10PM DAILY"
+},
+"rueck": {
+"vorlage": "rundliste",
+"inhalt": {
+"ueber": "Draught beers",
+"liste": [
+{
+"name": "Cloud 9 Light (5.4%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Pipeline Pale Ale (6.3%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Bells Beach Wheat (6.3%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "German Lager (4.7%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Pilsner (5%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "White Lager (5.3%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Indian Pale Lager (6%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Bulacan Lager (5%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "Vienna Lager (5.5%)",
+"detail": "",
+"preis": ""
+},
+{
+"name": "White IPA (7%)",
+"detail": "",
+"preis": ""
+}
+]
+},
+"ton": "hell"
+}
+},
+{
+"id": "bierdeckel-002",
+"titel": "Beer mat · Pool table",
+"bereich": "Pool table",
+"vorlage": "rund",
+"ton": "dc",
+"stil": {
+"ausr": "c",
+"rahmen": "ohne",
+"titel": 1,
+"zeichen": 1,
+"ecke": 2.4,
+"bild": 0.56
+},
+"inhalt": {
+"ueber": "Pool table",
+"titel": "Then someone picked up a cue."
+},
+"rueck": {
+"vorlage": "rund",
+"inhalt": {
+"titel": "Your neighbourhood hangout",
+"unter": "CATANGNAN · SIARGAO"
+},
+"ton": "hell"
+}
+}
+]
+}

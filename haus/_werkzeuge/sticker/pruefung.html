@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Check · Sticker editor · The Cat &amp; Gun</title>
+<link rel="icon" href="/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/catgun-zeichen.svg">
+<!-- Eigene Prüfseite des Sticker editor (Werkzeug-Master R23, Vorlage: imprimerie/pruefung.html des Culinarium). Läuft ohne das Werkzeug:
+     prüft Browser, Server und Speicher, Markenfundus, Schriften fürs PDF, veröffentlichte Druckdateien, zeigt mitgeschriebene Fehler,
+     erklärt jede Meldung (Lexikon: Sehen · Grund · Tun) und bietet Reparaturen mit Doppelklick. -->
+<style>
+@font-face{font-family:"Gloock";src:url(/the-cat-and-gun/haus/assets/schrift/Gloock.woff2)}
+@font-face{font-family:"Instrument Sans";src:url(/the-cat-and-gun/haus/assets/schrift/InstrumentSans-normal-400_600.woff2);font-weight:400 600}
+:root{--tief:#15120f;--nacht:#0d0b09;--papier:#f5f1ea;--creme:#ece5d9;--gold:#c99d70;--holz:#8a5634;--tinte:#1d1915;--rot:#b5343a;--gruen:#24452f}
+*{box-sizing:border-box}body{margin:0;background:var(--papier);color:var(--tinte);font:15px/1.55 "Instrument Sans",system-ui,-apple-system,sans-serif}
+header{background:linear-gradient(rgba(13,11,9,.5),rgba(13,11,9,.5)),url(/the-cat-and-gun/haus/_werkzeuge/sticker/_ob/kleid/tapete-dunkel.svg) 0 0/46px,var(--nacht);color:var(--papier);padding:36px 24px 30px}
+header .in,main{max-width:980px;margin:0 auto}header small{letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-size:13px}
+h1{font:400 34px/1.15 "Gloock",Georgia,serif;margin:8px 0 6px}h1 em{color:var(--gold);font-style:normal}header p{margin:0;opacity:.85;max-width:620px}
+header a{color:var(--gold)}main{padding:24px 16px 60px}h2{font:400 21px "Gloock",Georgia,serif;margin:34px 0 10px}
+.platte{background:#fbf8f3;border-radius:14px;box-shadow:0 1px 0 rgba(29,25,21,.06),0 10px 30px -18px rgba(29,25,21,.35);padding:6px 18px}
+.z{display:grid;grid-template-columns:22px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid rgba(29,25,21,.08);align-items:start}.z:last-child{border:0}
+.z i{width:12px;height:12px;border-radius:50%;margin-top:5px;background:#d9b88a}.z.ok i{background:var(--gruen)}.z.gelb i{background:#d29a2d}.z.rot i{background:var(--rot)}
+.z b{font-weight:500}.z span{color:#6c6157;font-size:13.5px}
+.lex dt{font-weight:500;margin-top:14px;scroll-margin-top:20px}.lex dt:target{color:var(--holz)}.lex dd{margin:4px 0 0;color:#4a3f36}.lex dd b{color:var(--tinte);font-weight:500}
+button{font:inherit;border:0;border-radius:999px;padding:9px 16px;background:var(--tief);color:var(--papier);cursor:pointer}button.scharf{background:var(--rot)}
+.fehler{font:12.5px/1.5 "DM Mono",ui-monospace,monospace;white-space:pre-wrap;word-break:break-word;margin:10px 0}
+.rep{display:flex;flex-wrap:wrap;gap:10px;padding:14px 0}.leise{color:#6c6157;font-size:13.5px}
+/* Auftritt beim Scrollen: nur Blöcke unterhalb des ersten Bildschirms, nur transform und opacity; ohne Skript steht alles da */
+.auf{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}.auf.da{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.auf{opacity:1;transform:none;transition:none}}
+@media (max-width:600px){h1{font-size:27px}.z{grid-template-columns:18px 1fr}.z>:last-child{grid-column:2}}
+</style>
+</head>
+<body>
+<header><div class="in"><small>The Cat &amp; Gun · Sticker editor</small><h1>Is everything <em>in order?</em></h1>
+<p>This page checks the Sticker editor without opening it. It only reads, unless you start a repair below with a double click. <a href="./">To the Sticker editor</a></p></div></header>
+<main>
+<h2>Checks</h2><div class="platte" id="liste"><div class="z"><i></i><div><b>Checking …</b></div></div></div>
+<h2>Errors written down</h2><div class="platte"><div id="fehler" class="fehler leise">None.</div></div>
+<h2>Repairs</h2><div class="platte"><div class="rep">
+  <button data-rep="sichern">Save all stickers as a file</button>
+  <button data-rep="ungespeichert">Drop unsaved input in this browser</button>
+  <button data-rep="fehler" class="scharf">Clear the error list</button>
+  <button data-rep="rundgang">Show the guide again</button>
+</div><p class="leise" id="repText">Repairs need a double click. «Save» puts a file with all stickers (draft or published) on this computer.</p></div>
+<h2>What the messages mean</h2><div class="platte"><dl class="lex" id="lexikon"></dl></div>
+</main>
+<script>
+(function () {
+  const $ = s => document.querySelector(s), K = 'catgun-sticker-fehler';
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const zeilen = [];
+  const zeig = () => { $('#liste').innerHTML = zeilen.map(z => `<div class="z ${z.s}"><i></i><div><b>${esc(z.t)}</b><br><span>${esc(z.d)}</span></div><span>${esc(z.w || '')}</span></div>`).join(''); };
+  const z = (t, s, d, w) => { zeilen.push({ t, s, d, w }); zeig(); };
+  const hol = async (u, art = 'json') => { const r = await fetch(u, { cache: 'no-store', method: art === 'kopf' ? 'HEAD' : 'GET' }); if (!r.ok) throw new Error(r.status + ' ' + u); return art === 'json' ? r.json() : r; };
+  (async () => {
+    try { localStorage.setItem('sk-probe', '1'); localStorage.removeItem('sk-probe'); z('Browser storage', 'ok', 'Unsaved input is kept here when the connection drops.'); }
+    catch (e) { z('Browser storage', 'gelb', 'This browser keeps nothing (private window or blocked site data). Saving to the house still works; unsaved input is lost when the window closes.'); }
+    const cv = document.createElement('canvas'); z('Pictures and PDF', cv.getContext && cv.toBlob ? 'ok' : 'rot', cv.toBlob ? 'The browser can make the PDF and the picture of a sticker.' : 'This browser cannot make PDFs. Use Chrome, Safari or Firefox.');
+    z('Pipette', 'ok', window.EyeDropper ? 'Picks colours on the whole screen (Chrome, Edge).' : 'Picks colours in the sticker and in uploaded photos (Safari, Firefox).');
+    try { const s = await hol('/the-cat-and-gun/haus/api/stand/catgun/sticker'); const n = (s.entwurf || s.live || { sticker: [] }).sticker.length; z('Server and storage', 'ok', `${n} stickers. ${s.offen ? 'A saved draft waits to be published.' : 'Everything is published.'}`); }
+    catch (e) { z('Server and storage', 'rot', 'The storage does not answer (' + e.message + '). Nothing can be saved right now.'); }
+    try { const v = await hol('/the-cat-and-gun/haus/api/verlauf/catgun/sticker'); z('Earlier versions', 'ok', v.length ? v.length + ' earlier published versions can be taken back.' : 'No earlier version yet. The original state stays available.'); }
+    catch (e) { z('Earlier versions', 'gelb', 'The list of earlier versions does not load (' + e.message + ').'); }
+    try { let F; try { F = await hol('/the-cat-and-gun/haus/_werkzeuge/fundus/stand.json'); } catch (x) { F = await hol('/the-cat-and-gun/haus/_werkzeuge/fundus/fundus.json'); }
+      const st = F.elemente.filter(e => e.art === 'sticker').length; z('Brand book (colours, fonts, elements)', st ? 'ok' : 'rot', `${F.farben.length} colours, ${F.schriften.length} fonts, ${F.elemente.length} elements, ${st} of them stickers.`); }
+    catch (e) { z('Brand book (colours, fonts, elements)', 'rot', 'The brand book does not load (' + e.message + '). Without it the Sticker editor does not start.'); }
+    const ttf = ['DMSerifDisplay-400.ttf', 'Gloock-400.ttf', 'DMMono-400.ttf', 'InstrumentSans-400.ttf', 'InstrumentSans-500.ttf', 'InstrumentSans-600.ttf'], fehlt = [];
+    for (const f of ttf) { try { await hol('schriften/' + f, 'kopf'); } catch (e) { fehlt.push(f); } }
+    z('Fonts for the PDF', fehlt.length ? 'rot' : 'ok', fehlt.length ? 'Missing: ' + fehlt.join(', ') : ttf.length + ' font files reachable. They are embedded in every PDF.');
+    try { const b = await hol('bereiche.json'); z('Areas', b.bereiche.length ? 'ok' : 'rot', b.bereiche.map(x => x.name).join(' · ')); } catch (e) { z('Areas', 'rot', 'bereiche.json is missing (' + e.message + ').'); }
+    try { const pr = await hol('/the-cat-and-gun/haus/api/protokoll/catgun/sticker'); if (!pr.some(x => x.was === 'veroeffentlicht')) throw new Error('none'); const i = await hol('/the-cat-and-gun/haus/drucksachen/sticker/editor/index.json'); let ok = 0; for (const x of i.sticker.slice(0, 3)) { try { await hol('/the-cat-and-gun/haus/drucksachen/sticker/editor/' + x.pdf, 'kopf'); ok++; } catch (e) { } }
+      z('Published print files', ok === Math.min(3, i.sticker.length) ? 'ok' : 'rot', `${i.sticker.length} PDFs, published ${new Date(i.stand).toLocaleString('en-GB')}.`); }
+    catch (e) { z('Published print files', 'gelb', 'Nothing published from the Sticker editor yet. Until then the print files of the house count.'); }
+    let f = []; try { f = JSON.parse(localStorage.getItem(K) || '[]'); } catch (e) { }
+    try { const s = await hol('api/fehler'); f = f.concat((s.fehler || []).map(x => ({ z: x.zeit, t: x.text + ' (server)' }))); } catch (e) { }
+    $('#fehler').textContent = f.length ? f.map(x => new Date(x.z).toLocaleString('en-GB') + '  ' + x.t).join('\n') : 'None.';
+    z('Script errors', f.length ? 'gelb' : 'ok', f.length ? f.length + ' written down, listed below.' : 'None written down.');
+  })();
+  /* Lexikon: jede Meldung mit Stichwort (Master 2.6), Anker = Stichwort klein */
+  const LEX = [
+    ['conflict', 'CONFLICT · This was changed in another window.', 'The same stickers were open in two windows, the other one saved first.', 'Nothing is lost: your version is kept as a copy «… (second window)». Look at both and save.'],
+    ['offline', 'OFFLINE · No connection.', 'The computer is offline or the server does not answer.', 'Your input stays in this browser. Save again when the connection is back.'],
+    ['photo', 'PHOTO · That is not a photo / The photo is only N pixels wide.', 'The file is not JPG, PNG or WebP, or it is smaller than 900 pixels.', 'Choose a photo of at least 900 pixels. Its colours can still be used from the photo field.'],
+    ['print', 'PRINT · The file could not be made.', 'The browser could not load a font or a photo for the PDF.', 'Reload and try again. If it stays, check «Fonts for the PDF» above.'],
+    ['veroeffentlichen', 'Not published.', 'The server refused (nothing changed, someone else published first, or a print file was wrong).', 'Read the sentence in the window. Reload, save, publish again. The stickers and print files stay as they were.'],
+    ['size', 'SIZE · The request is too large.', 'More than 3 MB of data at once.', 'Delete unused stickers or photos and save again.'],
+    ['origin', 'ORIGIN · This request does not come from the tool.', 'Another page tried to write.', 'Nothing to do. Opening the Sticker editor normally never shows this.'],
+    ['limit', 'LIMIT · Too many saves in one minute.', 'Protection against runaway scripts.', 'Wait a minute, then save again. Nothing is lost.'],
+    ['input', 'INPUT · The request cannot be read.', 'The data sent to the server was damaged on the way.', 'Reload and save again.'],
+    ['format', 'FORMAT · Only JSON is accepted.', 'Another program tried to write.', 'Nothing to do. Opening the Sticker editor normally never shows this.'],
+    ['file', 'FILE · A print file is wrong or missing.', 'A print file could not be made or read while publishing.', 'Reload, save and publish again.'],
+    ['busy', 'BUSY · Publishing is already running.', 'Another window is publishing right now.', 'Wait a moment, then publish again.'],
+    ['version', 'VERSION · This earlier version is not there.', 'The list of earlier versions changed.', 'Close «Earlier versions» and open it again.'],
+    ['storage', 'STORAGE · A saved file cannot be read.', 'A file on the computer is damaged. The last good copy is kept.', 'Reload. If it stays, save a backup below.'],
+    ['host', 'HOST · This address does not belong to the tool.', 'The tool was opened under a different address.', 'Open the Sticker editor from the Control panel.'],
+    ['website', 'WEBSITE · The website was not changed.', 'The print files could not be written.', 'Publish again.'],
+    ['server', 'SERVER · Unexpected error.', 'Something went wrong on the computer that runs the tool.', 'Reload. If it stays, the error is written in the list above.'],
+    ['brand', 'BRAND · The brand book did not load.', 'The colours, fonts or elements of the house did not arrive.', 'Reload. If it stays, check the red points above.'],
+    ['leer', 'Print check: «…» is empty.', 'A line of words has no text.', 'Write the words or delete the line.'],
+    ['rand', 'Print check: goes over the cut line / closer than 2 mm.', 'The printer cuts along the line with a small tolerance.', 'Move the words inwards or make them smaller.'],
+    ['dpi', 'Print check: the photo has only N dpi.', 'The photo is too small for its size on the sticker.', 'Make it smaller on the sticker or upload a bigger photo.'],
+    ['start', 'The Sticker editor does not start.', 'The brand book or the stickers did not arrive.', 'Reload. If it stays, check the red points above.']
+  ];
+  $('#lexikon').innerHTML = LEX.map(([k, s, g, t]) => `<dt id="${k}">${esc(s)}</dt><dd><b>Why:</b> ${esc(g)}<br><b>What to do:</b> ${esc(t)}</dd>`).join('');
+  /* Auftritte beim Scrollen */
+  (function () { if (!('IntersectionObserver' in window)) return; const H = innerHeight;
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('da'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('main > h2, main > .platte, .lex dt, .lex dd').forEach(el => { if (el.getBoundingClientRect().top > H) { el.classList.add('auf'); io.observe(el); } }); })();
+  document.addEventListener('dblclick', async e => {
+    const b = e.target.closest('[data-rep]'); if (!b) return; const r = b.dataset.rep, txt = $('#repText');
+    if (r === 'fehler') { try { localStorage.removeItem(K); } catch (x) { } $('#fehler').textContent = 'None.'; txt.textContent = 'Error list cleared.'; }
+    if (r === 'ungespeichert') { try { localStorage.removeItem('catgun-sticker-arbeit'); } catch (x) { } txt.textContent = 'Unsaved input of this browser dropped. The saved stickers are untouched.'; }
+    if (r === 'rundgang') { try { localStorage.removeItem('catgun-sticker-rundgang'); } catch (x) { } txt.textContent = 'The guide shows again the next time the Sticker editor opens.'; }
+    if (r === 'sichern') { try { const s = await hol('/the-cat-and-gun/haus/api/stand/catgun/sticker'); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(s, null, 1)], { type: 'application/json' })); a.download = 'the-cat-and-gun-stickers.json'; a.click(); txt.textContent = 'File saved.'; } catch (x) { txt.textContent = 'Could not save: ' + x.message; } }
+  });
+  document.addEventListener('click', e => { if (e.target.closest('[data-rep]')) $('#repText').textContent = 'Double click to start.'; });
+})();
+</script>
+</body>
+</html>
